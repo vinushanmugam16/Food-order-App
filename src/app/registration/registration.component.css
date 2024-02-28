@@ -1,0 +1,39 @@
+.set-reg-style{
+    display: inline-block;
+    /* border: 2px solid black; */
+    text-align: center;
+    margin-left: 50vh;
+    margin-top: 20vh;
+    width: 100vh;
+    /* height: 50vh; */
+    background-color: rgb(240, 204, 150) ;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    
+}
+small{
+    color:red;
+    font-weight:bold;
+}
+/* .input-style{
+    display: flex;
+    flex-wrap:wrap;
+    
+} */
+.user-style{
+    color:black;
+    font-weight: bold;
+}
+.dob-style{
+    font-weight: bold;
+}
+.address-style{
+    font-weight: bold;
+}
+.gender-style{
+    display: flex;
+}
+.country-style{
+    font-weight:bold;
+
+}

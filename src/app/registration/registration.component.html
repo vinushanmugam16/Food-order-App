@@ -1,0 +1,85 @@
+<!-- <p>registration works!</p> -->
+<app-header></app-header>
+
+
+<div class="set-reg-style">
+    <h1 class="heading-style">Details</h1>
+    <form [formGroup]='register'>
+        <div>
+            <div >
+                <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
+                <small *ngIf="register.get('firstname').invalid && register.get('firstname').touched">*Firstname is required</small>
+            </div>
+            <div>
+                <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname" ><br>
+                <small *ngIf="register.get('lastname').invalid && register.get('lastname').touched">*lastname is Required</small>
+            </div>
+            <div>
+                <input class="input-style" type="text" placeholder="Email" formControlName="email" ><br>
+                <small *ngIf="register.get('email').invalid && register.get('email').touched" >*Email is not in Valid Format</small>
+            </div>
+        </div><br>
+        <div>
+            <small class="user-style">Click the Username button to get Username of yours</small><br>
+            <input type="text" placeholder="Username" formControlName="username">
+            <button (click)="createUsername()">Username</button>
+
+        </div>
+
+        <hr><br>
+        
+
+        <div>
+            <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
+            <small *ngIf="register.get('phoneNumber').invalid && register.get('phoneNumber').touched">*Phone Number is Required</small>
+            
+        </div>
+<br>            
+        <div>
+            <label class="dob-style" name="DateofBirth">Date of Birth  </label>
+            <input type="date" placeholder="Date of Birth" formControlName="dob">
+        </div>
+        <br>
+        <div formGroupName="address" >
+           <label class="address-style">Address</label><br>
+           <input type="text" value="street" placeholder="Street Address" formControlName="street">
+            <small *ngIf="register.get('address.street').invalid && register.get('address.street').touched">*Street Address is Required</small><br>
+            
+            <input type="text" value="city" placeholder="City" formControlName="city">
+            <small *ngIf="register.get('address.city').invalid && register.get('address.city').touched">*City is Required</small><br>
+            
+            <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
+            <small *ngIf="register.get('address.pincode').invalid && register.get('address.pincode').touched">*Pincode is Required</small>
+            
+        </div>
+        <div   >
+            <h3>Gender</h3> 
+            <input type="radio" value='male' name="gender" id="check-male" formControlName="gender">
+            <label name="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" value='female' name="gender" id="check-female" formControlName="gender">
+            <label name="female">Female</label>
+        </div>
+        <div>
+            <input type="radio" value='others' name="gender" id="others" formControlName="gender">
+            <label name="others">Not to say</label>
+        </div>
+        <br>
+        <div>
+            <label class="country-style" >Country</label><br>
+            <select name="Country" formControlName="country"><br>
+                <small *ngIf="register.get('country').invalid && register.get('country').touched">*Country is required</small>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>German</option>
+            </select>
+        </div><br>
+        <div>
+            <input type="submit" value="Submit"  (click)="onSubmit()" >
+        </div>
+    </form>
+</div>
+

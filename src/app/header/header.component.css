@@ -1,0 +1,25 @@
+.header-style{
+    display: flex;
+    border:2px solid black;
+    /* margin:10px; */
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
+
+}
+.btn-style{
+    color:white;
+    font-size: large;
+    font-weight: bold;
+    padding:10px;
+}
+.login-btn , .reg-btn{
+   margin-left:120vh;
+   padding:10px;
+   color:white;
+   background-color: black;
+   font-weight:bold ;
+   
+}

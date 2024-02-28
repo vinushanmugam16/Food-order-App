@@ -1,0 +1,24 @@
+.contact-style{
+    display: flex;
+    border:2px solid black;
+    /* margin:10px; */
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    height:150px
+    
+    
+}
+.btn-style{
+   margin-left: 100vh;
+   color:white;
+   background-color: black;
+   width: 100px;
+   height:40px;
+  margin-top: 10px;
+}
+.rights-style{
+  margin-left:50vh;
+  margin-top:10px
+}

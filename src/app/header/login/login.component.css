@@ -1,0 +1,16 @@
+.set-login-style{
+    display: inline-block;
+    /* border: 2px solid black; */
+    text-align: center;
+    /* padding: 20px; */
+    margin-left: 50vh;
+    margin-top: 20vh;
+    width: 100vh;
+    height: 50vh;
+    background-color: rgb(147, 226, 240);
+    border-radius:20px ;
+}
+small{
+    color:red;
+    font-weight:bold;
+}
