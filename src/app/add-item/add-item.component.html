@@ -1,0 +1,12 @@
+<!-- <p>add-item works!</p> -->
+
+<div class="breakfast-style">
+    <div class="list-style"  *ngFor="let item of addItemtoCart">
+    <div class="item-style">
+    <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px">
+    <div >{{item.itemName}}</div>
+    <div >Price: ${{item.price}}</div>
+    <button (click)="addingCart(addItemtoCart)">Add to Cart</button>
+    </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <h1 class="heading-style">Lunch Menu</h1>
-
+<!-- 
 <div class="foodmenu-style">
         <div class="item-style">
         
@@ -29,4 +29,7 @@
                 <p>Price:{{sambarPrice}}</p>
             </div>
 
-</div>
+</div> -->
+
+
+<app-items [lunchItems]="lunch"  (addlunchItem)="addLunchItem($event)"></app-items>

@@ -2,7 +2,7 @@
 
 
 
-<h1 class="heading-style">Dinner</h1>
+<!-- <h1 class="heading-style">Dinner</h1>
 <div class="foodmenu-style">
    
 
@@ -36,8 +36,8 @@
             <img class="img-style" [src]="dessert">
             <p class="item-name">Dessert</p>
             <p>Price:{{dessertprice}}</p>
-        </div>
+        </div> -->
+    <!-- </div> -->
 
 
-
-    </div>
+    <app-items [dinnerItems]="dinner"  (addDinnerItem)="diningItem($event)"></app-items>

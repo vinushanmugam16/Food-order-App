@@ -16,6 +16,9 @@ import { BreakfastComponent } from './breakfast/breakfast.component';
 import { LunchComponent } from './lunch/lunch.component';
 import { DinnerComponent } from './dinner/dinner.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
+import { ItemsComponent } from './items/items.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { ContactComponent } from './contact/contact.component';
     BreakfastComponent,
     LunchComponent,
     DinnerComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent,
+    ItemsComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,

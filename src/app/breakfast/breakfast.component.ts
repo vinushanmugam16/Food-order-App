@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-breakfast',
@@ -6,26 +7,39 @@ import { Component } from '@angular/core';
   styleUrls: ['./breakfast.component.css']
 })
 export class BreakfastComponent {
+  
 
-  idlyimage='/assets/image/idly.jpeg'
-  dosaimage='/assets/image/dosa.jpeg'
-  venpongalimage='/assets/image/venpongal.jpeg'
+  constructor(private route:Router){}
 
-  count=0;
-  increaseCount(){
-    this.count++;
-  }
-  decreaseCount(){
-    this.count--;
-  }
+ breakfast=[
+  {imageUrl:'/assets/image/idly.jpeg',
+   itemName: 'Idly',
+   price:35},
+   {imageUrl:'/assets/image/dosa.jpeg',
+    itemName:'Dosa',
+    price:75
+   },
+   {
+    imageUrl:'/assets/image/venpongal.jpeg',
+    itemName:'Venpongal',
+    price:50
+   },
+   {imageUrl:'/assets/image/poori.jpeg',
+    itemName:'Poori',
+    price:60
+   }
+ ]
 
-  idlyPrice=30;
-  dosaPrice=75;  
-  pongalPrice=60;
- 
+ cartItemList=[];
 
-  addingCart(){
-    alert('Successfully Added to cart');
-  }
+
+addingCart(item){
+ console.log( this.cartItemList.push(item));
+  // this.cartItemList.push(item);
+  // alert('Successfully Added to cart');
+  // this.route.navigate['Cart'];
+}
+
+
 
 }

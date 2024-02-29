@@ -386,6 +386,62 @@
       "id": "4333",
       "username": "vinushan",
       "password": "1234556"
+    },
+    {
+      "id": "1b37",
+      "username": "vinushan",
+      "password": "vinu1234"
+    },
+    {
+      "id": "9adf",
+      "username": "vinushan",
+      "password": "123456"
+    },
+    {
+      "id": "26da",
+      "username": "vinushan",
+      "password": "1234567"
+    },
+    {
+      "id": "d0fb",
+      "username": "vinushan",
+      "password": "12345678"
+    },
+    {
+      "id": "5f38",
+      "username": "Vinu",
+      "password": "123456"
+    },
+    {
+      "id": "8489",
+      "username": "vinushn",
+      "password": "1234567"
+    },
+    {
+      "id": "94a7",
+      "username": "Vinushan",
+      "password": "Vinushan@12345"
+    },
+    {
+      "id": "3fec",
+      "firstname": "Vinu",
+      "lastname": "shanmugam",
+      "username": "VINUSHA2024",
+      "dob": "2024-03-02",
+      "email": "vinu@dfghj.com",
+      "address": {
+        "street": "12/srinx",
+        "city": "erode",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543210,
+      "gender": "female",
+      "country": "India"
+    },
+    {
+      "id": "d3ff",
+      "username": "Vinusha2002",
+      "password": "Vin@12345"
     }
   ]
 }

@@ -4,12 +4,12 @@
 <div class="foodmenu-style">
    
 
-    <div class="item-style">
+    <!-- <div class="item-style">
         <img class="img-style" [src]="idlyimage"><br>
         <p class="item-name">Idly</p>
         <p>Price:{{idlyPrice}}</p>
         <label>Quantity:</label><br>
-        <!-- <input class="input-style" type="number"> -->
+      
         <button class='btn-style'   (click)="decreaseCount()" *ngIf="count>0">-</button>
         <small>{{count}}</small>
         <button class='btn-style' (click)="increaseCount()">+</button><br>
@@ -20,21 +20,26 @@
             <img class="img-style" [src]="dosaimage">
             <p class="item-name">Dosa</p>
             <p>Price:{{dosaPrice}}</p>
-            <!-- <input class="input-style" type="number" [(ngModel)]="count">
-            <button (click)="increaseCount()">Button</button>
-            <small>{{count}}</small> -->
+          
+            <button  class='btn-style' (click)="addingCart()">Add to Cart</button>
         </div>
 
         <div class="item-style">
             <img class="img-style" [src]="venpongalimage">
             <p class="item-name">VenPongal</p>
             <p>Price:{{pongalPrice}}</p>
+            <button  class='btn-style' (click)="addingCart()">Add to Cart</button>
         </div>
 
-        <!-- <div class="item-style">
-            <img class="img-style" [src]="venpongalimage">
-            <p class="item-name">VenPongal</p>
+        <div class="item-style">
+            <img class="img-style" [src]="pooriImage">
+            <p class="item-name">Poori</p>
+            <p>Price:{{pooriPrice}}</p>
+            <button  class='btn-style' (click)="addingCart()">Add to Cart</button>
         </div> -->
 
        
     </div>
+
+<app-items [breakfastItems]="breakfast"   (addItem)="addingCart($event)"></app-items>
+

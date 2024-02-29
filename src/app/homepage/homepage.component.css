@@ -2,13 +2,15 @@ div{
     display: block;
     /* border:2px solid black; */
     /* margin:10px; */
-    /* height:50vh; */
+    height:80vh;
     background-color: gray;
     color: white;
     font-weight: bold;
     font-size: large;
    align-items: center;
    justify-content: center;
+   background-image:url('/assets/image/fback.jpg');
+   background-size: cover;
 }
 h1{
     padding-right:50vh ;
@@ -19,6 +21,6 @@ img{
    padding-bottom: 50px;
 }
 .quote-style{
-    color:rgb(58, 2, 131);
+    color:white;
 
 }

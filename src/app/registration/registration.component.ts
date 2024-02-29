@@ -11,6 +11,7 @@ import { Data } from '../Model/data';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
+ 
 
 
   constructor(private subData:UsernameService,
@@ -30,7 +31,7 @@ ngOnInit(): void {
         city:new FormControl('',[Validators.required]),
         pincode:new FormControl('',[Validators.required])
       }),
-      phoneNumber:new FormControl('',[Validators.required]),
+      phoneNumber:new FormControl('',[Validators.required,Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
       country:new FormControl('',[Validators.required]),    
     })
@@ -61,9 +62,10 @@ createUsername(){
   let user='';
   let fName:string=this.register.get('firstname').value;
   let lName:string=this.register.get('lastname').value;
-  let email:any=this.register.get('email').value
+  let dob:any=this.register.get('dob').value
+
   if(fName.length >=4){
-    user+=fName.slice(0,4).toUpperCase();
+    user+=fName.slice(0,5).toUpperCase();
   }
   else{
     user+=fName.toUpperCase();
@@ -74,19 +76,13 @@ createUsername(){
   else{
     user+=lName.toUpperCase();
   }
-  if(email.length >=3){
-    user+=email.slice(1,3);
-  }
-  else{
-    user+=email;
-  }
+
+  let date=new Date(dob)
+  user+=date.getFullYear();
+
   this.register.get('username').setValue(user);
 }
 
-// @Output() userData=new EventEmitter<Data>()
-// getUser(){
-//   this.userData.emit(this.createUsername);
-// }
 
 
 

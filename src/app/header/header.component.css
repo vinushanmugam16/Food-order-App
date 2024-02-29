@@ -16,10 +16,13 @@
     padding:10px;
 }
 .login-btn , .reg-btn{
-   margin-left:120vh;
-   padding:10px;
+   margin:20px;
+   /* padding:10px; */
    color:white;
-   background-color: black;
+   background-color: tan;
    font-weight:bold ;
    
+}
+.active-state{
+    font-weight: bold;
 }

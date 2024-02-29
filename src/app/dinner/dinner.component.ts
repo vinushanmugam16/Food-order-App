@@ -8,15 +8,31 @@ import { Component } from '@angular/core';
 export class DinnerComponent {
 
 
-  dosaImage='/assets/image/dosa.jpeg';
-  idlyImage='/assets/image/idly.jpeg';
-  naanImage='/assets/image/naan.jpeg';
-  paneerImage='/assets/image/paneerbutter.jpeg';
-  dessert='/assets/image/dessert.jpeg';
+  dinner=[
+    {imageUrl:'/assets/image/dosa.jpeg',
+     itemName: 'Dosa',
+     price:75},
+     {imageUrl:'/assets/image/idly.jpeg',
+      itemName:'Idly',
+      price:40
+     },
+     {
+      imageUrl:'/assets/image/naan.jpeg',
+      itemName:'Butter Naan',
+      price:230
+     },
+     {imageUrl:'/assets/image/paneerbutter.jpeg',
+      itemName:'Paneer Butter Masala',
+      price:310
+     },
+     {imageUrl:'/assets/image/dessert.jpeg',
+     itemName:'Dessert',
+     price:110
+    }
+   ]
+   cartItems=[]
 
-  dosaprice=75;
-  idlyprice=30;
-  naanprice=230;
-  paneerprice=310;
-  dessertprice=110;
+  diningItem(food){
+      console.log(this.cartItems.push(food));
+  }
 }

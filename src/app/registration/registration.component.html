@@ -4,8 +4,9 @@
 
 <div class="set-reg-style">
     <h1 class="heading-style">Details</h1>
+    
     <form [formGroup]='register'>
-        <div>
+        <div >
             <div >
                 <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
                 <small *ngIf="register.get('firstname').invalid && register.get('firstname').touched">*Firstname is required</small>
@@ -15,9 +16,10 @@
                 <small *ngIf="register.get('lastname').invalid && register.get('lastname').touched">*lastname is Required</small>
             </div>
             <div>
-                <input class="input-style" type="text" placeholder="Email" formControlName="email" ><br>
-                <small *ngIf="register.get('email').invalid && register.get('email').touched" >*Email is not in Valid Format</small>
+                <label class="dob-style" name="DateofBirth">Date of Birth  </label><br>
+                <input type="date" placeholder="Date of Birth" formControlName="dob">
             </div>
+           
         </div><br>
         <div>
             <small class="user-style">Click the Username button to get Username of yours</small><br>
@@ -27,18 +29,17 @@
         </div>
 
         <hr><br>
-        
+        <div>
+            <input class="input-style" type="text" placeholder="Email" formControlName="email" ><br>
+            <small *ngIf="register.get('email').invalid && register.get('email').touched" >*Email is not in Valid Format</small>
+        </div>
 
         <div>
             <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
             <small *ngIf="register.get('phoneNumber').invalid && register.get('phoneNumber').touched">*Phone Number is Required</small>
             
-        </div>
-<br>            
-        <div>
-            <label class="dob-style" name="DateofBirth">Date of Birth  </label>
-            <input type="date" placeholder="Date of Birth" formControlName="dob">
-        </div>
+        </div>      
+       
         <br>
         <div formGroupName="address" >
            <label class="address-style">Address</label><br>
@@ -83,3 +84,4 @@
     </form>
 </div>
 
+<app-footer></app-footer>

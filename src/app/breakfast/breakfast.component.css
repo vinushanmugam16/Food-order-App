@@ -1,10 +1,11 @@
-.foodmenu-style{
+/* .foodmenu-style{
     display: flex;
     text-align: center;
     border-radius: 10px;
     border:2px solid black;
     padding-top: 50px;
-}
+    padding-bottom:50px
+} */
 .heading-style{
     text-align: center;
     align-items: center;

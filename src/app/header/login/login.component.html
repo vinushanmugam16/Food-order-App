@@ -8,18 +8,21 @@
     <form [formGroup]='login'>
         <div>          
         <div>
-            <button (click)="createUser()">Username</button><br>
-            <input type="text" placeholder="Username" formControlName="username"><br>
+          
+            <input class="login-style" type="text" placeholder="Username" formControlName="username"><br>
             <small *ngIf="login.get('username').invalid && login.get('username').touched">*Username is Required</small>
         </div>
         <div>
-            <input type="password" placeholder="Password" formControlName="password"><br>
+            <input class="login-style" type="password" placeholder="Password" formControlName="password"><br>
             <small  *ngIf="login.get('password').invalid && login.get('password').touched">*Password is Required</small>  
+            
             
         </div>
         <div>
-            <input type="submit" value="Submit" (click)="onSubmit()"  >
+            <input class="login-style" type="submit" value="Submit" (click)="onSubmit()"  >
         </div>
         </div>
     </form>
 </div>
+
+<app-footer></app-footer>

@@ -7,13 +7,30 @@ import { Component } from '@angular/core';
 })
 export class LunchComponent {
 
-  curdrice='/assets/image/curdrice.jpeg'
-  friedrice='/assets/image/friedrice.jpeg'
-  mushroom='/assets/image/mushroombriyani.jpeg'
-  sambar='/assets/image/sambar.jpeg'
+  lunch=[
+    {imageUrl:'/assets/image/curdrice.jpeg',
+     itemName: 'Curdrice',
+     price:45},
+     {imageUrl:'/assets/image/friedrice.jpeg',
+      itemName:'Chicken Fried Rice',
+      price:120
+     },
+     {
+      imageUrl:'/assets/image/mushroombriyani.jpeg',
+      itemName:'Mushroom Briyani',
+      price:230
+     },
+     {imageUrl:'/assets/image/sambar.jpeg',
+      itemName:'Sambar',
+      price:80
+     }
+   ]
 
-  curdPrice=45
-  friedPrice=120
-  mushroomPrice=230
-  sambarPrice=80
+   cartItems=[];
+
+   addLunchItem(dish){
+    console.log(this.cartItems.push(dish));
+
+   }
+  
 }

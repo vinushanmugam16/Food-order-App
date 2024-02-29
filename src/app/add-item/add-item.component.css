@@ -1,0 +1,33 @@
+:host{
+    border:1px solid black
+}
+/* :host {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+} */
+.breakfast-style{
+    display:flex;
+    padding-left: 10px;
+    margin-left: 50vh;
+    /* border:1px solid black */
+}
+.image-style{
+    width: 200px;
+    height:200px;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding: 20px;
+
+}
+.item-style{
+    display: block;
+    /* border:2px solid black; */
+    padding-left: 10px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.list-style{
+    border:1px solid black;
+    padding: 10px;
+}
