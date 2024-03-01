@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Output} from '@angular/core';
+import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
-import { UsernameService } from '../Service/username.service';
+import { UserService } from '../Service/user.service';
 
-import { Data } from '../Model/data';
+
 
 @Component({
   selector: 'app-registration',
@@ -14,13 +14,15 @@ export class RegistrationComponent {
  
 
 
-  constructor(private subData:UsernameService,
+  constructor(private user:UserService,
               private router:Router){}
 
-  register:FormGroup;
+  registerForm:FormGroup;
+  gender=['Male','Female'];
+  country=['America','India','Japan','German'];
 
 ngOnInit(): void {
-    this.register=new FormGroup({
+    this.registerForm=new FormGroup({
       firstname: new FormControl('',[Validators.required]),
       lastname:new FormControl('',[Validators.required]),
       username:new FormControl(''),
@@ -40,47 +42,47 @@ ngOnInit(): void {
 
 onSubmit(){
   // this.taskdata.emit(this.register.value);
-  console.log(this.register);
+  console.log(this.registerForm);
   
  
-    if(this.register.invalid){
+    if(this.registerForm.invalid){
         alert('Please fill the form in valid format')
     }
     else{
-      this.subData.createData(this.register.value)
+      this.user.createData(this.registerForm.value)
       .subscribe(
         response=>{
           console.log(response);
         }
       )
-      this.router.navigateByUrl('Login');
+      this.router.navigateByUrl('login');
     }
 }
 
 
 createUsername(){
   let user='';
-  let fName:string=this.register.get('firstname').value;
-  let lName:string=this.register.get('lastname').value;
-  let dob:any=this.register.get('dob').value
+  let userFirstname:string=this.registerForm.get('firstname').value;
+  let userLastname:string=this.registerForm.get('lastname').value;
+  let dob:any=this.registerForm.get('dob').value
 
-  if(fName.length >=4){
-    user+=fName.slice(0,5).toUpperCase();
+  if(userFirstname.length >=4){
+    user+=userFirstname.slice(0,5).toUpperCase();
   }
   else{
-    user+=fName.toUpperCase();
+    user+=userFirstname.toUpperCase();
   }
-  if(lName.length >=3){
-    user+=lName.slice(0,3).toUpperCase();
+  if(userLastname.length >=3){
+    user+=userLastname.slice(0,3).toUpperCase();
   }
   else{
-    user+=lName.toUpperCase();
+    user+=userLastname.toUpperCase();
   }
 
   let date=new Date(dob)
   user+=date.getFullYear();
 
-  this.register.get('username').setValue(user);
+  this.registerForm.get('username').setValue(user);
 }
 
 

@@ -1,27 +1,42 @@
-import { Component, Input } from '@angular/core';
-import { CartService } from '../Service/cart.service';
+import { Component, OnInit } from '@angular/core';
 import { BreakfastComponent } from '../breakfast/breakfast.component';
+import { AddcartService } from '../Service/addcart.service';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  providers:[BreakfastComponent]
-})
-export class CartComponent {
  
-  // @Input() breakfastItems:any[];
+})
+export class CartComponent implements OnInit{
+ 
 
+  foodItem=[];
+  total:number=0;
+  itemList:Item=[]
+  imageUrl='/assets/image/emptycart.png'
 
-    // cartItems=[];
+  
+  constructor( private addingtoCart:AddcartService ){}
 
-    constructor(private addCart:BreakfastComponent){}
+  ngOnInit(){
+    this.addingtoCart.getItemListadd()
+    .subscribe((response)=>{
+      this.foodItem=response;
+      this.total=this.addingtoCart.getTotalPrice();
+    })
+  }
 
-    // ngOnInit(){
-    //   this.cartItems=this.addCart.getCartItems();
-    // }
+  fetchItem(){
+      // this.cartItem.getItem()
+      // .subscribe((response)=>
+      // this.itemList=response)
+  }
+   
+  deleteItem(){
 
-    getCartItem(){
-      this.addCart.cartItemList;
-    }
+  }
+ 
+
 }

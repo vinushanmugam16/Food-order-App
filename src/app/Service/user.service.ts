@@ -1,24 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Data } from '../Model/data';
+import { User } from '../model/user';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsernameService {
+export class UserService {
 
   constructor(private http:HttpClient) { }
 
-  state:Data[]=[];
-  url:string='http://localhost:3000/registerDetails'
+  state:User[]=[];
+  url:string='http://localhost:3000/registerdetails'
 
-  createData(state:Data){
+  createData(state:User){
     return this.http.post(this.url,state)
   }
 
-  getData(username:string){
-    return this.http.get(this.url + username)
+  getData(){
+    return this.http.get('items.json')
     // .subscribe(response=>
     //   console.log(response))
      

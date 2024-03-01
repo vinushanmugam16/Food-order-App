@@ -1,3 +1,4 @@
+
 :host{
     border:1px solid black
 }
@@ -6,10 +7,12 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
 } */
-.breakfast-style{
+.menu-style{
     display:flex;
+    flex-wrap: wrap;
     padding-left: 10px;
-    margin-left: 50vh;
+    /* margin-left: 50vh; */
+    padding-bottom: 12vh;
     /* border:1px solid black */
 }
 .image-style{
@@ -22,12 +25,23 @@
 }
 .item-style{
     display: block;
-    /* border:2px solid black; */
     padding-left: 10px;
     margin-left: 20px;
     font-weight: bold;
+    padding: 10px;
+    
 }
 .list-style{
     border:1px solid black;
     padding: 10px;
+    margin:10px 10px;
+    
+    
+}
+.heading-style{
+    text-align: center;
+    align-items: center;
+} 
+img:hover{
+    background-color: lightgray;
 }

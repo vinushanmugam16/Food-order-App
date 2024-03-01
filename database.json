@@ -1,5 +1,73 @@
 {
-  "registerDetails": [
+  "FoodItems": [
+    {
+      "imageUrl": "/assets/image/idly.jpeg",
+      "itemName": "Idly",
+      "price": 35,
+      "id": "9f6c"
+    },
+    {
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "id": "f33f"
+    },
+    {
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "id": "7361"
+    },
+    {
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "id": "3456"
+    },
+    {
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45,
+      "id": "52dc"
+    },
+    {
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120,
+      "id": "3d74"
+    },
+    {
+      "imageUrl": "/assets/image/mushroombriyani.jpeg",
+      "itemName": "Mushroom Briyani",
+      "price": 230,
+      "id": "7ab4"
+    },
+    {
+      "imageUrl": "/assets/image/sambar.jpeg",
+      "itemName": "Sambar",
+      "price": 80,
+      "id": "cebe"
+    },
+    {
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230,
+      "id": "6366"
+    },
+    {
+      "imageUrl": "/assets/image/paneerbutter.jpeg",
+      "itemName": "Paneer Butter Masala",
+      "price": 310,
+      "id": "48df"
+    },
+    {
+      "imageUrl": "/assets/image/dessert.jpeg",
+      "itemName": "Dessert",
+      "price": 110,
+      "id": "c686"
+    }
+  ],
+  "registerdetails": [
     {
       "id": "dafd",
       "firstname": "vinu",
@@ -442,6 +510,46 @@
       "id": "d3ff",
       "username": "Vinusha2002",
       "password": "Vin@12345"
+    },
+    {
+      "id": "d147",
+      "username": "Vinu",
+      "password": "stvd@BO9"
+    },
+    {
+      "id": "652c",
+      "username": "Vinu",
+      "password": "Vinu@12355"
+    },
+    {
+      "id": "094f",
+      "username": "Vinu",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "0d38",
+      "username": " bef,f",
+      "password": "Vnu@fmail32"
+    },
+    {
+      "id": "f554",
+      "username": "Vinu",
+      "password": "Vinu@13527"
+    },
+    {
+      "id": "d07b",
+      "username": "Vinu",
+      "password": "Vinu@12345"
+    },
+    {
+      "id": "69fa",
+      "username": "Vinu",
+      "password": "Shanmu@134"
+    },
+    {
+      "id": "0757",
+      "username": "Vinu",
+      "password": "Vinu@q12345"
     }
   ]
 }

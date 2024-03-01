@@ -6,9 +6,10 @@
     /* margin-top: 20vh; */
     width: 100vh;
     /* height: 50vh; */
-    background-color: rgb(240, 204, 150) ;
+    /* background-color: rgb(240, 204, 150) ; */
+   color:white;
     border-radius: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15vh;
     
 }
 small{
@@ -21,7 +22,7 @@ small{
     
 } */
 .user-style{
-    color:black;
+    color:white;
     font-weight: bold;
 }
 .dob-style{
@@ -35,5 +36,12 @@ small{
 }
 .country-style{
     font-weight:bold;
+
+}
+.whole-style{
+    background-image:url('/assets/image/pexels-photo-326281.jpeg');
+    background-size: cover;
+    /* filter:blur(4px);
+    -webkit-filter: blur(4px); */
 
 }

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AddcartService } from '../Service/addcart.service';
+import { CartService } from '../Service/cart.service';
 
 
 @Component({
@@ -9,30 +11,45 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ItemsComponent implements OnInit{
 
- @Input() breakfastItems=[];
- @Output() addItem=new EventEmitter();
- addingCart(item){
-   this.addItem.emit(item);
- }
+  cartItem:any;
+  // itemList: any;
+  constructor(private cartList:CartService, private addCart:AddcartService){}
 
+  // 
+// addingTocart(item){
+//  console.log(item)
+//   this.addCart.addingCart(item)
+// }
 
- @Input() lunchItems=[];
- @Output() addlunchItem=new EventEmitter();
- addLunchItem(dish){
-    this.addlunchItem.emit(dish);
- }
- 
- @Input() dinnerItems=[];
- @Output() addDinnerItem=new EventEmitter();
- dinnerItem(food){
-  this.addDinnerItem.emit(food)
- }
- 
- // items=[];
+// get cartItems(){
+//   return this.addCart.getItemListadd();
+// }
   ngOnInit(){
-    // this.items=this.itemdata.getBreakfast();
+    this.cartList.getItem()
+    .subscribe(response=>{
+      this.cartItem=response;
+
+      this.cartItem.forEach((value)=>{
+        Object.assign(value,{quantity:1,total:value.price});
+      })
+     
+    })
   }
 
-  
 
+
+  addingTocart(item){
+    this.addCart.addtoCart(item);
+    // this.cartList.addtoCart(item)
+  }
 }
+
+
+
+
+
+
+
+// this.itemList.forEach((val)=>{
+//   Object.assign(val,{quantity:1,total:val.price});
+// })

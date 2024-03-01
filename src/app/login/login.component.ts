@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Data } from 'src/app/Model/data';
-import { UsernameService } from 'src/app/Service/username.service';
+import { User } from 'src/app/model/user';
+import { UserService } from 'src/app/Service/user.service';
 
 
 
@@ -12,20 +12,19 @@ import { UsernameService } from 'src/app/Service/username.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers:[UsernameService]
+  providers:[UserService]
 })
 export class LoginComponent implements OnInit{
 
-  state:Data[]=[];
-user=''
+  state:User[]=[];
 
-constructor(private subData:UsernameService,
+constructor(private user:UserService,
             private router:Router){}
 
-login:FormGroup
+loginForm:FormGroup
 
 ngOnInit(): void {
-    this.login = new FormGroup({
+    this.loginForm = new FormGroup({
       username: new FormControl('',[Validators.required]),
       password: new FormControl('',[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)])
     })
@@ -35,18 +34,20 @@ ngOnInit(): void {
 
 
 onSubmit(){
-   console.log(this.login); 
+   console.log(this.loginForm); 
 
-   if(this.login.invalid){
+   
+   if(this.loginForm.invalid){
     alert('Please enter the Valid login details ');
    }
+  
    else{
 
-    this.subData.createData(this.login.value)
+    this.user.createData(this.loginForm.value)
     .subscribe(response=>console.log(response));
     
     
-      this.router.navigateByUrl('Mainpage')
+      this.router.navigateByUrl('mainpage')
    
    }
 }

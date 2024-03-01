@@ -2,25 +2,19 @@
     display: flex;
     border:2px solid black;
     /* margin:10px; */
-    background-color: gray;
+    background-color: rgb(13, 68, 54);
     color: white;
     font-weight: bold;
     font-size: large;
-    height:70px
-    
-    
+    /* height:60px; */
+    /* margin-bottom:40px; */
+    /* position: fixed; */
 }
 .btn-style{
-   /* margin-left: 100vh;
-   color:white;
-   background-color: black;
-   width: 100px;
-   height:40px;
-  margin-top: 10px; */
   margin:20px;
   /* padding:10px; */
   color:white;
-  background-color: tan;
+  background-color: rgb(173, 136, 87);
   font-weight:bold ;
   width: 100px;
   height:40px;

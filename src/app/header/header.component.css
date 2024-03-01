@@ -1,28 +1,47 @@
 .header-style{
     display: flex;
     border:2px solid black;
-    /* margin:10px; */
-    background-color: gray;
+    background-color: rgb(13, 68, 54);
     color: white;
     font-weight: bold;
     font-size: large;
-
-
+    height: 20vh;
+    /* position:fixed; */
 }
 .btn-style{
     color:white;
     font-size: large;
     font-weight: bold;
-    padding:10px;
+    padding-bottom:90px;
+    margin-left: 30px;
+    /* padding: 20px; */
+    /* margin:20px */
 }
 .login-btn , .reg-btn{
-   margin:20px;
-   /* padding:10px; */
+   /* margin:10px; */
    color:white;
-   background-color: tan;
+   background-color: rgb(173, 136, 87);
    font-weight:bold ;
+  
    
 }
+.reg-btn{
+    margin-left: 10px;
+}
 .active-state{
+    font-weight: bold;
+}
+.date-style{
+    margin-left: 160vh;
+}
+.title-style{
+        /* align-items: center; */
+       text-align: center;
+       margin-left: 50px;
+       /* padding-left: 50vh; */
+}
+.cart-btn-style{
+    background-color: rgb(173, 136, 87);
+    color:white;
     font-weight: bold;
 }

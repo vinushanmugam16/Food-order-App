@@ -8,8 +8,9 @@
     margin-bottom:20vh;
     width: 50vh;
     height: 50vh;
-    background-color: rgb(147, 226, 240);
+    /* background-color: rgb(147, 226, 240); */
     border-radius:20px ;
+    color:white;
 }
 small{
     color:red;
@@ -20,4 +21,8 @@ small{
 }
 .login-style{
     margin-top: 10px;    
+}
+.whole-style{
+    background-image:url('/assets/image/pexels-photo-326281.jpeg');
+    background-size: cover;
 }

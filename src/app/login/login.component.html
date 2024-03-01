@@ -1,20 +1,20 @@
 <!-- <p>login works!</p> -->
-<app-header></app-header>
 
 
 
+<div class="whole-style">
 <div class="set-login-style">
     <h1 class="heading-style">Login</h1>
-    <form [formGroup]='login'>
+    <form [formGroup]='loginForm'>
         <div>          
         <div>
           
             <input class="login-style" type="text" placeholder="Username" formControlName="username"><br>
-            <small *ngIf="login.get('username').invalid && login.get('username').touched">*Username is Required</small>
+            <small *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">*Username is Required</small>
         </div>
         <div>
             <input class="login-style" type="password" placeholder="Password" formControlName="password"><br>
-            <small  *ngIf="login.get('password').invalid && login.get('password').touched">*Password is Required</small>  
+            <small  *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">*Password is Required</small>  
             
             
         </div>
@@ -24,5 +24,4 @@
         </div>
     </form>
 </div>
-
-<app-footer></app-footer>
+</div>

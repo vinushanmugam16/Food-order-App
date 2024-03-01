@@ -1,37 +1,21 @@
-<!-- <p>items works!</p> -->
 
-<div class="breakfast-style">
-    <div class="list-style"  *ngFor="let item of breakfastItems">
+<h1 class="heading-style">Food Varieties </h1>
+
+
+<div class="menu-style">
+    <div class="list-style"  *ngFor="let item of cartItem">
     <div class="item-style">
     <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px">
-    <div >{{item.itemName}}</div>
-    <div >Price: ${{item.price}}</div>
-    <button (click)="addingCart($event)">Add to Cart</button>
+    <div>{{item.itemName}}</div>
+    <div>Price: ${{item.price}}</div>
+    <div>
+        <button>-</button>
+        <!-- <small>{{}}</small> -->
+        <button>+</button>
+    </div>
+    <button (click)="addingTocart(item)">Add to Cart</button>
+
+  
     </div>
     </div>
 </div>
-
-<div class="breakfast-style">
-    <div class="list-style"  *ngFor="let dish of lunchItems">
-    <div class="item-style">
-    <img class='image-style'  [src]="dish.imageUrl" width="200px" height="200px">
-    <div >{{dish.itemName}}</div>
-    <div >Price: ${{dish.price}}</div>
-    <button (click)="addLunchItem($event)">Add to Cart</button>
-    </div>
-    </div>
-</div>
-
-<div class="breakfast-style">
-    <div class="list-style"  *ngFor="let food of dinnerItems">
-    <div class="item-style">
-    <img class='image-style'  [src]="food.imageUrl" width="200px" height="200px">
-    <div >{{food.itemName}}</div>
-    <div >Price: ${{food.price}}</div>
-    <button (click)="dinnerItem($event)">Add to Cart</button>
-    </div>
-    </div>
-</div>
-
-
-<!-- <app-add-item [addItemtoCart]="breakfastItems" (itemAdded)="addingCart($event)"></app-add-item> -->

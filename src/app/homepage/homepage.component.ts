@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 export class HomepageComponent {
 
 
-  // image='/assets/image/food.png';
-  
-    // image='/assets/image/foodback.jpeg';
+
 }

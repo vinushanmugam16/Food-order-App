@@ -1,20 +1,29 @@
 .food-style{
     
-    background-image:url('/assets/image/background.png') ;
-    height: 100vh;
-    background-color:lightpink;
+    background-image:url('/assets/image/pexels-photo-6089654.webp') ;
+    height: 80vh;
+    /* background-color:lightpink; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .heading-style{
     text-align: center;
+    color:white
 }
 .menu-style{
     padding:10px;
     font-weight: bold;
 }
-.description{
-    color:brown;
+.description-style{
+    color:white;
+   margin-left: 89vh;
     font-size: large;
+}
+.routing-style{
+    padding: 10px;
+    border-radius: 5px;
+    margin-left:90vh;
+    background-color:rgb(173, 136, 87);
+    font-weight: bold;
 }

@@ -1,14 +1,52 @@
-<!-- <p>cart works!</p>
 
-<div class="breakfast-style">
-    <div class="list-style"  *ngFor="let item of breakfastItems">
-    <div class="item-style">
-    <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px">
-    <div >{{item.itemName}}</div>
-    <div >Price: ${{item.price}}</div>
-    <button>Add to Cart</button>
+<h2 class="heading-style">Cart</h2>
+<div class='table-style'  *ngIf="foodItem.length != 0">
+    <div>
+         <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Item Name</th>
+                        <th>Item Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of foodItem ; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.itemName}}</td>
+                        <td><img src={{item.imageUrl}}></td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.total}}</td>
+                       
+                    </tr>
+                  
+                </tbody>
+            </table>
+        
+                    
+                
+                    <button routerLink="/mainpage">Shop More</button>
+        
+                    <button>CheckOut</button>
+    
+        </div>
     </div>
-    </div>
+<!-- <div>
+    <button (click)="fetchItem()">Fetch</button>
+    <button (click)="deleteItem()">Delete</button>
 </div> -->
 
-<button (click)="getCartItem()">Show Cart Items</button>
+<div class="cart-style" *ngIf="foodItem.length === 0">
+    <div>
+        <img [src]='imageUrl'>
+        <h4>Your Cart is empty!</h4>
+        <h5>Add Items </h5>
+        <button routerLink="/mainpage">Shop Now</button>
+    </div>
+</div>
+
