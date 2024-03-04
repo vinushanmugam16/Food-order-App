@@ -1,8 +1,7 @@
 .food-style{
     
     background-image:url('/assets/image/pexels-photo-6089654.webp') ;
-    height: 80vh;
-    /* background-color:lightpink; */
+    height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

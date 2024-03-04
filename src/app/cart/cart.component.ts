@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakfastComponent } from '../breakfast/breakfast.component';
 import { AddcartService } from '../Service/addcart.service';
 import { Item } from '../model/item';
 
@@ -12,9 +11,9 @@ import { Item } from '../model/item';
 export class CartComponent implements OnInit{
  
 
-  foodItem=[];
-  total:number=0;
-  itemList:Item=[]
+  foodItem:Item[]=[];
+  total=0;
+  // itemList:Item[]=[]
   imageUrl='/assets/image/emptycart.png'
 
   
@@ -28,15 +27,9 @@ export class CartComponent implements OnInit{
     })
   }
 
-  fetchItem(){
-      // this.cartItem.getItem()
-      // .subscribe((response)=>
-      // this.itemList=response)
+  removeItem(item:Item){
+    this.addingtoCart.removeCartItem(item);
   }
-   
-  deleteItem(){
-
-  }
- 
+  
 
 }

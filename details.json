@@ -67,6 +67,249 @@
       "id": "c686"
     }
   ],
+  "addcart": [
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "3d74",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "f33f",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    }
+  ],
+  "logindetails": [
+    {
+      "id": "0965",
+      "username": "Vinuhsan",
+      "password": "Vinu@1345"
+    },
+    {
+      "id": "8b7d",
+      "username": "VinuShan",
+      "password": "123@Vinu"
+    },
+    {
+      "id": "026f",
+      "username": "VinuShan",
+      "password": "Vinu@1234"
+    },
+    {
+      "id": "80fb",
+      "username": "Vinushan",
+      "password": "Vinu@1234"
+    },
+    {
+      "id": "dd13",
+      "username": "VinuShan",
+      "password": "Vinu@1234"
+    },
+    {
+      "id": "eeae",
+      "username": "VinuShan",
+      "password": "Vinnu@123"
+    },
+    {
+      "id": "f091",
+      "username": "VinuShan",
+      "password": "Vinu@123"
+    }
+  ],
   "registerdetails": [
     {
       "id": "dafd",
@@ -186,11 +429,6 @@
       "password": "vinu@12345"
     },
     {
-      "id": "40e9",
-      "username": "",
-      "password": ""
-    },
-    {
       "id": "0887",
       "username": "vinushan",
       "password": "123456789"
@@ -253,11 +491,6 @@
       "password": "12345678"
     },
     {
-      "id": "fb4b",
-      "username": "",
-      "password": ""
-    },
-    {
       "id": "0452",
       "username": "vinushan",
       "password": "123456"
@@ -305,30 +538,9 @@
       "country": "India"
     },
     {
-      "id": "4784",
-      "username": "",
-      "password": ""
-    },
-    {
       "id": "c5f4",
       "username": "vinu",
       "password": "shanmuha"
-    },
-    {
-      "id": "4974",
-      "firstname": "",
-      "lastname": "",
-      "username": "",
-      "dob": "",
-      "email": "",
-      "address": {
-        "street": "",
-        "city": "",
-        "pincode": ""
-      },
-      "phoneNumber": "",
-      "gender": "",
-      "country": ""
     },
     {
       "id": "b006",
@@ -345,11 +557,6 @@
       "phoneNumber": 9876543210,
       "gender": "female",
       "country": "India"
-    },
-    {
-      "id": "b622",
-      "username": "",
-      "password": ""
     },
     {
       "id": "cf14",
@@ -550,6 +757,54 @@
       "id": "0757",
       "username": "Vinu",
       "password": "Vinu@q12345"
+    },
+    {
+      "id": "eee1",
+      "firstname": "Vinu",
+      "lastname": "Shanmugam",
+      "username": "VINUSHA2024",
+      "dob": "2024-03-14",
+      "email": "vinu@gmail.com",
+      "address": {
+        "street": "120.dui",
+        "city": "erode",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "b439",
+      "firstname": "Janushree",
+      "lastname": "Nagarajan",
+      "username": "JANUSNAG2024",
+      "dob": "2024-04-04",
+      "email": "vinu@gmail.com",
+      "address": {
+        "street": "120/61,sri sakthi nagar",
+        "city": "Erode",
+        "pincode": 638476
+      },
+      "phoneNumber": 9843562873,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "7fd1",
+      "firstname": "Sumeka",
+      "lastname": "Arasan",
+      "username": "SUMEKARA2024",
+      "dob": "2024-03-29",
+      "email": "sumi@gmail.com",
+      "address": {
+        "street": "120/61,Sri sakthi nagar",
+        "city": "Karur",
+        "pincode": 638476
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
     }
   ]
 }

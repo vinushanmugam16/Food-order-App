@@ -2,18 +2,16 @@
 :host{
     border:1px solid black
 }
-/* :host {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
-} */
 .menu-style{
     display:flex;
     flex-wrap: wrap;
     padding-left: 10px;
     /* margin-left: 50vh; */
-    padding-bottom: 12vh;
+    /* padding-bottom: 3vh; */
     /* border:1px solid black */
+    /* position:absolute; */
+    /* overflow-x: auto; */
+
 }
 .image-style{
     width: 200px;

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CountService } from './count.service';
+import { AuthguardService } from './authguard.service';
 
-describe('CountService', () => {
-  let service: CountService;
+describe('AuthguardService', () => {
+  let service: AuthguardService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CountService);
+    service = TestBed.inject(AuthguardService);
   });
 
   it('should be created', () => {

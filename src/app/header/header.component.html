@@ -4,17 +4,15 @@
 <div class="header-style">
     <div class='btn-style'>
         <div class="date-style">
-            
             <p>{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
             <button class="cart-btn-style" routerLink="cart">Cart</button>
-            <button>{{totalItem}}</button>
+            <button *ngIf="this.totalItem>=1">{{totalItem}}</button>
         </div>
-        <!-- 'dd-MM-yyyy HH:mm:ssZ' :'en:IN' -->
-        <!-- 'dd/MM/yy HH:mm:ss' -->
+
         <h1 class="title-style">Food Order App</h1>
         <button class='reg-btn' routerLink="registration" [routerLinkActive]="'active-state'">Register</button>
-        <button class='login-btn'  routerLink="login" [routerLinkActive]="'active-state'">Login</button>
-       
+        <button class='login-btn' (click)="loginPage()" routerLink="login">Login</button>
+        <button class="logout-btn" (click)="logoutPage()" routerLink="logout">LogOut</button>
     </div>
     
 </div>

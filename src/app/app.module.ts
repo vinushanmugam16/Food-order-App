@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule, Pipe } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,12 +11,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { BreakfastComponent } from './breakfast/breakfast.component';
-import { LunchComponent } from './lunch/lunch.component';
-import { DinnerComponent } from './dinner/dinner.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './items/items.component';
+import { OrderComponent } from './order/order.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -30,12 +29,11 @@ import { ItemsComponent } from './items/items.component';
     RegistrationComponent,
     FooterComponent,
     MainpageComponent,
-    BreakfastComponent,
-    LunchComponent,
-    DinnerComponent,
     ContactComponent,
     CartComponent,
     ItemsComponent,
+    OrderComponent,
+    LogoutComponent,
 
   ],
   imports: [
@@ -43,13 +41,11 @@ import { ItemsComponent } from './items/items.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
 
 
   ],
-  providers: [
-    // { provide: LOCALE_ID, useValue: 'en-IN' }
-         ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

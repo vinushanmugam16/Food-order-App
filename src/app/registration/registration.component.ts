@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
+import { FormControl,FormGroup, Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 
@@ -10,12 +10,15 @@ import { UserService } from '../Service/user.service';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
-export class RegistrationComponent {
+export class RegistrationComponent implements OnInit{
  
 
 
   constructor(private user:UserService,
-              private router:Router){}
+              private router:Router){
+                console.log("hi");
+                
+              }
 
   registerForm:FormGroup;
   gender=['Male','Female'];
@@ -41,12 +44,9 @@ ngOnInit(): void {
 
 
 onSubmit(){
-  // this.taskdata.emit(this.register.value);
   console.log(this.registerForm);
-  
- 
     if(this.registerForm.invalid){
-        alert('Please fill the form in valid format')
+        alert('Please fill the form in valid format');
     }
     else{
       this.user.createData(this.registerForm.value)
@@ -62,9 +62,9 @@ onSubmit(){
 
 createUsername(){
   let user='';
-  let userFirstname:string=this.registerForm.get('firstname').value;
-  let userLastname:string=this.registerForm.get('lastname').value;
-  let dob:any=this.registerForm.get('dob').value
+  const userFirstname:string=this.registerForm.get('firstname').value;
+  const userLastname:string=this.registerForm.get('lastname').value;
+  const dob:string=this.registerForm.get('dob').value
 
   if(userFirstname.length >=4){
     user+=userFirstname.slice(0,5).toUpperCase();
@@ -79,7 +79,7 @@ createUsername(){
     user+=userLastname.toUpperCase();
   }
 
-  let date=new Date(dob)
+  const date=new Date(dob)
   user+=date.getFullYear();
 
   this.registerForm.get('username').setValue(user);

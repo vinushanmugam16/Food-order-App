@@ -1,14 +1,11 @@
-export class User{
-    constructor(firstname:string,
-                lastname:string,
-                username:string,
-                dob:any,
-                gender:string,
-                phoneNumber:number,
-                country:string,
-                address:any,
-                email:any
-                ){
-
-    }
+export interface User{
+    firstname:string,
+    lastname:string,
+    username:string,
+    dob:string,
+    gender:string,
+    phoneNumber:number,
+    country:string,
+    address:string,
+    email:string
 }

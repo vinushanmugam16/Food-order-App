@@ -1,14 +1,12 @@
 .set-login-style{
     display: inline-block;
-    /* border: 2px solid black; */
     text-align: center;
     /* padding: 20px; */
     margin-left: 70vh;
     margin-top: 10vh;
     margin-bottom:20vh;
     width: 50vh;
-    height: 50vh;
-    /* background-color: rgb(147, 226, 240); */
+    height: 45vh;
     border-radius:20px ;
     color:white;
 }

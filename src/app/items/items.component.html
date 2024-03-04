@@ -5,13 +5,14 @@
 <div class="menu-style">
     <div class="list-style"  *ngFor="let item of cartItem">
     <div class="item-style">
-    <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px">
+    <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px" alt="Food Image">
     <div>{{item.itemName}}</div>
-    <div>Price: ${{item.price}}</div>
+    <div>Price: {{item.price | currency:'INR'}}</div>
     <div>
-        <button>-</button>
-        <!-- <small>{{}}</small> -->
-        <button>+</button>
+        <!-- <button (click)="increaseItemCount()">+</button>
+        <small>{{count}}</small>
+        <button>-</button> -->
+        <!-- <input [(ngModel)]="count"> -->
     </div>
     <button (click)="addingTocart(item)">Add to Cart</button>
 

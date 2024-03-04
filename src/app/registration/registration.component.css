@@ -9,18 +9,13 @@
     /* background-color: rgb(240, 204, 150) ; */
    color:white;
     border-radius: 20px;
-    padding-bottom: 15vh;
+    padding-bottom: 9vh;
     
 }
 small{
     color:red;
     font-weight:bold;
 }
-/* .input-style{
-    display: flex;
-    flex-wrap:wrap;
-    
-} */
 .user-style{
     color:white;
     font-weight: bold;
@@ -31,17 +26,10 @@ small{
 .address-style{
     font-weight: bold;
 }
-.gender-style{
-    display: flex;
-}
-.country-style{
-    font-weight:bold;
-
-}
 .whole-style{
     background-image:url('/assets/image/pexels-photo-326281.jpeg');
     background-size: cover;
-    /* filter:blur(4px);
-    -webkit-filter: blur(4px); */
-
+}
+.label-style{
+    font-weight: bold;
 }

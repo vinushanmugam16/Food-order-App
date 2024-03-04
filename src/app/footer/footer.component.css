@@ -6,21 +6,25 @@
     color: white;
     font-weight: bold;
     font-size: large;
-    /* height:60px; */
-    /* margin-bottom:40px; */
-    /* position: fixed; */
+    height:50px;
+
+    /* margin-bottom:40vh; */
+    position: fixed;
+    width:260vh;
+    margin-bottom:40vh
 }
 .btn-style{
-  margin:20px;
+  margin:10px;
   /* padding:10px; */
   color:white;
   background-color: rgb(173, 136, 87);
   font-weight:bold ;
   width: 100px;
-  height:40px;
-  margin-left: 50vh;
+  height:30px;
+  margin-left: 30vh;
 }
 .rights-style{
-  margin-left:50vh;
-  margin-top:10px
+  margin-left:60vh;
+  margin-top:10px;
+  
 }

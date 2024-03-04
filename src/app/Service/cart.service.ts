@@ -19,17 +19,6 @@ export class CartService {
 
   getItem(){
     return this.http.get('http://localhost:3000/FoodItems')
-    // .pipe(map((val)=>{
-    //   return val;
-    // }))
   }
-
-
-  // getLunchItem(){
-  //   return this.http.get('http://localhost:3000/lunchItems');
-  // }
-
-  
-
 
 }

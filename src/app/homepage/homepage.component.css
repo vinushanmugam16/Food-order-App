@@ -1,25 +1,20 @@
 div{
-    display: block;
-    /* border:2px solid black; */
-    /* margin:10px; */
-    height:80vh;
-    background-color: gray;
-    color: white;
-    font-weight: bold;
-    font-size: large;
+   display: block;
+   /* margin-top:10vh; */
+   height:75vh;
+   color: white;
+   font-weight: bold;
+   font-size: large;
    align-items: center;
-   justify-content: center;
    background-image:url('/assets/image/pexels-cats-coming-674574.jpg');
-   background-size: cover;
+   background-size: cover; 
+   background-position: center;
+   /* margin-bottom: 40px; */
 }
 h1{
     padding-right:50vh ;
 }
-img{
-   padding-left: 80vh;
-   height: 50vh;
-   padding-bottom: 50px;
-}
+
 .quote-style{
     color:white;
 

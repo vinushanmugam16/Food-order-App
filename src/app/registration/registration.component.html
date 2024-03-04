@@ -1,12 +1,9 @@
-<!-- <p>registration works!</p> -->
-
-
 <div class="whole-style">
 
 <div class="set-reg-style">
     <h1 class="heading-style">Details</h1>
     
-    <form [formGroup]='registerForm'>
+    <form [formGroup]="registerForm">
         <div >
             <div >
                 <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
@@ -17,8 +14,9 @@
                 <small *ngIf="registerForm.get('lastname').invalid && registerForm.get('lastname').touched">*lastname is Required</small>
             </div>
             <div>
-                <label class="dob-style" name="DateofBirth">Date of Birth  </label><br>
-                <input type="date" placeholder="Date of Birth" formControlName="dob">
+                <label htmlfor="dob" class="dob-style" name="DateofBirth">Date of Birth  <br>
+                <input id="dob"   type="date" placeholder="Date of Birth" formControlName="dob">
+            </label>
             </div>
            
         </div><br>
@@ -43,7 +41,7 @@
        
         <br>
         <div formGroupName="address" >
-           <label class="address-style">Address</label><br>
+           <label class="address-style">Address<br>
            <input type="text" value="street" placeholder="Street Address" formControlName="street">
             <small *ngIf="registerForm.get('address.street').invalid && registerForm.get('address.street').touched">*Street Address is Required</small><br>
             
@@ -52,21 +50,23 @@
             
             <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
             <small *ngIf="registerForm.get('address.pincode').invalid && registerForm.get('address.pincode').touched">*Pincode is Required</small>
-            
+        </label>
         </div>
         <div>
+            <label class="label-style" >Gender
             <select formControlName="gender">
-            <option value="" selected>Gender</option>
             <option *ngFor="let item of gender" [value]="item">{{item}}</option>
         </select> 
+    </label>
         </div>
         <br>
         <div>
+            <label class="label-style">Country
             <select name="Country" formControlName="country"><br>
-                <option value="">Country</option>
                 <option *ngFor="let place of country" [value]="place">{{place}}</option>
                 <small *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">*Country is required</small>
             </select>
+        </label>
         </div><br>
         <div>
             <input type="submit" value="Submit"  (click)="onSubmit()" >
