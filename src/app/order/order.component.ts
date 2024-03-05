@@ -28,7 +28,8 @@ export class OrderComponent implements OnInit {
   }
 
   orderSelected(){
-    alert('Selected items are ordered Successfully!');
-  }
+    
+      alert('Selected items are ordered Successfully!');
+    }
    
 }

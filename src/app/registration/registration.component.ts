@@ -11,14 +11,9 @@ import { UserService } from '../Service/user.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit{
- 
-
 
   constructor(private user:UserService,
-              private router:Router){
-                console.log("hi");
-                
-              }
+              private router:Router){}
 
   registerForm:FormGroup;
   gender=['Male','Female'];

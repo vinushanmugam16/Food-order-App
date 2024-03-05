@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:'cart',title:'Cart',component:CartComponent},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthguardService]},
   {path:'order',title:'Order',component:OrderComponent},
-  {path:'logout',title:'Logout',component:LogoutComponent}
+  // {path:'logout',title:'Logout',component:LogoutComponent}
 ];
 
 @NgModule({

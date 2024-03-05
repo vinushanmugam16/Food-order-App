@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,9 +16,6 @@ import { CartComponent } from './cart/cart.component';
 import { ItemsComponent } from './items/items.component';
 import { OrderComponent } from './order/order.component';
 import { LogoutComponent } from './logout/logout.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -42,8 +39,6 @@ import { LogoutComponent } from './logout/logout.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]

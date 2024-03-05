@@ -4,6 +4,7 @@ import { User } from '../model/user';
 import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
 import { map } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -11,12 +12,12 @@ import { map } from 'rxjs';
 })
 export class UserService {
 
-  constructor(private http:HttpClient ) { }
+  constructor(private http:HttpClient ,private route:Router) { }
 
   userDetail:User[]=[];
   loginDetail:Loginuser[]=[];
   addingCart:Item[]=[];
-  loggedIn:boolean=false;
+  loggedIn=false;
   authen=[]
 
   url='http://localhost:3000/registerdetails'
@@ -36,7 +37,7 @@ export class UserService {
   createCart(addingCart:string){
     return this.http.post('http://localhost:3000/addcart',addingCart)
   }
-
+ 
   getUsername(userName:string)
   {
     return this.http.get('http://localhost:3000/registerdetails')
@@ -57,6 +58,7 @@ export class UserService {
  }
  logout(){
   this.loggedIn=false;
+  this.route.navigateByUrl('login');
  }
   
   authenticate(){

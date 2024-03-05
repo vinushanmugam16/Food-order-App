@@ -24,14 +24,6 @@ export class AddcartService {
     console.log(this.cartItemList);
   }
 
-  countingItem(item){
-    this.cartItemList.push(item);
-    let count=0
-    this.cartItemList.map((val)=>{
-      count
-    })
-  }
-
   getTotalPrice(){
     let totalAll=0;
     this.cartItemList.map((val)=>{

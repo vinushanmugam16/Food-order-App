@@ -271,6 +271,30 @@
       "imageUrl": "/assets/image/curdrice.jpeg",
       "itemName": "Curdrice",
       "price": 45
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "f33f",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "52dc",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
     }
   ],
   "logindetails": [
@@ -307,6 +331,101 @@
     {
       "id": "f091",
       "username": "VinuShan",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "1de1",
+      "username": "SUMEKARA2024",
+      "password": "Vinu@1234"
+    },
+    {
+      "id": "26e2",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "4b1c",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "af0b",
+      "username": "VINUSHA2024",
+      "password": "stvd@1234"
+    },
+    {
+      "id": "2f8c",
+      "username": "VINUSHA2024",
+      "password": "vINU@123"
+    },
+    {
+      "id": "4694",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "57ff",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "663c",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "798e",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "5f7e",
+      "username": "VINUSHA2024",
+      "password": "vINU@123"
+    },
+    {
+      "id": "c92f",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "888d",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "8c04",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "635e",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "2647",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "b129",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "3616",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "3c6a",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "cfe2",
+      "username": "VINUSHA2024",
       "password": "Vinu@123"
     }
   ],

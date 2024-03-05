@@ -10,9 +10,9 @@
         </div>
 
         <h1 class="title-style">Food Order App</h1>
-        <button class='reg-btn' routerLink="registration" [routerLinkActive]="'active-state'">Register</button>
+        <button class='reg-btn' routerLink="registration" [routerLinkActive]="'active-state'" *ngIf="!log">Register</button>
         <button class='login-btn' (click)="loginPage()" routerLink="login">Login</button>
-        <button class="logout-btn" (click)="logoutPage()" routerLink="logout">LogOut</button>
+        <button class="logout-btn" (click)="logoutPage()" *ngIf="log">LogOut</button>
     </div>
     
 </div>

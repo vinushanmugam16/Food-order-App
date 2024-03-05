@@ -16,7 +16,7 @@ export class AuthguardService implements CanActivate{
       
     }
     else{
-      alert('Yet to Login');
+      alert('Yet to Login,Please Login to choose your favorite!');
        return false;
     }
   }

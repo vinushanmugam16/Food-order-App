@@ -18,8 +18,9 @@
             <td>{{item.price | currency:'INR'}}</td>
         </tr>
       <br>
-        <button (click)="getTotal()">Total:{{total | currency:'INR'}}</button><br>
-        <button (click)="orderSelected()"> Order </button>
+        <button (click)="getTotal()">Total:</button>
+        <span>{{total | currency:'INR'}}</span><br>
+        <button (click)="orderSelected()" *ngIf="total>=1"> Order </button>
     </tbody>
 </table>
 </div>

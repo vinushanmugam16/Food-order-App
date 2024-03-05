@@ -32,27 +32,18 @@ ngOnInit(): void {
 onSubmit(){
    console.log(this.loginForm); 
 
-  //  if(this.loginForm.invalid){
-  //   alert('Please enter the Valid login details ');
-  //  }
-  //  else{
-    // this.user.createLogin(this.loginForm.value)
-    // .subscribe(response=>console.log(response));
-    
-    //   this.router.navigateByUrl('mainpage') 
-  
-  //  }
   this.userName = this.loginForm.get('username').value;
 
-  console.log(this.userName);
+  // console.log(this.userName);
   this.user.getUsername(this.userName)
-  .subscribe((data)=>{
-        if(data){
-          alert('Username has Successfully Matched')
+  .subscribe((logUser)=>{
+        if(logUser && this.loginForm.valid){
+          this.user.createLogin(this.loginForm.value)
+          .subscribe(response=>console.log(response));
           this.router.navigateByUrl('mainpage');
         }
         else{
-          alert('Invalid Login')
+          alert('Invalid Login');
         }
   })
 

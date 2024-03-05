@@ -8,15 +8,7 @@ import { Injectable } from '@angular/core';
 export class CartService {
  
   constructor(private http:HttpClient) { }
-   
-  // cart:Item[]=[]
-
-
-  // addtoCart(state:Item){
-  //   this.cart.push(state);
-  //   console.log(this.cart);
-  // }
-
+  
   getItem(){
     return this.http.get('http://localhost:3000/FoodItems')
   }

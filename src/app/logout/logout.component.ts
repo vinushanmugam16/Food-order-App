@@ -11,11 +11,11 @@ export class LogoutComponent {
   constructor(private route:Router){}
 
   
-loggingout(){
+// loggingout(){
 
-  alert('Logging out ,Please visit us again!'); 
-  this.route.navigateByUrl('home');
-}
+//   alert('Logging out ,Please visit us again!'); 
+//   this.route.navigateByUrl('home');
+// }
  
   
 

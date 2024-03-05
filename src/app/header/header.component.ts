@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   today = Date.now();
   totalItem=0;
-
+  log=false;
   constructor(private addCart:AddcartService,
               private route:Router ,private user:UserService){}
   ngOnInit(){
@@ -23,11 +23,13 @@ export class HeaderComponent implements OnInit {
   }
 
   loginPage(){
+    this.log=true;
       this.user.login();
   }
 
   logoutPage(){
       this.user.logout()
+      
    }
 
 
