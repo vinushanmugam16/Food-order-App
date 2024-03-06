@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -38,5 +39,7 @@ export class MainpageComponent {
 
   // "fr":{
   //   "browserTarget":"sample-app:build:development,fr"}
+
+
 
 }

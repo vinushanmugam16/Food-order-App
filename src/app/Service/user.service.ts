@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
 
@@ -17,8 +17,7 @@ export class UserService {
   userDetail:User[]=[];
   loginDetail:Loginuser[]=[];
   addingCart:Item[]=[];
-  loggedIn=false;
-  authen=[]
+
 
   url='http://localhost:3000/registerdetails'
 
@@ -43,27 +42,23 @@ export class UserService {
     return this.http.get('http://localhost:3000/registerdetails')
     .pipe((map(user=>{
       if(Array.isArray(user)){
-          const aunthenticate=user.find(userN=>userN.username === userName)
-          console.log(aunthenticate);
-          // this.loggedIn=true;
-          // console.log(this.loggedIn);
-          return aunthenticate;
+          const usernameDetail=user.find(userN=>userN.username === userName);
+          console.log(usernameDetail);
+          sessionStorage.setItem('user',userName);
+          return usernameDetail;
       }
       return false;
     })))
   }
 
  login(){
-  this.loggedIn=true;
+  return sessionStorage.getItem('user') ? true:false;
  }
+
  logout(){
-  this.loggedIn=false;
+  sessionStorage.removeItem('user');
   this.route.navigateByUrl('login');
  }
-  
-  authenticate(){
-    return this.loggedIn;
-  }
 
 
 

@@ -37,16 +37,17 @@ onSubmit(){
   // console.log(this.userName);
   this.user.getUsername(this.userName)
   .subscribe((logUser)=>{
+       console.log(logUser);
+       
         if(logUser && this.loginForm.valid){
           this.user.createLogin(this.loginForm.value)
           .subscribe(response=>console.log(response));
-          this.router.navigateByUrl('mainpage');
+           this.router.navigateByUrl('mainpage');
         }
         else{
-          alert('Invalid Login');
+          alert('Invalid Login , Please Enter Valid Details!');
         }
   })
-
 }
 
 

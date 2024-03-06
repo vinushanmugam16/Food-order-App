@@ -295,6 +295,30 @@
       "imageUrl": "/assets/image/curdrice.jpeg",
       "itemName": "Curdrice",
       "price": 45
+    },
+    {
+      "id": "7361",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3456",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
     }
   ],
   "logindetails": [
@@ -425,6 +449,151 @@
     },
     {
       "id": "cfe2",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "927f",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "dcce",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "0133",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "4173",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "e278",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "0907",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "a6d1",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "83bd",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "2ddc",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "8af0",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "5c4c",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "5c95",
+      "username": "VINUSHA2024",
+      "password": "Vinu@1223"
+    },
+    {
+      "id": "dea9",
+      "username": "VINUSHA2024",
+      "password": "Vinu@!23"
+    },
+    {
+      "id": "8f8d",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "4930",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "5dab",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "a10a",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "919c",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "25d3",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "9a93",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "2819",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "a8c2",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "76b7",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "8017",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "f767",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "07e1",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "bb8a",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "7a98",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "1cf6",
       "username": "VINUSHA2024",
       "password": "Vinu@123"
     }

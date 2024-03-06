@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
-import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
+// import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +12,8 @@ export class HeaderComponent implements OnInit {
 
   today = Date.now();
   totalItem=0;
-  log=false;
   constructor(private addCart:AddcartService,
-              private route:Router ,private user:UserService){}
+              public user:UserService ){}
   ngOnInit(){
     this.addCart.getItemListadd()
     .subscribe(response=>{
@@ -22,15 +21,9 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  loginPage(){
-    this.log=true;
-      this.user.login();
-  }
-
   logoutPage(){
-      this.user.logout()
-      
-   }
+    this.user.logout();
+  } 
 
 
 }
