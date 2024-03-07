@@ -1,4 +1,3 @@
-
 <h2 class="heading-style">Cart</h2>
 <div class='table-style'  *ngIf="foodItem.length !== 0">
     <div>
@@ -21,7 +20,7 @@
                         <td>{{item.price | currency:'INR'}}</td>
                         <td>{{item.price | currency:'INR'}}</td>
                        <td>
-                        <button (click)="removeItem(item)">Delete</button>
+                        <button (click)="removeItem(i)">Delete</button>
                        </td>
                     </tr>
                   

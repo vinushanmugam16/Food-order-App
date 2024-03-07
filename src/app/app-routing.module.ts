@@ -19,9 +19,9 @@ const routes: Routes = [
   {path:'registration',title:'Registration', component:RegistrationComponent},
   {path:'login',title:'Login',component:LoginComponent},
   {path:'footer',component:FooterComponent},
-  {path:'mainpage',title:'Food Order App',component:MainpageComponent},
-  {path:'contact',title:'Contact',component:ContactComponent},
-  {path:'cart',title:'Cart',component:CartComponent},
+  {path:'mainpage',title:'Food Order App',component:MainpageComponent,canActivate:[AuthGuard]},
+  {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
+  {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
   {path:'order',title:'Order',component:OrderComponent},
 ];

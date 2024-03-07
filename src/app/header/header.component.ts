@@ -14,11 +14,17 @@ export class HeaderComponent implements OnInit {
   totalItem=0;
   constructor(private addCart:AddcartService,
               public user:UserService ){}
+
   ngOnInit(){
     this.addCart.getItemListadd()
     .subscribe(response=>{
         this.totalItem=response.length;
     })
+
+      // this.addCart.removeCartItem(id)
+    
+
+
   }
 
   logoutPage(){

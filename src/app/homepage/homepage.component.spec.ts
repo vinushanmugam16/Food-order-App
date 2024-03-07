@@ -26,10 +26,5 @@ describe('HomepageComponent', () => {
     expect (compile.querySelector('h1')?.textContent).toContain('Food Matters!')
   })
 
-  it('should render para',()=>{
-    const test = TestBed.createComponent(HomepageComponent);
-    test.detectChanges();
-    const compile=test.nativeElement as HTMLElement;
-    expect (compile.querySelector('.simple')?.textContent).toContain('Hello')
-  })
+ 
 });

@@ -48,7 +48,6 @@ onSubmit(){
       .subscribe(
         response=>{
           console.log(response);
-          // localStorage.setItem('token',response.token)
         }
       )
       this.router.navigateByUrl('login');

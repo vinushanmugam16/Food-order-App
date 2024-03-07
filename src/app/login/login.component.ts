@@ -34,6 +34,7 @@ onSubmit(){
 
   this.userName = this.loginForm.get('username').value;
 
+  
   // console.log(this.userName);
   this.user.getUsername(this.userName)
   .subscribe((logUser)=>{

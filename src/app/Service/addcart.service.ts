@@ -12,12 +12,12 @@ export class AddcartService {
   getItemListadd(){
    return this.itemListadd;
   }
-  setItem(item){
+  setItem(item: []){
     this.cartItemList.push(...item);
     this.itemListadd.next(item);
   }
 
-  addtoCart(item){
+  addtoCart(item: string){
     this.cartItemList.push(item);
     this.itemListadd.next(this.cartItemList);
     this.getTotalPrice();
@@ -29,19 +29,14 @@ export class AddcartService {
     this.cartItemList.map((val)=>{
       totalAll +=val.price
     })
-    return totalAll
+    return totalAll;
   }
 
-  removeCartItem(item){
-    this.cartItemList.map((val,index)=>{
-      if(item.itemName === val.itemName){
-        this.cartItemList.splice(index,1)
-      }
-    })
-    this.itemListadd.next(this.cartItemList)
+  removeCartItem(id: number){
+    this.cartItemList.splice(id,1);
+    this.itemListadd.next(this.cartItemList);
   }
  
-
 
 }
 

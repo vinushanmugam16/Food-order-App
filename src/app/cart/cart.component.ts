@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
 import { Item } from '../model/item';
+import { UserService } from '../Service/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,11 +14,10 @@ export class CartComponent implements OnInit{
 
   foodItem:Item[]=[];
   total=0;
-  // itemList:Item[]=[]
-  imageUrl='/assets/image/emptycart.png'
+  imageUrl='/assets/image/emptycart.png';
 
   
-  constructor( private addingtoCart:AddcartService ){}
+  constructor( private addingtoCart:AddcartService ,private user:UserService){}
 
   ngOnInit(){
     this.addingtoCart.getItemListadd()
@@ -27,8 +27,8 @@ export class CartComponent implements OnInit{
     })
   }
 
-  removeItem(item:Item){
-    this.addingtoCart.removeCartItem(item);
+  removeItem(id){
+    this.addingtoCart.removeCartItem(id);
   }
   
 

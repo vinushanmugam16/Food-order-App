@@ -19,17 +19,14 @@ export class OrderComponent implements OnInit {
     this.addingtoCart.getItemListadd()
     .subscribe((response)=>{
       this.foodItem=response;
-      // this.total=this.addingtoCart.getTotalPrice();
     })
-  }
-  
-  getTotal(){
     this.total=this.addingtoCart.getTotalPrice();
   }
+  
+ 
+   
 
   orderSelected(){
-    
       alert('Selected items are ordered Successfully!');
     }
-   
 }

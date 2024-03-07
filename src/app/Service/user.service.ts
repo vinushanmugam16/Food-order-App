@@ -37,22 +37,31 @@ export class UserService {
     return this.http.post('http://localhost:3000/addcart',addingCart)
   }
  
+  // deleteItem(id:number){
+  //   return this.http.delete('http://localhost:3000/addcart'+'?id='+ id);
+  // }
+
   getUsername(userName:string)
   {
     return this.http.get('http://localhost:3000/registerdetails')
     .pipe((map(user=>{
       if(Array.isArray(user)){
           const usernameDetail=user.find(userN=>userN.username === userName);
-          console.log(usernameDetail);
-          sessionStorage.setItem('user',userName);
+          // console.log(usernameDetail);         
+         if(usernameDetail)
+         {
+          sessionStorage.setItem('user',usernameDetail.username);
           return usernameDetail;
+         }
+         else{
+           return false
+         }         
       }
-      return false;
     })))
   }
 
  login(){
-  return sessionStorage.getItem('user') ? true:false;
+   return sessionStorage.getItem('user') ? true:false;
  }
 
  logout(){

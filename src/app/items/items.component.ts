@@ -23,7 +23,7 @@ export class ItemsComponent implements OnInit{
     })
   }
 
-  addingTocart(item){
+  addingTocart(item: string){
     this.addCart.addtoCart(item);
     this.cart.createCart(item)
     .subscribe(response=>console.log(response));
