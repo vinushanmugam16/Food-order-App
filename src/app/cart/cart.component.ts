@@ -11,12 +11,9 @@ import { UserService } from '../Service/user.service';
 })
 export class CartComponent implements OnInit{
  
-
   foodItem:Item[]=[];
   total=0;
   imageUrl='/assets/image/emptycart.png';
-
-  
   constructor( private addingtoCart:AddcartService ,private user:UserService){}
 
   ngOnInit(){
@@ -27,9 +24,11 @@ export class CartComponent implements OnInit{
     })
   }
 
-  removeItem(id){
+  removeItem(id: number){
     this.addingtoCart.removeCartItem(id);
   }
-  
 
+  removeAll(){
+    this.addingtoCart.removeAll();
+  }
 }

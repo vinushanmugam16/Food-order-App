@@ -1,14 +1,10 @@
-
-
 <h1 class="heading-style">Food Varieties </h1>
-
-
 <div class="menu-style">
     <div class="list-style"  *ngFor="let item of cartItem">
     <div class="item-style">
     <img class='image-style'  [src]="item.imageUrl" width="200px" height="200px" alt="Food Image">
-    <div>{{item.itemName}}</div>
-    <div>Price: {{item.price | currency:'INR'}}</div>
+    <p>{{item.itemName}}</p>
+    <p>Price: {{item.price | currency:'INR'}}</p>
     <button (click)="addingTocart(item)">Add to Cart</button>
     </div>
     </div>

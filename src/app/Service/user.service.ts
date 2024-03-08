@@ -6,7 +6,6 @@ import { Item } from '../model/item';
 import { map } from 'rxjs';
 import { Router } from '@angular/router';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -17,46 +16,35 @@ export class UserService {
   userDetail:User[]=[];
   loginDetail:Loginuser[]=[];
   addingCart:Item[]=[];
-
-
   url='http://localhost:3000/registerdetails'
 
   createData(userDetail:User){
-    return this.http.post(this.url,userDetail)
+    return this.http.post(this.url,userDetail);
   }
 
-  createLogin(loginDetail:string){
-    return this.http.post('http://localhost:3000/logindetails',loginDetail)
-  }
-
-  getData(){
-    return this.http.get('items.json')
+  createLogin(loginDetail:Loginuser){
+    return this.http.post('http://localhost:3000/logindetails',loginDetail);
   }
   
-  createCart(addingCart:string){
-    return this.http.post('http://localhost:3000/addcart',addingCart)
+  createCart(addingCart:Item){
+    return this.http.post('http://localhost:3000/addcart',addingCart);
   }
- 
-  // deleteItem(id:number){
-  //   return this.http.delete('http://localhost:3000/addcart'+'?id='+ id);
-  // }
 
-  getUsername(userName:string)
+  getUsername(userName)
   {
     return this.http.get('http://localhost:3000/registerdetails')
     .pipe((map(user=>{
-      if(Array.isArray(user)){
-          const usernameDetail=user.find(userN=>userN.username === userName);
-          // console.log(usernameDetail);         
-         if(usernameDetail)
-         {
-          sessionStorage.setItem('user',usernameDetail.username);
-          return usernameDetail;
-         }
-         else{
-           return false
-         }         
-      }
+        if(Array.isArray(user)){
+          const usernameDetail=user.find(userN=>userN.username === userName);      
+           if(usernameDetail)
+           {
+              sessionStorage.setItem('user',usernameDetail.username);
+              return usernameDetail;
+           }
+           else{
+           return false;
+           }         
+        }
     })))
   }
 

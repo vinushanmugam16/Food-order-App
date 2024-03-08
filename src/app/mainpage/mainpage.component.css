@@ -1,5 +1,4 @@
 .food-style{
-    
     background-image:url('/assets/image/pexels-photo-6089654.webp') ;
     height: 75vh;
     background-position: center;
@@ -16,7 +15,7 @@
 }
 .description-style{
     color:white;
-   margin-left: 89vh;
+    margin-left: 89vh;
     font-size: large;
 }
 .routing-style{

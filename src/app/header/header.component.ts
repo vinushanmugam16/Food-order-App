@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
 import { UserService } from '../Service/user.service';
-// import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-header',
@@ -20,16 +19,9 @@ export class HeaderComponent implements OnInit {
     .subscribe(response=>{
         this.totalItem=response.length;
     })
-
-      // this.addCart.removeCartItem(id)
-    
-
-
   }
 
   logoutPage(){
     this.user.logout();
   } 
-
-
 }

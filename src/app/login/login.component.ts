@@ -5,54 +5,45 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/Service/user.service';
 import { Loginuser } from '../model/loginuser';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers:[UserService]
+  providers: [UserService]
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
 
-detail:Loginuser[]=[];
-userName='';
-constructor(private user:UserService,
-            private router:Router){}
+  detail: Loginuser[] = [];
+  userName: string;
+  constructor(private user: UserService,
+    private router: Router) { }
 
-loginForm:FormGroup
+  loginForm: FormGroup
 
-ngOnInit(): void {
+  ngOnInit(): void {
     this.loginForm = new FormGroup({
-      username: new FormControl('',[Validators.required]),
-      password: new FormControl('',[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)])
+      username: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)])
     })
-}
+  }
 
 
-onSubmit(){
-   console.log(this.loginForm); 
+  onSubmit() {
+    console.log(this.loginForm);
+    this.userName = this.loginForm.get('username').value;
 
-  this.userName = this.loginForm.get('username').value;
-
-  
-  // console.log(this.userName);
-  this.user.getUsername(this.userName)
-  .subscribe((logUser)=>{
-       console.log(logUser);
-       
-        if(logUser && this.loginForm.valid){
+    this.user.getUsername(this.userName)
+      .subscribe((logUser) => {
+        console.log(logUser);
+        if (logUser && this.loginForm.valid) {
           this.user.createLogin(this.loginForm.value)
-          .subscribe(response=>console.log(response));
-           this.router.navigateByUrl('mainpage');
+            .subscribe(response => console.log(response));
+          this.router.navigateByUrl('mainpage');
         }
-        else{
+        else {
           alert('Invalid Login , Please Enter Valid Details!');
         }
-  })
-}
-
-
-
-
+      })
+  }
 }
 

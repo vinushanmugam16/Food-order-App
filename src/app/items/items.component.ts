@@ -13,8 +13,7 @@ import { UserService } from '../Service/user.service';
 export class ItemsComponent implements OnInit{
 
   cartItem;
-  constructor(private cartList:CartService, private addCart:AddcartService, private cart:UserService){}
-
+  constructor(private cartList:CartService, private addCart:AddcartService, private user:UserService){}
 
   ngOnInit(){
     this.cartList.getItem()
@@ -22,13 +21,10 @@ export class ItemsComponent implements OnInit{
       this.cartItem=response; 
     })
   }
-
-  addingTocart(item: string){
+  addingTocart(item){
     this.addCart.addtoCart(item);
-    this.cart.createCart(item)
+    this.user.createCart(item)
     .subscribe(response=>console.log(response));
   }
-  
-
 }
 

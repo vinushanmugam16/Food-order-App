@@ -20,7 +20,6 @@ import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
 import { AddcartService } from './Service/addcart.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +33,6 @@ import { AddcartService } from './Service/addcart.service';
     CartComponent,
     ItemsComponent,
     OrderComponent
-
   ],
   imports: [
     BrowserModule,

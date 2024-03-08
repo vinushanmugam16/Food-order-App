@@ -26,10 +26,13 @@
                   
                 </tbody>
             </table>
-       <br>
-        <button routerLink="/mainpage">Shop More</button>
+       <br> 
+       <div>
+        <button class ='btn-style' (click)="removeAll()">Empty Cart</button>
+       </div>
         <div>
-            <button routerLink="/order">Selected items to Order</button>
+            <button  class ='btn-style' routerLink="/mainpage">Shop More</button>
+            <button class ='btn-style' routerLink="/order">Buy Food</button>
         </div>
         </div>
     </div>
@@ -39,7 +42,7 @@
         <img [src]='imageUrl' alt="Empty Cart">
         <h4>Your Cart is empty!</h4>
         <h5>Add Items </h5>
-        <button routerLink="/mainpage">Shop Now</button>
+        <button class ='btn-style' routerLink="/mainpage">Shop Now</button>
     </div>
 </div>
 

@@ -9,3 +9,12 @@
     margin-left: 10vh;
     padding: 30px;
 }
+.btn-style{
+    background-color: rgb(207, 197, 18);
+    color:teal;
+    font-weight: bold;
+}
+.heading-style{
+    text-align: center;
+    font-weight: bold;
+}

@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
   {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
-  {path:'order',title:'Order',component:OrderComponent},
+  {path:'order',title:'Order',component:OrderComponent,canActivate:[AuthGuard]},
 ];
 
 @NgModule({

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -18,17 +17,11 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
   it('should render text',()=>{
     const test =TestBed.createComponent(FooterComponent);
     test.detectChanges();
     const compile=test.nativeElement as HTMLElement;
-    expect (compile.querySelector('button')?.textContent).toContain('Contact');
-    // expect(compile.querySelector('span')?.textContent).toContain('Copyrights &copy; All rights are reserved');
+    expect (compile.querySelector('button').textContent).toContain('Contact');
   })
-  // it('should contain text',()=>{
-  //   const test=TestBed.createComponent(FooterComponent);
-  //   test.detectChanges();
-  //   const compile=test.nativeElement as HTMLElement;
-  //   // expect (compile.querySelector('span')?.textContent).toContain('Copyrights &copy; All rights are reserved')
-  // })
 });

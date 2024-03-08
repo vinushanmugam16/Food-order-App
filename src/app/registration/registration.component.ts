@@ -37,7 +37,6 @@ ngOnInit(): void {
     })
 }
 
-
 onSubmit(){
   console.log(this.registerForm);
     if(this.registerForm.invalid){
@@ -53,7 +52,6 @@ onSubmit(){
       this.router.navigateByUrl('login');
     }
 }
-
 
 createUsername(){
   let user='';
@@ -73,14 +71,8 @@ createUsername(){
   else{
     user+=userLastname.toUpperCase();
   }
-
   const date=new Date(dob)
   user+=date.getFullYear();
-
   this.registerForm.get('username').setValue(user);
 }
-
-
-
-
 }

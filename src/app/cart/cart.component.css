@@ -7,8 +7,7 @@
     margin-top: 10vh;
     margin-bottom: 10vh;
     text-align: center;
-    padding-bottom: 10vh;
-    
+    padding-bottom: 10vh;   
 }
 .table-style{
     margin-left: 50vh;
@@ -23,5 +22,10 @@
 }
 .heading-style{
     text-align: center;
+    font-weight: bold;
+}
+.btn-style{
+    background-color: rgb(207, 197, 18);
+    color:teal;
     font-weight: bold;
 }

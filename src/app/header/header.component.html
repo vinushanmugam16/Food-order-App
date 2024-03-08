@@ -5,10 +5,9 @@
             <button class="cart-btn-style" routerLink="cart">Cart</button>
             <button *ngIf="this.totalItem>=1">{{totalItem}}</button>
         </div>
-
         <h1 class="title-style">Food Order App</h1>
         <button class='reg-btn' routerLink="registration" *ngIf="!user.login()">Register</button>
         <button class='login-btn' routerLink="login" *ngIf="!user.login()">Login</button>
-        <button class="logout-btn" (click)="user.logout()" *ngIf="user.login() ">LogOut</button>
+        <button class="logout-btn" (click)="user.logout()" *ngIf="user.login()">LogOut</button>
     </div>
 </div>

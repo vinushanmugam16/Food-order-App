@@ -1,6 +1,5 @@
 div{
    display: block;
-   /* margin-top:10vh; */
    height:75vh;
    color: white;
    font-weight: bold;
@@ -9,13 +8,10 @@ div{
    background-image:url('/assets/image/pexels-cats-coming-674574.jpg');
    background-size: cover; 
    background-position: center;
-   /* margin-bottom: 40px; */
 }
 h1{
     padding-right:50vh ;
 }
-
 .quote-style{
     color:white;
-
 }

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomepageComponent } from './homepage.component';
 
 describe('HomepageComponent', () => {
@@ -23,7 +22,7 @@ describe('HomepageComponent', () => {
     const test = TestBed.createComponent(HomepageComponent);
     test.detectChanges();
     const compile=test.nativeElement as HTMLElement;
-    expect (compile.querySelector('h1')?.textContent).toContain('Food Matters!')
+    expect (compile.querySelector('h1').textContent).toContain('Food Matters!')
   })
 
  

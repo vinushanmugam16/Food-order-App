@@ -9,10 +9,8 @@ import { AddcartService } from '../Service/addcart.service';
 })
 export class OrderComponent implements OnInit {
 
-
   foodItem:Item[]=[];
   total=0;
-
   constructor( private addingtoCart:AddcartService ){}
 
   ngOnInit(){
@@ -23,10 +21,8 @@ export class OrderComponent implements OnInit {
     this.total=this.addingtoCart.getTotalPrice();
   }
   
- 
-   
-
   orderSelected(){
       alert('Selected items are ordered Successfully!');
+      this.addingtoCart.removeAll();
     }
 }

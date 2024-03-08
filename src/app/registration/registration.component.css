@@ -1,16 +1,11 @@
 .set-reg-style{
     display: inline-block;
-    /* border: 2px solid black; */
     text-align: center;
     margin-left: 50vh;
-    /* margin-top: 20vh; */
     width: 100vh;
-    /* height: 50vh; */
-    /* background-color: rgb(240, 204, 150) ; */
-   color:white;
+    color:white;
     border-radius: 20px;
-    padding-bottom: 9vh;
-    
+    padding-bottom: 9vh;  
 }
 small{
     color:red;

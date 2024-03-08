@@ -6,6 +6,6 @@ export interface User{
     gender:string,
     phoneNumber:number,
     country:string,
-    address:string,
+    address:Object,
     email:string
 }

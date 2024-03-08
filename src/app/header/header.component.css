@@ -6,11 +6,6 @@
     font-weight: bold;
     font-size: large;
     height: 20vh; 
-          
-    /* text-align: center;
-       position: fixed;
-       width: 100%; */
-    /* position:fixed; */
 }
 .btn-style{
     color:white;
@@ -18,15 +13,12 @@
     font-weight: bold;
     padding-bottom:90px;
     margin-left: 30px;
-    /* padding: 20px; */
-    /* margin:20px */
 }
 .login-btn , .reg-btn , .logout-btn{
    margin:10px;
    color:white;
    background-color: rgb(173, 136, 87);
    font-weight:bold ;
-  
 }
 .reg-btn{
     margin-left: 10px;
@@ -40,7 +32,6 @@
 .title-style{
        text-align: center;
        margin-left: 50px;
-       /* padding-left: 50vh; */
 }
 .cart-btn-style{
     background-color: rgb(173, 136, 87);

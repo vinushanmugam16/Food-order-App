@@ -4,6 +4,7 @@ import { BehaviorSubject} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AddcartService {
 
   cartItemList=[];
@@ -12,7 +13,7 @@ export class AddcartService {
   getItemListadd(){
    return this.itemListadd;
   }
-  setItem(item: []){
+  setItem(item:[]){
     this.cartItemList.push(...item);
     this.itemListadd.next(item);
   }
@@ -37,6 +38,10 @@ export class AddcartService {
     this.itemListadd.next(this.cartItemList);
   }
  
+  removeAll(){
+    this.cartItemList=[];
+    this.itemListadd.next(this.cartItemList);
+  }
 
 }
 
