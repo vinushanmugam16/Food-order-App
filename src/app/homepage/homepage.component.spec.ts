@@ -18,12 +18,12 @@ describe('HomepageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render a title',()=>{
+  it('should render a title', () => {
     const test = TestBed.createComponent(HomepageComponent);
     test.detectChanges();
-    const compile=test.nativeElement as HTMLElement;
-    expect (compile.querySelector('h1').textContent).toContain('Food Matters!')
+    const compile = test.nativeElement as HTMLElement;
+    expect(compile.querySelector('h1').textContent).toContain('Food Matters!')
   })
 
- 
+
 });

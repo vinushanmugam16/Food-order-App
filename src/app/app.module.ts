@@ -13,12 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
-import { ItemsComponent } from './items/items.component';
 import { OrderComponent } from './order/order.component';
 import { AuthGuard } from './guard/auth.guard';
 import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
 import { AddcartService } from './Service/addcart.service';
+import { ItemsModule } from './items/items.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import { AddcartService } from './Service/addcart.service';
     MainpageComponent,
     ContactComponent,
     CartComponent,
-    ItemsComponent,
     OrderComponent
   ],
   imports: [
@@ -39,7 +38,8 @@ import { AddcartService } from './Service/addcart.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ItemsModule
   ],
   providers: [UserService,AuthGuard,CartService,AddcartService],
   bootstrap: [AppComponent]

@@ -1,34 +1,40 @@
-:host{
-    border:1px solid black
+:host {
+    border: 1px solid black
 }
-.menu-style{
-    display:flex;
+
+.menu-style {
+    display: flex;
     flex-wrap: wrap;
     padding-left: 10px;
 }
-.image-style{
+
+.image-style {
     width: 200px;
-    height:200px;
+    height: 200px;
     border-radius: 5px;
     padding-top: 50px;
     padding: 20px;
 }
-.item-style{
+
+.item-style {
     display: block;
     padding-left: 10px;
     margin-left: 20px;
     font-weight: bold;
-    padding: 10px;  
-}
-.list-style{
-    border:1px solid black;
     padding: 10px;
-    margin:10px 10px; 
 }
-.heading-style{
+
+.list-style {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 10px;
+}
+
+.heading-style {
     text-align: center;
     align-items: center;
-} 
-img:hover{
+}
+
+img:hover {
     background-color: lightgray;
 }

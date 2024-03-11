@@ -1,4 +1,4 @@
-.cart-style{
+.cart-style {
     display: block;
     width: 100vh;
     height: 50vh;
@@ -7,25 +7,31 @@
     margin-top: 10vh;
     margin-bottom: 10vh;
     text-align: center;
-    padding-bottom: 10vh;   
+    padding-bottom: 10vh;
 }
-.table-style{
+
+.table-style {
     margin-left: 50vh;
-    padding:50px;
-    padding-bottom:30vh
+    padding: 50px;
+    padding-bottom: 30vh
 }
-.table,th,td{
-    border:1px solid black;
+
+.table,
+th,
+td {
+    border: 1px solid black;
     border-collapse: collapse;
     margin-left: 10vh;
     padding: 30px;
 }
-.heading-style{
+
+.heading-style {
     text-align: center;
     font-weight: bold;
 }
-.btn-style{
+
+.btn-style {
     background-color: rgb(207, 197, 18);
-    color:teal;
+    color: teal;
     font-weight: bold;
 }

@@ -1,27 +1,31 @@
-.food-style{
-    background-image:url('/assets/image/pexels-photo-6089654.webp') ;
+.food-style {
+    background-image: url('/assets/image/pexels-photo-6089654.webp');
     height: 75vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.heading-style{
+
+.heading-style {
     text-align: center;
-    color:white
+    color: white
 }
-.menu-style{
-    padding:10px;
+
+.menu-style {
+    padding: 10px;
     font-weight: bold;
 }
-.description-style{
-    color:white;
+
+.description-style {
+    color: white;
     margin-left: 89vh;
     font-size: large;
 }
-.routing-style{
+
+.routing-style {
     padding: 10px;
     border-radius: 5px;
-    margin-left:90vh;
-    background-color:rgb(173, 136, 87);
+    margin-left: 90vh;
+    background-color: rgb(173, 136, 87);
     font-weight: bold;
 }

@@ -10,18 +10,18 @@ import { UserService } from '../Service/user.service';
 export class HeaderComponent implements OnInit {
 
   today = Date.now();
-  totalItem=0;
-  constructor(private addCart:AddcartService,
-              public user:UserService ){}
+  totalItem = 0;
+  constructor(private addCart: AddcartService,
+    public user: UserService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.addCart.getItemListadd()
-    .subscribe(response=>{
-        this.totalItem=response.length;
-    })
+      .subscribe(response => {
+        this.totalItem = response.length;
+      })
   }
 
-  logoutPage(){
+  logoutPage() {
     this.user.logout();
-  } 
+  }
 }

@@ -787,6 +787,438 @@
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
       "price": 60
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "11",
+      "imageUrl": "/assets/image/dessert.jpeg",
+      "itemName": "Coffee Delight Cake -Dessert",
+      "price": 110
+    },
+    {
+      "id": "12",
+      "imageUrl": "/assets/image/creamy.jpg",
+      "itemName": "Creamy Strawberry-Dessert",
+      "price": 130
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "9",
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75
+    },
+    {
+      "id": "1",
+      "imageUrl": "/assets/image/idly.jpeg",
+      "itemName": "Idly",
+      "price": 35
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "1",
+      "imageUrl": "/assets/image/idly.jpeg",
+      "itemName": "Idly",
+      "price": 35
+    },
+    {
+      "id": "12",
+      "imageUrl": "/assets/image/creamy.jpg",
+      "itemName": "Creamy Strawberry-Dessert",
+      "price": 130
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120
+    },
+    {
+      "id": "11",
+      "imageUrl": "/assets/image/dessert.jpeg",
+      "itemName": "Coffee Delight Cake -Dessert",
+      "price": 110
+    },
+    {
+      "id": "10",
+      "imageUrl": "/assets/image/paneerbutter.jpeg",
+      "itemName": "Paneer Butter Masala",
+      "price": 310
+    },
+    {
+      "id": "9",
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
     }
   ],
   "logindetails": [
@@ -1159,6 +1591,81 @@
       "id": "4a7f",
       "username": "VINUSHA2024",
       "password": "Vinu@123"
+    },
+    {
+      "id": "f3d2",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "13c8",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "c2b3",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "5792",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "90b3",
+      "username": "JANUNAG2001",
+      "password": "Janu@235"
+    },
+    {
+      "id": "5098",
+      "username": "JANUNAG2001",
+      "password": "JAn@1231"
+    },
+    {
+      "id": "84a9",
+      "username": "THAVASHA1977",
+      "password": "Thav@771"
+    },
+    {
+      "id": "71ae",
+      "username": "THAVASHA1977",
+      "password": "Thav@771"
+    },
+    {
+      "id": "7de5",
+      "username": "SHALIPRA1998",
+      "password": "Shalini@12"
+    },
+    {
+      "id": "5011",
+      "username": "SUMEKARA2024",
+      "password": "Sumi@1235"
+    },
+    {
+      "id": "bf16",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "2e91",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "6907",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "64c4",
+      "username": "VINUSHA2024",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "50db",
+      "username": "VINUSHA2024",
+      "password": "Vinu@134"
     }
   ],
   "registerdetails": [
@@ -1654,6 +2161,54 @@
         "pincode": 638476
       },
       "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "474f",
+      "firstname": "Janu",
+      "lastname": "Nagarajan",
+      "username": "JANUNAG2001",
+      "dob": "2001-10-23",
+      "email": "janu@gmail.com",
+      "address": {
+        "street": "321/40,Krishna street",
+        "city": "Mettupalayam",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "61c3",
+      "firstname": "Thavamani",
+      "lastname": "Shanmugam",
+      "username": "THAVASHA1977",
+      "dob": "1977-07-11",
+      "email": "thav77@gmail.com",
+      "address": {
+        "street": "120/61,Sri Sakthi nagar",
+        "city": "Gobi",
+        "pincode": 638476
+      },
+      "phoneNumber": 8642135790,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "6388",
+      "firstname": "Shalini",
+      "lastname": "Pravinrajan",
+      "username": "SHALIPRA1998",
+      "dob": "1998-01-19",
+      "email": "shaluprav@2gmail.com",
+      "address": {
+        "street": "54/2,Gwaraj street",
+        "city": "Pune",
+        "pincode": 670023
+      },
+      "phoneNumber": 8654323451,
       "gender": "Female",
       "country": "India"
     }

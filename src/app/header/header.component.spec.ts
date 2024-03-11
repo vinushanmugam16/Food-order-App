@@ -1,15 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FooterComponent } from './footer.component';
+import { HeaderComponent } from './header.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponent]
+      declarations: [HeaderComponent]
     });
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -19,9 +19,9 @@ describe('FooterComponent', () => {
   });
 
   it('should render text', () => {
-    const test = TestBed.createComponent(FooterComponent);
+    const test = TestBed.createComponent(HeaderComponent);
     test.detectChanges();
     const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('button').textContent).toContain('Contact');
+    expect(compile.querySelector('h1').textContent).toContain('Food Order App');
   })
 });

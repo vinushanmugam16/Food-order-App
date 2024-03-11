@@ -5,59 +5,56 @@ import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
 import { map } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
 
-  constructor(private http:HttpClient ,private route:Router) { }
+  constructor(private http: HttpClient, private route: Router) { }
+  registerUrl = environment.regUrl;
+  loginUrl = environment.loginUrl;
+  cartUrl = environment.addCart;
 
-  userDetail:User[]=[];
-  loginDetail:Loginuser[]=[];
-  addingCart:Item[]=[];
-  url='http://localhost:3000/registerdetails'
+  userDetail: User[] = [];
+  loginDetail: Loginuser[] = [];
+  addingCart: Item[] = [];
 
-  createData(userDetail:User){
-    return this.http.post(this.url,userDetail);
+  createData(userDetail: User) {
+    return this.http.post(this.registerUrl, userDetail);
   }
 
-  createLogin(loginDetail:Loginuser){
-    return this.http.post('http://localhost:3000/logindetails',loginDetail);
-  }
-  
-  createCart(addingCart:Item){
-    return this.http.post('http://localhost:3000/addcart',addingCart);
+  createLogin(loginDetail: Loginuser) {
+    return this.http.post(this.loginUrl, loginDetail);
   }
 
-  getUsername(userName)
-  {
-    return this.http.get('http://localhost:3000/registerdetails')
-    .pipe((map(user=>{
-        if(Array.isArray(user)){
-          const usernameDetail=user.find(userN=>userN.username === userName);      
-           if(usernameDetail)
-           {
-              sessionStorage.setItem('user',usernameDetail.username);
-              return usernameDetail;
-           }
-           else{
-           return false;
-           }         
+  createCart(addingCart: Item) {
+    return this.http.post(this.cartUrl, addingCart);
+  }
+
+  getUsername(userName) {
+    return this.http.get(this.registerUrl)
+      .pipe((map(user => {
+        if (Array.isArray(user)) {
+          const usernameDetail = user.find(userN => userN.username === userName);
+          if (usernameDetail) {
+            sessionStorage.setItem('user', usernameDetail.username);
+            return usernameDetail;
+          }
+          else {
+            return false;
+          }
         }
-    })))
+      })))
   }
 
- login(){
-   return sessionStorage.getItem('user') ? true:false;
- }
+  login() {
+    return sessionStorage.getItem('user') ? true : false;
+  }
 
- logout(){
-  sessionStorage.removeItem('user');
-  this.route.navigateByUrl('login');
- }
-
-
-
-
+  logout() {
+    sessionStorage.removeItem('user');
+    this.route.navigateByUrl('login');
+  }
 }

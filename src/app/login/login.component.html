@@ -1,20 +1,22 @@
 <div class="whole-style">
-<div class="set-login-style">
-    <h1 class="heading-style">Login</h1>
-    <form [formGroup]='loginForm'>
-        <div>          
-        <div>
-            <input class="login-style" type="text" placeholder="Username" formControlName="username"><br>
-            <small *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">*Username is Required</small>
-        </div>
-        <div>
-            <input class="login-style" type="password" placeholder="Password" formControlName="password"><br>
-            <small  *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">*Password doesn't match</small>  
-        </div>
-        <div>
-            <input class="login-style" type="submit" value="Submit" (click)="onSubmit()" >
-        </div>
-        </div>
-    </form>
-</div>
+    <div class="set-login-style">
+        <h1 class="heading-style">Login</h1>
+        <form [formGroup]='loginForm'>
+            <div>
+                <div>
+                    <input class="login-style" type="text" placeholder="Username" formControlName="username"><br>
+                    <small *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">*Username is
+                        Required</small>
+                </div>
+                <div>
+                    <input class="login-style" type="password" placeholder="Password" formControlName="password"><br>
+                    <small *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">*Password
+                        doesn't match</small>
+                </div>
+                <div>
+                    <input class="login-style" type="submit" value="Submit" (click)="onSubmit()">
+                </div>
+            </div>
+        </form>
+    </div>
 </div>

@@ -7,28 +7,28 @@ import { UserService } from '../Service/user.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
- 
-})
-export class CartComponent implements OnInit{
- 
-  foodItem:Item[]=[];
-  total=0;
-  imageUrl='/assets/image/emptycart.png';
-  constructor( private addingtoCart:AddcartService ,private user:UserService){}
 
-  ngOnInit(){
+})
+export class CartComponent implements OnInit {
+
+  foodItem: Item[] = [];
+  total = 0;
+  imageUrl = '/assets/image/emptycart.png';
+  constructor(private addingtoCart: AddcartService, private user: UserService) { }
+
+  ngOnInit() {
     this.addingtoCart.getItemListadd()
-    .subscribe((response)=>{
-      this.foodItem=response;
-      this.total=this.addingtoCart.getTotalPrice();
-    })
+      .subscribe((response) => {
+        this.foodItem = response;
+        this.total = this.addingtoCart.getTotalPrice();
+      })
   }
 
-  removeItem(id: number){
+  removeItem(id: number) {
     this.addingtoCart.removeCartItem(id);
   }
 
-  removeAll(){
+  removeAll() {
     this.addingtoCart.removeAll();
   }
 }

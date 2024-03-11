@@ -1,76 +1,88 @@
 <div class="whole-style">
+    <div class="set-reg-style">
+        <h1 class="heading-style">Details</h1>
+        <form [formGroup]="registerForm">
+            <div>
+                <div>
+                    <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
+                    <small
+                        *ngIf="registerForm.get('firstname').invalid && registerForm.get('firstname').touched">*Firstname
+                        is required</small>
+                </div>
+                <div>
+                    <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname"><br>
+                    <small
+                        *ngIf="registerForm.get('lastname').invalid && registerForm.get('lastname').touched">*lastname
+                        is Required</small>
+                </div>
+                <div>
+                    <label htmlfor="dob" class="dob-style" name="DateofBirth">Date of Birth <br>
+                        <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
+                    </label>
+                </div>
 
-<div class="set-reg-style">
-    <h1 class="heading-style">Details</h1>
-    
-    <form [formGroup]="registerForm">
-        <div >
-            <div >
-                <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
-                <small *ngIf="registerForm.get('firstname').invalid && registerForm.get('firstname').touched">*Firstname is required</small>
+            </div><br>
+            <div>
+                <small class="user-style">Click the Username button to get Username of yours</small><br>
+                <input type="text" placeholder="Username" formControlName="username">
+                <button (click)="createUsername()">Username</button>
+
+            </div>
+
+            <hr><br>
+            <div>
+                <input class="input-style" type="text" placeholder="Email" formControlName="email"><br>
+                <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">*Email is not in
+                    Valid Format</small>
+            </div>
+
+            <div>
+                <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
+                <small *ngIf="registerForm.get('phoneNumber').invalid && registerForm.get('phoneNumber').touched">*Phone
+                    Number is Required</small>
+
+            </div>
+
+            <br>
+            <div formGroupName="address">
+                <label class="address-style">Address<br>
+                    <input type="text" value="street" placeholder="Street Address" formControlName="street">
+                    <small
+                        *ngIf="registerForm.get('address.street').invalid && registerForm.get('address.street').touched">*Street
+                        Address is Required</small><br>
+
+                    <input type="text" value="city" placeholder="City" formControlName="city">
+                    <small
+                        *ngIf="registerForm.get('address.city').invalid && registerForm.get('address.city').touched">*City
+                        is Required</small><br>
+
+                    <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
+                    <small
+                        *ngIf="registerForm.get('address.pincode').invalid && registerForm.get('address.pincode').touched">*Pincode
+                        is Required</small>
+                </label>
             </div>
             <div>
-                <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname" ><br>
-                <small *ngIf="registerForm.get('lastname').invalid && registerForm.get('lastname').touched">*lastname is Required</small>
+                <label class="label-style">Gender
+                    <select formControlName="gender">
+                        <option *ngFor="let item of gender" [value]="item">{{item}}</option>
+                    </select>
+                </label>
             </div>
+            <br>
             <div>
-                <label htmlfor="dob" class="dob-style" name="DateofBirth">Date of Birth  <br>
-                <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
-            </label>
+                <label class="label-style">Country
+                    <select name="Country" formControlName="country"><br>
+                        <option *ngFor="let place of country" [value]="place">{{place}}</option>
+                        <small
+                            *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">*Country
+                            is required</small>
+                    </select>
+                </label>
+            </div><br>
+            <div>
+                <input type="submit" value="Submit" (click)="onSubmit()">
             </div>
-           
-        </div><br>
-        <div>
-            <small class="user-style">Click the Username button to get Username of yours</small><br>
-            <input type="text" placeholder="Username" formControlName="username">
-            <button (click)="createUsername()">Username</button>
-
-        </div>
-
-        <hr><br>
-        <div>
-            <input class="input-style" type="text" placeholder="Email" formControlName="email" ><br>
-            <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched" >*Email is not in Valid Format</small>
-        </div>
-
-        <div>
-            <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
-            <small *ngIf="registerForm.get('phoneNumber').invalid && registerForm.get('phoneNumber').touched">*Phone Number is Required</small>
-            
-        </div>      
-       
-        <br>
-        <div formGroupName="address" >
-           <label class="address-style">Address<br>
-           <input type="text" value="street" placeholder="Street Address" formControlName="street">
-            <small *ngIf="registerForm.get('address.street').invalid && registerForm.get('address.street').touched">*Street Address is Required</small><br>
-            
-            <input type="text" value="city" placeholder="City" formControlName="city">
-            <small *ngIf="registerForm.get('address.city').invalid && registerForm.get('address.city').touched">*City is Required</small><br>
-            
-            <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
-            <small *ngIf="registerForm.get('address.pincode').invalid && registerForm.get('address.pincode').touched">*Pincode is Required</small>
-        </label>
-        </div>
-        <div>
-            <label class="label-style" >Gender
-            <select formControlName="gender">
-            <option *ngFor="let item of gender" [value]="item">{{item}}</option>
-        </select> 
-    </label>
-        </div>
-        <br>
-        <div>
-            <label class="label-style">Country
-            <select name="Country" formControlName="country"><br>
-                <option *ngFor="let place of country" [value]="place">{{place}}</option>
-                <small *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">*Country is required</small>
-            </select>
-        </label>
-        </div><br>
-        <div>
-            <input type="submit" value="Submit"  (click)="onSubmit()" >
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>

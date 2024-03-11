@@ -1,25 +1,29 @@
-.set-login-style{
+.set-login-style {
     display: inline-block;
     text-align: center;
     margin-left: 70vh;
     margin-top: 10vh;
-    margin-bottom:20vh;
+    margin-bottom: 20vh;
     width: 50vh;
     height: 45vh;
-    border-radius:20px ;
-    color:white;
+    border-radius: 20px;
+    color: white;
 }
-small{
-    color:red;
-    font-weight:bold;
+
+small {
+    color: red;
+    font-weight: bold;
 }
-.heading-style{
+
+.heading-style {
     padding-top: 10vh;
 }
-.login-style{
-    margin-top: 10px;    
+
+.login-style {
+    margin-top: 10px;
 }
-.whole-style{
-    background-image:url('/assets/image/pexels-photo-326281.jpeg');
+
+.whole-style {
+    background-image: url('/assets/image/pexels-photo-326281.jpeg');
     background-size: cover;
 }

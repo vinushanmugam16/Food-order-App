@@ -1,20 +1,26 @@
-.table-style{
+.table-style {
     margin-left: 50vh;
-    padding:50px;
-    padding-bottom:30vh
+    padding: 50px;
+    padding-bottom: 48vh;
 }
-.table,th,td{
-    border:1px solid black;
+
+.table,
+th,
+td {
+    border: 1px solid black;
     border-collapse: collapse;
     margin-left: 10vh;
     padding: 30px;
 }
-.btn-style{
+
+.btn-style {
     background-color: rgb(207, 197, 18);
-    color:teal;
+    color: teal;
     font-weight: bold;
 }
-.heading-style{
+
+.heading-style {
     text-align: center;
     font-weight: bold;
+    padding-right: 50vh;
 }
