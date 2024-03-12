@@ -21,15 +21,6 @@ export class AddcartService {
   addtoCart(item: string) {
     this.cartItemList.push(item);
     this.itemListadd.next(this.cartItemList);
-    this.getTotalPrice();
-  }
-
-  getTotalPrice() {
-    let totalAll = 0;
-    this.cartItemList.map((val) => {
-      totalAll += val.price
-    })
-    return totalAll;
   }
 
   removeCartItem(id: number) {

@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { AuthGuard } from './guard/auth.guard';
+import { ItemsComponent } from './items/items.component';
 
 const routes: Routes = [
   {path:'', title:'Food Order App',component:HomepageComponent},
@@ -19,10 +20,9 @@ const routes: Routes = [
   {path:'login',title:'Login',component:LoginComponent},
   {path:'footer',component:FooterComponent},
   {path:'mainpage',title:'Food Order App',component:MainpageComponent,canActivate:[AuthGuard]},
-  // {path:'main',title:'Food order App',loadChildren:()=>import('./mainpage/mainpage.module').then((m)=>m.MainpageModule),},
   {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
-  {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},,
-  {path:'items',title:'Items',loadChildren:()=>import('./items/items.module').then((m)=>m.ItemsModule),canActivate:[AuthGuard]},
+  {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
+  {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
   {path:'order',title:'Order',component:OrderComponent,canActivate:[AuthGuard]}
 ];
 

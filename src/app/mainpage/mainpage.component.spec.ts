@@ -22,7 +22,7 @@ describe('MainpageComponent', () => {
     const test = TestBed.createComponent(MainpageComponent);
     test.detectChanges();
     const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('h1').textContent).toContain('We invite you for our Food zone');
+    expect(compile.querySelector('h2').textContent).toContain('We invite you for our Food zone');
   });
 
   it('should render a text', () => {

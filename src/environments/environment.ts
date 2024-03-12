@@ -1,6 +1,7 @@
 export const environment = {
-    production:false,
-    regUrl:'http://localhost:3000/registerdetails',
-    loginUrl:'http://localhost:3000/logindetails',
-    addCart : 'http://localhost:3000/addcart'
+    production: false,
+    regUrl: 'http://localhost:3000/registerdetails',
+    loginUrl: 'http://localhost:3000/logindetails',
+    addCart: 'http://localhost:3000/addcart',
+    foodItemsUrl: 'http://localhost:3000/FoodItems'
 };

@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,8 @@ import { AuthGuard } from './guard/auth.guard';
 import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
 import { AddcartService } from './Service/addcart.service';
-import { ItemsModule } from './items/items.module';
+import { CurrencyPipe } from '@angular/common';
+import { ItemsComponent } from './items/items.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ItemsModule } from './items/items.module';
     MainpageComponent,
     ContactComponent,
     CartComponent,
-    OrderComponent
+    OrderComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { ItemsModule } from './items/items.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ItemsModule
+    CurrencyPipe
   ],
   providers: [UserService,AuthGuard,CartService,AddcartService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,9 @@ import { Injectable } from '@angular/core';
 export class CartService {
  
   constructor(private http:HttpClient) { }
-  
+  fooditemsUrl=environment.foodItemsUrl;
+
   getItem(){
-    return this.http.get('http://localhost:3000/FoodItems');
+    return this.http.get(this.fooditemsUrl);
   }
 }

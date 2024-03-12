@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../model/item';
 import { AddcartService } from '../Service/addcart.service';
+import { CartService } from '../Service/cart.service';
 
 @Component({
   selector: 'app-order',
@@ -9,21 +9,28 @@ import { AddcartService } from '../Service/addcart.service';
 })
 export class OrderComponent implements OnInit {
 
-  foodItem: Item[] = [];
-  total = 0;
-  constructor(private addingtoCart: AddcartService) { }
+  foodItem;
+  total= 0;
+  constructor(private addingtoCart: AddcartService ,private cart:CartService) { }
 
   ngOnInit() {
     this.addingtoCart.getItemListadd()
       .subscribe((response) => {
         this.foodItem = response;
+        this.total= this.totalAll();
       })
-    this.total = this.addingtoCart.getTotalPrice();
+  }
+
+  totalAll(){
+    this.foodItem.map((value)=>{
+      this.total += value.price;
+    })
+    return this.total;
   }
 
   orderSelected() {
     alert('Selected items are ordered Successfully!');
     this.addingtoCart.removeAll();
-    this.total = 0;
+    this.total = 0; 
   }
 }

@@ -57,7 +57,7 @@ export class RegistrationComponent implements OnInit {
     const dob: string = this.registerForm.get('dob').value
 
     if (userFirstname.length >= 4) {
-      user += userFirstname.slice(0, 5).toUpperCase();
+      user += userFirstname.slice(0, 4).toUpperCase();
     }
     else {
       user += userFirstname.toUpperCase();

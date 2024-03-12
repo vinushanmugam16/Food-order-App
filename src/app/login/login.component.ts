@@ -8,15 +8,14 @@ import { Loginuser } from '../model/loginuser';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers: [UserService]
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
   detail: Loginuser[] = [];
   userName: string;
   constructor(private user: UserService,
-    private router: Router) { }
+              private router: Router) {}
 
   loginForm: FormGroup
 
@@ -33,7 +32,6 @@ export class LoginComponent implements OnInit {
 
     this.user.getUsername(this.userName)
       .subscribe((logUser) => {
-        console.log(logUser);
         if (logUser && this.loginForm.valid) {
           this.user.createLogin(this.loginForm.value)
             .subscribe(response => console.log(response));

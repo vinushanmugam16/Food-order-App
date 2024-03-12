@@ -22,6 +22,6 @@ describe('HeaderComponent', () => {
     const test = TestBed.createComponent(HeaderComponent);
     test.detectChanges();
     const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('h1').textContent).toContain('Food Order App');
+    expect(compile.querySelector('h1')?.textContent).toContain('Food Order App');
   })
 });

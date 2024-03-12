@@ -29,3 +29,9 @@
     background-color: rgb(173, 136, 87);
     font-weight: bold;
 }
+
+.greet-style {
+    color: cadetblue;
+    font-weight: bold;
+    font-size: large;
+}
