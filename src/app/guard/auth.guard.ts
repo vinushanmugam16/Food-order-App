@@ -1,4 +1,4 @@
-import { CanActivate } from "@angular/router";
+import { CanActivate, CanActivateFn } from "@angular/router";
 import { UserService } from "../Service/user.service";
 import { Injectable } from "@angular/core";
 

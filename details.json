@@ -319,6 +319,120 @@
       "imageUrl": "/assets/image/curdrice.jpeg",
       "itemName": "Curdrice",
       "price": 45
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120
+    },
+    {
+      "id": "12",
+      "imageUrl": "/assets/image/creamy.jpg",
+      "itemName": "Creamy Strawberry-Dessert",
+      "price": 130
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "9",
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50
+    },
+    {
+      "id": "9",
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
+    },
+    {
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45
     }
   ],
   "logindetails": [
@@ -794,6 +908,26 @@
     },
     {
       "id": "2ba6",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "4576",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "7685",
+      "username": "KRISRAJ2002",
+      "password": "Krish@123"
+    },
+    {
+      "id": "5baa",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "8ad3",
       "username": "VINUSHA2002",
       "password": "Vinu@123"
     }
@@ -1355,6 +1489,22 @@
         "pincode": 638476
       },
       "phoneNumber": 6382885212,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "6878",
+      "firstname": "Krishna Priya",
+      "lastname": "Rajendran",
+      "username": "KRISRAJ2002",
+      "dob": "2002-05-05",
+      "email": "krish@gmail.com",
+      "address": {
+        "street": "32,Kurumandur",
+        "city": "Gobi",
+        "pincode": 638476
+      },
+      "phoneNumber": 9876543210,
       "gender": "Female",
       "country": "India"
     }

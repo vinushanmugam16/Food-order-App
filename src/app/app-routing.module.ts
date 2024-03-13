@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
-import { OrderComponent } from './order/order.component';
+// import { OrderComponent } from './order/order.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ItemsComponent } from './items/items.component';
 
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
   {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
-  {path:'order',title:'Order',component:OrderComponent,canActivate:[AuthGuard]}
+  {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)}
 ];
 
 @NgModule({

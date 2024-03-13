@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
-import { CartService } from '../Service/cart.service';
 
 @Component({
   selector: 'app-order',
@@ -11,7 +10,7 @@ export class OrderComponent implements OnInit {
 
   foodItem;
   total= 0;
-  constructor(private addingtoCart: AddcartService ,private cart:CartService) { }
+  constructor(private addingtoCart: AddcartService) {}
 
   ngOnInit() {
     this.addingtoCart.getItemListadd()

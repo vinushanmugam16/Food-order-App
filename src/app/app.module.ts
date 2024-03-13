@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
-import { OrderComponent } from './order/order.component';
 import { AuthGuard } from './guard/auth.guard';
 import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
@@ -32,7 +31,6 @@ import { ItemsComponent } from './items/items.component';
     MainpageComponent,
     ContactComponent,
     CartComponent,
-    OrderComponent,
     ItemsComponent
   ],
   imports: [
