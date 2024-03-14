@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl,Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/Service/user.service';
@@ -41,6 +41,8 @@ export class LoginComponent implements OnInit {
           alert('Invalid Login , Please Enter Valid Details!');
         }
       })
+
+  
   }
 }
 

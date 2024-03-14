@@ -19,15 +19,15 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      firstname: new FormControl('', [Validators.required]),
-      lastname: new FormControl('', [Validators.required]),
-      username: new FormControl(''),
+      firstname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){5,15}")]),
+      lastname: new FormControl('', [Validators.required,Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){5,15}")]),
+      username: new FormControl('',[Validators.required]),
       dob: new FormControl(''),
       email: new FormControl('', [Validators.required, Validators.email]),
       address: new FormGroup({
         street: new FormControl('', [Validators.required]),
-        city: new FormControl('', [Validators.required]),
-        pincode: new FormControl('', [Validators.required])
+        city: new FormControl('', [Validators.required,Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
+        pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
       }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),

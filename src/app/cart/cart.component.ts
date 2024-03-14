@@ -9,10 +9,10 @@ import { AddcartService } from '../Service/addcart.service';
 
 export class CartComponent implements OnInit {
 
-  foodItem;
+  foodItem=[];
   total = 0;
   imageUrl = '/assets/image/emptycart.png';
-  constructor(private addingtoCart: AddcartService) { }
+  constructor(private addingtoCart: AddcartService) {}
 
   ngOnInit() {
     this.addingtoCart.getItemListadd()

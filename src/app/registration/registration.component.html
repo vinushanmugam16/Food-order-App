@@ -25,7 +25,10 @@
             <div>
                 <small class="user-style">Click the Username button to get username of yours.</small><br>
                 <input type="text" placeholder="Username" formControlName="username">
-                <button (click)="createUsername()">Username</button>
+                <button (click)="createUsername()">Username</button><br>
+                <small
+                *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">*Username
+                is Required</small>
 
             </div>
 

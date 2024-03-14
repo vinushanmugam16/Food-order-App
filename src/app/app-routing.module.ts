@@ -8,7 +8,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
-// import { OrderComponent } from './order/order.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ItemsComponent } from './items/items.component';
 

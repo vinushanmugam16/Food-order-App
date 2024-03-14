@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
-import { AuthGuard } from './guard/auth.guard';
 import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
 import { AddcartService } from './Service/addcart.service';
@@ -41,7 +40,7 @@ import { ItemsComponent } from './items/items.component';
     HttpClientModule,
     CurrencyPipe
   ],
-  providers: [UserService,AuthGuard,CartService,AddcartService],
+  providers: [UserService,CartService,AddcartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

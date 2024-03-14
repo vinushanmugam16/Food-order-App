@@ -6,8 +6,8 @@
             <button *ngIf="this.totalItem">{{totalItem}}</button>
         </div>
         <h1 class="title-style">Food Order App</h1>
-        <button class='reg-btn' routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</button>
-        <button class='login-btn' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
-        <button class="logout-btn" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
+        <button class="btn btn-success" routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</button>
+        <button class='btn btn-info' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
+        <button class="btn btn-danger" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
     </div>
 </div>
