@@ -9,8 +9,14 @@ export class CartService {
  
   constructor(private http:HttpClient) { }
   fooditemsUrl=environment.foodItemsUrl;
+  cartUrl = environment.addCart;
 
   getItem(){
     return this.http.get(this.fooditemsUrl);
   }
+
+  gettingItemId(id){
+    return this.http.get(this.cartUrl+'?id='+id);
+  }
 }
+

@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class AddcartService {
 
   cartItemList = [];
+  quantity=1;
   itemListadd = new BehaviorSubject([]);
 
   getItemListadd() {
@@ -32,5 +33,7 @@ export class AddcartService {
     this.cartItemList = [];
     this.itemListadd.next(this.cartItemList);
   }
+
+  
 }
 

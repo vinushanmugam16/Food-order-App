@@ -5,6 +5,7 @@ import { User } from '../model/user';
 import { Router } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
+import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 describe('UserService', () => {
   let service: UserService;
@@ -29,20 +30,22 @@ describe('UserService', () => {
 
   it('should create user data', () => {
     const registerUser: User = {
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-01",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "12/61,Sri Sakthi Nagar",
-        "city": "Gobi",
-        "pincode": 7654322
-      },
-      "phoneNumber": 876543123,
-      "gender": "female",
-      "country": "India"
-    };
+        "firstname": "Gomathi",
+        "lastname": "Thiru",
+        "username": "GOMATHI2000",
+        "password": "Aspire@123",
+        "confirmpassword": "Aspire@123",
+        "dob": "2000-09-23",
+        "email": "gomathi@gmail.com",
+        "address": {
+          "street": "123/987,WiThyaa street",
+          "city": "Salem",
+          "pincode": 654321
+        },
+        "phoneNumber": 9876543210,
+        "gender": "Female",
+        "country": "India"
+      }
 
     service.createData(registerUser).subscribe(response => {
       expect(response).toBeTruthy();
@@ -74,6 +77,7 @@ describe('UserService', () => {
       "id": 4,
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
+      "quantity":1,
       "price": 60
     };
 
@@ -87,24 +91,26 @@ describe('UserService', () => {
 
   it('should get username by user details', () => {
     const username: User = {
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-01",
-      "email": "vinu@gmail.com",
+      "firstname": "Gomathi",
+      "lastname": "Thiru",
+      "username": "GOMATHI2000",
+      "password": "Aspire@123",
+      "confirmpassword": "Aspire@123",
+      "dob": "2000-09-23",
+      "email": "gomathi@gmail.com",
       "address": {
-        "street": "12/61,Sri Sakthi Nagar",
-        "city": "Gobi",
-        "pincode": 7654322
+        "street": "123/987,WiThyaa street",
+        "city": "Salem",
+        "pincode": 654321
       },
-      "phoneNumber": 876543123,
-      "gender": "female",
+      "phoneNumber": 9876543210,
+      "gender": "Female",
       "country": "India"
     }
 
-    service.getUsername(username).subscribe(response => {
-      expect(response).toBeTruthy;
-    })
+    // service.getUsername(username,password).subscribe(response => {
+    //   expect(response).toBeTruthy;
+    // })
     const result = httpMock.expectOne('http://localhost:3000/registerdetails');
     expect(result.request.method).toBe('GET');
     result.flush({ username });

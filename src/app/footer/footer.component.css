@@ -11,17 +11,11 @@
   margin-bottom: 40vh
 }
 
-.btn-style {
-  margin: 10px;
-  color: white;
-  background-color: rgb(173, 136, 87);
-  font-weight: bold;
-  width: 100px;
-  height: 30px;
-  margin-left: 30vh;
-}
-
 .rights-style {
   margin-left: 60vh;
   margin-top: 10px;
+}
+.btn-light{
+  background-color: thistle;
+  margin-left: 40vh;
 }

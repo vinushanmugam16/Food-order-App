@@ -26,13 +26,26 @@
                 <small class="user-style">Click the Username button to get username of yours.</small><br>
                 <input type="text" placeholder="Username" formControlName="username">
                 <button (click)="createUsername()">Username</button><br>
-                <small
-                *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">*Username
-                is Required</small>
+                <small *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">*Username
+                    is Required</small>
 
             </div>
-
-            <hr><br>
+            <div>
+                <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
+                <small *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">*Password is
+                    not in
+                    Valid Format</small>
+            </div>
+            <div>
+                <input class="input-style" type="password" placeholder="Confirm Password"
+                    formControlName="confirmpassword"><br>
+                <small
+                    *ngIf="registerForm.get('confirmpassword').invalid && registerForm.get('confirmpassword').touched">*Confirm
+                    Password is not
+                    matched</small>
+                <small *ngIf="registerForm.get('passwordMisMatch')">*Password should match</small>
+            </div>
+            <hr>
             <div>
                 <input class="input-style" type="text" placeholder="Email" formControlName="email"><br>
                 <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">*Email is not in
@@ -67,7 +80,7 @@
             </div>
             <div>
                 <label class="label-style">Gender
-                    <select formControlName="gender">
+                    <select class="form-select" formControlName="gender">
                         <option *ngFor="let item of gender" [value]="item">{{item}}</option>
                     </select>
                 </label>
@@ -75,7 +88,7 @@
             <br>
             <div>
                 <label class="label-style">Country
-                    <select name="Country" formControlName="country"><br>
+                    <select class="form-select" name="Country" formControlName="country"><br>
                         <option *ngFor="let place of country" [value]="place">{{place}}</option>
                         <small
                             *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">*Country

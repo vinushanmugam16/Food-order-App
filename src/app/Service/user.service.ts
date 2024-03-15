@@ -33,13 +33,14 @@ export class UserService {
     return this.http.post(this.cartUrl, addingCart);
   }
 
-  getUsername(userName) {
+  getUsername(userName,pass) {
     return this.http.get(this.registerUrl)
       .pipe((map(user => {
         if (Array.isArray(user)) {
-          const usernameDetail = user.find(userN => userN.username === userName);
+          const usernameDetail = user.find(userN => userN.username === userName && userN.password === pass);
           if (usernameDetail) {
             sessionStorage.setItem('user', usernameDetail.username);
+            sessionStorage.setItem('password',usernameDetail.pass);
             return usernameDetail;
           }
           else {
@@ -50,7 +51,7 @@ export class UserService {
   }
 
   login() {
-    return sessionStorage.getItem('user') ? true : false;
+    return sessionStorage.getItem('user') && sessionStorage.getItem('password') ? true : false;
   }
 
   logout() {

@@ -4,955 +4,223 @@
       "imageUrl": "/assets/image/idly.jpeg",
       "itemName": "Idly",
       "price": 35,
+      "quantity": 1,
       "id": "1"
     },
     {
       "imageUrl": "/assets/image/dosa.jpeg",
       "itemName": "Dosa",
       "price": 75,
+      "quantity": 1,
       "id": "2"
     },
     {
       "imageUrl": "/assets/image/venpongal.jpeg",
       "itemName": "Venpongal",
       "price": 50,
+      "quantity": 1,
       "id": "3"
     },
     {
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
       "price": 60,
+      "quantity": 1,
       "id": "4"
     },
     {
       "imageUrl": "/assets/image/curdrice.jpeg",
       "itemName": "Curdrice",
       "price": 45,
+      "quantity": 1,
       "id": "5"
     },
     {
       "imageUrl": "/assets/image/friedrice.jpeg",
       "itemName": "Chicken Fried Rice",
       "price": 120,
+      "quantity": 1,
       "id": "6"
     },
     {
       "imageUrl": "/assets/image/mushroombriyani.jpeg",
       "itemName": "Mushroom Briyani",
       "price": 230,
+      "quantity": 1,
       "id": "7"
     },
     {
       "imageUrl": "/assets/image/sambar.jpeg",
       "itemName": "Sambar",
       "price": 80,
+      "quantity": 1,
       "id": "8"
     },
     {
       "imageUrl": "/assets/image/naan.jpeg",
       "itemName": "Butter Naan",
       "price": 230,
+      "quantity": 1,
       "id": "9"
     },
     {
       "imageUrl": "/assets/image/paneerbutter.jpeg",
       "itemName": "Paneer Butter Masala",
       "price": 310,
+      "quantity": 1,
       "id": "10"
     },
     {
       "imageUrl": "/assets/image/dessert.jpeg",
       "itemName": "Coffee Delight Cake -Dessert",
       "price": 110,
+      "quantity": 1,
       "id": "11"
     },
     {
       "imageUrl": "/assets/image/creamy.jpg",
       "itemName": "Creamy Strawberry-Dessert",
       "price": 130,
+      "quantity": 1,
       "id": "12"
     }
   ],
   "addcart": [
     {
-      "id": "9",
-      "imageUrl": "/assets/image/naan.jpeg",
-      "itemName": "Butter Naan",
-      "price": 230
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "3",
       "imageUrl": "/assets/image/venpongal.jpeg",
       "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "7",
-      "imageUrl": "/assets/image/mushroombriyani.jpeg",
-      "itemName": "Mushroom Briyani",
-      "price": 230
-    },
-    {
-      "id": "8",
-      "imageUrl": "/assets/image/sambar.jpeg",
-      "itemName": "Sambar",
-      "price": 80
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
+      "price": 50,
+      "quantity": 1
     },
     {
       "id": "11",
       "imageUrl": "/assets/image/dessert.jpeg",
       "itemName": "Coffee Delight Cake -Dessert",
-      "price": 110
+      "price": 110,
+      "quantity": 1
     },
     {
-      "id": "8",
-      "imageUrl": "/assets/image/sambar.jpeg",
-      "itemName": "Sambar",
-      "price": 80
+      "id": "10",
+      "imageUrl": "/assets/image/paneerbutter.jpeg",
+      "itemName": "Paneer Butter Masala",
+      "price": 310,
+      "quantity": 1
     },
     {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
     },
     {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
     },
     {
-      "id": "11",
-      "imageUrl": "/assets/image/dessert.jpeg",
-      "itemName": "Coffee Delight Cake -Dessert",
-      "price": 110
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
     },
     {
-      "id": "7",
-      "imageUrl": "/assets/image/mushroombriyani.jpeg",
-      "itemName": "Mushroom Briyani",
-      "price": 230
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
     },
     {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120
-    },
-    {
-      "id": "12",
-      "imageUrl": "/assets/image/creamy.jpg",
-      "itemName": "Creamy Strawberry-Dessert",
-      "price": 130
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "9",
-      "imageUrl": "/assets/image/naan.jpeg",
-      "itemName": "Butter Naan",
-      "price": 230
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
     },
     {
       "id": "2",
       "imageUrl": "/assets/image/dosa.jpeg",
       "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
+      "price": 75,
+      "quantity": 1
     },
     {
       "id": "3",
       "imageUrl": "/assets/image/venpongal.jpeg",
       "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "9",
-      "imageUrl": "/assets/image/naan.jpeg",
-      "itemName": "Butter Naan",
-      "price": 230
+      "price": 50,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "4",
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "price": 60
+      "price": 60,
+      "quantity": 1
     },
     {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1
     },
     {
       "id": "3",
       "imageUrl": "/assets/image/venpongal.jpeg",
       "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60
-    },
-    {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45
+      "price": 50,
+      "quantity": 1
     }
   ],
   "logindetails": [
-    {
-      "id": "eeae",
-      "username": "VinuShan",
-      "password": "Vinnu@123"
-    },
-    {
-      "id": "f091",
-      "username": "VinuShan",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "1de1",
-      "username": "SUMEKARA2024",
-      "password": "Vinu@1234"
-    },
-    {
-      "id": "26e2",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "4b1c",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "af0b",
-      "username": "VINUSHA2024",
-      "password": "stvd@1234"
-    },
-    {
-      "id": "2f8c",
-      "username": "VINUSHA2024",
-      "password": "vINU@123"
-    },
-    {
-      "id": "4694",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "57ff",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "663c",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "798e",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "5f7e",
-      "username": "VINUSHA2024",
-      "password": "vINU@123"
-    },
-    {
-      "id": "c92f",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "888d",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "8c04",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "635e",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "2647",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "b129",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "3616",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "3c6a",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "cfe2",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "927f",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "dcce",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "0133",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "4173",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "e278",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "0907",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "a6d1",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "83bd",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "2ddc",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "8af0",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "5c4c",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "5c95",
-      "username": "VINUSHA2024",
-      "password": "Vinu@1223"
-    },
-    {
-      "id": "dea9",
-      "username": "VINUSHA2024",
-      "password": "Vinu@!23"
-    },
-    {
-      "id": "8f8d",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "4930",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "5dab",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "a10a",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "919c",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "25d3",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "9a93",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
     {
       "id": "2819",
       "username": "VINUSHA2024",
@@ -1040,21 +308,6 @@
     },
     {
       "id": "e152",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "4b69",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "259b",
-      "username": "VINUSHA2024",
-      "password": "Vinu@123"
-    },
-    {
-      "id": "1c8f",
       "username": "VINUSHA2024",
       "password": "Vinu@123"
     },
@@ -1277,568 +530,104 @@
       "id": "34e0",
       "username": "VINUSHA2002",
       "password": "Vinu@123"
-    }
-  ],
-  "registerdetails": [
-    {
-      "id": "dafd",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "12/0,sri nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
     },
     {
-      "id": "0055",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "12/sir nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
+      "id": "db0e",
+      "username": "VINUSHA2002",
+      "password": ""
     },
     {
-      "id": "7129",
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "123/seri sakthi nagar",
-        "city": "erode",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
+      "id": "0353",
+      "username": "VINUSHA2002",
+      "password": ""
     },
     {
-      "id": "8168",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "123,poiuh",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "4f0a",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-06",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "123/sri sakthi nagar",
-        "city": "erode",
-        "pincode": 543212
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "98aa",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-08",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "13/sri sakthi nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "e231",
-      "firstname": "vinu",
-      "lastname": "dharshini",
-      "username": "vinudhar",
-      "dob": "2024-03-06",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "12/sri sakthi nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "0798",
-      "username": "vinushan",
-      "password": "vinu@12345"
-    },
-    {
-      "id": "0887",
-      "username": "vinushan",
-      "password": "123456789"
-    },
-    {
-      "id": "21cd",
-      "username": "vinushan",
-      "password": "1234567"
-    },
-    {
-      "id": "0b0e",
-      "username": "vinushan",
-      "password": "12345672"
-    },
-    {
-      "id": "8502",
-      "username": "vinushan",
-      "password": "123456723"
-    },
-    {
-      "id": "ca99",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu@16gmail.com",
-      "address": {
-        "street": "aed,nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "75e3",
-      "username": "vinushan",
-      "password": "1234567"
-    },
-    {
-      "id": "d792",
-      "firstname": "sumeka",
-      "lastname": "arasakumar",
-      "username": "sumearas",
-      "dob": "2024-03-08",
-      "email": "vsumi@ihmal.com",
-      "address": {
-        "street": "qwerthgfds",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 987654321,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "b942",
-      "username": "vinushan",
-      "password": "12345678"
-    },
-    {
-      "id": "0452",
-      "username": "vinushan",
-      "password": "123456"
-    },
-    {
-      "id": "c80a",
-      "username": "Vinushan",
-      "password": "12345678"
-    },
-    {
-      "id": "e0d2",
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-01",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "12,sri sakthi nagar",
-        "city": "erode",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "bb9f",
-      "username": "vinushan",
-      "password": "123456"
-    },
-    {
-      "id": "b9c0",
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-01",
-      "email": "vinnu@gmail.com",
-      "address": {
-        "street": "12/sri sakthi nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9765432111,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "c5f4",
-      "username": "vinu",
-      "password": "shanmuha"
-    },
-    {
-      "id": "b006",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-08",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "1234/sri sakthi nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "cf14",
-      "username": "Vinushan",
-      "password": "1234567"
-    },
-    {
-      "id": "ceac",
-      "username": "vinu",
-      "password": "12345tfs"
-    },
-    {
-      "id": "65d6",
-      "username": "vinshan",
-      "password": "123456"
-    },
-    {
-      "id": "2574",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-08",
-      "email": "viu@gmail.com",
-      "address": {
-        "street": "123/sri sakthi  nagar",
-        "city": "erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "2ea3",
-      "username": "vinu",
-      "password": "123456"
-    },
-    {
-      "id": "b727",
-      "username": "vinu",
-      "password": "1234567"
-    },
-    {
-      "id": "c07d",
-      "username": "vinu",
-      "password": "1234567"
-    },
-    {
-      "id": "c6f6",
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "Vinushan",
-      "dob": "2024-03-01",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "123",
-        "city": "sdv",
-        "pincode": 7654322
-      },
-      "phoneNumber": 876543123,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "c440",
-      "username": "vinu",
-      "password": "12345678"
-    },
-    {
-      "id": "94ea",
-      "firstname": "vinu",
-      "lastname": "shanmugam",
-      "username": "vinushan",
-      "dob": "2024-03-07",
-      "email": "vinu16@gmail.com",
-      "address": {
-        "street": "1234/ksu",
-        "city": "erode",
-        "pincode": 654316
-      },
-      "phoneNumber": 6543212345,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "1f63",
-      "firstname": "janu",
-      "lastname": "shree",
-      "username": "JANUSHRan",
-      "dob": "2024-03-08",
-      "email": "janu12345@gmail.com",
-      "address": {
-        "street": "wedfghajs",
-        "city": "erode",
-        "pincode": 87648
-      },
-      "phoneNumber": 87654376548,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "4333",
-      "username": "vinushan",
-      "password": "1234556"
-    },
-    {
-      "id": "1b37",
-      "username": "vinushan",
-      "password": "vinu1234"
-    },
-    {
-      "id": "9adf",
-      "username": "vinushan",
-      "password": "123456"
-    },
-    {
-      "id": "26da",
-      "username": "vinushan",
-      "password": "1234567"
-    },
-    {
-      "id": "d0fb",
-      "username": "vinushan",
-      "password": "12345678"
-    },
-    {
-      "id": "5f38",
-      "username": "Vinu",
-      "password": "123456"
-    },
-    {
-      "id": "8489",
-      "username": "vinushn",
-      "password": "1234567"
-    },
-    {
-      "id": "94a7",
-      "username": "Vinushan",
-      "password": "Vinushan@12345"
-    },
-    {
-      "id": "3fec",
-      "firstname": "Vinu",
-      "lastname": "shanmugam",
-      "username": "VINUSHA2024",
-      "dob": "2024-03-02",
-      "email": "vinu@dfghj.com",
-      "address": {
-        "street": "12/srinx",
-        "city": "erode",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "female",
-      "country": "India"
-    },
-    {
-      "id": "d3ff",
-      "username": "Vinusha2002",
-      "password": "Vin@12345"
-    },
-    {
-      "id": "d147",
-      "username": "Vinu",
-      "password": "stvd@BO9"
-    },
-    {
-      "id": "652c",
-      "username": "Vinu",
-      "password": "Vinu@12355"
-    },
-    {
-      "id": "094f",
-      "username": "Vinu",
+      "id": "51bc",
+      "username": "VINUSHA2002",
       "password": "Vinu@123"
     },
     {
-      "id": "0d38",
-      "username": " bef,f",
-      "password": "Vnu@fmail32"
-    },
-    {
-      "id": "f554",
-      "username": "Vinu",
-      "password": "Vinu@13527"
-    },
-    {
-      "id": "d07b",
-      "username": "Vinu",
-      "password": "Vinu@12345"
-    },
-    {
-      "id": "69fa",
-      "username": "Vinu",
-      "password": "Shanmu@134"
-    },
-    {
-      "id": "0757",
-      "username": "Vinu",
-      "password": "Vinu@q12345"
-    },
-    {
-      "id": "eee1",
-      "firstname": "Vinu",
-      "lastname": "Shanmugam",
-      "username": "VINUSHA2024",
-      "dob": "2024-03-14",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "120.dui",
-        "city": "erode",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "b439",
-      "firstname": "Janushree",
-      "lastname": "Nagarajan",
-      "username": "JANUSNAG2024",
-      "dob": "2024-04-04",
-      "email": "vinu@gmail.com",
-      "address": {
-        "street": "120/61,sri sakthi nagar",
-        "city": "Erode",
-        "pincode": 638476
-      },
-      "phoneNumber": 9843562873,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "7fd1",
-      "firstname": "Sumeka",
-      "lastname": "Arasan",
-      "username": "SUMEKARA2024",
-      "dob": "2024-03-29",
-      "email": "sumi@gmail.com",
-      "address": {
-        "street": "120/61,Sri sakthi nagar",
-        "city": "Karur",
-        "pincode": 638476
-      },
-      "phoneNumber": 9876543210,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "474f",
-      "firstname": "Janu",
-      "lastname": "Nagarajan",
-      "username": "JANUNAG2001",
-      "dob": "2001-10-23",
-      "email": "janu@gmail.com",
-      "address": {
-        "street": "321/40,Krishna street",
-        "city": "Mettupalayam",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "61c3",
-      "firstname": "Thavamani",
-      "lastname": "Shanmugam",
-      "username": "THAVASHA1977",
-      "dob": "1977-07-11",
-      "email": "thav77@gmail.com",
-      "address": {
-        "street": "120/61,Sri Sakthi nagar",
-        "city": "Gobi",
-        "pincode": 638476
-      },
-      "phoneNumber": 8642135790,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "6388",
-      "firstname": "Shalini",
-      "lastname": "Pravinrajan",
-      "username": "SHALIPRA1998",
-      "dob": "1998-01-19",
-      "email": "shaluprav@2gmail.com",
-      "address": {
-        "street": "54/2,Gwaraj street",
-        "city": "Pune",
-        "pincode": 670023
-      },
-      "phoneNumber": 8654323451,
-      "gender": "Female",
-      "country": "India"
-    },
-    {
-      "id": "4212",
-      "firstname": "Vinudharshini",
-      "lastname": "Shanmugam",
+      "id": "b954",
       "username": "VINUSHA2002",
-      "dob": "2002-04-16",
-      "email": "vinu16@gmail.com",
-      "address": {
-        "street": "120/61,Sri Sakthi Nagar",
-        "city": "Gobichettipalayam",
-        "pincode": 638476
-      },
-      "phoneNumber": 6382885212,
-      "gender": "Female",
-      "country": "India"
+      "password": "123dad"
     },
+    {
+      "id": "1c36",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "e487",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "06e4",
+      "username": "VINUSHA2002",
+      "password": "vInu@1234"
+    },
+    {
+      "id": "c986",
+      "username": "VINUSHA2002",
+      "password": "fjgkhwi9348"
+    },
+    {
+      "id": "3fb8",
+      "username": "VINUSHA2002",
+      "password": "Vinu@1223"
+    },
+    {
+      "id": "5c02",
+      "username": "VINUSHA2002",
+      "password": "dfejwewfbw"
+    },
+    {
+      "id": "e3ae",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "7dbb",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "993c",
+      "username": "VINUSHA2002",
+      "password": "Vinu@123"
+    },
+    {
+      "id": "7fc4",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123"
+    },
+    {
+      "id": "99f7",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123"
+    },
+    {
+      "id": "6156",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123"
+    },
+    {
+      "id": "35aa",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123"
+    },
+    {
+      "id": "eed1",
+      "username": "GOMATHI2000",
+      "password": "Aspire@123"
+    },
+    {
+      "id": "63ab",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    }
+  ],
+  "registerdetails": [
     {
       "id": "6878",
       "firstname": "Krishna Priya",
@@ -1885,6 +674,60 @@
       },
       "phoneNumber": 9876543456,
       "gender": "Male",
+      "country": "India"
+    },
+    {
+      "id": "9a7d",
+      "firstname": "Anira",
+      "lastname": "Prashanth",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123",
+      "confirmpassword": "Anira@123",
+      "dob": "2022-07-26",
+      "email": "anira@gmail.com",
+      "address": {
+        "street": "15,Priel street",
+        "city": "Coimbatore",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "6906",
+      "firstname": "Gomathi",
+      "lastname": "Thiru",
+      "username": "GOMATHI2000",
+      "password": "Aspire@123",
+      "confirmpassword": "Aspire@123",
+      "dob": "2000-09-23",
+      "email": "gomathi@gmail.com",
+      "address": {
+        "street": "123/987,WiThyaa street",
+        "city": "Salem",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female",
+      "country": "India"
+    },
+    {
+      "id": "c47d",
+      "firstname": "Vinudharshini",
+      "lastname": "Shanmugam",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468",
+      "confirmpassword": "Vinu@2468",
+      "dob": "2002-04-16",
+      "email": "vinu@gmail.com",
+      "address": {
+        "street": "120/61,Sri Sakthi Nagar",
+        "city": "Gobichettipalayam",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543201,
+      "gender": "Female",
       "country": "India"
     }
   ]

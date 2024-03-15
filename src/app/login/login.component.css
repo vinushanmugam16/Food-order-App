@@ -27,3 +27,11 @@ small {
     background-image: url('/assets/image/pexels-photo-326281.jpeg');
     background-size: cover;
 }
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid {
+    border: 2px solid green;
+}

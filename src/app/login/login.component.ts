@@ -1,40 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl,Validators } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/Service/user.service';
-import { Loginuser } from '../model/loginuser';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  detail: Loginuser[] = [];
   userName: string;
+  pass: string;
+  patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   constructor(private user: UserService,
-              private router: Router) {}
+    private router: Router) { }
 
-  loginForm: FormGroup
+  loginForm: NgForm;
 
-  ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      username: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)])
-    })
-  }
+  onSubmit(loginForm) {
+    // this.userName = loginForm.controls['username'].value;
 
-
-  onSubmit() {
-    this.userName = this.loginForm.get('username').value;
-
-    this.user.getUsername(this.userName)
+    this.user.getUsername(this.userName,this.pass)
       .subscribe((logUser) => {
-        if (logUser && this.loginForm.valid) {
-          this.user.createLogin(this.loginForm.value)
+        if (logUser && loginForm.valid) {
+          this.user.createLogin(loginForm.value)
             .subscribe(response => console.log(response));
+          // console.log('feuiaff')
           this.router.navigateByUrl('mainpage');
         }
         else {
@@ -42,7 +34,9 @@ export class LoginComponent implements OnInit {
         }
       })
 
-  
+    console.log('12345678');
+    console.log(this.loginForm.value.username);
+    console.log(loginForm.controls['password'].value);
   }
 }
 

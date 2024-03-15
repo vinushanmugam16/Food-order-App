@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
+import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 @Component({
   selector: 'app-registration',
@@ -22,6 +23,8 @@ export class RegistrationComponent implements OnInit {
       firstname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){5,15}")]),
       lastname: new FormControl('', [Validators.required,Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){5,15}")]),
       username: new FormControl('',[Validators.required]),
+      password: new FormControl('',[Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
+      confirmpassword:new FormControl('',[Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
       dob: new FormControl(''),
       email: new FormControl('', [Validators.required, Validators.email]),
       address: new FormGroup({
@@ -32,7 +35,8 @@ export class RegistrationComponent implements OnInit {
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
       country: new FormControl('', [Validators.required]),
-    })
+    }),
+    {Validators:[PasswordValidation]}
   }
 
   onSubmit() {

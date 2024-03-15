@@ -2,12 +2,13 @@
     <div class='btn-style'>
         <div class="date-style">
             <p>{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
-            <button class="cart-btn-style" routerLink="cart">Cart</button>
+            <button class="btn btn-warning" routerLink="items">Items</button>
+            <button class="bi bi-cart4" routerLink="cart"></button>
             <button *ngIf="this.totalItem">{{totalItem}}</button>
         </div>
         <h1 class="title-style">Food Order App</h1>
-        <button class="btn btn-success" routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</button>
-        <button class='btn btn-info' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
-        <button class="btn btn-danger" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
+        <button class="btn btn-light" routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</button>
+        <button class='btn btn-light' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
+        <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
     </div>
 </div>

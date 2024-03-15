@@ -20,6 +20,4 @@ describe('AddcartService', () => {
         const itemList = service.getItemListadd()
         expect(itemList).toBeInstanceOf(BehaviorSubject);
     });
-
-
 })
