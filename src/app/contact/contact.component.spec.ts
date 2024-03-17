@@ -24,4 +24,5 @@ describe('ContactComponent', () => {
     const compile = test.nativeElement as HTMLElement;
     expect(compile.querySelector('h3').textContent).toContain('HelpLines');
   })
+  
 });

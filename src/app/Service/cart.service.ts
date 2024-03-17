@@ -14,9 +14,9 @@ export class CartService {
   getItem(){
     return this.http.get(this.fooditemsUrl);
   }
-  
+
   gettingItemId(id){
-    return this.http.get(this.cartUrl+'?id='+id);
+    return this.http.get(this.cartUrl + '?id=' + id);
   }
 }
 

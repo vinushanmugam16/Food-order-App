@@ -54,8 +54,6 @@ export class CartComponent implements OnInit {
   // }
   // }
 
-
-
   removeItem(id:number) {
     this.addingtoCart.removeCartItem(id);
   }

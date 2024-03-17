@@ -24,6 +24,7 @@ export class AddcartService {
     this.itemListadd.next(this.cartItemList);
   }
 
+  
   removeCartItem(id: number) {
     this.cartItemList.splice(id, 1);
     this.itemListadd.next(this.cartItemList);
@@ -34,4 +35,5 @@ export class AddcartService {
     this.itemListadd.next(this.cartItemList);
   }
 }
+
 
