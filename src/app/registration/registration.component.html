@@ -43,7 +43,7 @@
                     *ngIf="registerForm.get('confirmpassword').invalid && registerForm.get('confirmpassword').touched">*Confirm
                     Password is not
                     matched</small>
-                <small *ngIf="registerForm.get('passwordMisMatch')">*Password should match</small>
+                <small *ngIf="registerForm.get('notmatchPassword')">*Password should match</small>
             </div>
             <hr>
             <div>

@@ -5,7 +5,6 @@ import { User } from '../model/user';
 import { Router } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
-import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 describe('UserService', () => {
   let service: UserService;

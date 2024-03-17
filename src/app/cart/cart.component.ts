@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
-import { Item } from '../model/item';
 import { CartService } from '../Service/cart.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-cart',
@@ -24,25 +24,37 @@ export class CartComponent implements OnInit {
       })
   }
 
-  decrease(id){
+  count=0
+  // onCounting(id){
+    
+  // decrease(id){
   
-    this.cart.gettingItemId(id)
-    .subscribe((response)=>{
-      // if(response.value.quantity === ){
+  //   this.cart.gettingItemId(id)
+  //   .subscribe((response)=>{
+  //     // if(response.value.quantity === ){
 
-      // }
-      console.log('werfds',response[0].quantity);
+  //     // }
+    
+  //     console.log('werfds',response[0].quantity);
       
-    }
+  //   }
      
-      )
-    // this.quantity--;
-  }
-  increase(id){
-    // this.cart.gettingItemId(id)
-    // .subscribe((response)=>
-    //   this.quantity=response)
-  }
+  //     )
+  //   // this.quantity--;
+  // }
+  // increase(id){
+  //   this.cart.gettingItemId(id)
+  //   .subscribe((response)=>{
+  //     console.log(response[0].quantity);
+      
+  //   })
+  //   // this.cart.gettingItemId(id)
+  //   // .subscribe((response)=>
+  //   //   this.quantity=response)
+  // }
+  // }
+
+
 
   removeItem(id:number) {
     this.addingtoCart.removeCartItem(id);
@@ -52,3 +64,6 @@ export class CartComponent implements OnInit {
     this.addingtoCart.removeAll();
   }
 }
+
+
+

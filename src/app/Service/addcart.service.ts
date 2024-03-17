@@ -33,7 +33,5 @@ export class AddcartService {
     this.cartItemList = [];
     this.itemListadd.next(this.cartItemList);
   }
-
-  
 }
 

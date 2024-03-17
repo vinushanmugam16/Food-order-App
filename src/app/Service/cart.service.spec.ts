@@ -27,6 +27,7 @@ describe('CartService', () => {
         service.getItem().subscribe((items) => {
             expect(items).toBeTruthy();
         });
+        
         const result = httpMock.expectOne('http://localhost:3000/FoodItems');
         expect(result.request.method).toBe('GET');
     })
