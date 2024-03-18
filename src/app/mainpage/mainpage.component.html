@@ -1,8 +1,10 @@
 <div class="food-style">
-    <h1 class="greet-style">Hello,{{userName}}</h1>
-    <h2 class="heading-style">We invite you for our Food zone</h2>
+    <h1 class="greet-style">{{'hello'| translate }},
+        <i>{{userName}}...</i>
+    </h1>
+    <h2 class="heading-style">{{'food zone' |translate}} </h2>
     <div class="menu-style">
-        <i class="description-style">Delicious varieties of food</i><br>
-        <button class="routing-style" routerLink="/items">Start Ordering Food</button>
+        <i class="description-style">{{'variety' | translate}}</i><br>
+        <button class="routing-style" routerLink="/items">{{'start' | translate}}</button>
     </div>
 </div>

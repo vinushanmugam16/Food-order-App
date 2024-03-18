@@ -11,14 +11,14 @@
                     <span *ngIf="userName">Username:{{userName}}</span>
                 </div>
                 <div>
-                    <input class="login-style" type="password" placeholder="Password" name="password" [(ngModel)]="pass" 
+                    <input class="login-style" type="password" placeholder="Password" name="password" [(ngModel)]="correctPassword" 
                     required minlength="8"  #password="ngModel" [pattern]="patternValue"><br>
                     <small *ngIf="password.invalid && password.touched">
                         <small *ngIf="password.errors?.['required']">*Password is required</small>
                         <small *ngIf="password.errors?.['pattern']">*Password is in invalid format</small>
                         <small *ngIf="password.errors?.['minlength']">*Password should be atleast 8 characters</small>
                     </small><br>
-                    <span *ngIf="pass">Password:{{pass}}</span>
+                    <span *ngIf="correctPassword">Password:{{correctPassword}}</span>
                 </div>
                 <div>
                     <input class="login-style" type="submit" value="Submit">

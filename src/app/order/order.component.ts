@@ -8,28 +8,28 @@ import { AddcartService } from '../Service/addcart.service';
 })
 export class OrderComponent implements OnInit {
 
-  foodItem = [];
-  total = 0;
+  public foodItem = [];
+  public totalPrice = 0;
   constructor(private addingtoCart: AddcartService) { }
 
   ngOnInit() {
     this.addingtoCart.getItemListadd()
       .subscribe((response) => {
         this.foodItem = response;
-        this.total = this.totalAll();
+        this.totalPrice = this.totalAll();
       })
   }
 
-  totalAll() {
+  public totalAll() {
     this.foodItem.map((value) => {
-      this.total += value.price;
+      this.totalPrice += value.price*value.quantity ;
     })
-    return this.total;
+    return this.totalPrice;
   }
 
-  orderSelected() {
+  public orderSelected() {
     alert('Selected items are ordered Successfully!');
     this.addingtoCart.removeAll();
-    this.total = 0;
+    this.totalPrice = 0;
   }
 }

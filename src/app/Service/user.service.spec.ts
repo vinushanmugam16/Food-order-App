@@ -5,6 +5,7 @@ import { User } from '../model/user';
 import { Router } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
+import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 describe('UserService', () => {
   let service: UserService;
@@ -107,9 +108,9 @@ describe('UserService', () => {
       "country": "India"
     }
 
-    // service.getUsername(username,password).subscribe(response => {
-    //   expect(response).toBeTruthy;
-    // })
+    service.getUsername(username,PasswordValidation).subscribe(response => {
+      expect(response).toBeTruthy;
+    })
     const result = httpMock.expectOne('http://localhost:3000/registerdetails');
     expect(result.request.method).toBe('GET');
     result.flush({ username });
@@ -117,6 +118,6 @@ describe('UserService', () => {
   it('should return true if user is logged in', () => {
     sessionStorage.setItem('user', 'VINUSHA2024');
     const isLoggedIn = service.login();
-    expect(isLoggedIn).toBe(true);
+    expect(isLoggedIn).toBeTruthy();
   });
 });

@@ -11,7 +11,7 @@ import { UserService } from '../Service/user.service';
 })
 export class ItemsComponent implements OnInit {
 
-  cartItem;
+  public cartItem;
   constructor(private cartList: CartService, private addCart: AddcartService, private user: UserService) {}
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class ItemsComponent implements OnInit {
       })
   }
   
-  addingTocart(item) {
+  public addingTocart(item) {
     this.addCart.addtoCart(item);
     this.user.createCart(item)
       .subscribe(response => console.log(response));

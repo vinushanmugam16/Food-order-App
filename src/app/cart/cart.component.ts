@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
 import { CartService } from '../Service/cart.service';
-import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-cart',
@@ -11,10 +10,9 @@ import { LoginComponent } from '../login/login.component';
 
 export class CartComponent implements OnInit {
 
-  foodItem=[];
-  total = 0;
-  quantity=1;
-  imageUrl = '/assets/image/emptycart.png';
+  public foodItem;
+  public total = 0;
+  public imageUrl = '/assets/image/emptycart.png';
   constructor(private addingtoCart: AddcartService, private cart:CartService) {}
 
   ngOnInit() {
@@ -24,42 +22,22 @@ export class CartComponent implements OnInit {
       })
   }
 
-  count=0
-  // onCounting(id){
-    
-  // decrease(id){
-  
-  //   this.cart.gettingItemId(id)
-  //   .subscribe((response)=>{
-  //     // if(response.value.quantity === ){
-
-  //     // }
-    
-  //     console.log('werfds',response[0].quantity);
-      
-  //   }
-     
-  //     )
-  //   // this.quantity--;
-  // }
-  // increase(id){
-  //   this.cart.gettingItemId(id)
-  //   .subscribe((response)=>{
-  //     console.log(response[0].quantity);
-      
-  //   })
-  //   // this.cart.gettingItemId(id)
-  //   // .subscribe((response)=>
-  //   //   this.quantity=response)
-  // }
-  // }
-
-  removeItem(id:number) {
-    this.addingtoCart.removeCartItem(id);
+  public removeItem(id:number) {
+    // this.addingtoCart.removeCartItem(id);
+    this.cart.delete(id).subscribe((data)=>
+    {
+      console.log("hello All",data);
+      // this.foodItem=data
+     this.foodItem.splice(id,1);
+    })
   }
 
-  removeAll() {
+  public removeAll() {
     this.addingtoCart.removeAll();
+    // this.cart.deleteAll().subscribe((response)=>{
+    //   this.foodItem=response;
+    //   console.log('Hello');
+    // })
   }
 }
 

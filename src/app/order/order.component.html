@@ -16,10 +16,10 @@
                 <td>{{item.itemName}}</td>
                 <td><img src={{item.imageUrl}} alt="Food image" width="200px" height="200px"></td>
                 <td>{{item.price | currency:'INR'}}</td>
-                <td>{{item.price | currency:'INR'}}</td>
+                <td>{{item.price*item.quantity | currency:'INR'}}</td>
             </tr>
             <br>
-            <span>Total:{{total | currency:'INR'}}</span><br>
+            <span>Total:{{totalPrice | currency:'INR'}}</span><br>
             <button class="btn btn-success" (click)="orderSelected()"> Order </button>
         </tbody>
     </table>

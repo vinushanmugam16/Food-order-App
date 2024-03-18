@@ -12,18 +12,18 @@
     color: white;
     font-size: large;
     font-weight: bold;
-    padding-bottom: 90px;
-    margin-left: 30px;
+    padding-bottom: 40px;
+    margin-left: 10px;
 }
 
-.login-btn,
+/* .login-btn,
 .reg-btn,
 .logout-btn {
     margin: 10px;
     color: white;
     background-color: rgb(173, 136, 87);
     font-weight: bold;
-}
+} */
 
 .reg-btn {
     margin-left: 10px;
@@ -49,16 +49,19 @@
     font-weight: bold;
 }
 
-
-.btn-primary , .btn-light,.btn-warning{
+.btn-light,.btn-warning{
     margin-left: 10px;
     background-color: #d8bfd8;
 }
 .btn-warning{
     margin-right: 10px;
 }
-/* .bi-cart{
-    width: 50px;
-    height: 50px;
-    margin-right:10px
-} */
+.btn-secondary{
+    margin-bottom: 100px;
+    /* color:white; */
+}
+
+.lang-style{
+    margin-right: 20px;
+    /* margin:70px; */
+}

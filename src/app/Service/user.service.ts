@@ -21,19 +21,19 @@ export class UserService {
   loginDetail: Loginuser[] = [];
   addingCart: Item[] = [];
 
-  createData(userDetail: User) {
+  public createData(userDetail: User) {
     return this.http.post(this.registerUrl, userDetail);
   }
 
-  createLogin(loginDetail: Loginuser) {
+  public createLogin(loginDetail: Loginuser) {
     return this.http.post(this.loginUrl, loginDetail);
   }
 
-  createCart(addingCart: Item) {
+  public createCart(addingCart: Item) {
     return this.http.post(this.cartUrl, addingCart);
   }
 
-  getUsername(userName,pass) {
+  public getUsername(userName,pass) {
     return this.http.get(this.registerUrl)
       .pipe((map(user => {
         if (Array.isArray(user)) {
@@ -50,11 +50,11 @@ export class UserService {
       })))
   }
 
-  login() {
+  public login() {
     return sessionStorage.getItem('user') && sessionStorage.getItem('password') ? true : false;
   }
 
-  logout() {
+  public logout() {
     sessionStorage.removeItem('user');
     this.route.navigateByUrl('login');
   }

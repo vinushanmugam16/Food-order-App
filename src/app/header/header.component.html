@@ -2,7 +2,7 @@
     <div class='btn-style'>
         <div class="date-style">
             <p>{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
-            <button class="btn btn-warning" routerLink="items">Items</button>
+            <button class="btn btn-warning" routerLink="items"> Items </button>
             <button class="bi bi-cart4" routerLink="cart"></button>
             <button *ngIf="this.totalItem">{{totalItem}}</button>
         </div>
@@ -11,4 +11,14 @@
         <button class='btn btn-light' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
         <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
     </div>
+<br>
+    <span class="lang-style" *ngIf="user.login() ">
+        <select #selectedLang (change)="switchLang(selectedLang.value)">
+          <option *ngFor="let language of translate.getLangs()" 
+            [value]="language"
+            [selected]="language === translate.currentLang">
+            {{ language }}
+          </option>
+        </select>
+    </span>
 </div>

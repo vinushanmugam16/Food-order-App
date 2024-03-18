@@ -14,9 +14,9 @@ export class RegistrationComponent implements OnInit {
   constructor(private user: UserService,
     private router: Router) { }
 
-  registerForm: FormGroup;
-  gender = ['Male', 'Female'];
-  country = ['America', 'India', 'Japan', 'German'];
+  public registerForm: FormGroup;
+  public gender = ['Male', 'Female'];
+  // country = ['America', 'India', 'Japan', 'German'];
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -34,12 +34,12 @@ export class RegistrationComponent implements OnInit {
       }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
-      country: new FormControl('', [Validators.required]),
+      // country: new FormControl('', [Validators.required]),
     }),
     {Validators:[PasswordValidation]}
   }
 
-  onSubmit() {
+  public onSubmit() {
     if (this.registerForm.invalid) {
       alert('Please fill the form in valid format');
     }
@@ -54,7 +54,7 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
-  createUsername() {
+  public createUsername() {
     let user = '';
     const userFirstname: string = this.registerForm.get('firstname').value;
     const userLastname: string = this.registerForm.get('lastname').value;

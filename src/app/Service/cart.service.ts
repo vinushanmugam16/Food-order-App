@@ -11,12 +11,19 @@ export class CartService {
   fooditemsUrl=environment.foodItemsUrl;
   cartUrl = environment.addCart;
 
-  getItem(){
+  public getItem(){
     return this.http.get(this.fooditemsUrl);
   }
 
-  gettingItemId(id){
+  public gettingItemId(id){
     return this.http.get(this.cartUrl + '?id=' + id);
   }
-}
 
+  public delete(id){
+    return this.http.delete(`${this.cartUrl}/${id}`);
+  }
+
+  public deleteAll(){
+    return this.http.delete(this.cartUrl);
+  }
+}

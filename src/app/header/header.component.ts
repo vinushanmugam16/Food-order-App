@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
 import { UserService } from '../Service/user.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +10,15 @@ import { UserService } from '../Service/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  today = Date.now();
-  totalItem = 0;
+  public today = Date.now();
+  public totalItem = 0;
   constructor(private addCart: AddcartService,
-    public user: UserService) { }
+    public user: UserService, public translate:TranslateService) {
+      translate.addLangs(['en','fr']);
+      translate.setDefaultLang('en')
+     }
 
+  
   ngOnInit() {
     this.addCart.getItemListadd()
       .subscribe(response => {
@@ -21,7 +26,11 @@ export class HeaderComponent implements OnInit {
       })
   }
 
-  logoutPage() {
+  public logoutPage() {
     this.user.logout();
+  }
+
+  public switchLang(lang:string){
+    this.translate.use(lang)
   }
 }

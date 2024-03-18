@@ -9,7 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
@@ -18,6 +18,9 @@ import { CartService } from './Service/cart.service';
 import { AddcartService } from './Service/addcart.service';
 import { CurrencyPipe } from '@angular/common';
 import { ItemsComponent } from './items/items.component';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ItemComponent } from './items/item/item.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { ItemsComponent } from './items/items.component';
     MainpageComponent,
     ContactComponent,
     CartComponent,
-    ItemsComponent
+    ItemsComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +42,20 @@ import { ItemsComponent } from './items/items.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    CurrencyPipe
+    CurrencyPipe,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [UserService,CartService,AddcartService],
+  providers: [UserService,CartService,AddcartService,TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

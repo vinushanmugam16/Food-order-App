@@ -10,18 +10,18 @@ import { UserService } from 'src/app/Service/user.service';
 })
 export class LoginComponent {
 
-  userName: string;
-  pass: string;
-  patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  public userName: string;
+  public correctPassword: string;
+  public patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   constructor(private user: UserService,
-    private router: Router) { }
+    private router: Router) {}
 
-  loginForm: NgForm;
+  public loginForm: NgForm;
 
-  onSubmit(loginForm) {
+  public onSubmit(loginForm) {
     // this.userName = loginForm.controls['username'].value;
 
-    this.user.getUsername(this.userName,this.pass)
+    this.user.getUsername(this.userName,this.correctPassword)
       .subscribe((logUser) => {
         if (logUser && loginForm.valid) {
           this.user.createLogin(loginForm.value)
