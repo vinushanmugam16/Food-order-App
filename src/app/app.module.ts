@@ -20,7 +20,6 @@ import { CurrencyPipe } from '@angular/common';
 import { ItemsComponent } from './items/items.component';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ItemComponent } from './items/item/item.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +32,7 @@ import { ItemComponent } from './items/item/item.component';
     MainpageComponent,
     ContactComponent,
     CartComponent,
-    ItemsComponent,
-    ItemComponent
+    ItemsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,43 +1,46 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainpageComponent } from './mainpage.component';
-import { TranslateLoader } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 describe('MainpageComponent', () => {
   let component: MainpageComponent;
   let fixture: ComponentFixture<MainpageComponent>;
+  let translate: TranslateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MainpageComponent]
+      declarations: [MainpageComponent],
+      providers:[TranslateService]
     });
     fixture = TestBed.createComponent(MainpageComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    translate= TestBed.inject(TranslateService);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render a text', () => {
-    const test = TestBed.createComponent(MainpageComponent);
-    test.detectChanges();
-    const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('h2').textContent).toBeTruthy();
-  });
+  it('should render a translation', () => {
+    // const test = TestBed.createComponent(MainpageComponent);
+    // test.detectChanges();
+    // const compile = test.nativeElement as HTMLElement;
+    // expect(compile.querySelector('h2').textContent).toBeTruthy();
+    const trans = fixture.nativeElement;
+    translate.setTranslation('en', {
+      'hello': 'Hello',
+      'food zone': 'We invite you for our Food zone!',
+      'variety': 'Delicious Varieties of Food',
+      'start': 'Start Ordering Food'
+    });
+    translate.use('en');
 
-  it('should render a text', () => {
-    const test = TestBed.createComponent(MainpageComponent);
-    test.detectChanges();
-    const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('button').textContent).toContain('Start Ordering Food');
-  });
+    fixture.detectChanges();
 
-  it('should render a text', () => {
-    const test = TestBed.createComponent(MainpageComponent);
-    test.detectChanges();
-    const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('i').textContent).toContain('Delicious varieties of food');
-  });
+    expect(trans.querySelector('h1').textContent).toContain('Hello');
+    expect(trans.querySelector('h2').textContent).toContain('We invite you for our Food zone!');
+    expect(trans.querySelector('i').textContent).toContain('Delicious Varieties of Food');
+    expect(trans.querySelector('button').textContent).toContain('Start Ordering Food');
 
+  });
 });

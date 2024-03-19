@@ -35,7 +35,7 @@
 }
 
 .date-style {
-    margin-left: 160vh;
+    margin-right: 150vh;
 }
 
 .title-style {
@@ -49,19 +49,24 @@
     font-weight: bold;
 }
 
-.btn-light,.btn-warning{
+.btn-light{
     margin-left: 10px;
     background-color: #d8bfd8;
 }
-.btn-warning{
-    margin-right: 10px;
+.bi-cart4{
+    margin-left:165vh;
 }
+
+.btn-warning{
+    margin-left:10vh; 
+    background-color: #d8bfd8; 
+}
+
 .btn-secondary{
-    margin-bottom: 100px;
-    /* color:white; */
+    margin-bottom: 50px;
+    margin-left:170vh
 }
 
 .lang-style{
-    margin-right: 20px;
-    /* margin:70px; */
+    margin-top: 50px;
 }

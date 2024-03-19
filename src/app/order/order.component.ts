@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddcartService } from '../Service/addcart.service';
+import { CartService } from '../Service/cart.service';
 
 @Component({
   selector: 'app-order',
@@ -8,16 +9,21 @@ import { AddcartService } from '../Service/addcart.service';
 })
 export class OrderComponent implements OnInit {
 
-  public foodItem = [];
+  public foodItem;
   public totalPrice = 0;
-  constructor(private addingtoCart: AddcartService) { }
+  constructor(private addingtoCart: AddcartService,private cart:CartService) { }
 
   ngOnInit() {
-    this.addingtoCart.getItemListadd()
-      .subscribe((response) => {
-        this.foodItem = response;
-        this.totalPrice = this.totalAll();
-      })
+    // this.addingtoCart.getItemListadd()
+    //   .subscribe((response) => {
+    //     this.foodItem = response;
+    //     this.totalPrice = this.totalAll();
+    //   })
+    this.cart.getCart()
+    .subscribe((res)=>{
+      this.foodItem=res;
+      this.totalPrice = this.totalAll();
+    })
   }
 
   public totalAll() {
@@ -29,7 +35,7 @@ export class OrderComponent implements OnInit {
 
   public orderSelected() {
     alert('Selected items are ordered Successfully!');
-    this.addingtoCart.removeAll();
+    this.cart.deleteAll();
     this.totalPrice = 0;
   }
 }

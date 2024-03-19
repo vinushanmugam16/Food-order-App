@@ -1,7 +1,7 @@
 <div class="header-style">
     <div class='btn-style'>
-        <div class="date-style">
-            <p>{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
+        <div>
+            <p class="date-style">{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
             <button class="btn btn-warning" routerLink="items"> Items </button>
             <button class="bi bi-cart4" routerLink="cart"></button>
             <button *ngIf="this.totalItem">{{totalItem}}</button>

@@ -4,7 +4,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { User } from '../model/user';
 import { Router } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
-import { Item } from '../model/item';
 import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 describe('UserService', () => {
@@ -72,23 +71,6 @@ describe('UserService', () => {
 
   });
 
-  it('should create cart items ', () => {
-    const items: Item = {
-      "id": 4,
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "quantity":1,
-      "price": 60
-    };
-
-    service.createCart(items).subscribe(response => {
-      expect(response).toBeTruthy();
-    });
-    const result = httpMock.expectOne('http://localhost:3000/addcart');
-    expect(result.request.method).toBe('POST');
-    result.flush({ items });
-  });
-
   it('should get username by user details', () => {
     const username: User = {
       "firstname": "Gomathi",
@@ -114,10 +96,20 @@ describe('UserService', () => {
     const result = httpMock.expectOne('http://localhost:3000/registerdetails');
     expect(result.request.method).toBe('GET');
     result.flush({ username });
-  })
+  });
+
   it('should return true if user is logged in', () => {
     sessionStorage.setItem('user', 'VINUSHA2024');
     const isLoggedIn = service.login();
     expect(isLoggedIn).toBeTruthy();
   });
+
+  it('should logout', () => {
+    sessionStorage.removeItem('user');
+    sessionStorage.removeItem('password');
+    const isLogout = service.logout();
+    expect(isLogout).toBeTruthy();
+
+  });
+
 });

@@ -18,4 +18,12 @@ describe('OrderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should render text', () => {
+  //   const test = TestBed.createComponent(OrderComponent);
+  //   test.detectChanges();
+  //   const compile = test.nativeElement as HTMLElement;
+  //   expect(compile.querySelector('h2').textContent).toContain('Checkout');
+  // })
+
 });

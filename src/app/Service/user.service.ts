@@ -13,9 +13,9 @@ import { environment } from 'src/environments/environment.development';
 export class UserService {
 
   constructor(private http: HttpClient, private route: Router) { }
-  registerUrl = environment.regUrl;
-  loginUrl = environment.loginUrl;
-  cartUrl = environment.addCart;
+  private registerUrl = environment.regUrl;
+  private loginUrl = environment.loginUrl;
+  private cartUrl = environment.addCart;
 
   userDetail: User[] = [];
   loginDetail: Loginuser[] = [];
@@ -27,10 +27,6 @@ export class UserService {
 
   public createLogin(loginDetail: Loginuser) {
     return this.http.post(this.loginUrl, loginDetail);
-  }
-
-  public createCart(addingCart: Item) {
-    return this.http.post(this.cartUrl, addingCart);
   }
 
   public getUsername(userName,pass) {
@@ -56,6 +52,7 @@ export class UserService {
 
   public logout() {
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('password');
     this.route.navigateByUrl('login');
   }
 }

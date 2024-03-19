@@ -34,9 +34,9 @@ export class LoginComponent {
         }
       })
 
-    console.log('12345678');
-    console.log(this.loginForm.value.username);
-    console.log(loginForm.controls['password'].value);
+    // console.log('12345678');
+    // console.log(this.loginForm.value.username);
+    // console.log(loginForm.controls['password'].value);
   }
 }
 

@@ -24,6 +24,10 @@ export class HeaderComponent implements OnInit {
       .subscribe(response => {
         this.totalItem = response.length;
       })
+    // this.user.getCart()
+    // .subscribe(res=>{
+    //   this.totalItem = res.length;
+    // })
   }
 
   public logoutPage() {
