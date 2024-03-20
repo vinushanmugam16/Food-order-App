@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Item } from '../model/item';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AddcartService {
+
+  constructor(private cart:CartService){}
 
   cartItemList = [];
   itemListadd = new BehaviorSubject([]);
@@ -21,24 +24,20 @@ export class AddcartService {
 
   public addtoCart(item: Item) {
 
-    // this.cartItemList.push(item);
-   
+  
+    const found= this.cartItemList.find((list)=> list.itemName === item.itemName);
+    // console.log(`found`,item);
 
-    // if(this.cartItemList.find((list)=>list.itemName === item.itemName)){
-
-    //   console.log('Comparing item name');
-    //   this.cartItemList[0].quantity++;
-      
-    //   this.itemListadd.next(this.cartItemList);
-      
-    // }
-    const found= this.cartItemList.filter((list)=> list.itemName === item.itemName);
-    console.log(`found`,item);
-
-    if(found){
+    if(found !== undefined){
       console.log(' compared item checked');
       
-      // found.quantity++;
+      
+
+      this.cart.updateQuantity(found.quantity++,found.id)
+      .subscribe(response=>{
+        console.log('Put',response)
+      })
+
       // this.itemListadd.next(this.cartItemList);
     }       
     // if(this.cartItemList.find((list)=> list.itemName === item.itemName)
@@ -52,33 +51,9 @@ export class AddcartService {
     else{
       console.log('else part',this.cartItemList);
       
-      // this.cartItemList.next(item);
-      // this.itemListadd.next(this.cartItemList);
+      this.cartItemList.push(item);
+      this.itemListadd.next(this.cartItemList);
     }   
-    // this.itemListadd.next(this.cartItemList);
-//    this.cartItemList.map((list) => console.log(list.id === item.id));
-
-// console.log('check',this.cartItemList.find((list) => list.id === item.id));
-
-//     if (this.cartItemList.find((list) => { list.id === item.id;
-//       console.log(`this.cartItemList`, list.itemName, item.itemName)
-
-//     })) 
-
-//       this.cartItemList[0].quantity++;
-//     //   // this.cartItemList.find((val) => val.quantity++)
-      
-//     //   console.log('adding to cart');
-      
-//     // }
-//     else {
-//       this.cartItemList.push(item);
-//       console.log('cart push');
-//     // this.itemListadd.next(this.cartItemList);
-      
-//     //   // this.itemListadd.next(this.cartItemList);
-//     }
-
   }
 
   public removeCartItem(id: number) {

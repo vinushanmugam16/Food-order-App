@@ -8,7 +8,8 @@ import { PasswordValidation } from '../customvalidation/passwordvalidation.direc
 
 describe('UserService', () => {
   let service: UserService;
-  let httpMock: HttpTestingController
+  let httpMock: HttpTestingController;
+  let route: Router;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -17,6 +18,7 @@ describe('UserService', () => {
     });
     service = TestBed.inject(UserService);
     httpMock = TestBed.inject(HttpTestingController);
+    route = TestBed.inject(Router)
   });
 
   afterEach(() => {
@@ -100,6 +102,7 @@ describe('UserService', () => {
 
   it('should return true if user is logged in', () => {
     sessionStorage.setItem('user', 'VINUSHA2024');
+    sessionStorage.setItem('password', 'Vinu@123');
     const isLoggedIn = service.login();
     expect(isLoggedIn).toBeTruthy();
   });
@@ -109,7 +112,7 @@ describe('UserService', () => {
     sessionStorage.removeItem('password');
     const isLogout = service.logout();
     expect(isLogout).toBeTruthy();
-
+    expect(route.navigateByUrl).toHaveBeenCalledWith('login'); 
   });
 
 });

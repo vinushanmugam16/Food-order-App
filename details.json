@@ -85,7 +85,22 @@
       "id": "12"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 2
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
+    }
+  ],
   "logindetails": [
     {
       "id": "2819",
@@ -551,6 +566,31 @@
       "id": "5141",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "edc9",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "aa35",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "c25b",
+      "username": "DIVYMOO2001",
+      "password": "Divya@123"
+    },
+    {
+      "id": "50cf",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "0e70",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
     }
   ],
   "registerdetails": [
@@ -655,6 +695,23 @@
       "phoneNumber": 9876543201,
       "gender": "Female",
       "country": "India"
+    },
+    {
+      "id": "ed8a",
+      "firstname": "DivyaSreetha",
+      "lastname": "Moorthy",
+      "username": "DIVYMOO2001",
+      "password": "Divya@123",
+      "confirmpassword": "Divya@123",
+      "dob": "2001-11-08",
+      "email": "divya@gmail.com",
+      "address": {
+        "street": "98/2,Cross street,",
+        "city": "Dubai",
+        "pincode": 100002
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female"
     }
   ]
 }

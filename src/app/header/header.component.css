@@ -16,15 +16,6 @@
     margin-left: 10px;
 }
 
-/* .login-btn,
-.reg-btn,
-.logout-btn {
-    margin: 10px;
-    color: white;
-    background-color: rgb(173, 136, 87);
-    font-weight: bold;
-} */
-
 .reg-btn {
     margin-left: 10px;
 }
@@ -54,7 +45,7 @@
     background-color: #d8bfd8;
 }
 .bi-cart4{
-    margin-left:165vh;
+    margin-left:155vh;                           
 }
 
 .btn-warning{

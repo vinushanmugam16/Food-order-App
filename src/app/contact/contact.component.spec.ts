@@ -24,5 +24,13 @@ describe('ContactComponent', () => {
     const compile = test.nativeElement as HTMLElement;
     expect(compile.querySelector('h3').textContent).toContain('HelpLines');
   })
+
+
+  it('should render text', () => {
+    const test = TestBed.createComponent(ContactComponent);
+    test.detectChanges();
+    const compile = test.nativeElement as HTMLElement;
+    expect(compile.querySelector('p').textContent).toContain('Contact:foodzone232@gmail.com ');
+  })
   
 });

@@ -22,10 +22,6 @@ describe('MainpageComponent', () => {
   });
 
   it('should render a translation', () => {
-    // const test = TestBed.createComponent(MainpageComponent);
-    // test.detectChanges();
-    // const compile = test.nativeElement as HTMLElement;
-    // expect(compile.querySelector('h2').textContent).toBeTruthy();
     const trans = fixture.nativeElement;
     translate.setTranslation('en', {
       'hello': 'Hello',

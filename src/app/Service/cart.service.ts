@@ -29,7 +29,11 @@ export class CartService {
   }
 
   public deleteAll(){
-    this.http.delete(this.cartUrl)
-    .subscribe(()=>console.log('Deleted'))
+   return this.http.delete(this.cartUrl)
+    
+  }
+
+  public updateQuantity(id,foodItem){
+    return this.http.put(this.cartUrl+'/'+id,foodItem);
   }
 }
