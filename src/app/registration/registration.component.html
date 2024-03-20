@@ -33,16 +33,14 @@
             <div>
                 <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
                 <small *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">*Password is
-                    not in
-                    Valid Format</small>
+                    not in Valid Format</small>
             </div>
             <div>
                 <input class="input-style" type="password" placeholder="Confirm Password"
                     formControlName="confirmpassword"><br>
                 <small
                     *ngIf="registerForm.get('confirmpassword').invalid && registerForm.get('confirmpassword').touched">*Confirm
-                    Password is not
-                    matched</small>
+                    Password is not matched</small>
                 <small *ngIf="registerForm.get('notmatchPassword')">*Password should match</small>
             </div>
             <hr>
@@ -85,17 +83,6 @@
                     </select>
                 </label>
             </div>
-            <br>
-            <!-- <div>
-                <label class="label-style">Country
-                    <select class="form-select" name="Country" formControlName="country"><br>
-                        <option *ngFor="let place of country" [value]="place">{{place}}</option>
-                        <small
-                            *ngIf="registerForm.get('country').invalid && registerForm.get('country').touched">*Country
-                            is required</small>
-                    </select>
-                </label>
-            </div><br> -->
             <div>
                 <input type="submit" value="Submit" (click)="onSubmit()">
             </div>

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainpageComponent } from './mainpage.component';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('MainpageComponent', () => {
   let component: MainpageComponent;
@@ -8,9 +9,13 @@ describe('MainpageComponent', () => {
   let translate: TranslateService;
 
   beforeEach(() => {
+    const translateServiceSpy = jasmine.createSpyObj('TranslateService', ['use']);
+    const translateStoreSpy = jasmine.createSpyObj('TranslateStore');
     TestBed.configureTestingModule({
       declarations: [MainpageComponent],
-      providers:[TranslateService]
+      providers:[TranslateService],
+      imports:[TranslateModule]
+
     });
     fixture = TestBed.createComponent(MainpageComponent);
     component = fixture.componentInstance;

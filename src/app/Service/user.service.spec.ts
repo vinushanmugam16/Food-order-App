@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { UserService } from './user.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { User } from '../model/user';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
 import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
@@ -13,12 +13,12 @@ describe('UserService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, RouterModule],
       providers: [UserService, { provide: Router, useValue: {} }],
     });
     service = TestBed.inject(UserService);
     httpMock = TestBed.inject(HttpTestingController);
-    route = TestBed.inject(Router)
+    route = TestBed.inject(Router);
   });
 
   afterEach(() => {
@@ -112,6 +112,7 @@ describe('UserService', () => {
     sessionStorage.removeItem('password');
     const isLogout = service.logout();
     expect(isLogout).toBeTruthy();
+    
     expect(route.navigateByUrl).toHaveBeenCalledWith('login'); 
   });
 

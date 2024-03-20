@@ -16,7 +16,6 @@ export class RegistrationComponent implements OnInit {
 
   public registerForm: FormGroup;
   public gender = ['Male', 'Female'];
-  // country = ['America', 'India', 'Japan', 'German'];
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -34,7 +33,6 @@ export class RegistrationComponent implements OnInit {
       }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
-      // country: new FormControl('', [Validators.required]),
     }),
     {Validators:[PasswordValidation]}
   }

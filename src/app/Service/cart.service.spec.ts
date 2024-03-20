@@ -50,12 +50,12 @@ describe('CartService', () => {
     result.flush({ items });
   });
 
-  it('should get cart data from json', () => {
+  it('should get cart items from json', () => {
     service.getItem().subscribe((items) => {
         expect(items).toBeTruthy();
     });
 
-    const result = httpMock.expectOne('http://localhost:3000/addcart');
+    const result = httpMock.expectOne('http://localhost:3000/FoodItems');
     expect(result.request.method).toBe('GET');
   });
 
@@ -72,15 +72,34 @@ describe('CartService', () => {
         expect(items).toBeTruthy();
     });
 
-    const result = httpMock.expectOne('http://localhost:3000/addcart');
+    const result = httpMock.expectOne('http://localhost:3000/addcart/' +items.id);
     expect(result.request.method).toBe('DELETE');
+
   });
 
   it('should send a DELETE request to the correct URL', () => {
-    service.deleteAll();
+    service.deleteAll().subscribe((items)=>{
+      expect(items).toBeTruthy();
+    })
     
-    const req = httpMock.expectOne(service.cartUrl);
+    const req = httpMock.expectOne('http://localhost:3000/addcart');
     expect(req.request.method).toBe('DELETE');
-    req.flush(null);
   });
+
+  it('should send a PUT request to the correct URL', () => {
+    const cart:Item={
+      "id": 4,
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "quantity":1,
+      "price": 60
+    };
+    const item =cart.id;
+    service.updateQuantity(cart,item);
+    
+    const req = httpMock.expectOne('http://localhost:3000/addcart/'+item);
+    expect(req.request.method).toBe('PUT');
+    req.flush({cart});
+  });
+
 })

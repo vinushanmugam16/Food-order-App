@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AddcartService } from '../Service/addcart.service';
 import { CartService } from '../Service/cart.service';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-cart',
@@ -11,35 +11,83 @@ import { CartService } from '../Service/cart.service';
 export class CartComponent implements OnInit {
 
   public foodItem;
-  public total = 0;
+  public cartfoodItem;
   public imageUrl = '/assets/image/emptycart.png';
-  constructor(private addingtoCart: AddcartService, private cart:CartService ) {}
+  constructor(private cart: CartService) { }
 
   ngOnInit() {
-   this.getFoodItem();
+    this.getFoodItem();
   }
 
-  public getFoodItem(){
+  public getFoodItem() {
     this.cart.getCart()
-    .subscribe((res)=>{
-      this.foodItem=res;
+      .subscribe((res) => {
+        this.foodItem = res;
+      })
+  }
+
+  increaseQuantity(item: Item) {
+    this.cart.getCart().subscribe((data) => {
+      this.cartfoodItem = data;
+
+      const foundItem = this.cartfoodItem.find((food) =>
+        food.itemName === item.itemName
+      )
+
+      if (foundItem === undefined) {
+        this.cart.createCart(item)
+          .subscribe(() => {
+            this.getFoodItem();
+          })
+      }
+      else {
+        foundItem.quantity++;
+        this.cart.updateQuantity(foundItem.id, foundItem)
+          .subscribe(() => {
+            this.getFoodItem();
+          })
+      }
+    })
+  }
+
+  decreaseQuantity(item: Item) {
+    this.cart.getCart().subscribe((data: any) => {
+      this.cartfoodItem = data;
+      const foundItem = this.cartfoodItem.find((food) =>
+        food.itemName === item.itemName
+      )
+      if (foundItem === undefined) {
+        this.cart.createCart(item)
+          .subscribe(() => {
+            this.getFoodItem();
+          })
+      }
+      else {
+        if (foundItem.quantity > 1) {
+          foundItem.quantity--;
+        }
+        this.cart.updateQuantity(foundItem.id, foundItem)
+          .subscribe(() => {
+            this.getFoodItem();
+          })
+      }
     })
   }
 
   public removeItem(id) {
-    this.cart.deleteItem(id).subscribe((item)=>
-    {
-      console.log("hello All",item);
+    this.cart.deleteItem(id).subscribe(() => {
       this.getFoodItem();
+      this.cart.itemLength();
     });
   }
 
   public removeAll() {
-    this.cart.deleteAll().subscribe(()=>{
-      console.log('deleting');
-    });
+    this.foodItem.map((item) => {
+      this.cart.deleteItem(item.id).subscribe(() => {
+        this.getFoodItem();
+      })
+    })
   }
-  
 }
 
 

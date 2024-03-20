@@ -15,7 +15,6 @@ export class UserService {
   constructor(private http: HttpClient, private route: Router) { }
   private registerUrl = environment.regUrl;
   private loginUrl = environment.loginUrl;
-  private cartUrl = environment.addCart;
 
   userDetail: User[] = [];
   loginDetail: Loginuser[] = [];

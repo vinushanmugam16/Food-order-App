@@ -1,40 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { AddcartService } from '../Service/addcart.service';
+import { Component } from '@angular/core';
 import { UserService } from '../Service/user.service';
 import { TranslateService } from '@ngx-translate/core';
+import { CartService } from '../Service/cart.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   public today = Date.now();
   public totalItem = 0;
-  constructor(private addCart: AddcartService,
-    public user: UserService, public translate:TranslateService) {
-      translate.addLangs(['en','fr']);
-      translate.setDefaultLang('en')
-     }
-
-  
-  ngOnInit() {
-    this.addCart.getItemListadd()
-      .subscribe(response => {
-        this.totalItem = response.length;
-      })
-    // this.user.getCart()
-    // .subscribe(res=>{
-    //   this.totalItem = res.length;
-    // })
+  constructor(public cart: CartService,
+    public user: UserService,
+    public translate: TranslateService) {
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang('en')
   }
 
   public logoutPage() {
     this.user.logout();
   }
 
-  public switchLang(lang:string){
+  public switchLang(lang: string) {
     this.translate.use(lang)
   }
 }

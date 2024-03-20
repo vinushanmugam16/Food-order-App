@@ -85,22 +85,7 @@
       "id": "12"
     }
   ],
-  "addcart": [
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 2
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1
-    }
-  ],
+  "addcart": [],
   "logindetails": [
     {
       "id": "2819",
@@ -591,6 +576,11 @@
       "id": "0e70",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "eb6d",
+      "username": "KAATVEN2024",
+      "password": "Kaat@123"
     }
   ],
   "registerdetails": [
@@ -709,6 +699,23 @@
         "street": "98/2,Cross street,",
         "city": "Dubai",
         "pincode": 100002
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female"
+    },
+    {
+      "id": "f367",
+      "firstname": "Kaathyaayini",
+      "lastname": "Venkat",
+      "username": "KAATVEN2024",
+      "password": "Kaat@123",
+      "confirmpassword": "Kaat@123",
+      "dob": "2024-02-19",
+      "email": "kaathya@gmail.com",
+      "address": {
+        "street": "Suresh Illam",
+        "city": "Gobi",
+        "pincode": 638476
       },
       "phoneNumber": 9876543210,
       "gender": "Female"

@@ -15,10 +15,9 @@ import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
-import { AddcartService } from './Service/addcart.service';
 import { CurrencyPipe } from '@angular/common';
 import { ItemsComponent } from './items/items.component';
-import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule,TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
@@ -49,7 +48,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
       }
     })
   ],
-  providers: [UserService,CartService,AddcartService,TranslateService],
+  providers: [UserService,CartService,TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

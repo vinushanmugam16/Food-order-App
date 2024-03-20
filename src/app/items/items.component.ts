@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddcartService } from '../Service/addcart.service';
 import { CartService } from '../Service/cart.service';
-
 
 @Component({
   selector: 'app-items',
@@ -12,7 +10,7 @@ import { CartService } from '../Service/cart.service';
 export class ItemsComponent implements OnInit {
 
   public cartItem;
-  constructor(private cartList: CartService, private addCart: AddcartService) { }
+  constructor(private cartList: CartService) { }
 
   ngOnInit() {
     this.cartList.getItem()
@@ -24,20 +22,19 @@ export class ItemsComponent implements OnInit {
   public addingTocart(item) {
     this.cartList.getCart().subscribe((data: any) => {
       const foodItem = data;
-      // console.log(`cart data`,foodItem);
-      
-      const foundItem = foodItem.find((food) => 
-        food.itemName === item.itemName     
+      const foundItem = foodItem.find((food) =>
+        food.itemName === item.itemName
       )
-     
       if (foundItem === undefined) {
-        this.cartList.createCart(item).subscribe((data)=>{console.log("Data added successfully");
+        this.cartList.createCart(item).subscribe(() => {
+          this.cartList.itemLength();
         })
       }
-      else{
+      else {
         foundItem.quantity++;
-        this.cartList.updateQuantity(foundItem.id,foundItem).subscribe((data)=>{
-          console.log("quantity added successfully",data);
+        this.cartList.updateQuantity(foundItem.id, foundItem).subscribe((data) => {
+          console.log("quantity added successfully", data);
+          this.cartList.itemLength();
         })
       }
     })

@@ -6,9 +6,13 @@ import { Item } from '../model/item';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CartService {
- 
+  
+  public totalItem:number;
+
   constructor(private http:HttpClient) { }
+
   fooditemsUrl=environment.foodItemsUrl;
   cartUrl = environment.addCart;
 
@@ -30,10 +34,16 @@ export class CartService {
 
   public deleteAll(){
    return this.http.delete(this.cartUrl)
-    
   }
 
   public updateQuantity(id,foodItem){
     return this.http.put(this.cartUrl+'/'+id,foodItem);
+  }
+
+  public itemLength(){   
+    this.getCart()
+    .subscribe((res:any)=>{
+      this.totalItem = res.length;
+    })
   }
 }
