@@ -32,18 +32,14 @@ export class CartService {
     return this.http.delete(`${this.cartUrl}/${id}`);
   }
 
-  public deleteAll(){
-   return this.http.delete(this.cartUrl)
-  }
-
   public updateQuantity(id,foodItem){
     return this.http.put(this.cartUrl+'/'+id,foodItem);
   }
 
   public itemLength(){   
     this.getCart()
-    .subscribe((res:any)=>{
-      this.totalItem = res.length;
+    .subscribe((response:any)=>{
+      this.totalItem = response.length;
     })
   }
 }

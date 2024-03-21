@@ -11,7 +11,6 @@ import { CartService } from '../Service/cart.service';
 export class HeaderComponent {
 
   public today = Date.now();
-  public totalItem = 0;
   constructor(public cart: CartService,
     public user: UserService,
     public translate: TranslateService) {

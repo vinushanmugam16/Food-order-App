@@ -9,8 +9,8 @@ describe('MainpageComponent', () => {
   let translate: TranslateService;
 
   beforeEach(() => {
-    const translateServiceSpy = jasmine.createSpyObj('TranslateService', ['use']);
-    const translateStoreSpy = jasmine.createSpyObj('TranslateStore');
+    // const translateServiceSpy = jasmine.createSpyObj('TranslateService', ['use']);
+    // const translateStoreSpy = jasmine.createSpyObj('TranslateStore');
     TestBed.configureTestingModule({
       declarations: [MainpageComponent],
       providers:[TranslateService],

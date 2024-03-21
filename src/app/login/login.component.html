@@ -11,7 +11,7 @@
                     <span *ngIf="userName">Username:{{userName}}</span>
                 </div>
                 <div>
-                    <input class="login-style" type="password" placeholder="Password" name="password" [(ngModel)]="correctPassword" 
+                    <input class="login-style" type="password" placeholder="Password" name="password" [(ngModel)]="correctPassword"
                     required minlength="8"  #password="ngModel" [pattern]="patternValue"><br>
                     <small *ngIf="password.invalid && password.touched">
                         <small *ngIf="password.errors?.['required']">*Password is required</small>

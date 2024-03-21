@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   public foodItem;
   public cartfoodItem;
   public imageUrl = '/assets/image/emptycart.png';
-  constructor(private cart: CartService) { }
+  constructor(public cart: CartService) { }
 
   ngOnInit() {
     this.getFoodItem();
@@ -29,49 +29,28 @@ export class CartComponent implements OnInit {
   increaseQuantity(item: Item) {
     this.cart.getCart().subscribe((data) => {
       this.cartfoodItem = data;
-
-      const foundItem = this.cartfoodItem.find((food) =>
-        food.itemName === item.itemName
-      )
-
-      if (foundItem === undefined) {
-        this.cart.createCart(item)
-          .subscribe(() => {
-            this.getFoodItem();
-          })
-      }
-      else {
-        foundItem.quantity++;
-        this.cart.updateQuantity(foundItem.id, foundItem)
-          .subscribe(() => {
-            this.getFoodItem();
-          })
-      }
-    })
+    });
+    item.quantity++;
+    this.cart.updateQuantity(item.id, item)
+      .subscribe(() => {
+        this.getFoodItem();
+      })
   }
 
   decreaseQuantity(item: Item) {
-    this.cart.getCart().subscribe((data: any) => {
+    this.cart.getCart().subscribe((data) => {
       this.cartfoodItem = data;
-      const foundItem = this.cartfoodItem.find((food) =>
-        food.itemName === item.itemName
-      )
-      if (foundItem === undefined) {
-        this.cart.createCart(item)
-          .subscribe(() => {
-            this.getFoodItem();
-          })
-      }
-      else {
-        if (foundItem.quantity > 1) {
-          foundItem.quantity--;
-        }
-        this.cart.updateQuantity(foundItem.id, foundItem)
-          .subscribe(() => {
-            this.getFoodItem();
-          })
-      }
-    })
+    });
+    if (item.quantity > 1) {
+      item.quantity--;
+    }
+    else {
+      this.removeItem(item.id);
+    }
+    this.cart.updateQuantity(item.id, item)
+      .subscribe(() => {
+        this.getFoodItem();
+      })
   }
 
   public removeItem(id) {

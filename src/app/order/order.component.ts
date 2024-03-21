@@ -18,15 +18,15 @@ export class OrderComponent implements OnInit {
 
   public getFoodItem(){
     this.cart.getCart()
-    .subscribe((res)=>{
-      this.foodItem=res;
+    .subscribe((response)=>{
+      this.foodItem=response;
       this.totalPrice = this.totalAll();
     })
   }
 
   public totalAll() {
     this.foodItem.map((value) => {
-      this.totalPrice += value.price*value.quantity ;
+      this.totalPrice += value.price*value.quantity;
     })
     return this.totalPrice;
   }
@@ -40,8 +40,6 @@ export class OrderComponent implements OnInit {
       this.totalPrice = 0;
       this.cart.itemLength();
       })
-    })
-    
+    }) 
   }
-
 }

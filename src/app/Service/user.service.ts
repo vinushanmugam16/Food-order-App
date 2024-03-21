@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.development';
 @Injectable({
   providedIn: 'root',
 })
+
 export class UserService {
 
   constructor(private http: HttpClient, private route: Router) { }

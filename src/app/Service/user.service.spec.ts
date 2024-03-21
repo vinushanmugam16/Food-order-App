@@ -108,12 +108,11 @@ describe('UserService', () => {
   });
 
   it('should logout', () => {
-    sessionStorage.removeItem('user');
-    sessionStorage.removeItem('password');
-    const isLogout = service.logout();
-    expect(isLogout).toBeTruthy();
-    
-    expect(route.navigateByUrl).toHaveBeenCalledWith('login'); 
+    spyOn(sessionStorage, 'removeItem');
+    service.logout();
+    expect(sessionStorage.removeItem).toHaveBeenCalledWith('user');
+    expect(sessionStorage.removeItem).toHaveBeenCalledWith('password');
+    expect(route.navigateByUrl).toHaveBeenCalledWith('login');
   });
 
 });
