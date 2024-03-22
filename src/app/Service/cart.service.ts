@@ -10,6 +10,8 @@ import { Item } from '../model/item';
 export class CartService {
   
   public totalItem:number;
+  public foodItem:any;
+  totalPrice: number=0;
 
   constructor(private http:HttpClient) { }
 
@@ -28,11 +30,11 @@ export class CartService {
     return this.http.get(this.cartUrl);   
   }
 
-  public deleteItem(id){
+  public deleteItem(id: number){
     return this.http.delete(`${this.cartUrl}/${id}`);
   }
 
-  public updateQuantity(id,foodItem){
+  public updateQuantity(id: string | number,foodItem: Item){
     return this.http.put(this.cartUrl+'/'+id,foodItem);
   }
 
@@ -42,4 +44,12 @@ export class CartService {
       this.totalItem = response.length;
     })
   }
+  
+  // public totalAll() {
+  //   this.foodItem.map((value: { price: number; quantity: number; }) => {
+  //     this.totalPrice += value.price*value.quantity;
+  //   })
+  //   return this.totalPrice;
+  // }
+
 }

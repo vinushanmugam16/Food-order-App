@@ -7,7 +7,6 @@ export interface User {
     dob: string,
     gender: string,
     phoneNumber: number,
-    country: string,
     address: Object,
     email: string
 }

@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { AuthGuard } from './guard/auth.guard';
 import { ItemsComponent } from './items/items.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {path:'', title:'Food Order App',component:HomepageComponent},
@@ -22,7 +23,9 @@ const routes: Routes = [
   {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
   {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
-  {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)}
+  {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)},
+  {path:'payment' ,title:'Payment', component:PaymentComponent}
+
 ];
 
 @NgModule({

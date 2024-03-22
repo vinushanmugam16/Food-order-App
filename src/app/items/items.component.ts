@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-items',
@@ -9,7 +10,7 @@ import { CartService } from '../Service/cart.service';
 })
 export class ItemsComponent implements OnInit {
 
-  public cartItem;
+  public cartItem: any;
   constructor(private cartList: CartService) { }
 
   ngOnInit() {
@@ -19,10 +20,10 @@ export class ItemsComponent implements OnInit {
       })
   }
   
-  public addingTocart(item) {
+  public addingTocart(item: Item) {
     this.cartList.getCart().subscribe((data: any) => {
       const foodItem = data;
-      const foundItem = foodItem.find((food) =>
+      const foundItem = foodItem.find((food: { itemName: any; }) =>
         food.itemName === item.itemName
       )
       if (!foundItem) {

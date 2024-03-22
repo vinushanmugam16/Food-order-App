@@ -10,8 +10,8 @@ import { Item } from '../model/item';
 
 export class CartComponent implements OnInit {
 
-  public foodItem;
-  public cartfoodItem;
+  public foodItem: any;
+  public cartfoodItem: Object;
   public imageUrl = '/assets/image/emptycart.png';
   constructor(public cart: CartService) { }
 
@@ -53,7 +53,7 @@ export class CartComponent implements OnInit {
       })
   }
 
-  public removeItem(id) {
+  public removeItem(id:any) {
     this.cart.deleteItem(id).subscribe(() => {
       this.getFoodItem();
       this.cart.itemLength();
@@ -61,7 +61,7 @@ export class CartComponent implements OnInit {
   }
 
   public removeAll() {
-    this.foodItem.map((item) => {
+    this.foodItem.map((item: { id: number; }) => {
       this.cart.deleteItem(item.id).subscribe(() => {
         this.getFoodItem();
       })

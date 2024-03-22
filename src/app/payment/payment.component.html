@@ -1,0 +1,45 @@
+
+
+<!-- <form>
+    <div>
+        <label>Payment Methods</label>
+        <select > 
+            <option></option>
+            <option (click)="totalAll">Gpay</option>
+            <option #refCash> Cash on Delivery</option>
+            <option #refCash>PhonePay</option>
+        </select>
+    </div>
+  </form>
+
+  <div >
+    <p>Total:{{totalPrice | currency:'INR'}}</p>
+    <button class="btn btn-success" (click)="successPayment()">Pay</button>
+  </div> -->
+
+
+  <form #payment="ngForm">
+    <div >
+      <h1>Payment</h1>
+      <!-- <label for="paymentMethod">Payment Methods</label> -->
+      <select id="paymentMethod" (change)="selectPaymentMethod($event)">
+        <option value="">Select Payment Method</option>
+        <option value="gpay">Gpay</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="phonepay">PhonePay</option>
+      </select>
+    </div>
+
+    <div *ngIf="showTotal">
+      <label>UPI PIN</label><br>
+      <input type="text" id="upi" >
+      <button type="submit" disabled="!payment.valid">Submit</button>
+    </div>
+    
+  </form>
+  
+  <div *ngIf="showTotal" class="total-style">
+    <p>Total: {{totalPrice | currency:'INR'}}</p>
+    <button class="btn btn-success" (click)="processPayment()">Pay</button>
+  </div>
+  

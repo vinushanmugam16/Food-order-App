@@ -29,14 +29,14 @@ export class UserService {
     return this.http.post(this.loginUrl, loginDetail);
   }
 
-  public getUsername(userName,pass) {
+  public getUsername(userName:string,password:string) {
     return this.http.get(this.registerUrl)
       .pipe((map(user => {
         if (Array.isArray(user)) {
-          const usernameDetail = user.find(userN => userN.username === userName && userN.password === pass);
+          const usernameDetail = user.find(userN => userN.username === userName && userN.password === password);
           if (usernameDetail) {
             sessionStorage.setItem('user', usernameDetail.username);
-            sessionStorage.setItem('password',usernameDetail.pass);
+            sessionStorage.setItem('password',usernameDetail.password);
             return usernameDetail;
           }
           else {

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/Service/user.service';
+import { Loginuser } from '../model/loginuser';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent {
 
   public loginForm: NgForm;
 
-  public onSubmit(loginForm) {
+  public onSubmit(loginForm: { valid: any; value: Loginuser; }) {
     this.user.getUsername(this.userName, this.correctPassword)
       .subscribe((logUser) => {
         if (logUser && loginForm.valid) {

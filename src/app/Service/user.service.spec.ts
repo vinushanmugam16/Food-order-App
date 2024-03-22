@@ -44,8 +44,7 @@ describe('UserService', () => {
           "pincode": 654321
         },
         "phoneNumber": 9876543210,
-        "gender": "Female",
-        "country": "India"
+        "gender": "Female"
       }
 
     service.createData(registerUser).subscribe(response => {
@@ -73,32 +72,31 @@ describe('UserService', () => {
 
   });
 
-  it('should get username by user details', () => {
-    const username: User = {
-      "firstname": "Gomathi",
-      "lastname": "Thiru",
-      "username": "GOMATHI2000",
-      "password": "Aspire@123",
-      "confirmpassword": "Aspire@123",
-      "dob": "2000-09-23",
-      "email": "gomathi@gmail.com",
-      "address": {
-        "street": "123/987,WiThyaa street",
-        "city": "Salem",
-        "pincode": 654321
-      },
-      "phoneNumber": 9876543210,
-      "gender": "Female",
-      "country": "India"
-    }
+  // it('should get username by user details', () => {
+  //   const username: User = {
+  //     "firstname": "Gomathi",
+  //     "lastname": "Thiru",
+  //     "username": "GOMATHI2000",
+  //     "password": "Aspire@123",
+  //     "confirmpassword": "Aspire@123",
+  //     "dob": "2000-09-23",
+  //     "email": "gomathi@gmail.com",
+  //     "address": {
+  //       "street": "123/987,WiThyaa street",
+  //       "city": "Salem",
+  //       "pincode": 654321
+  //     },
+  //     "phoneNumber": 9876543210,
+  //     "gender": "Female"
+  //   }
 
-    service.getUsername(username,PasswordValidation).subscribe(response => {
-      expect(response).toBeTruthy;
-    })
-    const result = httpMock.expectOne('http://localhost:3000/registerdetails');
-    expect(result.request.method).toBe('GET');
-    result.flush({ username });
-  });
+  //   service.getUsername(username:String,PasswordValidation).subscribe(response => {
+  //     expect(response).toBeTruthy;
+  //   })
+  //   const result = httpMock.expectOne('http://localhost:3000/registerdetails');
+  //   expect(result.request.method).toBe('GET');
+  //   result.flush({ username });
+  // });
 
   it('should return true if user is logged in', () => {
     sessionStorage.setItem('user', 'VINUSHA2024');

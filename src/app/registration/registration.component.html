@@ -5,20 +5,30 @@
             <div>
                 <div>
                     <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
-                    <small
-                        *ngIf="registerForm.get('firstname').invalid && registerForm.get('firstname').touched">*Firstname
-                        is required</small>
+                    <small *ngIf="registerForm.get('firstname')?.invalid && (registerForm.get('firstname')?.touched || registerForm.get('firstname')?.dirty)">
+                        <small *ngIf="registerForm.get('firstname')?.hasError('required')">*Firstname is required </small>
+                        <small *ngIf="registerForm.get('firstname')?.hasError('minlength')">*Firstname should atleast contain 4 letters</small>
+                        <small *ngIf="registerForm.get('firstname')?.errors?.['pattern'] && !registerForm.get('firstname')?.hasError('required')"> *Firstname should be valid format</small> 
+                    </small>
                 </div>
+               
                 <div>
                     <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname"><br>
                     <small
-                        *ngIf="registerForm.get('lastname').invalid && registerForm.get('lastname').touched">*lastname
-                        is Required</small>
+                        *ngIf="registerForm.get('lastname')?.invalid && (registerForm.get('lastname')?.touched || registerForm.get('lastname')?.dirty)">
+                        <small *ngIf="registerForm.get('lastname')?.hasError('required')">*Lastname is required </small>
+                        <small *ngIf="registerForm.get('lastname')?.hasError('minlength')">*Lastname should atleast contain 4 letters</small>
+                        <small *ngIf="registerForm.get('lastname')?.hasError('pattern') && !registerForm.get('lastname')?.hasError('required')"> *Lastname should be valid format</small> 
+                    </small>
                 </div>
                 <div>
                     <label class="dob-style" name="DateofBirth">Date of Birth <br>
                         <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
-                    </label>
+                    </label><br>
+                    <small
+                    *ngIf="registerForm.get('dob')?.invalid && (registerForm.get('dob')?.touched || registerForm.get('dob')?.dirty)">
+                    <small *ngIf="registerForm.get('dob')?.hasError('required')">*Date of Birth is required </small>
+                    </small>
                 </div>
 
             </div><br>
@@ -26,54 +36,65 @@
                 <small class="user-style">Click the Username button to get username of yours.</small><br>
                 <input type="text" placeholder="Username" formControlName="username">
                 <button (click)="createUsername()">Username</button><br>
-                <small *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">*Username
-                    is Required</small>
+                <small
+                        *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">*Username
+                        is Required</small>
 
             </div>
             <div>
                 <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
-                <small *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">*Password is
-                    not in Valid Format</small>
+                <small *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)">
+                <small *ngIf="registerForm.get('password')?.hasError('required')">*Password is required </small>
+                <!-- <small *ngIf="registerForm.get('passsord')?.hasError('minlength')">*Password should atleast contain 4 letters</small> -->
+                <small *ngIf="registerForm.get('password')?.hasError('pattern') && !registerForm.get('password')?.hasError('required')"> *Password should be valid format</small>
+            </small>
             </div>
             <div>
                 <input class="input-style" type="password" placeholder="Confirm Password"
                     formControlName="confirmpassword"><br>
-                <small
-                    *ngIf="registerForm.get('confirmpassword').invalid && registerForm.get('confirmpassword').touched">*Confirm
-                    Password is not matched</small>
-                <small *ngIf="registerForm.get('notmatchPassword')">*Password should match</small>
+                    <small *ngIf="registerForm.get('confirmpassword')?.invalid && (registerForm.get('confirmpassword')?.touched || registerForm.get('confirmpassword')?.dirty)">
+                        <small *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required </small>
+                        <small *ngIf="registerForm.get('confirmpassword')?.hasError('pattern') && !registerForm.get('confirmpassword')?.hasError('required')"> *Confirm Password should be valid format</small>
+                        <small *ngIf="registerForm?.hasError('notmatchPassword')">*Password should match</small>
+                    </small>   
             </div>
             <hr>
             <div>
                 <input class="input-style" type="text" placeholder="Email" formControlName="email"><br>
-                <small *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">*Email is not in
-                    Valid Format</small>
+                <small
+                *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)">*Email
+                is Required</small>
             </div>
 
             <div>
                 <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
-                <small *ngIf="registerForm.get('phoneNumber').invalid && registerForm.get('phoneNumber').touched">*Phone
-                    Number is Required</small>
-
+                <small *ngIf="registerForm.get('phoneNumber')?.invalid && (registerForm.get('phoneNumber')?.touched || registerForm.get('phoneNumber')?.dirty)">
+                    <small *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is required</small>
+                    <small *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10 numbers</small>
+                
+                </small>
             </div>
-
             <br>
+
             <div formGroupName="address">
                 <label class="address-style">Address<br>
                     <input type="text" value="street" placeholder="Street Address" formControlName="street">
-                    <small
-                        *ngIf="registerForm.get('address.street').invalid && registerForm.get('address.street').touched">*Street
-                        Address is Required</small><br>
+                    <small *ngIf="registerForm.get('address.street')?.invalid && (registerForm.get('address.street')?.touched || registerForm.get('address.street')?.dirty)">
+                        *Street is Required
+                    </small><br>
 
                     <input type="text" value="city" placeholder="City" formControlName="city">
-                    <small
-                        *ngIf="registerForm.get('address.city').invalid && registerForm.get('address.city').touched">*City
-                        is Required</small><br>
+                    <small *ngIf="registerForm.get('address.city')?.invalid && (registerForm.get('address.city')?.touched || registerForm.get('address.city')?.dirty)">
+                        <small *ngIf="registerForm.get('address.city')?.hasError('required')">*City is required</small>
+                        <small *ngIf="registerForm.get('address.city')?.hasError('pattern')">*City should be in valid name format</small>
+                   </small>    
+                <br>
 
                     <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
-                    <small
-                        *ngIf="registerForm.get('address.pincode').invalid && registerForm.get('address.pincode').touched">*Pincode
-                        is Required</small>
+                    <small *ngIf="registerForm.get('address.pincode')?.invalid && (registerForm.get('address.pincode')?.touched || registerForm.get('address.pincode')?.dirty)">
+                        <small *ngIf="registerForm.get('address.pincode')?.hasError('required')">*Pincode is Required</small>
+                        <small *ngIf="registerForm.get('address.pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
+                    </small>
                 </label>
             </div>
             <div>
@@ -82,7 +103,7 @@
                         <option *ngFor="let item of gender" [value]="item">{{item}}</option>
                     </select>
                 </label>
-            </div>
+            </div><br>
             <div>
                 <input type="submit" value="Submit" (click)="onSubmit()">
             </div>

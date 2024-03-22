@@ -85,7 +85,36 @@
       "id": "12"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 3
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 2
+    },
+    {
+      "id": "7",
+      "imageUrl": "/assets/image/mushroombriyani.jpeg",
+      "itemName": "Mushroom Briyani",
+      "price": 230,
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1
+    }
+  ],
   "logindetails": [
     {
       "id": "2819",
@@ -606,6 +635,31 @@
       "id": "f488",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "d6ed",
+      "username": "JASMVEN2010",
+      "password": "Jasmhi@123"
+    },
+    {
+      "id": "425c",
+      "username": "MONILOG2001",
+      "password": "Moni@123"
+    },
+    {
+      "id": "8e56",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "0aa8",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "d74c",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
     }
   ],
   "registerdetails": [
@@ -744,6 +798,40 @@
       },
       "phoneNumber": 9876543210,
       "gender": "Female"
+    },
+    {
+      "id": "bc77",
+      "firstname": "Jasmhitha",
+      "lastname": "Venkat",
+      "username": "JASMVEN2010",
+      "password": "Jasmhi@123",
+      "confirmpassword": "Jasmhi@123",
+      "dob": "2010-05-15",
+      "email": "jasmhi@gmail.com",
+      "address": {
+        "street": "Nandha Nagar",
+        "city": "Vadugapalayam",
+        "pincode": 600004
+      },
+      "phoneNumber": 9876543210,
+      "gender": "Female"
+    },
+    {
+      "id": "2923",
+      "firstname": "Monish",
+      "lastname": "Loganathan",
+      "username": "MONILOG2001",
+      "password": "Moni@123",
+      "confirmpassword": "Moni@1233",
+      "dob": "2001-05-03",
+      "email": "monish@gmail.com",
+      "address": {
+        "street": "Mahalakshmi Nagar",
+        "city": "Gobi",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876543211,
+      "gender": "Male"
     }
   ]
 }
