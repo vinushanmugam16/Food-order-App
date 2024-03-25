@@ -1,14 +1,13 @@
 <div class="header-style">
     <div class='btn-style'>
         <div>
-            <p class="date-style">{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p>
-            <button class="btn btn-warning" routerLink="items"> Items </button>
+            <!-- <p class="date-style">{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p> -->
             <button class="bi bi-cart4" routerLink="cart"></button>
             <button *ngIf="this.cart.totalItem">{{this.cart.totalItem}}</button>
         </div>
         <h1 class="title-style">Food Order App</h1>
-        <button class="btn btn-light" routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</button>
-        <button class='btn btn-light' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</button>
+        <a routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</a>
+        <a routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</a>
         <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
     </div>
 <br>

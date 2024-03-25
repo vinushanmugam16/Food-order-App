@@ -1,7 +1,7 @@
 div {
     display: block;
     height: 75vh;
-    color: white;
+    color: seagreen;
     font-weight: bold;
     font-size: large;
     align-items: center;
@@ -15,5 +15,5 @@ h1 {
 }
 
 .quote-style {
-    color: white;
+    color:seagreen ;
 }

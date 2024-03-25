@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { Item } from '../model/item';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-payment',
@@ -17,14 +19,19 @@ export class PaymentComponent {
   paymentMethod: string;
   cod:boolean=false;
 
-  constructor(private cart: CartService) { }
+  constructor(private cart: CartService, private toast:ToastrService) { }
 
   ngOnInit() {
     this.totalAll();
 
     this.payment = new FormGroup({
       paymentOption: new FormControl('', Validators.required),
-      upiId: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,4}$/)])
+      upiId: new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,4}$/)]),
+      address: new FormGroup({
+        street: new FormControl('', [Validators.required]),
+        city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
+        pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
+      }),
     })
   }
 
@@ -48,11 +55,11 @@ export class PaymentComponent {
   }
 
   processPayment() {
-    alert('Successfully Paid!',)
     this.foodItem.map((item: { id: number }) => {
       this.cart.deleteItem(item.id).subscribe(() => {
         this.totalPrice = 0;
         this.cart.itemLength();
+        this.toast.success('Successfully Paid!');
       })
     })
   }

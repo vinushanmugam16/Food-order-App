@@ -24,7 +24,7 @@
                        <span>{{item.quantity}}</span>
                         <button (click)="decreaseQuantity(item)">-</button>
                     </td>
-                    <td>{{item.price * item.quantity | currency:'INR'}}</td>
+                    <td>{{item.price * item.quantity | currency:'USD'}}</td>
                     <td>
                         <button class="bi bi-trash" (click)="removeItem(item.id)"></button>
                     </td>
@@ -36,7 +36,7 @@
             <button class='btn btn-danger' (click)="removeAll()">Empty Cart</button>
         </div>
         <div>
-            <button class='btn btn-success' routerLink="/mainpage">Shop More</button>
+            <button class='btn btn-success' routerLink="/items">Shop More</button>
             <button class='btn btn-success' routerLink="/ordering/order">Buy Food</button>
         </div>
     </div>

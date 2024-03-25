@@ -5,7 +5,7 @@
             <img icon-link icon-link-hover [src]="item.imageUrl" width="200px" height="200px" alt="Food Image">
             <p>{{item.itemName}}</p>
             <p>Price: {{item.price | currency:'INR'}}</p>
-            <button class="btn btn-secondary" (click)="addingTocart(item)">Add to Cart</button>
+            <button class="btn btn-outline-primary" (click)="addingTocart(item)">Add to Cart</button>
         </div>
     </div>
 </div>

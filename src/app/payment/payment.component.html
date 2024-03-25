@@ -18,6 +18,35 @@
         <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
       </small><br>
     </div>
+
+    <!-- <div>
+    <label class="address-style">Address:
+      <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
+      <small
+          *ngIf="payment.get('address.street')?.invalid && (payment.get('address.street')?.touched || payment.get('address.street')?.dirty)">
+          *Street is Required
+      </small><br>
+
+      <input type="text" value="city" placeholder="City" formControlName="city"><br>
+      <small
+          *ngIf="payment.get('address.city')?.invalid && (payment.get('address.city')?.touched || payment.get('address.city')?.dirty)">
+          <small *ngIf="payment.get('address.city')?.hasError('required')">*City is required</small>
+          <small *ngIf="payment.get('address.city')?.hasError('pattern')">*City should be in valid
+              name format</small>
+      </small>
+      <br>
+
+      <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode"><br>
+      <small
+          *ngIf="payment.get('address.pincode')?.invalid && (payment.get('address.pincode')?.touched || payment.get('address.pincode')?.dirty)">
+          <small *ngIf="payment.get('address.pincode')?.hasError('required')">*Pincode is
+              Required</small>
+          <small *ngIf="payment.get('address.pincode')?.hasError('pattern')">*Pincode should contain
+              6 numbers</small>
+      </small>
+  </label>
+</div> -->
+
   </form>
   
   <div *ngIf="showTotal" class="total-style">
@@ -30,3 +59,41 @@
     <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
   </div>
   
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Address update</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <div class="input-group">
+            <!-- <input
+              id="address"
+              class="form-control"
+              placeholder="Address"
+              name="address"
+              ngbDatepicker
+              #dp="ngbDatepicker"
+            /> -->
+
+            <!-- <div formGroupName="address"> -->
+               
+            <!-- </div> -->
+            <!-- <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+  
+  <hr />
+  
+  <!-- <pre>{{ closeResult }}</pre> -->

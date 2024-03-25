@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +13,7 @@ import { PasswordValidation } from '../customvalidation/passwordvalidation.direc
 export class RegistrationComponent implements OnInit {
 
   constructor(private user: UserService,
-    private router: Router) { }
+    private router: Router, private toast:ToastrService) { }
 
   public registerForm: FormGroup;
   public gender = ['Male', 'Female'];
@@ -39,11 +40,12 @@ export class RegistrationComponent implements OnInit {
 
   public onSubmit() {
     if (this.registerForm.invalid) {
-      alert('Please fill the form in valid format');
+      this.toast.warning('Please fill the form in Valid format!')
     }
     else {
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
+          this.toast.success('Successfully Registered!');
           this.router.navigateByUrl('login');
         })
     }

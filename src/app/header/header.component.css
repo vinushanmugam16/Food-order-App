@@ -1,23 +1,20 @@
 .header-style {
     display: flex;
-    border: 2px solid black;
-    background-color: rgb(13, 68, 54);
-    color: white;
+    border: 2px solid darkgrey;
+    background-color: rgb(66, 67, 68);
     font-weight: bold;
     font-size: large;
-    height: 20vh;
+    height: 16vh;
+    
 }
 
-.btn-style {
-    color: white;
+.btn-style ,a{
+    font-size: 30px;
+    color: darkblue;
     font-size: large;
     font-weight: bold;
     padding-bottom: 40px;
-    margin-left: 10px;
-}
-
-.reg-btn {
-    margin-left: 10px;
+    margin: 20px;
 }
 
 .active-state {
@@ -25,39 +22,19 @@
     font-weight: bold;
 }
 
-.date-style {
-    margin-right: 150vh;
-}
-
 .title-style {
     text-align: center;
     margin-left: 50px;
+    color:white
 }
 
-.cart-btn-style {
-    background-color: rgb(173, 136, 87);
-    color: white;
-    font-weight: bold;
+.bi-cart4 {
+    margin-left: 170vh;
 }
-
-.btn-light{
-    margin-left: 10px;
-    background-color: #d8bfd8;
-}
-.bi-cart4{
-    margin-left:155vh;                           
-}
-
-.btn-warning{
-    margin-left:10vh; 
-    background-color: #d8bfd8; 
-}
-
-.btn-secondary{
-    margin-bottom: 50px;
-    margin-left:170vh
-}
-
-.lang-style{
+.lang-style {
     margin-top: 50px;
+}
+.btn-secondary{
+    margin-left: 167vh;
+    margin-bottom: 10px;
 }

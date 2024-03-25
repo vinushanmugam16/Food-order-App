@@ -20,6 +20,7 @@ import { ItemsComponent } from './items/items.component';
 import { TranslateLoader, TranslateModule,TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PaymentComponent } from './payment/payment.component';
+import { ToastNoAnimationModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,9 @@ import { PaymentComponent } from './payment/payment.component';
         useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    ToastNoAnimationModule.forRoot(),
+
   ],
   providers: [UserService,CartService,TranslateService],
   bootstrap: [AppComponent]

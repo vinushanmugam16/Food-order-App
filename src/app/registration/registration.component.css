@@ -27,8 +27,10 @@ small {
 }
 
 .whole-style {
-    background-image: url('/assets/image/pexels-photo-326281.jpeg');
+    /* background-image: url('/assets/image/pexels-photo-326281.jpeg'); */
+    background-image:url('/assets/image/light-blue.avif');
     background-size: cover;
+  
 }
 
 .label-style {

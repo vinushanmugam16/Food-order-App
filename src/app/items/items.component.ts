@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { Item } from '../model/item';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-items',
@@ -11,7 +12,7 @@ import { Item } from '../model/item';
 export class ItemsComponent implements OnInit {
 
   public cartItem: any;
-  constructor(private cartList: CartService) { }
+  constructor(private cartList: CartService ,private toast:ToastrService) { }
 
   ngOnInit() {
     this.cartList.getItem()
@@ -29,7 +30,11 @@ export class ItemsComponent implements OnInit {
       if (!foundItem) {
         this.cartList.createCart(item).subscribe(() => {
           this.cartList.itemLength();
+          this.toast.success('Item added to cart!');
         })
+      }
+      else{
+        this.toast.info('Item already added to cart!');
       }
     })
   }

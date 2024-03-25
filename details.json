@@ -85,7 +85,36 @@
       "id": "12"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1
+    },
+    {
+      "id": "1",
+      "imageUrl": "/assets/image/idly.jpeg",
+      "itemName": "Idly",
+      "price": 35,
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1
+    }
+  ],
   "logindetails": [
     {
       "id": "2819",
@@ -716,6 +745,41 @@
       "id": "049c",
       "username": "janu",
       "password": "Janu@123"
+    },
+    {
+      "id": "0fb5",
+      "username": "Banu",
+      "password": "Banu@1234"
+    },
+    {
+      "id": "e282",
+      "username": "Banu",
+      "password": "Banu@1234"
+    },
+    {
+      "id": "c8fb",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "5949",
+      "username": "LILAKRI2005",
+      "password": "Lila@123"
+    },
+    {
+      "id": "4ca9",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "efe4",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "e6be",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
     }
   ],
   "registerdetails": [
@@ -973,6 +1037,40 @@
       },
       "phoneNumber": 4567890789,
       "gender": "Male"
+    },
+    {
+      "id": "513a",
+      "firstname": "Banu",
+      "lastname": "Lakshman",
+      "username": "Banu",
+      "password": "Banu@1234",
+      "confirmpassword": "Banu@1234",
+      "dob": "2000-01-23",
+      "email": "banu@gmail.com",
+      "address": {
+        "street": "120, Sri Sakthi nagar",
+        "city": "Erode",
+        "pincode": 654321
+      },
+      "phoneNumber": 9876532512,
+      "gender": "Female"
+    },
+    {
+      "id": "9931",
+      "firstname": "Lila",
+      "lastname": "Krish",
+      "username": "LILAKRI2005",
+      "password": "Lila@123",
+      "confirmpassword": "Lila@123",
+      "dob": "2005-01-21",
+      "email": "lila@gmail.com",
+      "address": {
+        "street": "hvduiuwq",
+        "city": "erode",
+        "pincode": 642632
+      },
+      "phoneNumber": 9876543212,
+      "gender": "Female"
     }
   ]
 }

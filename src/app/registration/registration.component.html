@@ -3,6 +3,7 @@
         <h1 class="heading-style">Details</h1>
         <form [formGroup]="registerForm">
             <div>
+                <br>
                 <div>
                     <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
                     <small
@@ -16,7 +17,7 @@
                             *Firstname should be valid format</small>
                     </small>
                 </div>
-
+                <br>
                 <div>
                     <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname"><br>
                     <small
@@ -28,27 +29,28 @@
                             *ngIf="registerForm.get('lastname')?.hasError('pattern') && !registerForm.get('lastname')?.hasError('required')">
                             *Lastname should be valid format</small>
                     </small>
-                </div>
+                </div><br>
                 <div>
-                    <label class="dob-style" name="DateofBirth">Date of Birth <br>
+                    <!-- <label class="dob-style" name="DateofBirth">Date of Birth <br> -->
                         <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
-                    </label><br>
+                    <!-- </label>-->
+                        <br> 
                     <small
                         *ngIf="registerForm.get('dob')?.invalid && (registerForm.get('dob')?.touched || registerForm.get('dob')?.dirty)">
                         <small *ngIf="registerForm.get('dob')?.hasError('required')">*Date of Birth is required </small>
                     </small>
                 </div>
-
-            </div><br>
+            </div>
+            <br>
             <div>
-                <small class="user-style">Click the Username button to get username of yours.</small><br>
-                <input type="text" placeholder="Username" formControlName="username">
+                <small class="user-style">(Click the Username button to get username of yours.)</small><br>
+                <input type="text" placeholder="Username" formControlName="username"><br>
                 <button (click)="createUsername()">Username</button><br>
                 <small
                     *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">*Username
                     is Required</small>
-
             </div>
+            <br>
             <div>
                 <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
                 <small
@@ -58,7 +60,7 @@
                         *ngIf="registerForm.get('password')?.hasError('pattern') && !registerForm.get('password')?.hasError('required')">
                         *Password should be valid format</small>
                 </small>
-            </div>
+            </div><br>
             <div>
                 <input class="input-style" type="password" placeholder="Confirm Password" formControlName="confirmpassword"><br>
                 <small
@@ -74,7 +76,7 @@
                     *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)">*Email
                     is Required</small>
             </div>
-
+            <br>
             <div>
                 <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
                 <small
@@ -83,20 +85,19 @@
                         required</small>
                     <small *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10
                         numbers</small>
-
                 </small>
             </div>
             <br>
 
-            <div formGroupName="address">
-                <label class="address-style">Address<br>
-                    <input type="text" value="street" placeholder="Street Address" formControlName="street">
+            <!-- <div formGroupName="address">
+                <label class="address-style">Address:
+                    <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
                     <small
                         *ngIf="registerForm.get('address.street')?.invalid && (registerForm.get('address.street')?.touched || registerForm.get('address.street')?.dirty)">
                         *Street is Required
                     </small><br>
 
-                    <input type="text" value="city" placeholder="City" formControlName="city">
+                    <input type="text" value="city" placeholder="City" formControlName="city"><br>
                     <small
                         *ngIf="registerForm.get('address.city')?.invalid && (registerForm.get('address.city')?.touched || registerForm.get('address.city')?.dirty)">
                         <small *ngIf="registerForm.get('address.city')?.hasError('required')">*City is required</small>
@@ -105,7 +106,7 @@
                     </small>
                     <br>
 
-                    <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode">
+                    <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode"><br>
                     <small
                         *ngIf="registerForm.get('address.pincode')?.invalid && (registerForm.get('address.pincode')?.touched || registerForm.get('address.pincode')?.dirty)">
                         <small *ngIf="registerForm.get('address.pincode')?.hasError('required')">*Pincode is
@@ -114,17 +115,17 @@
                             6 numbers</small>
                     </small>
                 </label>
-            </div>
+            </div> -->
             <div>
-                <label class="label-style"> Gender
-                    <select class="form-select" formControlName="gender" >
+                <label class="label-style">
+                    <select class="form-select" formControlName="gender">
                         <option value="" selected > Select Gender</option>
                         <option *ngFor="let item of gender" [value]="item">{{item}}</option>
                     </select>
                 </label>
             </div><br>
             <div>
-                <input type="submit" value="Submit" (click)="onSubmit()">
+                <input class="btn btn-success"  type="submit" value="Submit" (click)="onSubmit()">
             </div>
         </form>
     </div>
