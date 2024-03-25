@@ -22,6 +22,6 @@ describe('FooterComponent', () => {
     const test = TestBed.createComponent(FooterComponent);
     test.detectChanges();
     const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('button').textContent).toContain('Contact');
+    expect(compile.querySelector('button')?.textContent).toContain('Contact');
   })
 });

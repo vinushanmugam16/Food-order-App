@@ -1,45 +1,32 @@
-
-
-<!-- <form>
-    <div>
-        <label>Payment Methods</label>
-        <select > 
-            <option></option>
-            <option (click)="totalAll">Gpay</option>
-            <option #refCash> Cash on Delivery</option>
-            <option #refCash>PhonePay</option>
-        </select>
-    </div>
-  </form>
-
-  <div >
-    <p>Total:{{totalPrice | currency:'INR'}}</p>
-    <button class="btn btn-success" (click)="successPayment()">Pay</button>
-  </div> -->
-
-
-  <form #payment="ngForm">
-    <div >
+  <form [formGroup]="payment">
+    <div class="payment-style" >
       <h1>Payment</h1>
-      <!-- <label for="paymentMethod">Payment Methods</label> -->
-      <select id="paymentMethod" (change)="selectPaymentMethod($event)">
+      <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
         <option value="">Select Payment Method</option>
         <option value="gpay">Gpay</option>
         <option value="cod">Cash on Delivery</option>
         <option value="phonepay">PhonePay</option>
-      </select>
-    </div>
+      </select><br>
+        <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
+    </div><br>
 
     <div *ngIf="showTotal">
-      <label>UPI PIN</label><br>
-      <input type="text" id="upi" >
-      <button type="submit" disabled="!payment.valid">Submit</button>
+      <label>UPI ID</label><br>
+      <input type="text" id="upi" formControlName="upiId" ><br>
+      <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
+        <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
+        <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
+      </small><br>
     </div>
-    
   </form>
   
   <div *ngIf="showTotal" class="total-style">
-    <p>Total: {{totalPrice | currency:'INR'}}</p>
+    <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
     <button class="btn btn-success" (click)="processPayment()">Pay</button>
+  </div>
+  
+  <div *ngIf="cod" class="total-style">
+    <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
+    <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
   </div>
   

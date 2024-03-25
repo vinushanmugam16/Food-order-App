@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
   {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)},
-  {path:'payment' ,title:'Payment', component:PaymentComponent}
+  {path:'payment' ,title:'Payment', component:PaymentComponent,canActivate:[AuthGuard]}
 
 ];
 

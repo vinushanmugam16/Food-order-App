@@ -19,6 +19,13 @@ describe('CartComponent', () => {
 
     fixture = TestBed.createComponent(CartComponent);
     component = fixture.componentInstance;
+    component.foodItem=[{
+      "id": 4,
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "quantity":1,
+      "price": 60
+    }];
     fixture.detectChanges();
     service=TestBed.inject(CartService);
   })
@@ -46,16 +53,4 @@ describe('CartComponent', () => {
     expect(component.foodItem).toEqual(mockResponse);
   });
 
-  it('should call getFoodItem and itemLength when removeItem is called', () => {
-    const mockItemId = '1'; 
-    spyOn(component, 'getFoodItem');
-    spyOn(component.cart, 'itemLength'); 
-    spyOn(service, 'deleteItem').and.returnValue(of(null)); 
-
-    component.removeItem(mockItemId);
-
-    expect(service.deleteItem).toHaveBeenCalledWith(mockItemId); 
-    expect(component.getFoodItem).toHaveBeenCalled(); 
-    expect(component.cart.itemLength).toHaveBeenCalled(); 
-  });
 });

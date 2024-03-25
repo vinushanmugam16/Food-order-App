@@ -4,21 +4,22 @@
         <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
             <div>
                 <div>
-                    <input class="login-style" type="text" placeholder="Username" name="username" [(ngModel)]="userName" required #uName="ngModel"><br>
-                    <small *ngIf="uName.invalid && uName.touched">
+                    <input class="login-style" type="text" placeholder="Username" name="username" [(ngModel)]="userName"
+                        required #uName="ngModel"><br>
+                    <small *ngIf="uName.invalid && (uName.touched || uName.dirty)">
                         <small *ngIf="uName.errors?.['required']">*Username is Required</small>
                     </small>
                     <span *ngIf="userName">Username:{{userName}}</span>
                 </div>
                 <div>
-                    <input class="login-style" type="password" placeholder="Password" name="password" [(ngModel)]="correctPassword"
-                    required minlength="8"  #password="ngModel" [pattern]="patternValue"><br>
-                    <small *ngIf="password.invalid && password.touched">
+                    <input class="login-style" type="password" placeholder="Password" name="password"
+                        [(ngModel)]="correctPassword" required minlength="8" #password="ngModel"
+                        [pattern]="patternValue"><br>
+                    <small *ngIf="password.invalid && (password.touched || password.dirty)">
                         <small *ngIf="password.errors?.['required']">*Password is required</small>
                         <small *ngIf="password.errors?.['pattern']">*Password is in invalid format</small>
-                        <small *ngIf="password.errors?.['minlength']">*Password should be atleast 8 characters</small>
+                        <small *ngIf="password.errors?.['minlength']&& !password.errors?.['pattern']">*Password should be atleast 8 characters</small>
                     </small><br>
-                    <span *ngIf="correctPassword">Password:{{correctPassword}}</span>
                 </div>
                 <div>
                     <input class="login-style" type="submit" value="Submit">

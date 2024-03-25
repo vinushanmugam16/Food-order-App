@@ -85,36 +85,7 @@
       "id": "12"
     }
   ],
-  "addcart": [
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 3
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 2
-    },
-    {
-      "id": "7",
-      "imageUrl": "/assets/image/mushroombriyani.jpeg",
-      "itemName": "Mushroom Briyani",
-      "price": 230,
-      "quantity": 1
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60,
-      "quantity": 1
-    }
-  ],
+  "addcart": [],
   "logindetails": [
     {
       "id": "2819",
@@ -660,6 +631,91 @@
       "id": "d74c",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "7f50",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "36a1",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "91f4",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "50f3",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "c087",
+      "username": "AKILARA2008",
+      "password": "Sumi@akil$12062008"
+    },
+    {
+      "id": "8b12",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "9202",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "fc12",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "7c4f",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "1a0c",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "2f23",
+      "username": "Anupriya",
+      "password": "Anu@1234"
+    },
+    {
+      "id": "9f35",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "e462",
+      "username": "SURYPRA2002",
+      "password": "Surya@123"
+    },
+    {
+      "id": "271c",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "5132",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "1147",
+      "username": "janu",
+      "password": "Janu@123"
+    },
+    {
+      "id": "049c",
+      "username": "janu",
+      "password": "Janu@123"
     }
   ],
   "registerdetails": [
@@ -831,6 +887,91 @@
         "pincode": 654321
       },
       "phoneNumber": 9876543211,
+      "gender": "Male"
+    },
+    {
+      "id": "8c16",
+      "firstname": "Akilnath",
+      "lastname": "Arasakumaran",
+      "username": "AKILARA2008",
+      "password": "Sumi@akil$12062008",
+      "confirmpassword": "Sumi@akil$12062008",
+      "dob": "2008-06-30",
+      "email": "akil@gmail.com",
+      "address": {
+        "street": "18th,Cross street",
+        "city": "Karur",
+        "pincode": 639111
+      },
+      "phoneNumber": 9025638100,
+      "gender": "Female"
+    },
+    {
+      "id": "203e",
+      "firstname": "Anupriyaa",
+      "lastname": "Chinasamy",
+      "username": "Anupriya",
+      "password": "Anu@1234",
+      "confirmpassword": "Anu@1234",
+      "dob": "2002-06-06",
+      "email": "anu@gmail.com",
+      "address": {
+        "street": "Ambika nagar",
+        "city": "Karatadipalayam",
+        "pincode": 638476
+      },
+      "phoneNumber": 6543218909,
+      "gender": "Female"
+    },
+    {
+      "id": "6fa0",
+      "firstname": "Surya",
+      "lastname": "Prabha",
+      "username": "SURYPRA2002",
+      "password": "Surya@123",
+      "confirmpassword": "Surya@123",
+      "dob": "2002-03-13",
+      "email": "surya@gmail.com",
+      "address": {
+        "street": "Sri sakthi nagar",
+        "city": "Gobi",
+        "pincode": 638476
+      },
+      "phoneNumber": 9876543211,
+      "gender": "Female"
+    },
+    {
+      "id": "8d57",
+      "firstname": "Vidhyashree",
+      "lastname": "Mahalingam",
+      "username": "VIDHMAH2001",
+      "password": "Vidhya@123",
+      "confirmpassword": "Vidhya@123",
+      "dob": "2001-06-23",
+      "email": "vidhya@gmail.com",
+      "address": {
+        "street": "Sai baba street",
+        "city": "Sathy",
+        "pincode": 638474
+      },
+      "phoneNumber": 9876543211,
+      "gender": "Female"
+    },
+    {
+      "id": "ca6d",
+      "firstname": "janu",
+      "lastname": "fghj",
+      "username": "janu",
+      "password": "Janu@123",
+      "confirmpassword": "Janu@123",
+      "dob": "2024-02-25",
+      "email": "jn@gmail.com",
+      "address": {
+        "street": "dfghjkhjkl",
+        "city": "ffghjkl",
+        "pincode": 678978
+      },
+      "phoneNumber": 4567890789,
       "gender": "Male"
     }
   ]

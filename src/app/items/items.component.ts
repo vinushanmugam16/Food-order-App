@@ -19,20 +19,15 @@ export class ItemsComponent implements OnInit {
         this.cartItem = response;
       })
   }
-  
+
   public addingTocart(item: Item) {
     this.cartList.getCart().subscribe((data: any) => {
       const foodItem = data;
-      const foundItem = foodItem.find((food: { itemName: any; }) =>
+      const foundItem = foodItem.find((food: { itemName: string; }) =>
         food.itemName === item.itemName
       )
       if (!foundItem) {
         this.cartList.createCart(item).subscribe(() => {
-          this.cartList.itemLength();
-        })
-      }
-      else {
-        this.cartList.updateQuantity(foundItem.id, foundItem).subscribe(() => {
           this.cartList.itemLength();
         })
       }

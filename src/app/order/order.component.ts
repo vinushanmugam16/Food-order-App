@@ -11,7 +11,7 @@ export class OrderComponent implements OnInit {
 
   public foodItem: any;
   public totalPrice: number = 0;
-  constructor(private cart: CartService, private route: Router) { }
+  constructor(private cart: CartService, private route: Router) {}
 
   ngOnInit() {
     this.getFoodItem();
@@ -33,14 +33,6 @@ export class OrderComponent implements OnInit {
   }
 
   public orderSelected() {
-    // alert('Selected items are ordered Successfully!');
-    // this.foodItem.map((item: { id: number; }) => {
-    //   this.cart.deleteItem(item.id).subscribe(() => {
-    //     this.getFoodItem();
-    //     // this.totalPrice = 0;
-    //     this.cart.itemLength();
-    //   })
-    // })
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

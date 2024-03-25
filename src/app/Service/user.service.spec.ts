@@ -4,7 +4,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { User } from '../model/user';
 import { Router, RouterModule } from '@angular/router';
 import { Loginuser } from '../model/loginuser';
-import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 
 describe('UserService', () => {
   let service: UserService;
@@ -72,32 +71,6 @@ describe('UserService', () => {
 
   });
 
-  // it('should get username by user details', () => {
-  //   const username: User = {
-  //     "firstname": "Gomathi",
-  //     "lastname": "Thiru",
-  //     "username": "GOMATHI2000",
-  //     "password": "Aspire@123",
-  //     "confirmpassword": "Aspire@123",
-  //     "dob": "2000-09-23",
-  //     "email": "gomathi@gmail.com",
-  //     "address": {
-  //       "street": "123/987,WiThyaa street",
-  //       "city": "Salem",
-  //       "pincode": 654321
-  //     },
-  //     "phoneNumber": 9876543210,
-  //     "gender": "Female"
-  //   }
-
-  //   service.getUsername(username:String,PasswordValidation).subscribe(response => {
-  //     expect(response).toBeTruthy;
-  //   })
-  //   const result = httpMock.expectOne('http://localhost:3000/registerdetails');
-  //   expect(result.request.method).toBe('GET');
-  //   result.flush({ username });
-  // });
-
   it('should return true if user is logged in', () => {
     sessionStorage.setItem('user', 'VINUSHA2024');
     sessionStorage.setItem('password', 'Vinu@123');
@@ -110,7 +83,8 @@ describe('UserService', () => {
     service.logout();
     expect(sessionStorage.removeItem).toHaveBeenCalledWith('user');
     expect(sessionStorage.removeItem).toHaveBeenCalledWith('password');
-    expect(route.navigateByUrl).toHaveBeenCalledWith('login');
+   const spy= spyOn(route, 'navigateByUrl');
+    expect(spy).toHaveBeenCalledWith('login');
   });
 
 });

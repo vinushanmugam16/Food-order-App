@@ -19,22 +19,22 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      firstname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*)"),Validators.minLength(4)]),
-      lastname: new FormControl('', [Validators.required,Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*)"),Validators.minLength(4)]),
-      username: new FormControl('',[Validators.required]),
-      password: new FormControl('',[Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
-      confirmpassword:new FormControl('',[Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
-      dob: new FormControl('',[Validators.required]),
+      firstname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*)"), Validators.minLength(3)]),
+      lastname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*)"), Validators.minLength(3)]),
+      username: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
+      confirmpassword: new FormControl('', [Validators.required]),
+      dob: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       address: new FormGroup({
         street: new FormControl('', [Validators.required]),
-        city: new FormControl('', [Validators.required,Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
+        city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
         pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
       }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
-    }),
-    {Validators:PasswordValidation}
+    },
+      { validators: PasswordValidation })
   }
 
   public onSubmit() {
@@ -43,31 +43,17 @@ export class RegistrationComponent implements OnInit {
     }
     else {
       this.user.createData(this.registerForm.value)
-        .subscribe(
-          response => {
-            console.log(response);
-          }
-        )
-      this.router.navigateByUrl('login');
+        .subscribe(() => {
+          this.router.navigateByUrl('login');
+        })
     }
   }
 
   public createUsername() {
     let user = '';
-    // const userFirstname: string = this.registerForm.get('firstname').value;
-    // const userLastname: string = this.registerForm.get('lastname').value;
-    // const userDob: string = this.registerForm.get('dob').value
-    const { firstname, lastname, dob ,username} = this.registerForm.value;
-
-// You can further ensure type safety by explicitly typing the destructured variables
-// const userFirstname: string = firstname;
-// const userLastname: string = lastname;
-// const userDob: string = dob;
-// const setUsername:string=username;
-
-const userFirstname: string = this.registerForm.value.firstname;
-const userLastname: string = this.registerForm.value.lastname;
-const userDob: string = this.registerForm.value.dob;
+    const userFirstname: string = this.registerForm.value.firstname;
+    const userLastname: string = this.registerForm.value.lastname;
+    const userDob: string = this.registerForm.value.dob;
 
     if (userFirstname.length >= 4) {
       user += userFirstname.slice(0, 4).toUpperCase();
@@ -87,6 +73,5 @@ const userDob: string = this.registerForm.value.dob;
     this.registerForm.patchValue({
       username: user
     });
-    // this.registerForm.value.username.setValue(user);
   }
 }

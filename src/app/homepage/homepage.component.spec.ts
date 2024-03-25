@@ -7,7 +7,7 @@ describe('HomepageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomepageComponent]
+      declarations: [HomepageComponent],
     });
     fixture = TestBed.createComponent(HomepageComponent);
     component = fixture.componentInstance;
@@ -22,6 +22,6 @@ describe('HomepageComponent', () => {
     const test = TestBed.createComponent(HomepageComponent);
     test.detectChanges();
     const compile = test.nativeElement as HTMLElement;
-    expect(compile.querySelector('h1').textContent).toContain('Food Matters!')
+    expect(compile.querySelector('h1')?.textContent).toContain('Food Matters!')
   })
 });

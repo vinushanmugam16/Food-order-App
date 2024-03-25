@@ -44,12 +44,4 @@ export class CartService {
       this.totalItem = response.length;
     })
   }
-  
-  // public totalAll() {
-  //   this.foodItem.map((value: { price: number; quantity: number; }) => {
-  //     this.totalPrice += value.price*value.quantity;
-  //   })
-  //   return this.totalPrice;
-  // }
-
 }

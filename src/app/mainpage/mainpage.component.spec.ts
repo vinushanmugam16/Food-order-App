@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainpageComponent } from './mainpage.component';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MainpageComponent', () => {
   let component: MainpageComponent;
@@ -9,12 +10,10 @@ describe('MainpageComponent', () => {
   let translate: TranslateService;
 
   beforeEach(() => {
-    // const translateServiceSpy = jasmine.createSpyObj('TranslateService', ['use']);
-    // const translateStoreSpy = jasmine.createSpyObj('TranslateStore');
     TestBed.configureTestingModule({
       declarations: [MainpageComponent],
       providers:[TranslateService],
-      imports:[TranslateModule]
+      imports:[TranslateModule,HttpClientTestingModule]
 
     });
     fixture = TestBed.createComponent(MainpageComponent);
