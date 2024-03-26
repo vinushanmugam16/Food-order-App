@@ -18,7 +18,7 @@
         <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
       </small><br>
     </div>
-
+  </form>
     <!-- <div>
     <label class="address-style">Address:
       <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
@@ -47,7 +47,7 @@
   </label>
 </div> -->
 
-  </form>
+ 
   
   <div *ngIf="showTotal" class="total-style">
     <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
@@ -60,40 +60,276 @@
   </div>
   
 
-  <ng-template #content let-modal>
+  
+<!-- <div class="container p4">
+  <div class="modal-header">
+    <h2 class="modal-title" id="titlealign">Add</h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')" class="btn btn-lg">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div> -->
+
+     
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>  
+     
+<ng-template #mymodal let-modal>  
+  <div class="modal-header">  
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>  
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">  
+      <span aria-hidden="true">?</span>  
+    </button>  
+  </div>  
+  <div class="modal-body">  
+    This is example from Javatpoint.com  
+  </div>  
+  <div class="modal-footer">  
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>  
+  </div>   -->
+
+
+
+  <!-- <div class="container p-4">
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Address update</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      <h2 class="modal-title" id="titlealign">Add</h2>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"
+        class="btn btn-lg">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
     <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="address">Address</label>
-          <div class="input-group">
-            <!-- <input
-              id="address"
-              class="form-control"
-              placeholder="Address"
-              name="address"
-              ngbDatepicker
-              #dp="ngbDatepicker"
-            /> -->
 
-            <!-- <div formGroupName="address"> -->
-               
-            <!-- </div> -->
-            <!-- <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button> -->
+      <form [formGroup]="address" (input)="buttonDisable()">
+
+        <div class="row">
+          <input type="text" formControlName="street" class="form-control form-control-lg border border-black" placeholder="Street"/>
+          <div *ngIf="address.get('street')?.invalid && (address.get('street')?.dirty || address.get('street')?.touched)">
+            <div *ngIf="address.get('street')?.errors?.['required']">*Street must be given</div>
           </div>
         </div>
-      </form>
+        <br />
+</form>
+</div>
+</div> -->
+
+        <!-- <p *ngIf="buttonAble">*Enter Valid Details</p>
+        <div class="row">
+          <label class="categoryAlign">Category</label>
+          <select
+            formControlName="category"
+            id=" "
+            class="form-select form-select-lg mb-3 border border-black"
+            multiple
+          >
+            <option
+              *ngFor="let item of category"
+              [value]="item"
+              class="border border-black"
+            >
+              {{ item }}
+            </option>
+          </select>
+          <div
+            *ngIf="
+              addNewData.get('category')?.invalid &&
+              (addNewData.get('category')?.dirty ||
+                addNewData.get('category')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('category')?.errors?.['required']">
+              *Category must be given
+            </div>
+          </div>
+        </div>
+        <br />
+   
+        <div class="row">
+          <input
+            type="text"
+            formControlName="food"
+            class="form-control form-control-lg border border-black"
+            placeholder="Food"
+          />
+          <div
+            *ngIf="
+              addNewData.get('food')?.invalid &&
+              (addNewData.get('food')?.dirty || addNewData.get('food')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('food')?.errors?.['required']">
+              *Food must be given
+            </div>
+            <div *ngIf="addNewData.get('food')?.errors?.['pattern']">
+              *Valid Food Name must be given
+            </div>
+          </div>
+        </div>
+        <br />
+   
+        <div class="row">
+          <input
+            type="number"
+            formControlName="quantity"
+            class="form-control form-control-lg border border-black"
+            placeholder="FoodQuantity"
+            min="1"
+          />
+          <div
+            *ngIf="
+              addNewData.get('quantity')?.invalid &&
+              (addNewData.get('quantity')?.dirty ||
+                addNewData.get('quantity')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('quantity')?.errors?.['required']">
+              *Food Quantity must be given
+            </div>
+            <div *ngIf="addNewData.get('quantity')?.errors?.['min']">
+              * Valid Food Quantity should be given
+            </div>
+          </div>
+        </div>
+        <br />
+   
+        <div class="row">
+          <input
+            type="text"
+            formControlName="foodunit"
+            class="form-control form-control-lg border border-black"
+            placeholder="Food Quantity Unit"
+            required
+          />
+          <div
+            *ngIf="
+              addNewData.get('foodunit')?.invalid &&
+              (addNewData.get('foodunit')?.dirty ||
+                addNewData.get('foodunit')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('foodunit')?.errors?.['required']">
+              *Food Quantity Unit must be given
+            </div>
+            <div *ngIf="addNewData.get('foodunit').hasError('pattern')">
+              *Food Quantity Unit must be in lowercase
+            </div>
+          </div>
+        </div>
+   
+        <br />
+   
+        <div class="row">
+          <input
+            type="text"
+            formControlName="sidedish"
+            class="form-control form-control-lg border border-black"
+            placeholder="Combo"
+          />
+          <div
+            *ngIf="
+              addNewData.get('sidedish')?.invalid &&
+              (addNewData.get('sidedish')?.dirty ||
+                addNewData.get('sidedish')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('sidedish')?.errors?.['required']">
+              *Combo must be given
+            </div>
+            <div *ngIf="addNewData.get('sidedish').hasError('pattern')">
+              *Valid Combo should be given
+            </div>
+          </div>
+        </div>
+   
+        <br />
+   
+        <div class="row">
+          <input
+            type="number"
+            formControlName="sidedishquantity"
+            class="form-control form-control-lg border border-black"
+            placeholder="Combo Quantity"
+            min="1"
+          />
+          <div
+            *ngIf="
+              addNewData.get('sidedishquantity')?.invalid &&
+              (addNewData.get('sidedishquantity')?.dirty ||
+                addNewData.get('sidedishquantity')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('sidedishquantity')?.errors?.['required']">
+              *Combo Quantity must be given
+            </div>
+            <div *ngIf="addNewData.get('sidedishquantity')?.errors?.['min']">
+              *Valid Combo Quantity should be given
+            </div>
+          </div>
+        </div>
+        <br />
+   
+        <div class="row">
+          <input
+            type="text"
+            formControlName="sidedishunit"
+            class="form-control form-control-lg border border-black"
+            placeholder="Combo Quantity Unit"
+          />
+          <div
+            *ngIf="
+              addNewData.get('sidedishunit')?.invalid &&
+              (addNewData.get('sidedishunit')?.dirty ||
+                addNewData.get('sidedishunit')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('sidedishunit')?.errors?.['required']">
+              *Combo Quantity Unit must be given
+            </div>
+            <div *ngIf="addNewData.get('sidedishunit')?.errors?.['pattern']">
+              *Combo Quantity Unit must be in lowercase
+            </div>
+          </div>
+        </div>
+        <br />
+   
+        <div class="row">
+          <input
+            type="number"
+            formControlName="calorie"
+            class="form-control form-control-lg border border-black"
+            placeholder="Calorie"
+            min="1"
+          />
+          <div
+            *ngIf="
+              addNewData.get('calorie')?.invalid &&
+              (addNewData.get('calorie')?.dirty ||
+                addNewData.get('calorie')?.touched)
+            "
+          >
+            <div *ngIf="addNewData.get('calorie')?.errors?.['required']">
+              *Calorie must be given
+            </div>
+            <div *ngIf="addNewData.get('calorie')?.errors?.['min']">
+              *Valid Calorie should be given
+            </div>
+          </div>
+        </div>
+        <br />
+      
+
+
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    </div>
-  </ng-template>
-  
-  <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
-  
-  <hr />
-  
-  <!-- <pre>{{ closeResult }}</pre> -->
+      <button
+        class="btn btn-secondary btn-lg"
+        (click)="dataTransfer()"
+        [disabled]="buttonAble"
+      >
+        Submit
+      </button>
+    </div> -->
+  <!-- </div> -->

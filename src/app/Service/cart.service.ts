@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { Item } from '../model/item';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,9 @@ export class CartService {
 
   constructor(private http:HttpClient) { }
 
-  fooditemsUrl=environment.foodItemsUrl;
-  cartUrl = environment.addCart;
+  fooditemsUrl=environment.baseUrl+environment.foodItemsUrl;
+  cartUrl = environment.baseUrl+environment.addCart;
+  userUrl=environment.baseUrl+environment.regUrl
 
   public getItem(){
     return this.http.get(this.fooditemsUrl);
@@ -24,6 +26,22 @@ export class CartService {
 
   public createCart(addingCart: Item) {
     return this.http.post(this.cartUrl, addingCart);
+  }
+
+  public createCartItems(items:Item){
+    return this.http.post(this.userUrl,items)
+  }
+
+  public gettingItems(){
+    return this.http.get(this.userUrl)
+  }
+
+  public getUserData(username:any){
+    return this.http.get(`${this.userUrl}?username=${username}`);
+  }
+
+  public updateCart(id:any,item:User){
+    return this.http.put(this.userUrl+'/'+id,item);
   }
 
   public getCart(){

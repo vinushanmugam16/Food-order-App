@@ -1,0 +1,29 @@
+<p>address works!</p>
+
+<div class="container p-4">
+    <div class="modal-header">
+      <h2 class="modal-title" id="titlealign">Add</h2>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"
+        class="btn btn-lg">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+      <form [formGroup]="address" (input)="buttonDisable()">
+
+        <div class="row">
+          <input type="text" formControlName="street" class="form-control form-control-lg border border-black" placeholder="Street"/>
+          <div *ngIf="address.get('street')?.invalid && (address.get('street')?.dirty || address.get('street')?.touched)">
+            <div *ngIf="address.get('street')?.errors?.['required']">*Street must be given</div>
+          </div>
+        </div>
+        
+        <br />
+     </form>
+     </div>
+     </div>

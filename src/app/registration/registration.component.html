@@ -8,26 +8,26 @@
                     <input class="input-style" type="text" placeholder="Firstname" formControlName="firstname"><br>
                     <small
                         *ngIf="registerForm.get('firstname')?.invalid && (registerForm.get('firstname')?.touched || registerForm.get('firstname')?.dirty)">
-                        <small *ngIf="registerForm.get('firstname')?.hasError('required')">*Firstname is required
-                        </small>
-                        <small *ngIf="registerForm.get('firstname')?.hasError('minlength')">*Firstname should atleast
-                            contain 3 letters</small>
-                        <small
+                        <div *ngIf="registerForm.get('firstname')?.hasError('required')">*Firstname is required
+                        </div>
+                        <div *ngIf="registerForm.get('firstname')?.hasError('minlength')">*Firstname should atleast
+                            contain 3 letters</div>
+                        <div
                             *ngIf="registerForm.get('firstname')?.errors?.['pattern'] && !registerForm.get('firstname')?.hasError('required')">
-                            *Firstname should be valid format</small>
-                    </small>
+                            *Firstname should be valid format</div>
+                        </small>
                 </div>
                 <br>
                 <div>
                     <input class="input-style" type="text" placeholder="Lastname" formControlName="lastname"><br>
                     <small
                         *ngIf="registerForm.get('lastname')?.invalid && (registerForm.get('lastname')?.touched || registerForm.get('lastname')?.dirty)">
-                        <small *ngIf="registerForm.get('lastname')?.hasError('required')">*Lastname is required </small>
-                        <small *ngIf="registerForm.get('lastname')?.hasError('minlength')">*Lastname should atleast
-                            contain 3 letters</small>
-                        <small
+                        <div *ngIf="registerForm.get('lastname')?.hasError('required')">*Lastname is required </div>
+                        <div *ngIf="registerForm.get('lastname')?.hasError('minlength')">*Lastname should atleast
+                            contain 3 letters</div>
+                        <div
                             *ngIf="registerForm.get('lastname')?.hasError('pattern') && !registerForm.get('lastname')?.hasError('required')">
-                            *Lastname should be valid format</small>
+                            *Lastname should be valid format</div>
                     </small>
                 </div><br>
                 <div>
@@ -37,7 +37,7 @@
                         <br> 
                     <small
                         *ngIf="registerForm.get('dob')?.invalid && (registerForm.get('dob')?.touched || registerForm.get('dob')?.dirty)">
-                        <small *ngIf="registerForm.get('dob')?.hasError('required')">*Date of Birth is required </small>
+                        <div *ngIf="registerForm.get('dob')?.hasError('required')">*Date of Birth is required </div>
                     </small>
                 </div>
             </div>
@@ -55,18 +55,18 @@
                 <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
                 <small
                     *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)">
-                    <small *ngIf="registerForm.get('password')?.hasError('required')">*Password is required </small>
-                    <small
+                    <div *ngIf="registerForm.get('password')?.hasError('required')">*Password is required </div>
+                    <div
                         *ngIf="registerForm.get('password')?.hasError('pattern') && !registerForm.get('password')?.hasError('required')">
-                        *Password should be valid format</small>
+                        *Password should be valid format</div>
                 </small>
             </div><br>
             <div>
                 <input class="input-style" type="password" placeholder="Confirm Password" formControlName="confirmpassword"><br>
                 <small
                     *ngIf="registerForm.get('confirmpassword')?.invalid && (registerForm.get('confirmpassword')?.touched || registerForm.get('confirmpassword')?.dirty)">
-                    <small *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required </small>
-                    <small *ngIf="registerForm.hasError('notmatchPassword')">*Password must match</small>
+                    <div *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required </div>
+                    <div *ngIf="registerForm.hasError('notmatchPassword')">*Password must match</div>
             </small>
             </div>
             <hr>
@@ -81,10 +81,10 @@
                 <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
                 <small
                     *ngIf="registerForm.get('phoneNumber')?.invalid && (registerForm.get('phoneNumber')?.touched || registerForm.get('phoneNumber')?.dirty)">
-                    <small *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is
-                        required</small>
-                    <small *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10
-                        numbers</small>
+                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is
+                        required</div>
+                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10
+                        numbers</div>
                 </small>
             </div>
             <br>

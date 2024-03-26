@@ -7,6 +7,7 @@ export interface User {
     dob: string,
     gender: string,
     phoneNumber: number,
-    address: Object,
-    email: string
+    // address: Object,
+    email: string,
+    addtoCart:Array<Object>
 }

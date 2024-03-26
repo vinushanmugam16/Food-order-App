@@ -25,6 +25,9 @@ export class CartComponent implements OnInit {
       .subscribe((res) => {
         this.foodItem = res;
       })
+    // this.cart.gettingItems().subscribe((res)=>{
+    //   this.foodItem=res;
+    // })
   }
 
   increaseQuantity(item: Item) {

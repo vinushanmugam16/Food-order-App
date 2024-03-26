@@ -14,8 +14,8 @@ import { environment } from 'src/environments/environment.development';
 export class UserService {
 
   constructor(private http: HttpClient, private route: Router) { }
-  private registerUrl = environment.regUrl;
-  private loginUrl = environment.loginUrl;
+  private registerUrl = environment.baseUrl +environment.regUrl;
+  private loginUrl = environment.baseUrl+environment.loginUrl;
 
   userDetail: User[] = [];
   loginDetail: Loginuser[] = [];

@@ -1,14 +1,15 @@
 .header-style {
     display: flex;
     border: 2px solid darkgrey;
-    background-color: rgb(66, 67, 68);
+    background-color:darkolivegreen;
     font-weight: bold;
     font-size: large;
-    height: 16vh;
-    
+    height: 20vh;
+
 }
 
-.btn-style ,a{
+.btn-style,
+a {
     font-size: 30px;
     color: darkblue;
     font-size: large;
@@ -25,16 +26,18 @@
 .title-style {
     text-align: center;
     margin-left: 50px;
-    color:white
+    color:darkgoldenrod;
 }
 
 .bi-cart4 {
     margin-left: 170vh;
 }
+
 .lang-style {
     margin-top: 50px;
 }
-.btn-secondary{
+
+.btn-secondary {
     margin-left: 167vh;
     margin-bottom: 10px;
 }

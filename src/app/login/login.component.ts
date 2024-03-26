@@ -29,6 +29,9 @@ export class LoginComponent {
             })
         }
         else {
+          console.log(logUser);
+          console.log(this.correctPassword);
+          
           this.toast.warning('Invalid Login , Please Enter Valid Details!');
         }
       })

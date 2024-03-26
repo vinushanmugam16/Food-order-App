@@ -21,6 +21,9 @@ import { TranslateLoader, TranslateModule,TranslateService } from '@ngx-translat
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PaymentComponent } from './payment/payment.component';
 import { ToastNoAnimationModule } from 'ngx-toastr';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddressComponent } from './payment/address/address.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { ToastNoAnimationModule } from 'ngx-toastr';
     ContactComponent,
     CartComponent,
     ItemsComponent,
-    PaymentComponent
+    PaymentComponent,
+    NotFoundComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
@@ -50,10 +55,18 @@ import { ToastNoAnimationModule } from 'ngx-toastr';
         deps: [HttpClient]
       }
     }),
-    ToastNoAnimationModule.forRoot(),
-
+    ToastNoAnimationModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
+    NgbModule
+ 
   ],
-  providers: [UserService,CartService,TranslateService],
+  providers: [UserService, 
+              CartService, 
+              TranslateService
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

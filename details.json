@@ -85,36 +85,7 @@
       "id": "12"
     }
   ],
-  "addcart": [
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 1
-    },
-    {
-      "id": "1",
-      "imageUrl": "/assets/image/idly.jpeg",
-      "itemName": "Idly",
-      "price": 35,
-      "quantity": 1
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60,
-      "quantity": 1
-    }
-  ],
+  "addcart": [],
   "logindetails": [
     {
       "id": "2819",
@@ -780,6 +751,71 @@
       "id": "e6be",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "d1c4",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "7b21",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "beb3",
+      "username": "JJFGDBF2004",
+      "password": "Abc@1234"
+    },
+    {
+      "id": "3a75",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "eaf6",
+      "username": "SAKSDAN2000",
+      "password": "Sak@1234"
+    },
+    {
+      "id": "0bb4",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "72fd",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "bdb0",
+      "username": "GOWSTHA2001",
+      "password": "Gows@1234"
+    },
+    {
+      "id": "c9e2",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "46bb",
+      "username": "GOWSTHA2001",
+      "password": "Gows@1234"
+    },
+    {
+      "id": "4b2a",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "da94",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "245d",
+      "username": "KAYAELA2002",
+      "password": "Kayal@123"
     }
   ],
   "registerdetails": [
@@ -790,14 +826,10 @@
       "username": "KRISRAJ2002",
       "dob": "2002-05-05",
       "email": "krish@gmail.com",
-      "address": {
-        "street": "32,Kurumandur",
-        "city": "Gobi",
-        "pincode": 638476
-      },
       "phoneNumber": 9876543210,
       "gender": "Female",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "4290",
@@ -806,14 +838,10 @@
       "username": "747537499999",
       "dob": "99999-09-09",
       "email": "hshdb@fjds.com",
-      "address": {
-        "street": "456fgh",
-        "city": "fgh4567",
-        "pincode": 876556
-      },
       "phoneNumber": 7787876678,
       "gender": "Male",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "ea6c",
@@ -822,14 +850,10 @@
       "username": "ASHWDAN2011",
       "dob": "2011-11-11",
       "email": "ashwin.daniel@gmail.com",
-      "address": {
-        "street": "Chennai",
-        "city": "Chennai",
-        "pincode": 98765
-      },
       "phoneNumber": 9876543456,
       "gender": "Male",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "9a7d",
@@ -840,14 +864,10 @@
       "confirmpassword": "Anira@123",
       "dob": "2022-07-26",
       "email": "anira@gmail.com",
-      "address": {
-        "street": "15,Priel street",
-        "city": "Coimbatore",
-        "pincode": 654321
-      },
       "phoneNumber": 9876543210,
       "gender": "Female",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "6906",
@@ -858,14 +878,10 @@
       "confirmpassword": "Aspire@123",
       "dob": "2000-09-23",
       "email": "gomathi@gmail.com",
-      "address": {
-        "street": "123/987,WiThyaa street",
-        "city": "Salem",
-        "pincode": 654321
-      },
       "phoneNumber": 9876543210,
       "gender": "Female",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "c47d",
@@ -876,14 +892,10 @@
       "confirmpassword": "Vinu@2468",
       "dob": "2002-04-16",
       "email": "vinu@gmail.com",
-      "address": {
-        "street": "120/61,Sri Sakthi Nagar",
-        "city": "Gobichettipalayam",
-        "pincode": 654321
-      },
       "phoneNumber": 9876543201,
       "gender": "Female",
-      "country": "India"
+      "country": "India",
+      "addtoCart": ""
     },
     {
       "id": "ed8a",
@@ -894,13 +906,9 @@
       "confirmpassword": "Divya@123",
       "dob": "2001-11-08",
       "email": "divya@gmail.com",
-      "address": {
-        "street": "98/2,Cross street,",
-        "city": "Dubai",
-        "pincode": 100002
-      },
       "phoneNumber": 9876543210,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "f367",
@@ -911,13 +919,9 @@
       "confirmpassword": "Kaat@123",
       "dob": "2024-02-19",
       "email": "kaathya@gmail.com",
-      "address": {
-        "street": "Suresh Illam",
-        "city": "Gobi",
-        "pincode": 638476
-      },
       "phoneNumber": 9876543210,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "bc77",
@@ -928,13 +932,9 @@
       "confirmpassword": "Jasmhi@123",
       "dob": "2010-05-15",
       "email": "jasmhi@gmail.com",
-      "address": {
-        "street": "Nandha Nagar",
-        "city": "Vadugapalayam",
-        "pincode": 600004
-      },
       "phoneNumber": 9876543210,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "2923",
@@ -945,13 +945,9 @@
       "confirmpassword": "Moni@1233",
       "dob": "2001-05-03",
       "email": "monish@gmail.com",
-      "address": {
-        "street": "Mahalakshmi Nagar",
-        "city": "Gobi",
-        "pincode": 654321
-      },
       "phoneNumber": 9876543211,
-      "gender": "Male"
+      "gender": "Male",
+      "addtoCart": ""
     },
     {
       "id": "8c16",
@@ -962,13 +958,9 @@
       "confirmpassword": "Sumi@akil$12062008",
       "dob": "2008-06-30",
       "email": "akil@gmail.com",
-      "address": {
-        "street": "18th,Cross street",
-        "city": "Karur",
-        "pincode": 639111
-      },
       "phoneNumber": 9025638100,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "203e",
@@ -979,13 +971,9 @@
       "confirmpassword": "Anu@1234",
       "dob": "2002-06-06",
       "email": "anu@gmail.com",
-      "address": {
-        "street": "Ambika nagar",
-        "city": "Karatadipalayam",
-        "pincode": 638476
-      },
       "phoneNumber": 6543218909,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "6fa0",
@@ -996,13 +984,9 @@
       "confirmpassword": "Surya@123",
       "dob": "2002-03-13",
       "email": "surya@gmail.com",
-      "address": {
-        "street": "Sri sakthi nagar",
-        "city": "Gobi",
-        "pincode": 638476
-      },
       "phoneNumber": 9876543211,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "8d57",
@@ -1013,13 +997,9 @@
       "confirmpassword": "Vidhya@123",
       "dob": "2001-06-23",
       "email": "vidhya@gmail.com",
-      "address": {
-        "street": "Sai baba street",
-        "city": "Sathy",
-        "pincode": 638474
-      },
       "phoneNumber": 9876543211,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "ca6d",
@@ -1030,13 +1010,9 @@
       "confirmpassword": "Janu@123",
       "dob": "2024-02-25",
       "email": "jn@gmail.com",
-      "address": {
-        "street": "dfghjkhjkl",
-        "city": "ffghjkl",
-        "pincode": 678978
-      },
       "phoneNumber": 4567890789,
-      "gender": "Male"
+      "gender": "Male",
+      "addtoCart": ""
     },
     {
       "id": "513a",
@@ -1047,13 +1023,9 @@
       "confirmpassword": "Banu@1234",
       "dob": "2000-01-23",
       "email": "banu@gmail.com",
-      "address": {
-        "street": "120, Sri Sakthi nagar",
-        "city": "Erode",
-        "pincode": 654321
-      },
       "phoneNumber": 9876532512,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
     },
     {
       "id": "9931",
@@ -1064,13 +1036,94 @@
       "confirmpassword": "Lila@123",
       "dob": "2005-01-21",
       "email": "lila@gmail.com",
-      "address": {
-        "street": "hvduiuwq",
-        "city": "erode",
-        "pincode": 642632
-      },
       "phoneNumber": 9876543212,
-      "gender": "Female"
+      "gender": "Female",
+      "addtoCart": ""
+    },
+    {
+      "id": "bedf",
+      "firstname": "jjfge",
+      "lastname": "dbfwiuf",
+      "username": "JJFGDBF2004",
+      "password": "Abc@1234",
+      "confirmpassword": "Abc@1234",
+      "dob": "2004-12-23",
+      "email": "abc@gmail.com",
+      "phoneNumber": 9876543211,
+      "gender": "Female",
+      "addtoCart": ""
+    },
+    {
+      "0": {
+        "id": "54cb",
+        "firstname": "Sakshi",
+        "lastname": "Daniel",
+        "username": "SAKSDAN2000",
+        "password": "Sak@1234",
+        "confirmpassword": "Sak@1234",
+        "dob": "2000-03-22",
+        "email": "sak@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": [
+          {
+            "imageUrl": "/assets/image/poori.jpeg",
+            "itemName": "Poori",
+            "price": 60,
+            "quantity": 1,
+            "id": "4"
+          }
+        ]
+      },
+      "id": "54cb"
+    },
+    {
+      "0": {
+        "id": "f48c",
+        "firstname": "Gowsi",
+        "lastname": "Thangavel",
+        "username": "GOWSTHA2001",
+        "password": "Gows@1234",
+        "confirmpassword": "Gows@1234",
+        "dob": "2001-05-23",
+        "email": "gows@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": [
+          {
+            "imageUrl": "/assets/image/poori.jpeg",
+            "itemName": "Poori",
+            "price": 60,
+            "quantity": 1,
+            "id": "4"
+          }
+        ]
+      },
+      "id": "f48c"
+    },
+    {
+      "0": {
+        "id": "c617",
+        "firstname": "Kayal",
+        "lastname": "Elango",
+        "username": "KAYAELA2002",
+        "password": "Kayal@123",
+        "confirmpassword": "Kayal@123",
+        "dob": "2002-04-22",
+        "email": "kayal@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": [
+          {
+            "imageUrl": "/assets/image/venpongal.jpeg",
+            "itemName": "Venpongal",
+            "price": 50,
+            "quantity": 1,
+            "id": "3"
+          }
+        ]
+      },
+      "id": "c617"
     }
   ]
 }
