@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { Item } from '../model/item';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../model/user';
-import { map } from 'rxjs';
 
 @Component({
   selector: 'app-items',
@@ -16,7 +14,9 @@ export class ItemsComponent implements OnInit {
   public cartItem: any;
   public userdata:any;
   public cartAdd=[];
-  foodItem:Item;
+  foodItem:any;
+  itemper=10;
+  pageNumber: number = 1;
   constructor(private cartList: CartService ,private toast:ToastrService) { }
 
   ngOnInit() {
@@ -29,25 +29,43 @@ export class ItemsComponent implements OnInit {
     catch(err){
       this.cartItem='Items not added !'
     }
-  
   }
 
-  public addingTocart(item: User) {
-    // this.cartList.getCart().subscribe((data: any) => {
-    //   const foodItem = data;
-    //   const foundItem = foodItem.find((food: { itemName: string; }) =>
-    //     food.itemName === item.itemName
-    //   )
-    //   if (!foundItem) {
-    //     this.cartList.createCart(item).subscribe(() => {
-    //       this.cartList.itemLength();
-    //       this.toast.success('Item added to cart!');
-    //     })
-    //   }
-    //   else{
-    //     this.toast.info('Item already added to cart!');
-    //   }
-    // })
+  public addingTocart(item: Item) {
+    
+    const userName = sessionStorage.getItem('user')
+    item.userName = userName;
+    console.log(userName);
+    
+    this.cartList.getCart().subscribe((data: any) => {
+       this.foodItem = data.filter((foodItem:any)=>foodItem.userName === userName);
+      // const name = data.userName;
+      // console.log('Name:',name);
+      
+      if(this.foodItem.find((item: any )=>item.userName ===userName)){
+
+        // const food = this.foodItem.filter((item:any)=>item.userName === userName);
+          // console.log('userfoood',food);
+          const food = this.foodItem
+          console.log(food);
+      }
+
+      console.log('FoodItem',this.foodItem);
+      
+      const foundItem = this.foodItem.find((food: { itemName: string; }) =>
+        food.itemName === item.itemName
+      )
+      if (!foundItem) {
+        this.cartList.createCart(item).subscribe(() => {
+          this.cartList.itemLength();
+          this.toast.success('Item added to cart!');
+        })
+      }
+      else{
+        this.toast.info('Item already added to cart!');
+        this.cartList.itemLength();
+      }
+    })
 
     // const currentUser=sessionStorage.getItem('user');
     // this.cartList.gettingItems().subscribe((items)=>{
@@ -77,25 +95,25 @@ export class ItemsComponent implements OnInit {
       
 
 
-      const currentUser=sessionStorage.getItem('user');
-      console.log(sessionStorage.getItem('user'));
+      // const currentUser=sessionStorage.getItem('user');
+      // console.log(sessionStorage.getItem('user'));
 
 
-      this.cartList.getUserData(currentUser).subscribe((data)=>{
-         this.userdata=data;
-         console.log('Stored items',item);
-         console.log( 'userdata',this.userdata);
+      // this.cartList.getUserData(currentUser).subscribe((data)=>{
+      //    this.userdata=data;
+      //    console.log('Stored items',item);
+      //    console.log( 'userdata',this.userdata);
          
-        //  console.log(`dfghjkk........`,this.userdata[0].addtoCart);
+      //   //  console.log(`dfghjkk........`,this.userdata[0].addtoCart);
 
          
-        const merge=this.userdata[0].addtoCart.push(item);
-         console.log(`cartt`,this.userdata[0].addtoCart);
+      //   const merge=this.userdata[0].addtoCart.push(item);
+      //    console.log(`cartt`,this.userdata[0].addtoCart);
 
-         this.cartList.updateCart(this.userdata[0].id,this.userdata)
-         .subscribe((data)=>{
-          console.log('updatee',data);
-         })
+      //    this.cartList.updateCart(this.userdata[0].id,this.userdata)
+      //    .subscribe((data)=>{
+      //     console.log('updatee',data);
+      //    })
 
 
 
@@ -116,31 +134,7 @@ export class ItemsComponent implements OnInit {
       //    .subscribe((item: any)=>{
       //       console.log('helllooo',item);
       //    })
-      })
-
-
-
-      // if(currentUser){
-      //   this.cartList.gettingItems().subscribe((items)=>{
-      //       const user=items;
-      //       console.log('Details of current  user',user);
-            
-      //   })
-      // }
-
-
-      // if(currentUser){
-       
-      // }
-        
-     
-
-      // const foundItem= 
-    
-
-    // this.cartList.createCartItems(item).subscribe((items)=>{
-    //   console.log('Items added',items);
-    // })
+      // })
 
 
 
@@ -152,7 +146,10 @@ export class ItemsComponent implements OnInit {
     // .pipe(map(items=>{
     //   items.
     // }))
+
+    
   }
 
 }
+
 

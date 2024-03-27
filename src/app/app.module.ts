@@ -23,7 +23,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { ToastNoAnimationModule } from 'ngx-toastr';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddressComponent } from './payment/address/address.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -38,8 +39,8 @@ import { AddressComponent } from './payment/address/address.component';
     CartComponent,
     ItemsComponent,
     PaymentComponent,
-    NotFoundComponent,
-    AddressComponent
+    NotFoundComponent
+
   ],
   imports: [
     BrowserModule,
@@ -60,13 +61,14 @@ import { AddressComponent } from './payment/address/address.component';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    NgbModule
+    NgbModule,
+    NgxPaginationModule
  
   ],
   providers: [UserService, 
               CartService, 
               TranslateService
-            ],
+             ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

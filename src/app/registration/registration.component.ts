@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit {
       // }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl(''),
-      addtoCart:new FormControl('[]')
+      // addtoCart:new FormControl('[]')
     },
     { validators: PasswordValidation });
 
@@ -52,7 +52,7 @@ export class RegistrationComponent implements OnInit {
       this.toast.warning('Please fill the form in Valid format!')
     }
     else {
-    this.registerForm.get('addtoCart')?.setValue([])
+    // this.registerForm.get('addtoCart')?.setValue([])
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
           this.toast.success('Successfully Registered!');

@@ -12,7 +12,6 @@ import { AuthGuard } from './guard/auth.guard';
 import { ItemsComponent } from './items/items.component';
 import { PaymentComponent } from './payment/payment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { AddressComponent } from './payment/address/address.component';
 
 const routes: Routes = [
   {path:'', title:'Food Order App',component:HomepageComponent},
@@ -27,7 +26,6 @@ const routes: Routes = [
   {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
   {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)},
   {path:'payment' ,title:'Payment', component:PaymentComponent,canActivate:[AuthGuard]},
-  {path:'address',title:'Address',component:AddressComponent},
   {path:'**',title:'404 Error',component:NotFoundComponent}
 ];
 

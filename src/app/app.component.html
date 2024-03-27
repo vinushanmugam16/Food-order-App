@@ -1,3 +1,641 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+
+
+
+<!-- 
+{
+    "FoodItems": [
+      {
+        "imageUrl": "/assets/image/idly.jpeg",
+        "itemName": "Idly",
+        "price": 35,
+        "quantity": 1,
+        "id": "1"
+      },
+      {
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "id": "2"
+      },
+      {
+        "imageUrl": "/assets/image/venpongal.jpeg",
+        "itemName": "Venpongal",
+        "price": 50,
+        "quantity": 1,
+        "id": "3"
+      },
+      {
+        "imageUrl": "/assets/image/poori.jpeg",
+        "itemName": "Poori",
+        "price": 60,
+        "quantity": 1,
+        "id": "4"
+      },
+      {
+        "imageUrl": "/assets/image/curdrice.jpeg",
+        "itemName": "Curdrice",
+        "price": 45,
+        "quantity": 1,
+        "id": "5"
+      },
+      {
+        "imageUrl": "/assets/image/friedrice.jpeg",
+        "itemName": "Chicken Fried Rice",
+        "price": 120,
+        "quantity": 1,
+        "id": "6"
+      },
+      {
+        "imageUrl": "/assets/image/mushroombriyani.jpeg",
+        "itemName": "Mushroom Briyani",
+        "price": 230,
+        "quantity": 1,
+        "id": "7"
+      },
+      {
+        "imageUrl": "/assets/image/sambar.jpeg",
+        "itemName": "Sambar",
+        "price": 80,
+        "quantity": 1,
+        "id": "8"
+      },
+      {
+        "imageUrl": "/assets/image/naan.jpeg",
+        "itemName": "Butter Naan",
+        "price": 230,
+        "quantity": 1,
+        "id": "9"
+      },
+      {
+        "imageUrl": "/assets/image/paneerbutter.jpeg",
+        "itemName": "Paneer Butter Masala",
+        "price": 310,
+        "quantity": 1,
+        "id": "10"
+      },
+      {
+        "imageUrl": "/assets/image/dessert.jpeg",
+        "itemName": "Coffee Delight Cake -Dessert",
+        "price": 110,
+        "quantity": 1,
+        "id": "11"
+      },
+      {
+        "imageUrl": "/assets/image/creamy.jpg",
+        "itemName": "Creamy Strawberry-Dessert",
+        "price": 130,
+        "quantity": 1,
+        "id": "12"
+      }
+    ],
+    "addcart": [
+      {
+        "id": "1",
+        "imageUrl": "/assets/image/idly.jpeg",
+        "itemName": "Idly",
+        "price": 35,
+        "quantity": 1,
+        "userName": "Banu"
+      },
+      {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "userName": "Banu"
+      }
+    ],
+    "logindetails": [
+      {
+        "id": "6156",
+        "username": "ANIRPRA2022",
+        "password": "Anira@123"
+      },
+      {
+        "id": "35aa",
+        "username": "ANIRPRA2022",
+        "password": "Anira@123"
+      },
+      {
+        "id": "eed1",
+        "username": "GOMATHI2000",
+        "password": "Aspire@123"
+      },
+      {
+        "id": "63ab",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "aabf",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "5aa4",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "bc52",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "5141",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "edc9",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "aa35",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "c25b",
+        "username": "DIVYMOO2001",
+        "password": "Divya@123"
+      },
+      {
+        "id": "50cf",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "0e70",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "eb6d",
+        "username": "KAATVEN2024",
+        "password": "Kaat@123"
+      },
+      {
+        "id": "3e50",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "1667",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "5215",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "9176",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "f488",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "d6ed",
+        "username": "JASMVEN2010",
+        "password": "Jasmhi@123"
+      },
+      {
+        "id": "425c",
+        "username": "MONILOG2001",
+        "password": "Moni@123"
+      },
+      {
+        "id": "8e56",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "0aa8",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "d74c",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "7f50",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "36a1",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "91f4",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "50f3",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "c087",
+        "username": "AKILARA2008",
+        "password": "Sumi@akil$12062008"
+      },
+      {
+        "id": "8b12",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "9202",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "fc12",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "7c4f",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "1a0c",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "2f23",
+        "username": "Anupriya",
+        "password": "Anu@1234"
+      },
+      {
+        "id": "9f35",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "e462",
+        "username": "SURYPRA2002",
+        "password": "Surya@123"
+      },
+      {
+        "id": "271c",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "5132",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "1147",
+        "username": "janu",
+        "password": "Janu@123"
+      },
+      {
+        "id": "049c",
+        "username": "janu",
+        "password": "Janu@123"
+      },
+      {
+        "id": "0fb5",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "e282",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "c8fb",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "5949",
+        "username": "LILAKRI2005",
+        "password": "Lila@123"
+      },
+      {
+        "id": "4ca9",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "7b21",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "beb3",
+        "username": "JJFGDBF2004",
+        "password": "Abc@1234"
+      },
+      {
+        "id": "3a75",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "eaf6",
+        "username": "SAKSDAN2000",
+        "password": "Sak@1234"
+      },
+      {
+        "id": "0bb4",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "72fd",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "bdb0",
+        "username": "GOWSTHA2001",
+        "password": "Gows@1234"
+      },
+      {
+        "id": "c9e2",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "46bb",
+        "username": "GOWSTHA2001",
+        "password": "Gows@1234"
+      },
+      {
+        "id": "4b2a",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "da94",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "245d",
+        "username": "KAYAELA2002",
+        "password": "Kayal@123"
+      },
+      {
+        "id": "cf6e",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "bf61",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "f5a2",
+        "username": "ANIRPRA2022",
+        "password": "Anira@123"
+      },
+      {
+        "id": "1fc2",
+        "username": "LILAKRI2005",
+        "password": "Lila@123"
+      },
+      {
+        "id": "83d7",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "6370",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "02ee",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "f742",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "f595",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "e34d",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "29a6",
+        "username": "Banu",
+        "password": "Banu@1234"
+      },
+      {
+        "id": "dad2",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      },
+      {
+        "id": "c9fc",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468"
+      }
+    ],
+    "registerdetails": [
+      {
+        "id": "c47d",
+        "firstname": "Vinudharshini",
+        "lastname": "Shanmugam",
+        "username": "VINUSHA2002",
+        "password": "Vinu@2468",
+        "confirmpassword": "Vinu@2468",
+        "dob": "2002-04-16",
+        "email": "vinu@gmail.com",
+        "phoneNumber": 9876543201,
+        "gender": "Female",
+        "country": "India",
+        "addtoCart": ""
+      },
+      {
+        "id": "ed8a",
+        "firstname": "DivyaSreetha",
+        "lastname": "Moorthy",
+        "username": "DIVYMOO2001",
+        "password": "Divya@123",
+        "confirmpassword": "Divya@123",
+        "dob": "2001-11-08",
+        "email": "divya@gmail.com",
+        "phoneNumber": 9876543210,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "f367",
+        "firstname": "Kaathyaayini",
+        "lastname": "Venkat",
+        "username": "KAATVEN2024",
+        "password": "Kaat@123",
+        "confirmpassword": "Kaat@123",
+        "dob": "2024-02-19",
+        "email": "kaathya@gmail.com",
+        "phoneNumber": 9876543210,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "bc77",
+        "firstname": "Jasmhitha",
+        "lastname": "Venkat",
+        "username": "JASMVEN2010",
+        "password": "Jasmhi@123",
+        "confirmpassword": "Jasmhi@123",
+        "dob": "2010-05-15",
+        "email": "jasmhi@gmail.com",
+        "phoneNumber": 9876543210,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "2923",
+        "firstname": "Monish",
+        "lastname": "Loganathan",
+        "username": "MONILOG2001",
+        "password": "Moni@123",
+        "confirmpassword": "Moni@1233",
+        "dob": "2001-05-03",
+        "email": "monish@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Male",
+        "addtoCart": ""
+      },
+      {
+        "id": "8c16",
+        "firstname": "Akilnath",
+        "lastname": "Arasakumaran",
+        "username": "AKILARA2008",
+        "password": "Sumi@akil$12062008",
+        "confirmpassword": "Sumi@akil$12062008",
+        "dob": "2008-06-30",
+        "email": "akil@gmail.com",
+        "phoneNumber": 9025638100,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "203e",
+        "firstname": "Anupriyaa",
+        "lastname": "Chinasamy",
+        "username": "Anupriya",
+        "password": "Anu@1234",
+        "confirmpassword": "Anu@1234",
+        "dob": "2002-06-06",
+        "email": "anu@gmail.com",
+        "phoneNumber": 6543218909,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "6fa0",
+        "firstname": "Surya",
+        "lastname": "Prabha",
+        "username": "SURYPRA2002",
+        "password": "Surya@123",
+        "confirmpassword": "Surya@123",
+        "dob": "2002-03-13",
+        "email": "surya@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "8d57",
+        "firstname": "Vidhyashree",
+        "lastname": "Mahalingam",
+        "username": "VIDHMAH2001",
+        "password": "Vidhya@123",
+        "confirmpassword": "Vidhya@123",
+        "dob": "2001-06-23",
+        "email": "vidhya@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "ca6d",
+        "firstname": "janu",
+        "lastname": "fghj",
+        "username": "janu",
+        "password": "Janu@123",
+        "confirmpassword": "Janu@123",
+        "dob": "2024-02-25",
+        "email": "jn@gmail.com",
+        "phoneNumber": 4567890789,
+        "gender": "Male",
+        "addtoCart": ""
+      },
+      {
+        "id": "513a",
+        "firstname": "Banu",
+        "lastname": "Lakshman",
+        "username": "Banu",
+        "password": "Banu@1234",
+        "confirmpassword": "Banu@1234",
+        "dob": "2000-01-23",
+        "email": "banu@gmail.com",
+        "phoneNumber": 9876532512,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "9931",
+        "firstname": "Lila",
+        "lastname": "Krish",
+        "username": "LILAKRI2005",
+        "password": "Lila@123",
+        "confirmpassword": "Lila@123",
+        "dob": "2005-01-21",
+        "email": "lila@gmail.com",
+        "phoneNumber": 9876543212,
+        "gender": "Female",
+        "addtoCart": ""
+      },
+      {
+        "id": "bedf",
+        "firstname": "jjfge",
+        "lastname": "dbfwiuf",
+        "username": "JJFGDBF2004",
+        "password": "Abc@1234",
+        "confirmpassword": "Abc@1234",
+        "dob": "2004-12-23",
+        "email": "abc@gmail.com",
+        "phoneNumber": 9876543211,
+        "gender": "Female",
+        "addtoCart": ""
+      }
+    ], -->

@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
 export class OrderComponent implements OnInit {
 
   public foodItem: any;
+  public food: any;
   public totalPrice: number = 0;
-  constructor(private cart: CartService, private route: Router) {}
+  constructor(private cart: CartService, private route: Router) { }
 
   ngOnInit() {
     this.getFoodItem();
@@ -21,12 +22,13 @@ export class OrderComponent implements OnInit {
     this.cart.getCart()
       .subscribe((response) => {
         this.foodItem = response;
+        this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
         this.totalPrice = this.totalAll();
       })
   }
 
   public totalAll() {
-    this.foodItem.map((value: { price: number; quantity: number; }) => {
+    this.food.map((value: { price: number; quantity: number; }) => {
       this.totalPrice += value.price * value.quantity;
     })
     return this.totalPrice;

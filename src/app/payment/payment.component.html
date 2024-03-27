@@ -1,25 +1,90 @@
-  <form [formGroup]="payment">
-    <div class="payment-style" >
-      <h1>Payment</h1>
-      <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
-        <option value="">Select Payment Method</option>
-        <option value="gpay">Gpay</option>
-        <option value="cod">Cash on Delivery</option>
-        <option value="phonepay">PhonePay</option>
-      </select><br>
-        <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
-    </div><br>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Address update</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="address">
+      <div class="mb-3">
+        <label for="address">Address</label>
+        <div class="input-group">
 
-    <div *ngIf="showTotal">
-      <label>UPI ID</label><br>
-      <input type="text" id="upi" formControlName="upiId" ><br>
-      <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
-        <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
-        <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
-      </small><br>
-    </div>
-  </form>
-    <!-- <div>
+          <input type="text" id="address" class="form-control" placeholder="Street" formControlName="street" />
+          <!-- <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button> -->
+        </div>
+
+        <div>
+          <input type="text" class="form-control" placeholder="City" formControlName="city">
+        </div>
+        <div>
+          <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
+          <small
+            *ngIf="address.get('address.pincode')?.invalid && (address.get('address.pincode')?.touched || address.get('address.pincode')?.dirty)">
+            <small *ngIf="address.get('address.pincode')?.hasError('required')">*Pincode is Required</small>
+            <small *ngIf="address.get('address.pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
+          </small>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('')" (click)="onSave()">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
+
+
+
+<pre>{{ closeResult }}</pre>
+
+
+
+<div class="table-style">
+  <table>
+    <thead>
+      <th>S.No</th>
+      <th>Address</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let add of locateAddress ,let i=index">
+        <td>{{i+1}}</td>
+        <td>{{add.street}},{{add.city}},{{add.pincode}}</td>
+        <td><button class="bi bi-trash" (click)="removeAddress(add.id)"></button>
+          <button (click)="selectedAddress(add.id)">+</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<form [formGroup]="payment">
+  <div class="payment-style">
+    <h1>Payment</h1>
+    <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
+      <option value="">Select Payment Method</option>
+      <option value="gpay">Gpay</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="phonepay">PhonePay</option>
+    </select><br>
+    <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
+  </div><br>
+  <div>
+    <p>Address:{{this.setAddress}}</p>
+  </div>
+  <div *ngIf="showTotal">
+    <label>UPI ID</label><br>
+    <input type="text" id="upi" formControlName="upiId"><br>
+    <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
+      <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
+      <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
+    </small><br>
+  </div>
+</form>
+<!-- <div>
     <label class="address-style">Address:
       <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
       <small
@@ -47,20 +112,20 @@
   </label>
 </div> -->
 
- 
-  
-  <div *ngIf="showTotal" class="total-style">
-    <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
-    <button class="btn btn-success" (click)="processPayment()">Pay</button>
-  </div>
-  
-  <div *ngIf="cod" class="total-style">
-    <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
-    <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
-  </div>
-  
 
-  
+
+<div *ngIf="showTotal" class="total-style">
+  <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
+  <button class="btn btn-success" (click)="processPayment()">Pay</button>
+</div>
+
+<div *ngIf="cod" class="total-style">
+  <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
+  <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
+</div>
+
+
+
 <!-- <div class="container p4">
   <div class="modal-header">
     <h2 class="modal-title" id="titlealign">Add</h2>
@@ -70,7 +135,7 @@
   </div>
 </div> -->
 
-     
+
 <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>  
      
 <ng-template #mymodal let-modal>  
@@ -89,7 +154,7 @@
 
 
 
-  <!-- <div class="container p-4">
+<!-- <div class="container p-4">
     <div class="modal-header">
       <h2 class="modal-title" id="titlealign">Add</h2>
       <button
@@ -116,7 +181,7 @@
 </div>
 </div> -->
 
-        <!-- <p *ngIf="buttonAble">*Enter Valid Details</p>
+<!-- <p *ngIf="buttonAble">*Enter Valid Details</p>
         <div class="row">
           <label class="categoryAlign">Category</label>
           <select
@@ -332,4 +397,10 @@
         Submit
       </button>
     </div> -->
-  <!-- </div> -->
+<!-- </div> -->
+
+
+
+
+
+

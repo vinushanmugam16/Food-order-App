@@ -1,0 +1,212 @@
+{
+  "foodItems": [
+    {
+      "imageUrl": "/assets/image/idly.jpeg",
+      "itemName": "Idly",
+      "price": 35,
+      "quantity": 1,
+      "id": "1"
+    },
+    {
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "id": "2"
+    },
+    {
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "id": "3"
+    },
+    {
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1,
+      "id": "4"
+    },
+    {
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45,
+      "quantity": 1,
+      "id": "5"
+    },
+    {
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120,
+      "quantity": 1,
+      "id": "6"
+    },
+    {
+      "imageUrl": "/assets/image/mushroombriyani.jpeg",
+      "itemName": "Mushroom Briyani",
+      "price": 230,
+      "quantity": 1,
+      "id": "7"
+    },
+    {
+      "imageUrl": "/assets/image/sambar.jpeg",
+      "itemName": "Sambar",
+      "price": 80,
+      "quantity": 1,
+      "id": "8"
+    },
+    {
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230,
+      "quantity": 1,
+      "id": "9"
+    },
+    {
+      "imageUrl": "/assets/image/paneerbutter.jpeg",
+      "itemName": "Paneer Butter Masala",
+      "price": 310,
+      "quantity": 1,
+      "id": "10"
+    },
+    {
+      "imageUrl": "/assets/image/dessert.jpeg",
+      "itemName": "Coffee Delight Cake -Dessert",
+      "price": 110,
+      "quantity": 1,
+      "id": "11"
+    },
+    {
+      "imageUrl": "/assets/image/creamy.jpg",
+      "itemName": "Creamy Strawberry-Dessert",
+      "price": 130,
+      "quantity": 1,
+      "id": "12"
+    },
+    {
+      "imageUrl": "/assets/image/chicken-biryani.webp",
+      "itemName": "Chicken Briyani",
+      "price": 180,
+      "quantity": 1,
+      "id": "13"
+    },
+    {
+      "imageUrl": "/assets/image/eggmasal.jpg",
+      "itemName": "Egg Masala",
+      "price": 80,
+      "quantity": 1,
+      "id": "14"
+    },
+    {
+      "imageUrl": "/assets/image/fishfry.png",
+      "itemName": "Fishfry",
+      "price": 100,
+      "quantity": 1,
+      "id": "15"
+    },
+    {
+      "imageUrl": "/assets/image/kebab.jpg",
+      "itemName": "Kebab",
+      "price": 120,
+      "quantity": 1,
+      "id": "16"
+    },
+    {
+      "imageUrl": "/assets/image/Mutton-Chukka-Varuval.jpg",
+      "itemName": "Mutton Chukka",
+      "price": 130,
+      "quantity": 1,
+      "id": "17"
+    },
+    {
+      "imageUrl": "/assets/image/muttonbriyani.webp",
+      "itemName": "Mutton Briyani",
+      "price": 190,
+      "quantity": 1,
+      "id": "18"
+    },
+    {
+      "imageUrl": "/assets/image/tandoori.jpeg",
+      "itemName": "Tandoori",
+      "price": 125,
+      "quantity": 1,
+      "id": "19"
+    },
+    {
+      "imageUrl": "/assets/image/prawns-fry.jpg",
+      "itemName": "Prawn Fry",
+      "price": 115,
+      "quantity": 1,
+      "id": "20"
+    }
+  ],
+  "addcart": [],
+  "logindetails": [
+    {
+      "id": "6156",
+      "username": "ANIRPRA2022",
+      "password": "Anira@123"
+    },
+    {
+      "id": "09c3",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "78dc",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "8ac5",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "b562",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "5233",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "1bd9",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    }
+  ],
+  "registerdetails": [
+    {
+      "id": "c47d",
+      "firstname": "Vinudharshini",
+      "lastname": "Shanmugam",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468",
+      "confirmpassword": "Vinu@2468",
+      "dob": "2002-04-16",
+      "email": "vinu@gmail.com",
+      "phoneNumber": 9876543201,
+      "gender": "Female",
+      "country": "India",
+      "addtoCart": ""
+    }
+  ],
+  "address": [
+    {
+      "id": "3d16",
+      "street": "Sri sakthi nagar",
+      "city": "Erode",
+      "pincode": "638476"
+    },
+    {
+      "id": "2ef1",
+      "street": "12,Giant Complex Street",
+      "city": "Chennai",
+      "pincode": "638003"
+    }
+  ]
+}

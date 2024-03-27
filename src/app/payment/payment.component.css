@@ -11,3 +11,17 @@ form{
     font-size: large;
     font-weight: bold;
 }
+.table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 30px;
+    
+}
+.table-style{
+    margin-left: 30vh;
+}
+.btn-outline-primary{
+    margin:30px 50vh;
+}

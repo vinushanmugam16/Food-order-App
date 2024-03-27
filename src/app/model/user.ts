@@ -9,5 +9,5 @@ export interface User {
     phoneNumber: number,
     // address: Object,
     email: string,
-    addtoCart:Array<Object>
+    // addtoCart:Array<Object>
 }

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { Item } from '../model/item';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Address } from '../model/address';
 
 
 @Component({
@@ -14,17 +15,25 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class PaymentComponent {
 
   foodItem: Item[];
+  food: any
   totalPrice: number = 0;
   showTotal: boolean = false;
   payment: FormGroup;
   address: FormGroup;
   paymentMethod: string;
   cod: boolean = false;
+  locateAddress: any;
+  location:any;
+  setAddress:any
 
-  constructor(private cart: CartService, private toast: ToastrService) { }
+  constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal) { }
 
-  // , public activeModal: NgbActiveModal
+ 
   ngOnInit() {
+
+  this.gettingAddress();
+
+
     this.totalAll();
 
     this.payment = new FormGroup({
@@ -37,6 +46,8 @@ export class PaymentComponent {
       city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
       pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
     })
+
+
   }
 
 
@@ -45,6 +56,7 @@ export class PaymentComponent {
     this.paymentMethod = target.value;
     if (this.paymentMethod === 'gpay' || this.paymentMethod === 'phonepay') {
       this.showTotal = true;
+      this.setAddress=this.location;
     }
     else {
       this.cod = true;
@@ -55,12 +67,13 @@ export class PaymentComponent {
     this.cart.getCart()
       .subscribe((resp: any) => {
         this.foodItem = resp;
-        this.totalPrice = this.foodItem.reduce((total, food) => total + (food.price * food.quantity), 0);
+        this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
+        this.totalPrice = this.food.reduce((total: number, food: { price: number; quantity: number; }) => total + (food.price * food.quantity), 0);
       })
   }
 
   processPayment() {
-    this.foodItem.map((item: { id: number }) => {
+    this.food.map((item: { id: number }) => {
       this.cart.deleteItem(item.id).subscribe(() => {
         this.totalPrice = 0;
         this.cart.itemLength();
@@ -138,4 +151,65 @@ export class PaymentComponent {
     this.buttonAble = false;
   }
 
+
+
+
+  closeResult: any;
+
+  open(content: TemplateRef<any>) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
+      (result) => {
+
+        let streetAddress = this.address.value.street;
+        let cityAddress = this.address.value.city;
+        let pinAddress = this.address.value.pincode;
+        this.closeResult = `Address: ${streetAddress},${cityAddress},${pinAddress} ${result}`;
+      },
+      // (reason) => {
+      //   this.closeResult = `Dismissed ${reason}`;
+      // },
+    );
+  }
+
+  // private getDismissReason(reason: any): string {
+  //   switch (reason) {
+  //     case ModalDismissReasons.ESC:
+  //       return 'by pressing ESC';
+  //     case ModalDismissReasons.BACKDROP_CLICK:
+  //       return 'by clicking on a backdrop';
+  //     default:
+  //       return `with: ${reason}`;
+  //   }
+  // }
+
+  gettingAddress(){
+    this.cart.getAddress()
+    .subscribe((res)=>{
+      this.locateAddress=res
+    })
+  }
+
+  onSave() {
+    this.cart.createAddress(this.address.value)
+    .subscribe((data)=>{
+      console.log(data);
+      this.locateAddress=data;
+      this.gettingAddress();
+    })
+  }
+
+  removeAddress(id:any){
+    this.cart.deleteAddress(id)
+    .subscribe(()=>{
+      this.gettingAddress();
+      this.toast.error('Address has been deleted')
+    })
+  }
+
+  selectedAddress(id: string){
+   this.location= this.cart.selectAddress(id)
+    .subscribe((result)=>{
+      console.log(result);
+    })
+  }
 }

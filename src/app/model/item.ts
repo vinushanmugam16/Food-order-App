@@ -3,5 +3,6 @@ export interface Item {
     imageUrl: string,
     price: number,
     quantity:number,
-    id: number
+    id: number,
+    userName:string | null
 }

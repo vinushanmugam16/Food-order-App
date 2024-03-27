@@ -4,5 +4,6 @@ export const environment = {
     regUrl: '/registerdetails',
     loginUrl: '/logindetails',
     addCart: '/addcart',
-    foodItemsUrl: '/FoodItems'
+    foodItemsUrl: '/foodItems',
+    addressUrl:'/address'
 };

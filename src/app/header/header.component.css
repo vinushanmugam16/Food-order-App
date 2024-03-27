@@ -4,7 +4,7 @@
     background-color:darkolivegreen;
     font-weight: bold;
     font-size: large;
-    height: 20vh;
+    height: 15vh;
 
 }
 
@@ -14,8 +14,9 @@ a {
     color: darkblue;
     font-size: large;
     font-weight: bold;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     margin: 20px;
+    margin-bottom: 30vh;
 }
 
 .active-state {
@@ -34,10 +35,17 @@ a {
 }
 
 .lang-style {
-    margin-top: 50px;
+    margin: 30px;
 }
 
 .btn-secondary {
     margin-left: 167vh;
-    margin-bottom: 10px;
+    /* margin-bottom: x; */
+    font-size: 30px;
+    /* color: darkblue; */
+    font-size: large;
+    font-weight: bold;
+    /* padding-bottom: 40px; */
+    /* margin: 20px; */
+    margin-bottom: 60vh;
 }
