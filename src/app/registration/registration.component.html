@@ -43,7 +43,7 @@
             </div>
             <br>
             <div>
-                <small class="user-style">(Click the Username button to get username of yours.)</small><br>
+                <small class="user-style">(Click the Username button to get username of yours. or Type your Username by own)</small><br>
                 <input type="text" placeholder="Username" formControlName="username"><br>
                 <button (click)="createUsername()">Username</button><br>
                 <small
@@ -88,34 +88,6 @@
                 </small>
             </div>
             <br>
-
-            <!-- <div formGroupName="address">
-                <label class="address-style">Address:
-                    <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
-                    <small
-                        *ngIf="registerForm.get('address.street')?.invalid && (registerForm.get('address.street')?.touched || registerForm.get('address.street')?.dirty)">
-                        *Street is Required
-                    </small><br>
-
-                    <input type="text" value="city" placeholder="City" formControlName="city"><br>
-                    <small
-                        *ngIf="registerForm.get('address.city')?.invalid && (registerForm.get('address.city')?.touched || registerForm.get('address.city')?.dirty)">
-                        <small *ngIf="registerForm.get('address.city')?.hasError('required')">*City is required</small>
-                        <small *ngIf="registerForm.get('address.city')?.hasError('pattern')">*City should be in valid
-                            name format</small>
-                    </small>
-                    <br>
-
-                    <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode"><br>
-                    <small
-                        *ngIf="registerForm.get('address.pincode')?.invalid && (registerForm.get('address.pincode')?.touched || registerForm.get('address.pincode')?.dirty)">
-                        <small *ngIf="registerForm.get('address.pincode')?.hasError('required')">*Pincode is
-                            Required</small>
-                        <small *ngIf="registerForm.get('address.pincode')?.hasError('pattern')">*Pincode should contain
-                            6 numbers</small>
-                    </small>
-                </label>
-            </div> -->
             <div>
                 <label class="label-style">
                     <select class="form-select" formControlName="gender">

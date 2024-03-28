@@ -27,32 +27,19 @@ export class RegistrationComponent implements OnInit {
       confirmpassword: new FormControl('', [Validators.required]),
       dob: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      // address: new FormGroup({
-      //   street: new FormControl('', [Validators.required]),
-      //   city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
-      //   pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
-      // }),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
-      gender: new FormControl(''),
-      // addtoCart:new FormControl('[]')
+      gender: new FormControl('')
     },
     { validators: PasswordValidation });
 
 
   }
 
-  // addToCart(item: any) {
-  //   const currentCart = JSON.parse(this.registerForm.get('addtoCart')?.value); // Parse the current value of addtoCart as JSON
-  //   currentCart.push(item); // Add the new item to the cart
-  //   this.registerForm.patchValue({ addtoCart: JSON.stringify(currentCart) }); // Update the value of addtoCart
-  // }
-
   public onSubmit() {
     if (this.registerForm.invalid) {
       this.toast.warning('Please fill the form in Valid format!')
     }
     else {
-    // this.registerForm.get('addtoCart')?.setValue([])
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
           this.toast.success('Successfully Registered!');

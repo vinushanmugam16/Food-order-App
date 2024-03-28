@@ -4,7 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+    height: 80vh;
 }
 
 .heading-style {
@@ -32,8 +32,8 @@
 }
 
 .greet-style {
-    color: rgb(50, 229, 214);
+    color: white;
     font-weight: bold;
     font-size: larger;
-    padding-left: 10vh;
+    padding: 5vh;
 }

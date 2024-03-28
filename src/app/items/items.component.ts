@@ -11,47 +11,52 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ItemsComponent implements OnInit {
 
-  public cartItem: any;
-  public userdata:any;
-  public cartAdd=[];
-  foodItem:any;
-  itemper=10;
+  public cartItem: any=[];
+  public userdata: any;
+  public cartAdd = [];
+  foodItem: any;
+  itemper = 10;
+  searchFood: any='';
   pageNumber: number = 1;
-  constructor(private cartList: CartService ,private toast:ToastrService) { }
+  filterItems: any=[];
+  constructor(private cartList: CartService, private toast: ToastrService) { }
 
   ngOnInit() {
-    try{
+    try {
       this.cartList.getItem()
-      .subscribe(response => {
-        this.cartItem = response;
-      })
+        .subscribe(response => {
+          this.cartItem = response;
+          // this.filterItems=[...this.cartItem]
+        })
     }
-    catch(err){
-      this.cartItem='Items not added !'
+    catch (err) {
+      this.cartItem = 'Items not added !'
     }
+
+
   }
 
   public addingTocart(item: Item) {
-    
+
     const userName = sessionStorage.getItem('user')
     item.userName = userName;
     console.log(userName);
-    
+
     this.cartList.getCart().subscribe((data: any) => {
-       this.foodItem = data.filter((foodItem:any)=>foodItem.userName === userName);
+      this.foodItem = data.filter((foodItem: any) => foodItem.userName === userName);
       // const name = data.userName;
       // console.log('Name:',name);
-      
-      if(this.foodItem.find((item: any )=>item.userName ===userName)){
+
+      if (this.foodItem.find((item: any) => item.userName === userName)) {
 
         // const food = this.foodItem.filter((item:any)=>item.userName === userName);
-          // console.log('userfoood',food);
-          const food = this.foodItem
-          console.log(food);
+        // console.log('userfoood',food);
+        const food = this.foodItem
+        console.log(food);
       }
 
-      console.log('FoodItem',this.foodItem);
-      
+      console.log('FoodItem', this.foodItem);
+
       const foundItem = this.foodItem.find((food: { itemName: string; }) =>
         food.itemName === item.itemName
       )
@@ -61,93 +66,32 @@ export class ItemsComponent implements OnInit {
           this.toast.success('Item added to cart!');
         })
       }
-      else{
+      else {
         this.toast.info('Item already added to cart!');
         this.cartList.itemLength();
       }
     })
-
-    // const currentUser=sessionStorage.getItem('user');
-    // this.cartList.gettingItems().subscribe((items)=>{
-    //   const foodItem=items;
-    //   console.log('detaisss',foodItem);
-     
-    //   if(Array.isArray(foodItem)){
-    //  const found= foodItem.filter((name)=>name.username===item.username)
-
-    //   this.userdata=found;
-
-    //   console.log('iuytrdfghjk',found);
-      
-
-    //   }
-      
-    // })
-    // this.cartList.gettingItems().subscribe((items)=>{
-    //   const foodItem=items;
-    //   // items.addtoCart
-    //   // console.log('Cart',items);
-  // })
-      // console.log('Itemss',foodItem);
-
-
-
-      
-
-
-      // const currentUser=sessionStorage.getItem('user');
-      // console.log(sessionStorage.getItem('user'));
-
-
-      // this.cartList.getUserData(currentUser).subscribe((data)=>{
-      //    this.userdata=data;
-      //    console.log('Stored items',item);
-      //    console.log( 'userdata',this.userdata);
-         
-      //   //  console.log(`dfghjkk........`,this.userdata[0].addtoCart);
-
-         
-      //   const merge=this.userdata[0].addtoCart.push(item);
-      //    console.log(`cartt`,this.userdata[0].addtoCart);
-
-      //    this.cartList.updateCart(this.userdata[0].id,this.userdata)
-      //    .subscribe((data)=>{
-      //     console.log('updatee',data);
-      //    })
-
-
-
-
-
-
-        //  this.cartList.createCartItems(this.userdata[0].addtoCart)
-        //   .subscribe((data)=>{
-        //     console.log(data);
-            
-        //   })
-         
-      //    this.cartAdd.push()
-      // //  this.cartAdd =  this.userdata.addtoCart
-      //    console.log('Adding to cart',this.cartAdd);
-         
-      //    this.cartList.createCartItems(this.cartAdd)
-      //    .subscribe((item: any)=>{
-      //       console.log('helllooo',item);
-      //    })
-      // })
-
-
-
-
   }
 
-  onSearch(){
+  onSearch(event: Event) {
     // this.cartList.getItem()
     // .pipe(map(items=>{
     //   items.
     // }))
+    const inputElement = event.target as HTMLInputElement;
+    let response = inputElement.value;
+    console.log('input', response);
+    // console.log(this.cartItem);
 
-    
+    this.filterItems = this.cartItem.filter((item: any) => {
+      // console.log(item);
+       item.itemName.toLowerCase().includes(response.toLowerCase());
+    });
+    console.log(this.filterItems)
+
+
+
+
   }
 
 }

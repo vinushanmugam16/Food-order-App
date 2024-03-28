@@ -10,7 +10,7 @@ import { CartService } from '../Service/cart.service';
 })
 export class HeaderComponent {
 
-  public today = Date.now();
+  // public today = Date.now();
   constructor(public cart: CartService,
     public user: UserService,
     public translate: TranslateService) {
@@ -20,6 +20,10 @@ export class HeaderComponent {
 
   public logoutPage() {
     this.user.logout();
+  }
+
+  profile(){
+    this.logoutPage();
   }
 
   public switchLang(lang: string) {

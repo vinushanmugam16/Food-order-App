@@ -14,7 +14,7 @@ small {
 }
 
 .user-style {
-    color: white;
+    color:black;
     font-weight: bold;
 }
 
@@ -28,11 +28,16 @@ small {
 
 .whole-style {
     /* background-image: url('/assets/image/pexels-photo-326281.jpeg'); */
-    background-image:url('/assets/image/light-blue.avif');
+    background-image:url('/assets/image/back.jpg');
     background-size: cover;
+    height: 80vh;
   
 }
 
 .label-style {
     font-weight: bold;
+}
+
+.heading-style{
+    color:black;
 }

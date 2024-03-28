@@ -4,5 +4,6 @@ export interface Item {
     price: number,
     quantity:number,
     id: number,
+    variety:string,
     userName:string | null
 }

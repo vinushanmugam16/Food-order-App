@@ -46,7 +46,9 @@ describe('CartComponent', () => {
         "imageUrl": "/assets/image/poori.jpeg",
         "itemName": "Poori",
         "quantity":1,
-        "price": 60
+        "variety":"Veg",
+        "price": 60,
+        "userName":"VINUSHA2002"
       };
     spyOn(service, 'getCart').and.returnValue(of(mockResponse));
     component.getFoodItem();

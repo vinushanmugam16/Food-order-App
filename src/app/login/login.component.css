@@ -7,7 +7,7 @@
     width: 50vh;
     height: 45vh;
     border-radius: 20px;
-    color: white;
+    color: black;
 }
 
 small {
@@ -25,8 +25,9 @@ small {
 
 .whole-style {
     /* background-image: url('/assets/image/pexels-photo-326281.jpeg'); */
-    background-image:url('/assets/image/light-blue.avif');
+    background-image:url('/assets/image/back.jpg');
     background-size: cover;
+    height:80vh;
 }
 
 input.ng-invalid.ng-touched {

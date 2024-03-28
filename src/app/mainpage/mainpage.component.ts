@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class MainpageComponent implements OnInit {
 
   public userName: string | null;
+
   ngOnInit() {
+
     this.userName = sessionStorage.getItem('user');
   }
 }

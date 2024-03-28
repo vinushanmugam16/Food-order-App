@@ -6,21 +6,42 @@
             <button *ngIf="this.cart.totalItem">{{this.cart.totalItem}}</button>
         </div>
         <h1 class="title-style">Food Order App</h1>
-        <a routerLink="/payment">Payment</a>
+        <!-- <a routerLink="/payment">Payment</a> -->
         <!-- <a routerLink="/address">Address</a> -->
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Profile</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Profile Details</button>
+  <button mat-menu-item (click)="logout()">Logout</button>
+</mat-menu> -->
+
 
         <a routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</a>
         <a routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</a>
+        
         <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
     </div>
-<br>
+
+    <br>
     <span class="lang-style" *ngIf="user.login() ">
         <select #selectedLang (change)="switchLang(selectedLang.value)">
-          <option *ngFor="let language of translate.getLangs()" 
-            [value]="language"
-            [selected]="language === translate.currentLang">
-            {{ language }}
-          </option>
+            <option *ngFor="let language of translate.getLangs()" [value]="language"
+                [selected]="language === translate.currentLang">
+                {{ language }}
+            </option>
         </select>
     </span>
 </div>
+
+<!-- <div class="dropdown">
+    <a class="btn btn-light dropdown-toggle bi bi-person"
+    role="button"
+    id="dropdownMenuLink"
+    aria-expanded="false">
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item" routerLink="logout">Logout</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div> -->

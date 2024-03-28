@@ -22,18 +22,16 @@ export class PaymentComponent {
   address: FormGroup;
   paymentMethod: string;
   cod: boolean = false;
+  closeResult: string;
   locateAddress: any;
   location:any;
-  setAddress:any
+  setAddress: any
 
-  constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal) { }
+  constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal) {}
 
- 
   ngOnInit() {
 
-  this.gettingAddress();
-
-
+    this.gettingAddress();
     this.totalAll();
 
     this.payment = new FormGroup({
@@ -46,20 +44,19 @@ export class PaymentComponent {
       city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
       pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
     })
-
-
   }
-
 
   selectPaymentMethod(event: Event) {
     const target = event.target as HTMLSelectElement;
     this.paymentMethod = target.value;
     if (this.paymentMethod === 'gpay' || this.paymentMethod === 'phonepay') {
       this.showTotal = true;
-      this.setAddress=this.location;
+      this.setAddress = `${this.location.street},${this.location.city},${this.location.pincode}`;
     }
     else {
       this.cod = true;
+      this.setAddress = `${this.location.street},${this.location.city},${this.location.pincode}`;
+
     }
   }
 
@@ -83,79 +80,7 @@ export class PaymentComponent {
   }
 
 
-
-
-  // closeResult: string;
-
-
-  // open(content: any) {  
-  //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {  
-  //     this.closeResult = `Closed with: ${result}`;  
-  //   }, (reason: any) => {  
-  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;  
-  //   });  
-  // }  
-
-  // private getDismissReason(reason: any): string {  
-  //   if (reason === ModalOfDismissReasons.ESC) {  
-  //     return 'by pressing ESC';  
-  //   } else if (reason === ModalOfDismissReasons.BACKDROP_CLICK) {  
-  //     return 'by clicking on a backdrop';  
-  //   } else {  
-  //     return  `with: ${reason}`;  
-  //   }  
-  // }  
-
-  // public addNewData: any;
-  // public category = ['breakfast', 'dinner', 'lunch'];
-  public buttonAble = false;
-  // private sidedishArray: Array<string>;
-
-  // constructor(
-  //   private formbuilder: FormBuilder,
-  //   public activeModal: NgbActiveModal
-  // ) {}
-
-  // ngOnInit(): void {
-  //   this.addNewData = this.formbuilder.group({
-  //     category: ['', [Validators.required]],
-  //     food: [
-  //       '',
-  //       [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)],
-  //     ],
-  //     quantity: ['', [Validators.required, Validators.min(1)]],
-  //     foodunit: ['', [Validators.required, Validators.pattern(/^[a-z]+$/)]],
-  //     sidedish: [
-  //       '',
-  //       [
-  //         Validators.required,
-  //         Validators.pattern(/^[a-zA-Z ]+(?:,[a-zA-Z ]+)*$/),
-  //       ],
-  //     ],
-  //     sidedishquantity: ['', [Validators.required, Validators.min(1)]],
-  //     sidedishunit: ['', [Validators.required, Validators.pattern(/^[a-z]+$/)]],
-  //     calorie: ['', [Validators.required, Validators.min(1)]],
-  //   });
-  // }
-
-  // public dataTransfer() {
-  //   if (this.addNewData.invalid) this.buttonAble = true;
-  //   else {
-  //     [...this.sidedishArray] = this.addNewData.value.sidedish.split(',');
-  //     this.addNewData.value.sidedish = this.sidedishArray;
-  //     this.activeModal.close(this.addNewData.value);
-  //   }
-  // }
-
-  public buttonDisable() {
-    this.buttonAble = false;
-  }
-
-
-
-
-  closeResult: any;
-
+ 
   open(content: TemplateRef<any>) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
       (result) => {
@@ -164,52 +89,42 @@ export class PaymentComponent {
         let cityAddress = this.address.value.city;
         let pinAddress = this.address.value.pincode;
         this.closeResult = `Address: ${streetAddress},${cityAddress},${pinAddress} ${result}`;
-      },
-      // (reason) => {
-      //   this.closeResult = `Dismissed ${reason}`;
-      // },
+      }
     );
   }
 
-  // private getDismissReason(reason: any): string {
-  //   switch (reason) {
-  //     case ModalDismissReasons.ESC:
-  //       return 'by pressing ESC';
-  //     case ModalDismissReasons.BACKDROP_CLICK:
-  //       return 'by clicking on a backdrop';
-  //     default:
-  //       return `with: ${reason}`;
-  //   }
-  // }
-
-  gettingAddress(){
+  gettingAddress() {
     this.cart.getAddress()
-    .subscribe((res)=>{
-      this.locateAddress=res
-    })
+      .subscribe((res) => {
+        this.locateAddress = res
+      })
   }
 
   onSave() {
     this.cart.createAddress(this.address.value)
-    .subscribe((data)=>{
-      console.log(data);
-      this.locateAddress=data;
-      this.gettingAddress();
-    })
+      .subscribe((data) => {
+        console.log(data);
+        this.locateAddress = data;
+        this.gettingAddress();
+      })
   }
 
-  removeAddress(id:any){
+  removeAddress(id: any) {
     this.cart.deleteAddress(id)
-    .subscribe(()=>{
-      this.gettingAddress();
-      this.toast.error('Address has been deleted')
-    })
+      .subscribe(() => {
+        this.gettingAddress();
+        this.toast.error('Address has been deleted')
+      })
   }
 
-  selectedAddress(id: string){
-   this.location= this.cart.selectAddress(id)
-    .subscribe((result)=>{
-      console.log(result);
-    })
+  selectedAddress(id: string) {
+    this.cart.selectAddress(id)
+      .subscribe((result) => {
+        // console.log(result);
+        this.location=result;
+        console.log(this.location);
+        
+        this.toast.success('Has selected the address for order');
+      })
   }
 }

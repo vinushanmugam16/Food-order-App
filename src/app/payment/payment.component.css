@@ -1,27 +1,40 @@
-form{
-    text-align:center;
-    margin:30px 30px;
+form {
+    text-align: center;
+    margin: 30px 30px;
     margin-top: 20vh
- 
 }
-.total-style{
-    margin:30px 30px;
+
+.total-style {
+    margin: 30px 30px;
     text-align: center;
     margin-bottom: 53vh;
     font-size: large;
     font-weight: bold;
+    
 }
+
 .table,
 th,
 td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 30px;
-    
+
 }
-.table-style{
+
+.table-style {
     margin-left: 30vh;
+    margin-bottom: 50px;
 }
-.btn-outline-primary{
-    margin:30px 50vh;
+
+.btn-outline-primary {
+    margin: 30px 50vh;
+}
+
+/* .payment-align-style { */
+    /* margin-left: 60vh; */
+    /* margin-bottom: 30vh; */
+/* } */
+.text-style{
+    padding: 30px;
 }

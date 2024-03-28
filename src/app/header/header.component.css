@@ -1,7 +1,7 @@
 .header-style {
     display: flex;
-    border: 2px solid darkgrey;
-    background-color:darkolivegreen;
+    border: 2px solid rgb(82, 74, 74);
+    background-color:rgb(161, 208, 214);
     font-weight: bold;
     font-size: large;
     height: 15vh;
@@ -27,7 +27,7 @@ a {
 .title-style {
     text-align: center;
     margin-left: 50px;
-    color:darkgoldenrod;
+    color:rgb(10, 8, 1);
 }
 
 .bi-cart4 {
@@ -39,13 +39,23 @@ a {
 }
 
 .btn-secondary {
-    margin-left: 167vh;
-    /* margin-bottom: x; */
+    margin-left: 150vh;
     font-size: 30px;
-    /* color: darkblue; */
     font-size: large;
     font-weight: bold;
-    /* padding-bottom: 40px; */
-    /* margin: 20px; */
-    margin-bottom: 60vh;
+    /* margin-bottom: 60vh; */
+}
+
+/* .logout-btn-style{
+    margin-bottom:90vh;
+    margin-left: 167vh;
+} */
+
+.bi-person{
+    margin-left:161vh
+}
+
+.dropdown{
+    /* margin: 30vh; */
+    padding: 10px;
 }

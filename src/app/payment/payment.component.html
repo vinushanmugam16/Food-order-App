@@ -19,9 +19,9 @@
         <div>
           <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
           <small
-            *ngIf="address.get('address.pincode')?.invalid && (address.get('address.pincode')?.touched || address.get('address.pincode')?.dirty)">
-            <small *ngIf="address.get('address.pincode')?.hasError('required')">*Pincode is Required</small>
-            <small *ngIf="address.get('address.pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
+            *ngIf="address.get('pincode')?.invalid && (address.get('pincode')?.touched || address.get('pincode')?.dirty)">
+            <small *ngIf="address.get('pincode')?.hasError('required')">*Pincode is Required</small>
+            <small *ngIf="address.get('pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
           </small>
         </div>
       </div>
@@ -34,13 +34,69 @@
 
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
 
+<pre class="text-style">{{ closeResult }}</pre>
 
 
-<pre>{{ closeResult }}</pre>
+<div class="row">
+  <div class="col md-3">
+    <div class="table-style">
+      <table>
+        <thead>
+          <th>S.No</th>
+          <th>Address</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let add of locateAddress ,let i=index">
+            <td>{{i+1}}</td>
+            <td>{{add.street}},{{add.city}},{{add.pincode}}</td>
+            <td><button class="bi bi-trash" (click)="removeAddress(add.id)"></button>
+              <button (click)="selectedAddress(add.id)">+</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col md-3">
+    <form [formGroup]="payment" class="payment-align-style">
+      <div class="payment-style">
+        <h1>Payment</h1>
+        <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
+          <option value="">Select Payment Method</option>
+          <option value="gpay">Gpay</option>
+          <option value="cod">Cash on Delivery</option>
+          <option value="phonepay">PhonePay</option>
+        </select><br>
+        <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
+      </div><br>
+      <div>
+        <p>Address:{{setAddress}}</p>
+      </div>
+      <div *ngIf="showTotal">
+        <label>UPI ID</label><br>
+        <input type="text" id="upi" formControlName="upiId"><br>
+        <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
+          <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
+          <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
+        </small><br>
+      </div>
 
+      <div *ngIf="showTotal" class="total-style">
+        <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
+        <button class="btn btn-success" (click)="processPayment()">Pay</button>
+      </div>
 
+      <div *ngIf="cod" class="total-style">
+        <!-- <p>Address:{{setAddress}}</p> -->
+        <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
+        <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-<div class="table-style">
+<!-- <div class="table-style">
   <table>
     <thead>
       <th>S.No</th>
@@ -57,11 +113,9 @@
       </tr>
     </tbody>
   </table>
-</div>
-
-
-
-<form [formGroup]="payment">
+</div> -->
+<!-- 
+<form [formGroup]="payment" class="payment-align-style">
   <div class="payment-style">
     <h1>Payment</h1>
     <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
@@ -73,7 +127,7 @@
     <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
   </div><br>
   <div>
-    <p>Address:{{this.setAddress}}</p>
+    <p>Address:{{setAddress}}</p>
   </div>
   <div *ngIf="showTotal">
     <label>UPI ID</label><br>
@@ -83,324 +137,17 @@
       <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
     </small><br>
   </div>
-</form>
-<!-- <div>
-    <label class="address-style">Address:
-      <input type="text" value="street" placeholder="Street Address" formControlName="street"><br>
-      <small
-          *ngIf="payment.get('address.street')?.invalid && (payment.get('address.street')?.touched || payment.get('address.street')?.dirty)">
-          *Street is Required
-      </small><br>
 
-      <input type="text" value="city" placeholder="City" formControlName="city"><br>
-      <small
-          *ngIf="payment.get('address.city')?.invalid && (payment.get('address.city')?.touched || payment.get('address.city')?.dirty)">
-          <small *ngIf="payment.get('address.city')?.hasError('required')">*City is required</small>
-          <small *ngIf="payment.get('address.city')?.hasError('pattern')">*City should be in valid
-              name format</small>
-      </small>
-      <br>
-
-      <input type="number" value="pincode" placeholder="Pincode" formControlName="pincode"><br>
-      <small
-          *ngIf="payment.get('address.pincode')?.invalid && (payment.get('address.pincode')?.touched || payment.get('address.pincode')?.dirty)">
-          <small *ngIf="payment.get('address.pincode')?.hasError('required')">*Pincode is
-              Required</small>
-          <small *ngIf="payment.get('address.pincode')?.hasError('pattern')">*Pincode should contain
-              6 numbers</small>
-      </small>
-  </label>
-</div> -->
-
-
-
-<div *ngIf="showTotal" class="total-style">
-  <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
-  <button class="btn btn-success" (click)="processPayment()">Pay</button>
-</div>
-
-<div *ngIf="cod" class="total-style">
-  <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
-  <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
-</div>
-
-
-
-<!-- <div class="container p4">
-  <div class="modal-header">
-    <h2 class="modal-title" id="titlealign">Add</h2>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')" class="btn btn-lg">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div *ngIf="showTotal" class="total-style">
+    <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
+    <button class="btn btn-success" (click)="processPayment()">Pay</button>
   </div>
-</div> -->
 
-
-<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Open My Modal</button>  
-     
-<ng-template #mymodal let-modal>  
-  <div class="modal-header">  
-    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>  
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">  
-      <span aria-hidden="true">?</span>  
-    </button>  
-  </div>  
-  <div class="modal-body">  
-    This is example from Javatpoint.com  
-  </div>  
-  <div class="modal-footer">  
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>  
-  </div>   -->
-
-
-
-<!-- <div class="container p-4">
-    <div class="modal-header">
-      <h2 class="modal-title" id="titlealign">Add</h2>
-      <button
-        type="button"
-        class="close"
-        aria-label="Close"
-        (click)="activeModal.dismiss('Cross click')"
-        class="btn btn-lg">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-
-      <form [formGroup]="address" (input)="buttonDisable()">
-
-        <div class="row">
-          <input type="text" formControlName="street" class="form-control form-control-lg border border-black" placeholder="Street"/>
-          <div *ngIf="address.get('street')?.invalid && (address.get('street')?.dirty || address.get('street')?.touched)">
-            <div *ngIf="address.get('street')?.errors?.['required']">*Street must be given</div>
-          </div>
-        </div>
-        <br />
+  <div *ngIf="cod" class="total-style">
+    <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
+    <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
+  </div>
 </form>
-</div>
-</div> -->
-
-<!-- <p *ngIf="buttonAble">*Enter Valid Details</p>
-        <div class="row">
-          <label class="categoryAlign">Category</label>
-          <select
-            formControlName="category"
-            id=" "
-            class="form-select form-select-lg mb-3 border border-black"
-            multiple
-          >
-            <option
-              *ngFor="let item of category"
-              [value]="item"
-              class="border border-black"
-            >
-              {{ item }}
-            </option>
-          </select>
-          <div
-            *ngIf="
-              addNewData.get('category')?.invalid &&
-              (addNewData.get('category')?.dirty ||
-                addNewData.get('category')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('category')?.errors?.['required']">
-              *Category must be given
-            </div>
-          </div>
-        </div>
-        <br />
-   
-        <div class="row">
-          <input
-            type="text"
-            formControlName="food"
-            class="form-control form-control-lg border border-black"
-            placeholder="Food"
-          />
-          <div
-            *ngIf="
-              addNewData.get('food')?.invalid &&
-              (addNewData.get('food')?.dirty || addNewData.get('food')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('food')?.errors?.['required']">
-              *Food must be given
-            </div>
-            <div *ngIf="addNewData.get('food')?.errors?.['pattern']">
-              *Valid Food Name must be given
-            </div>
-          </div>
-        </div>
-        <br />
-   
-        <div class="row">
-          <input
-            type="number"
-            formControlName="quantity"
-            class="form-control form-control-lg border border-black"
-            placeholder="FoodQuantity"
-            min="1"
-          />
-          <div
-            *ngIf="
-              addNewData.get('quantity')?.invalid &&
-              (addNewData.get('quantity')?.dirty ||
-                addNewData.get('quantity')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('quantity')?.errors?.['required']">
-              *Food Quantity must be given
-            </div>
-            <div *ngIf="addNewData.get('quantity')?.errors?.['min']">
-              * Valid Food Quantity should be given
-            </div>
-          </div>
-        </div>
-        <br />
-   
-        <div class="row">
-          <input
-            type="text"
-            formControlName="foodunit"
-            class="form-control form-control-lg border border-black"
-            placeholder="Food Quantity Unit"
-            required
-          />
-          <div
-            *ngIf="
-              addNewData.get('foodunit')?.invalid &&
-              (addNewData.get('foodunit')?.dirty ||
-                addNewData.get('foodunit')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('foodunit')?.errors?.['required']">
-              *Food Quantity Unit must be given
-            </div>
-            <div *ngIf="addNewData.get('foodunit').hasError('pattern')">
-              *Food Quantity Unit must be in lowercase
-            </div>
-          </div>
-        </div>
-   
-        <br />
-   
-        <div class="row">
-          <input
-            type="text"
-            formControlName="sidedish"
-            class="form-control form-control-lg border border-black"
-            placeholder="Combo"
-          />
-          <div
-            *ngIf="
-              addNewData.get('sidedish')?.invalid &&
-              (addNewData.get('sidedish')?.dirty ||
-                addNewData.get('sidedish')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('sidedish')?.errors?.['required']">
-              *Combo must be given
-            </div>
-            <div *ngIf="addNewData.get('sidedish').hasError('pattern')">
-              *Valid Combo should be given
-            </div>
-          </div>
-        </div>
-   
-        <br />
-   
-        <div class="row">
-          <input
-            type="number"
-            formControlName="sidedishquantity"
-            class="form-control form-control-lg border border-black"
-            placeholder="Combo Quantity"
-            min="1"
-          />
-          <div
-            *ngIf="
-              addNewData.get('sidedishquantity')?.invalid &&
-              (addNewData.get('sidedishquantity')?.dirty ||
-                addNewData.get('sidedishquantity')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('sidedishquantity')?.errors?.['required']">
-              *Combo Quantity must be given
-            </div>
-            <div *ngIf="addNewData.get('sidedishquantity')?.errors?.['min']">
-              *Valid Combo Quantity should be given
-            </div>
-          </div>
-        </div>
-        <br />
-   
-        <div class="row">
-          <input
-            type="text"
-            formControlName="sidedishunit"
-            class="form-control form-control-lg border border-black"
-            placeholder="Combo Quantity Unit"
-          />
-          <div
-            *ngIf="
-              addNewData.get('sidedishunit')?.invalid &&
-              (addNewData.get('sidedishunit')?.dirty ||
-                addNewData.get('sidedishunit')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('sidedishunit')?.errors?.['required']">
-              *Combo Quantity Unit must be given
-            </div>
-            <div *ngIf="addNewData.get('sidedishunit')?.errors?.['pattern']">
-              *Combo Quantity Unit must be in lowercase
-            </div>
-          </div>
-        </div>
-        <br />
-   
-        <div class="row">
-          <input
-            type="number"
-            formControlName="calorie"
-            class="form-control form-control-lg border border-black"
-            placeholder="Calorie"
-            min="1"
-          />
-          <div
-            *ngIf="
-              addNewData.get('calorie')?.invalid &&
-              (addNewData.get('calorie')?.dirty ||
-                addNewData.get('calorie')?.touched)
-            "
-          >
-            <div *ngIf="addNewData.get('calorie')?.errors?.['required']">
-              *Calorie must be given
-            </div>
-            <div *ngIf="addNewData.get('calorie')?.errors?.['min']">
-              *Valid Calorie should be given
-            </div>
-          </div>
-        </div>
-        <br />
-      
 
 
-    </div>
-    <div class="modal-footer">
-      <button
-        class="btn btn-secondary btn-lg"
-        (click)="dataTransfer()"
-        [disabled]="buttonAble"
-      >
-        Submit
-      </button>
-    </div> -->
-<!-- </div> -->
-
-
-
-
-
-
+ -->

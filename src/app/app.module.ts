@@ -24,6 +24,7 @@ import { ToastNoAnimationModule } from 'ngx-toastr';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CustomFilterPipe } from './custom-filter.pipe';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CartComponent,
     ItemsComponent,
     PaymentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CustomFilterPipe
 
   ],
   imports: [
