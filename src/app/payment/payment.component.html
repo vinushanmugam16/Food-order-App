@@ -10,7 +10,6 @@
         <div class="input-group">
 
           <input type="text" id="address" class="form-control" placeholder="Street" formControlName="street" />
-          <!-- <button class="btn btn-outline-secondary bi bi-calendar3" (click)="dp.toggle()" type="button"></button> -->
         </div>
 
         <div>
@@ -47,7 +46,7 @@
           <th>Action</th>
         </thead>
         <tbody>
-          <tr *ngFor="let add of locateAddress ,let i=index">
+          <tr *ngFor="let add of userAddress ,let i=index">
             <td>{{i+1}}</td>
             <td>{{add.street}},{{add.city}},{{add.pincode}}</td>
             <td><button class="bi bi-trash" (click)="removeAddress(add.id)"></button>
@@ -72,7 +71,47 @@
       </div><br>
       <div>
         <p>Address:{{setAddress}}</p>
-      </div>
+        <!-- <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" role="button">Delivery Address</button>
+          <ul class="dropdown-menu" *ngFor="let add of userAddress , let i=index">
+            <li>{{i+1}}</li>
+            <li>{{add.street}},{{add.city}},{{add.pincode}}</li>
+          </ul>
+          <p>Delivery Address:</p>
+      </div> -->
+
+
+      <!-- <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu">
+        <div class="form-group">
+        <input type="radio" class="form-check-input pos" value="">
+        <span>ption 2</span>
+          
+          </div>
+          
+          <div class="form-group">
+        <input type="radio" class="form-check-input pos" value="">
+        <span>ption 2</span>
+          
+          </div>
+          
+          <div class="form-group">
+        <input type="radio" class="form-check-input pos" value="">
+        <span>ption 2</span>
+          
+          </div>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </div> -->
+
+
+
+    </div>
       <div *ngIf="showTotal">
         <label>UPI ID</label><br>
         <input type="text" id="upi" formControlName="upiId"><br>
@@ -88,66 +127,9 @@
       </div>
 
       <div *ngIf="cod" class="total-style">
-        <!-- <p>Address:{{setAddress}}</p> -->
         <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
         <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
       </div>
     </form>
   </div>
 </div>
-
-<!-- <div class="table-style">
-  <table>
-    <thead>
-      <th>S.No</th>
-      <th>Address</th>
-      <th>Action</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let add of locateAddress ,let i=index">
-        <td>{{i+1}}</td>
-        <td>{{add.street}},{{add.city}},{{add.pincode}}</td>
-        <td><button class="bi bi-trash" (click)="removeAddress(add.id)"></button>
-          <button (click)="selectedAddress(add.id)">+</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div> -->
-<!-- 
-<form [formGroup]="payment" class="payment-align-style">
-  <div class="payment-style">
-    <h1>Payment</h1>
-    <select id="paymentMethod" (change)="selectPaymentMethod($event)" formControlName="paymentOption">
-      <option value="">Select Payment Method</option>
-      <option value="gpay">Gpay</option>
-      <option value="cod">Cash on Delivery</option>
-      <option value="phonepay">PhonePay</option>
-    </select><br>
-    <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
-  </div><br>
-  <div>
-    <p>Address:{{setAddress}}</p>
-  </div>
-  <div *ngIf="showTotal">
-    <label>UPI ID</label><br>
-    <input type="text" id="upi" formControlName="upiId"><br>
-    <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
-      <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
-      <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
-    </small><br>
-  </div>
-
-  <div *ngIf="showTotal" class="total-style">
-    <p *ngIf="totalPrice">Total: {{totalPrice | currency:'INR'}}</p>
-    <button class="btn btn-success" (click)="processPayment()">Pay</button>
-  </div>
-
-  <div *ngIf="cod" class="total-style">
-    <p *ngIf="totalPrice">Total:{{totalPrice | currency:'INR'}}</p>
-    <button class="btn btn-success" (click)="processPayment()">Pay on Delivery</button>
-  </div>
-</form>
-
-
- -->

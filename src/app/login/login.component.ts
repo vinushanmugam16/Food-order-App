@@ -16,7 +16,7 @@ export class LoginComponent {
   public patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]*$/;
 
   constructor(private user: UserService,
-    private router: Router, private toast:ToastrService) { }
+    private router: Router, private toast: ToastrService) { }
 
   public onSubmit(loginForm: NgForm) {
     this.user.getUsername(this.userName, this.correctPassword)
@@ -31,7 +31,7 @@ export class LoginComponent {
         else {
           console.log(logUser);
           console.log(this.correctPassword);
-          
+
           this.toast.warning('Invalid Login , Please Enter Valid Details!');
         }
       })

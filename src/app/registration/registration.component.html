@@ -15,7 +15,7 @@
                         <div
                             *ngIf="registerForm.get('firstname')?.errors?.['pattern'] && !registerForm.get('firstname')?.hasError('required')">
                             *Firstname should be valid format</div>
-                        </small>
+                    </small>
                 </div>
                 <br>
                 <div>
@@ -31,10 +31,8 @@
                     </small>
                 </div><br>
                 <div>
-                    <!-- <label class="dob-style" name="DateofBirth">Date of Birth <br> -->
-                        <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
-                    <!-- </label>-->
-                        <br> 
+                    <input id="dob" type="date" placeholder="Date of Birth" formControlName="dob">
+                    <br>
                     <small
                         *ngIf="registerForm.get('dob')?.invalid && (registerForm.get('dob')?.touched || registerForm.get('dob')?.dirty)">
                         <div *ngIf="registerForm.get('dob')?.hasError('required')">*Date of Birth is required </div>
@@ -43,7 +41,8 @@
             </div>
             <br>
             <div>
-                <small class="user-style">(Click the Username button to get username of yours. or Type your Username by own)</small><br>
+                <small class="user-style">(Click the Username button to get username of yours. or Type your Username by
+                    own)</small><br>
                 <input type="text" placeholder="Username" formControlName="username"><br>
                 <button (click)="createUsername()">Username</button><br>
                 <small
@@ -62,12 +61,14 @@
                 </small>
             </div><br>
             <div>
-                <input class="input-style" type="password" placeholder="Confirm Password" formControlName="confirmpassword"><br>
+                <input class="input-style" type="password" placeholder="Confirm Password"
+                    formControlName="confirmpassword"><br>
                 <small
                     *ngIf="registerForm.get('confirmpassword')?.invalid && (registerForm.get('confirmpassword')?.touched || registerForm.get('confirmpassword')?.dirty)">
-                    <div *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required </div>
+                    <div *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required
+                    </div>
                     <div *ngIf="registerForm.hasError('notmatchPassword')">*Password must match</div>
-            </small>
+                </small>
             </div>
             <hr>
             <div>
@@ -91,13 +92,13 @@
             <div>
                 <label class="label-style">
                     <select class="form-select" formControlName="gender">
-                        <option value="" selected > Select Gender</option>
+                        <option value="" selected> Select Gender</option>
                         <option *ngFor="let item of gender" [value]="item">{{item}}</option>
                     </select>
                 </label>
             </div><br>
             <div>
-                <input class="btn btn-success"  type="submit" value="Submit" (click)="onSubmit()">
+                <input class="btn btn-success" type="submit" value="Submit" (click)="onSubmit()">
             </div>
         </form>
     </div>

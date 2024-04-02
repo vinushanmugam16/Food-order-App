@@ -12,6 +12,7 @@ export class CustomFilterPipe implements PipeTransform {
     searchFood = searchFood.toLowerCase();
     return items.filter(item => {
       for (let key in item) {
+        
         if (item.hasOwnProperty(key) && item[key].toString().toLowerCase().includes(searchFood)) 
         { 
           return true;

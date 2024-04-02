@@ -1,5 +1,6 @@
 export interface Address{
     street:string,
     city:string;
-    pincode:number
+    pincode:number,
+    userName:string | null
 } 

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 import { ToastrService } from 'ngx-toastr';
+import { EncryptDecryptService } from '../Service/encryptDecrypt.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 export class RegistrationComponent implements OnInit {
 
   constructor(private user: UserService,
-    private router: Router, private toast:ToastrService) { }
+    private router: Router, private toast: ToastrService, private encrDecr:EncryptDecryptService) { }
 
   public registerForm: FormGroup;
   public gender = ['Male', 'Female'];
@@ -30,9 +31,7 @@ export class RegistrationComponent implements OnInit {
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern("[0-9]{10}")]),
       gender: new FormControl('')
     },
-    { validators: PasswordValidation });
-
-
+      { validators: PasswordValidation });
   }
 
   public onSubmit() {

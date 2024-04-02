@@ -27,7 +27,6 @@ small {
 }
 
 .whole-style {
-    /* background-image: url('/assets/image/pexels-photo-326281.jpeg'); */
     background-image:url('/assets/image/back.jpg');
     background-size: cover;
     height: 80vh;

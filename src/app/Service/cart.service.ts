@@ -32,22 +32,6 @@ export class CartService {
     return this.http.post(this.cartUrl, addingCart);
   }
 
-  // public createCartItems(items:Item){
-  //   return this.http.post(this.userUrl,items)
-  // }
-
-  // public gettingItems(){
-  //   return this.http.get(this.userUrl)
-  // }
-
-  // public getUserData(username:any){
-  //   return this.http.get(`${this.userUrl}?username=${username}`);
-  // }
-
-  // public updateCart(id:any,item:User){
-  //   return this.http.put(this.userUrl+'/'+id,item);
-  // }
-
   public getCart() {
     return this.http.get(this.cartUrl);
   }
@@ -69,8 +53,6 @@ export class CartService {
       })
   }
 
-
-
   public getAddress(){
     return this.http.get(this.addressUrl);
   }
@@ -85,5 +67,9 @@ export class CartService {
 
   public selectAddress(id:string){
     return this.http.get(`${this.addressUrl}/${id}`);
+  }
+
+  public updateAddress(id:string,address:Address){
+    return this.http.put(this.addressUrl+'/'+id,address)
   }
 }

@@ -14,7 +14,6 @@ a {
     color: darkblue;
     font-size: large;
     font-weight: bold;
-    /* padding-bottom: 40px; */
     margin: 20px;
     margin-bottom: 30vh;
 }
@@ -31,11 +30,12 @@ a {
 }
 
 .bi-cart4 {
-    margin-left: 170vh;
+    margin-left: 160vh;
 }
 
 .lang-style {
     margin: 30px;
+    margin-left: 10px;
 }
 
 .btn-secondary {
@@ -43,19 +43,14 @@ a {
     font-size: 30px;
     font-size: large;
     font-weight: bold;
-    /* margin-bottom: 60vh; */
 }
 
-/* .logout-btn-style{
-    margin-bottom:90vh;
-    margin-left: 167vh;
+/* .bi-person{
+    margin-left:161vh
 } */
 
-.bi-person{
-    margin-left:161vh
-}
-
 .dropdown{
-    /* margin: 30vh; */
     padding: 10px;
+    margin-top:10vh;
+    /* margin-bottom: 30vh; */
 }

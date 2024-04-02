@@ -1,9 +1,10 @@
-.page-style{
+.page-style {
     text-align: center;
     padding: 20px;
-    margin:20px
+    margin: 20px
 }
-.heading-style{
+
+.heading-style {
     padding: 20px;
     font-size: 100px;
 }

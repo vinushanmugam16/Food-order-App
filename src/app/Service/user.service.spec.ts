@@ -37,11 +37,6 @@ describe('UserService', () => {
         "confirmpassword": "Aspire@123",
         "dob": "2000-09-23",
         "email": "gomathi@gmail.com",
-        "address": {
-          "street": "123/987,WiThyaa street",
-          "city": "Salem",
-          "pincode": 654321
-        },
         "phoneNumber": 9876543210,
         "gender": "Female"
       }

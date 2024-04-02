@@ -18,7 +18,8 @@
                     <small *ngIf="password.invalid && (password.touched || password.dirty)">
                         <small *ngIf="password.errors?.['required']">*Password is required</small>
                         <small *ngIf="password.errors?.['pattern']">*Password is in invalid format</small>
-                        <small *ngIf="password.errors?.['minlength']&& !password.errors?.['pattern']">*Password should be atleast 8 characters</small>
+                        <small *ngIf="password.errors?.['minlength']&& !password.errors?.['pattern']">*Password should
+                            be atleast 8 characters</small>
                     </small><br>
                 </div>
                 <div>

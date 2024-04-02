@@ -4,6 +4,7 @@ import { CartService } from '../Service/cart.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 import { Item } from '../model/item';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 describe('CartComponent', () => {
   let component: CartComponent;
@@ -13,8 +14,8 @@ describe('CartComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [CartComponent],
-      providers:[CartService],
-      imports:[HttpClientTestingModule]
+      providers:[CartService,ToastrService],
+      imports:[HttpClientTestingModule,ToastrModule]
     })
 
     fixture = TestBed.createComponent(CartComponent);

@@ -169,6 +169,51 @@
       "price": 75,
       "quantity": 1,
       "variety": "Veg",
+      "userName": "Shalu"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Shalu"
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Shalu"
+    },
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120,
+      "quantity": 1,
+      "variety": "NonVeg",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "7",
+      "imageUrl": "/assets/image/mushroombriyani.jpeg",
+      "itemName": "Mushroom Briyani",
+      "price": 230,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
       "userName": "VINUSHA2002"
     },
     {
@@ -183,74 +228,44 @@
   ],
   "logindetails": [
     {
-      "id": "6156",
-      "username": "ANIRPRA2022",
-      "password": "Anira@123"
-    },
-    {
-      "id": "09c3",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "78dc",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "8ac5",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "b562",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "5233",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "1bd9",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "8b9f",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "1074",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "abcf",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "3443",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "29a9",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "88fb",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "e758",
+      "id": "fd00",
       "username": "DINEKUM2001",
       "password": "Dinesh@123"
+    },
+    {
+      "id": "229f",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "a5ac",
+      "username": "DINEKUM2001",
+      "password": "Dinesh@123"
+    },
+    {
+      "id": "c0c1",
+      "username": "Shalu",
+      "password": "Shalu@123"
+    },
+    {
+      "id": "e22f",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "6634",
+      "username": "Shalu",
+      "password": "Shalu@123"
+    },
+    {
+      "id": "4f28",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "347e",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
     }
   ],
   "registerdetails": [
@@ -277,44 +292,55 @@
       "email": "dinesh123@gmail.com",
       "phoneNumber": 1234567891,
       "gender": "Male"
+    },
+    {
+      "id": "1366",
+      "firstname": "Shalini",
+      "lastname": "Loganathan",
+      "username": "Shalu",
+      "password": "Shalu@123",
+      "confirmpassword": "Shalu@123",
+      "dob": "1998-01-19",
+      "email": "shalu19@gmail.com",
+      "phoneNumber": 9836727638,
+      "gender": "Female"
     }
   ],
   "address": [
     {
-      "id": "3d16",
-      "street": "Sri sakthi nagar",
-      "city": "Erode",
-      "pincode": "638476"
-    },
-    {
-      "id": "2ef1",
-      "street": "12,Giant Complex Street",
-      "city": "Chennai",
-      "pincode": "638003"
-    },
-    {
-      "id": "eb7c",
-      "street": "64,jai street",
-      "city": "erode",
-      "pincode": "543212"
-    },
-    {
-      "id": "fd63",
-      "street": "23,dia colony",
-      "city": "coimbatre",
-      "pincode": "543212"
-    },
-    {
-      "id": "ea63",
-      "street": "12,French Colony",
-      "city": "Pondy",
-      "pincode": "678901"
-    },
-    {
-      "id": "7eb2",
-      "street": "navalur",
+      "id": "14be",
+      "street": "ueuiwke",
       "city": "chennai",
-      "pincode": "636303"
+      "pincode": "286471",
+      "userName": "DINEKUM2001"
+    },
+    {
+      "id": "aa31",
+      "street": "43, Giri strret",
+      "city": "chennai",
+      "pincode": "823623",
+      "userName": "DINEKUM2001"
+    },
+    {
+      "id": "c3e2",
+      "street": "23, D-Block ",
+      "city": "Sholinganallur",
+      "pincode": "638476",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "7f0e",
+      "street": "98, Sai ram street",
+      "city": "Navalur",
+      "pincode": "630004",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "b746",
+      "street": "2,French street",
+      "city": "Pondy",
+      "pincode": "652351",
+      "userName": "VINUSHA2002"
     }
   ]
 }

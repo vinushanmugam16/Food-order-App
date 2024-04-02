@@ -5,42 +5,44 @@ import { Item } from "../model/item";
 import { of } from "rxjs";
 
 describe('CartService', () => {
-    let service: CartService;
-    let httpMock: HttpTestingController;
+  let service: CartService;
+  let httpMock: HttpTestingController;
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            imports: [HttpClientTestingModule],
-            providers: [CartService]
-        });
-        service = TestBed.inject(CartService);
-        httpMock = TestBed.inject(HttpTestingController);
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [CartService]
+    });
+    service = TestBed.inject(CartService);
+    httpMock = TestBed.inject(HttpTestingController);
+  });
+
+  afterEach(() => {
+    httpMock.verify();
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+  it('should get data from json', () => {
+    service.getItem().subscribe((items) => {
+      expect(items).toBeTruthy();
     });
 
-    afterEach(() => {
-        httpMock.verify();
-    });
+    const result = httpMock.expectOne('http://localhost:3000/FoodItems');
+    expect(result.request.method).toBe('GET');
+  });
 
-    it('should be created', () => {
-        expect(service).toBeTruthy();
-    });
-
-    it('should get data from json', () => {
-        service.getItem().subscribe((items) => {
-            expect(items).toBeTruthy();
-        });
-
-        const result = httpMock.expectOne('http://localhost:3000/FoodItems');
-        expect(result.request.method).toBe('GET');
-    });
-
-    it('should create cart items ', () => {
+  it('should create cart items ', () => {
     const items: Item = {
       "id": 4,
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "quantity":1,
-      "price": 60
+      "quantity": 1,
+      "price": 60,
+      "variety": "veg",
+      "userName": "VINUSHA2002"
     };
 
     service.createCart(items).subscribe(response => {
@@ -53,7 +55,7 @@ describe('CartService', () => {
 
   it('should get cart items from json', () => {
     service.getItem().subscribe((items) => {
-        expect(items).toBeTruthy();
+      expect(items).toBeTruthy();
     });
 
     const result = httpMock.expectOne('http://localhost:3000/FoodItems');
@@ -62,49 +64,55 @@ describe('CartService', () => {
 
   it('should delete cart data from json', () => {
     const items: Item = {
-        "id": 4,
-        "imageUrl": "/assets/image/poori.jpeg",
-        "itemName": "Poori",
-        "quantity":1,
-        "price": 60
-      };
+      "id": 4,
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "quantity": 1,
+      "price": 60,
+      "variety": "veg",
+      "userName": "VINUSHA2002"
+    };
 
     service.deleteItem(items.id).subscribe((items) => {
-        expect(items).toBeTruthy();
+      expect(items).toBeTruthy();
     });
 
-    const result = httpMock.expectOne('http://localhost:3000/addcart/' +items.id);
+    const result = httpMock.expectOne('http://localhost:3000/addcart/' + items.id);
     expect(result.request.method).toBe('DELETE');
 
   });
 
   it('should send a PUT request to the correct URL', () => {
-    const cart:Item={
+    const cart: Item = {
       "id": 4,
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "quantity":1,
-      "price": 60
+      "quantity": 1,
+      "price": 60,
+      "variety": "veg",
+      "userName": "VINUSHA2002"
     };
-    const item =cart.id;
-    service.updateQuantity(item,cart).subscribe((data)=>{
+    const item = cart.id;
+    service.updateQuantity(item, cart).subscribe((data) => {
       expect(data).toBeTruthy();
     })
-    
-    const req = httpMock.expectOne('http://localhost:3000/addcart/'+ item);
+
+    const req = httpMock.expectOne('http://localhost:3000/addcart/' + item);
     expect(req.request.method).toBe('PUT');
-    req.flush({cart});
+    req.flush({ cart });
   });
 
-  it('should get length of the items ',()=>{
-    const mock:Item={
+  it('should get length of the items ', () => {
+    const mock: Item = {
       "id": 4,
       "imageUrl": "/assets/image/poori.jpeg",
       "itemName": "Poori",
-      "quantity":1,
-      "price": 60
+      "quantity": 1,
+      "price": 60,
+      "variety": "veg",
+      "userName": "VINUSHA2002"
     };
-    spyOn(service,'getCart').and.returnValue(of(mock))
+    spyOn(service, 'getCart').and.returnValue(of(mock))
     service.itemLength();
     expect(service.getCart).toHaveBeenCalled();
   })

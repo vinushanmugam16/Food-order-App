@@ -24,7 +24,7 @@
                        <span>{{item.quantity}}</span>
                         <button (click)="decreaseQuantity(item)">-</button>
                     </td>
-                    <td>{{item.price * item.quantity | currency:'USD'}}</td>
+                    <td>{{item.price * item.quantity | currency:'INR'}}</td>
                     <td>
                         <button class="bi bi-trash" (click)="removeItem(item.id)"></button>
                     </td>

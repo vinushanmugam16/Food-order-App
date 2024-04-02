@@ -3,9 +3,7 @@ import { CartService } from '../Service/cart.service';
 import { Item } from '../model/item';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { ModalDismissReasons, NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Address } from '../model/address';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-payment',
@@ -24,10 +22,11 @@ export class PaymentComponent {
   cod: boolean = false;
   closeResult: string;
   locateAddress: any;
-  location:any;
-  setAddress: any
-
-  constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal) {}
+  location: any;
+  setAddress: string;
+  userAddress: any;
+  
+  constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal) { }
 
   ngOnInit() {
 
@@ -42,7 +41,8 @@ export class PaymentComponent {
     this.address = new FormGroup({
       street: new FormControl('', [Validators.required]),
       city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
-      pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")])
+      pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")]),
+      userName: new FormControl('')
     })
   }
 
@@ -56,7 +56,6 @@ export class PaymentComponent {
     else {
       this.cod = true;
       this.setAddress = `${this.location.street},${this.location.city},${this.location.pincode}`;
-
     }
   }
 
@@ -79,8 +78,6 @@ export class PaymentComponent {
     })
   }
 
-
- 
   open(content: TemplateRef<any>) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
       (result) => {
@@ -96,15 +93,22 @@ export class PaymentComponent {
   gettingAddress() {
     this.cart.getAddress()
       .subscribe((res) => {
-        this.locateAddress = res
+        this.locateAddress = res;
+        const storeUser = sessionStorage.getItem('user');
+        this.locateAddress.userName = storeUser;
+        this.userAddress = this.locateAddress.filter((val: { userName: string | null; }) => val.userName === storeUser);
       })
   }
 
   onSave() {
-    this.cart.createAddress(this.address.value)
-      .subscribe((data) => {
-        console.log(data);
-        this.locateAddress = data;
+
+    const value = {
+      street: this.address.get('street')?.value, city: this.address.get('city')?.value, pincode: this.address.get('pincode')?.value,
+      userName: sessionStorage.getItem('user')
+    };
+
+    this.cart.createAddress(value)
+      .subscribe(() => {
         this.gettingAddress();
       })
   }
@@ -120,10 +124,7 @@ export class PaymentComponent {
   selectedAddress(id: string) {
     this.cart.selectAddress(id)
       .subscribe((result) => {
-        // console.log(result);
-        this.location=result;
-        console.log(this.location);
-        
+        this.location = result;
         this.toast.success('Has selected the address for order');
       })
   }

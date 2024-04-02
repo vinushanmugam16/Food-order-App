@@ -1,24 +1,14 @@
 <div class="header-style">
     <div class='btn-style'>
         <div>
-            <!-- <p class="date-style">{{today | date: 'dd-MM-yyyy HH:mm:ssZ' }}</p> -->
             <button class="bi bi-cart4" routerLink="cart"></button>
             <button *ngIf="this.cart.totalItem">{{this.cart.totalItem}}</button>
         </div>
         <h1 class="title-style">Food Order App</h1>
-        <!-- <a routerLink="/payment">Payment</a> -->
-        <!-- <a routerLink="/address">Address</a> -->
-        <!-- <button mat-button [matMenuTriggerFor]="menu">Profile</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Profile Details</button>
-  <button mat-menu-item (click)="logout()">Logout</button>
-</mat-menu> -->
-
 
         <a routerLink="registration" routerLinkActive="active-state" *ngIf="!user.login()">Register</a>
         <a routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</a>
-        
-        <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button>
+        <!-- <button class="btn btn-secondary" (click)="logoutPage()" *ngIf="user.login()">Logout</button> -->
     </div>
 
     <br>
@@ -30,18 +20,15 @@
             </option>
         </select>
     </span>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" class="bi bi-person" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false" role="button">
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" class="bi bi-person"></a>{{userName}}</li>
+            <li>Address</li>
+            <li><a class="dropdown-item" (click)="logoutPage()" *ngIf="user.login()">Logout</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+        </ul>
+    </div>
 </div>
-
-<!-- <div class="dropdown">
-    <a class="btn btn-light dropdown-toggle bi bi-person"
-    role="button"
-    id="dropdownMenuLink"
-    aria-expanded="false">
-    </a>
-
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <li><a class="dropdown-item" routerLink="logout">Logout</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-  </div> -->

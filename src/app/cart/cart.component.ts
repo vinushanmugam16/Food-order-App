@@ -22,11 +22,17 @@ export class CartComponent implements OnInit {
   }
 
   public getFoodItem() {
-    this.cart.getCart()
+    try{
+      this.cart.getCart()
       .subscribe((res) => {
         this.foodItem = res;
         this.food=this.foodItem.filter((item:any)=>item.userName === sessionStorage.getItem('user'))
       })
+    }
+    catch(err){
+      console.error(err);
+    }
+  
   }
 
   increaseQuantity(item: Item) {

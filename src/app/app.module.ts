@@ -17,7 +17,7 @@ import { UserService } from './Service/user.service';
 import { CartService } from './Service/cart.service';
 import { CurrencyPipe } from '@angular/common';
 import { ItemsComponent } from './items/items.component';
-import { TranslateLoader, TranslateModule,TranslateService } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PaymentComponent } from './payment/payment.component';
 import { ToastNoAnimationModule } from 'ngx-toastr';
@@ -25,6 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CustomFilterPipe } from './custom-filter.pipe';
+import { EncryptDecryptService } from './Service/encryptDecrypt.service';
 
 
 @NgModule({
@@ -58,19 +59,16 @@ import { CustomFilterPipe } from './custom-filter.pipe';
         deps: [HttpClient]
       }
     }),
-    ToastNoAnimationModule.forRoot({
-      timeOut: 2000,
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true,
-    }),
+    ToastNoAnimationModule.forRoot(),
     NgbModule,
     NgxPaginationModule
- 
+
   ],
-  providers: [UserService, 
-              CartService, 
-              TranslateService
-             ],
+  providers: [UserService,
+    CartService,
+    TranslateService,
+    EncryptDecryptService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
