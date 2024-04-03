@@ -2,16 +2,24 @@
 
 <form>
     <input class="search-style" type="text" placeholder="Search" [(ngModel)]="searchFood" name="search">
+   <!-- <label>Veg
+    <input type="radio">
+   </label> -->
+
 </form>
 <div class="outlet container">
     <div class="row itemsBlock">
         <div class="col-md-3 col-sm-3 col-10" id="items-style"
-            *ngFor="let item of cartItem | paginate :{ itemsPerPage: 8, currentPage: pageNumber } | customFilter:searchFood">
+            *ngFor="let item of cartItem | customFilter:searchFood| paginate :{ itemsPerPage: 8, currentPage: pageNumber,totalItems:totalItems }">
             <img icon-link icon-link-hover [src]="item.imageUrl" width="200px" height="200px" alt="Food Image">
             <p>{{item.itemName}}</p>
             <p>Price: {{item.price | currency:'INR'}}</p>
+
             <button class="btn btn-outline-primary" (click)="addingTocart(item)">Add to Cart</button>
         </div>
+        <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+
     </div>
+
 </div>
-<pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
+

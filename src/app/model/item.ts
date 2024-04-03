@@ -5,5 +5,5 @@ export interface Item {
     quantity:number,
     id: number,
     variety:string,
-    userName:string | null
+    // userName:string | null
 }

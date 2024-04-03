@@ -1,8 +1,9 @@
 <div class="header-style">
+    
     <div class='btn-style'>
         <div>
             <button class="bi bi-cart4" routerLink="cart"></button>
-            <button *ngIf="this.cart.totalItem">{{this.cart.totalItem}}</button>
+            <button *ngIf="this.cart.totalItem"><sup>{{this.cart.totalItem}}</sup></button>
         </div>
         <h1 class="title-style">Food Order App</h1>
 
@@ -20,15 +21,60 @@
             </option>
         </select>
     </span>
-    <div class="dropdown">
+
+    <div class="dropdown" *ngIf="user.login()">
         <button class="btn btn-secondary dropdown-toggle" class="bi bi-person" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false" role="button">
+            aria-expanded="false" >
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" class="bi bi-person"></a>{{userName}}</li>
-            <li>Address</li>
-            <li><a class="dropdown-item" (click)="logoutPage()" *ngIf="user.login()">Logout</a></li>
-            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+
+            <li><i class="dropdown-item" class="bi bi-person">{{userName}}</i></li>
+           <li>
+            <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Address update</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="address">
+                  <div class="mb-3">
+                    <label for="address">Address</label>
+                    <div class="input-group">
+            
+                      <input type="text" id="address" class="form-control" placeholder="Street" formControlName="street" />
+                    </div>
+            
+                    <div>
+                      <input type="text" class="form-control" placeholder="City" formControlName="city">
+                    </div>
+                    <div>
+                      <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
+                      <small
+                        *ngIf="address.get('pincode')?.invalid && (address.get('pincode')?.touched || address.get('pincode')?.dirty)">
+                        <small *ngIf="address.get('pincode')?.hasError('required')">*Pincode is Required</small>
+                        <small *ngIf="address.get('pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
+                      </small>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="modal.close('')" (click)="onSave()">Save</button>
+              </div>
+            </ng-template>
+            
+            <button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
+            
+            <!-- <pre class="text-style">{{ closeResult }}</pre></li> -->
+            <li><a class="dropdown-item" class="bi bi-box-arrow-left" (click)="logoutPage()" *ngIf="user.login()"> Logout</a></li>
         </ul>
     </div>
 </div>
+<!-- <div>
+    <select [ngModel]="setAddress" (change)="addressed($event)">
+      <option *ngFor="let add of userAddress ,let i=index" value="{{add.street}},{{add.city}},{{add.pincode}}">
+        {{i+1}}. {{add.street}},{{add.city}},{{add.pincode}}</option>
+    </select> -->
+    <!-- <p>Delivery Address: {{setAddress}}</p> -->
+  <!-- </div> -->
+

@@ -15,11 +15,13 @@ export class ItemsComponent implements OnInit {
   public userdata: any;
   public cartAdd = [];
   private foodItem: any[];
-  public itemper = 10;
+  public pageSize = 10;
+  public totalItems=20;
   public searchFood: string;
   public pageNumber: number = 1;
 
-  constructor(private cartList: CartService, private toast: ToastrService) { }
+  
+  constructor(private cartList: CartService, private toast: ToastrService) {}
 
   ngOnInit() {
     try {
@@ -33,7 +35,7 @@ export class ItemsComponent implements OnInit {
     }
   }
 
-  public addingTocart(item: Item) {
+  public addingTocart(item: any) {
     const userName = sessionStorage.getItem('user');
     item.userName = userName;
 
@@ -58,5 +60,9 @@ export class ItemsComponent implements OnInit {
         this.cartList.itemLength();
       }
     })
+  }
+
+  get totalPages() {
+    return Math.ceil(this.searchFood.length / this.pageSize);
   }
 }

@@ -36,9 +36,13 @@ td {
     color: teal;
     font-weight: bold;
 }
-.btn-success, .btn-danger{
+
+.btn-success,
+.btn-danger {
     margin: 10px;
 }
-.bi-trash{
-   color:red;
+
+.bi-trash {
+    color: red;
 }
+

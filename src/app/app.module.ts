@@ -26,6 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CustomFilterPipe } from './custom-filter.pipe';
 import { EncryptDecryptService } from './Service/encryptDecrypt.service';
+import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
+import { PhonemockPipe } from './phonemock.pipe';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { EncryptDecryptService } from './Service/encryptDecrypt.service';
     ItemsComponent,
     PaymentComponent,
     NotFoundComponent,
-    CustomFilterPipe
+    CustomFilterPipe,
+    OrderedItemsComponent,
+    PhonemockPipe
 
   ],
   imports: [

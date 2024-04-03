@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../model/user';
 import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
-import { map } from 'rxjs';
+import { catchError, map, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.development';
 
@@ -22,7 +22,22 @@ export class UserService {
   addingCart: Item[] = [];
 
   public createData(userDetail: User) {
-    return this.http.post(this.registerUrl, userDetail);
+    return this.http.post(this.registerUrl, userDetail)
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      console.error('An error occurred:', error.error.message);
+    } else {
+      console.error(
+        `Backend returned code ${error.status}, ` +
+        `body was: ${error.error}`);
+    }
+
+    return throwError('Something bad happened; please try again later.');
   }
 
   public createLogin(loginDetail: Loginuser) {

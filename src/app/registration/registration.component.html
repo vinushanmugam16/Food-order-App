@@ -41,10 +41,36 @@
             </div>
             <br>
             <div>
+                <input class="input-style" type="text" placeholder="Email" formControlName="email"><br>
+                <small
+                    *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)">*Email
+                    is Required</small>
+            </div>
+            <br>
+            <div>
+                <input class="input-style" type="text" placeholder="Phone Number" formControlName="phoneNumber | phonemock"><br>
+                <small
+                    *ngIf="registerForm.get('phoneNumber')?.invalid && (registerForm.get('phoneNumber')?.touched || registerForm.get('phoneNumber')?.dirty)">
+                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is
+                        required</div>
+                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10
+                        numbers</div>
+                </small>
+            </div>
+            <br>
+            <div>
+                <label class="label-style">
+                    <select class="form-select" formControlName="gender">
+                        <option value="" selected> Select Gender</option>
+                        <option *ngFor="let item of gender" [value]="item">{{item}}</option>
+                    </select>
+                </label>
+            </div><br>
+            <div>
                 <small class="user-style">(Click the Username button to get username of yours. or Type your Username by
                     own)</small><br>
                 <input type="text" placeholder="Username" formControlName="username"><br>
-                <button (click)="createUsername()">Username</button><br>
+                <button (click)="createUsername()" *ngIf="registerForm.get('firstname')?.valid && registerForm.get('lastname')?.valid">Username</button><br>
                 <small
                     *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">*Username
                     is Required</small>
@@ -69,33 +95,6 @@
                     </div>
                     <div *ngIf="registerForm.hasError('notmatchPassword')">*Password must match</div>
                 </small>
-            </div>
-            <hr>
-            <div>
-                <input class="input-style" type="text" placeholder="Email" formControlName="email"><br>
-                <small
-                    *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)">*Email
-                    is Required</small>
-            </div>
-            <br>
-            <div>
-                <input class="input-style" type="number" placeholder="Phone Number" formControlName="phoneNumber"><br>
-                <small
-                    *ngIf="registerForm.get('phoneNumber')?.invalid && (registerForm.get('phoneNumber')?.touched || registerForm.get('phoneNumber')?.dirty)">
-                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is
-                        required</div>
-                    <div *ngIf="registerForm.get('phoneNumber')?.hasError('pattern') ">*Phone Number should contain 10
-                        numbers</div>
-                </small>
-            </div>
-            <br>
-            <div>
-                <label class="label-style">
-                    <select class="form-select" formControlName="gender">
-                        <option value="" selected> Select Gender</option>
-                        <option *ngFor="let item of gender" [value]="item">{{item}}</option>
-                    </select>
-                </label>
             </div><br>
             <div>
                 <input class="btn btn-success" type="submit" value="Submit" (click)="onSubmit()">

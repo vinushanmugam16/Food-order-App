@@ -1,0 +1,13 @@
+<div class="order-style">
+    <h1>My Order</h1>
+    <h3>Order Id: {{orderId}}</h3>
+    <ul>
+        <li *ngFor="let item of myOrder" >
+            <img src={{item.imageUrl}}>
+            <p>{{item.itemName}} - Quantity({{item.quantity}})-{{item.price*item.quantity}}</p>
+            <p></p>
+            <p></p>
+        </li>
+    </ul>
+    <p class="total-style">Total:{{totalPrice}}</p>
+</div>

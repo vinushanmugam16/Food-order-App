@@ -6,8 +6,17 @@ import * as CryptoJS from 'crypto-js';
 })
 export class EncryptDecryptService {
 
+  keys: string = '123'
+  password:string;
   constructor() { }
-  encPassword:string;
-  
 
+  convertText(password: string) {
+
+    CryptoJS.AES.encrypt(password, this.keys).toString();
+
+
+    CryptoJS.AES.decrypt(password, this.keys).toString(CryptoJS.enc.Utf8);
+
+
+  }
 }

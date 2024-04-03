@@ -5,5 +5,6 @@ export const environment = {
     loginUrl: '/logindetails',
     addCart: '/addcart',
     foodItemsUrl: '/foodItems',
-    addressUrl:'/address'
+    addressUrl:'/address',
+    myorder:'/my-order'
 };

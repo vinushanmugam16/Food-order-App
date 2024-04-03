@@ -45,7 +45,7 @@
       "itemName": "Chicken Fried Rice",
       "price": 120,
       "quantity": 1,
-      "variety": "NonVeg",
+      "variety": "Non",
       "id": "6"
     },
     {
@@ -161,82 +161,8 @@
       "id": "20"
     }
   ],
-  "addcart": [
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Shalu"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Shalu"
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Shalu"
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120,
-      "quantity": 1,
-      "variety": "NonVeg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "7",
-      "imageUrl": "/assets/image/mushroombriyani.jpeg",
-      "itemName": "Mushroom Briyani",
-      "price": 230,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    }
-  ],
+  "addcart": [],
   "logindetails": [
-    {
-      "id": "fd00",
-      "username": "DINEKUM2001",
-      "password": "Dinesh@123"
-    },
-    {
-      "id": "229f",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
     {
       "id": "a5ac",
       "username": "DINEKUM2001",
@@ -248,22 +174,7 @@
       "password": "Shalu@123"
     },
     {
-      "id": "e22f",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "6634",
-      "username": "Shalu",
-      "password": "Shalu@123"
-    },
-    {
-      "id": "4f28",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "347e",
+      "id": "b012",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
     }
@@ -341,6 +252,103 @@
       "city": "Pondy",
       "pincode": "652351",
       "userName": "VINUSHA2002"
+    },
+    {
+      "id": "f508",
+      "street": "67, Periyar street",
+      "city": "Siruseri",
+      "pincode": "652311",
+      "userName": "VINUSHA2002"
+    }
+  ],
+  "my-order": [
+
+    {
+      "0": {
+        "id": "4",
+        "imageUrl": "/assets/image/poori.jpeg",
+        "itemName": "Poori",
+        "price": 60,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "id": "c9e8"
+    },
+    {
+      "0": {
+        "id": "4",
+        "imageUrl": "/assets/image/poori.jpeg",
+        "itemName": "Poori",
+        "price": 60,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "id": "93cb"
+    },
+    {
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "1": {
+        "id": "8",
+        "imageUrl": "/assets/image/sambar.jpeg",
+        "itemName": "Sambar",
+        "price": 80,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "id": "c3d2"
+    },
+    {
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 3,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "1": {
+        "id": "20",
+        "imageUrl": "/assets/image/prawns-fry.jpg",
+        "itemName": "Prawn Fry",
+        "price": 115,
+        "quantity": 1,
+        "variety": "Non",
+        "userName": "VINUSHA2002"
+      },
+      "id": "21df"
+    },
+    {
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 3,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "1": {
+        "id": "20",
+        "imageUrl": "/assets/image/prawns-fry.jpg",
+        "itemName": "Prawn Fry",
+        "price": 115,
+        "quantity": 1,
+        "variety": "Non",
+        "userName": "VINUSHA2002"
+      },
+      "id": "46c6"
     }
   ]
 }

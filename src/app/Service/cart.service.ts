@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { Item } from '../model/item';
-import { User } from '../model/user';
 import { Address } from '../model/address';
 
 @Injectable({
@@ -11,24 +10,27 @@ import { Address } from '../model/address';
 
 export class CartService {
 
-  public totalItem: number;
+  public totalItem:any;
   public foodItem: any;
   public food: any;
-  totalPrice: number = 0;
+  public totalPrice: number = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.totalItem=this.itemLength()
+   }
 
   fooditemsUrl = environment.baseUrl + environment.foodItemsUrl;
   cartUrl = environment.baseUrl + environment.addCart;
   userUrl = environment.baseUrl + environment.regUrl;
   addressUrl = environment.baseUrl + environment.addressUrl;
+  orderUrl=environment.baseUrl+environment.myorder;
 
   public getItem() {
     return this.http.get(this.fooditemsUrl);
   }
 
   public createCart(addingCart: Item) {
-    console.log(addingCart);
+    // console.log(addingCart);
     return this.http.post(this.cartUrl, addingCart);
   }
 
@@ -72,4 +74,20 @@ export class CartService {
   public updateAddress(id:string,address:Address){
     return this.http.put(this.addressUrl+'/'+id,address)
   }
+
+  generateOrderId(): string {
+    const time = new Date().getTime().toString(36);
+    const randomNumber = Math.random().toString(36).substr(2, 5);
+    const orderId = time + randomNumber;
+    return orderId.toUpperCase(); 
+  }
+
+  public getOrder(){
+    return this.http.get(this.orderUrl);
+  }
+
+  public createOrder(order:any){
+    return this.http.post(this.orderUrl,order)
+  }
+
 }
