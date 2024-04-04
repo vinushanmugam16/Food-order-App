@@ -35,7 +35,7 @@ export class CartComponent implements OnInit {
   
   }
 
-  increaseQuantity(item: Item) {
+  public increaseQuantity(item: Item) {
     this.cart.getCart().subscribe((data) => {
       this.cartfoodItem = data;
     });
@@ -46,7 +46,7 @@ export class CartComponent implements OnInit {
       })
   }
 
-  decreaseQuantity(item: Item) {
+  public decreaseQuantity(item: Item) {
     this.cart.getCart().subscribe((data) => {
       this.cartfoodItem = data;
     });

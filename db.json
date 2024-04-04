@@ -161,7 +161,35 @@
       "id": "20"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "18",
+      "imageUrl": "/assets/image/muttonbriyani.webp",
+      "itemName": "Mutton Briyani",
+      "price": 190,
+      "quantity": 2,
+      "variety": "Non",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "20",
+      "imageUrl": "/assets/image/prawns-fry.jpg",
+      "itemName": "Prawn Fry",
+      "price": 115,
+      "quantity": 1,
+      "variety": "Non",
+      "userName": "VINUSHA2002"
+    }
+  ],
   "logindetails": [
     {
       "id": "a5ac",
@@ -177,6 +205,36 @@
       "id": "b012",
       "username": "VINUSHA2002",
       "password": "Vinu@2468"
+    },
+    {
+      "id": "e653",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "3b3c",
+      "username": "DEVASH2004",
+      "password": "Dev@1234"
+    },
+    {
+      "id": "ee06",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "b7eb",
+      "username": "VINUSHA2002",
+      "password": "Vinu@2468"
+    },
+    {
+      "id": "bc06",
+      "username": "Janu",
+      "password": "JAnu@123"
+    },
+    {
+      "id": "955f",
+      "username": "Janu",
+      "password": "Janu@123"
     }
   ],
   "registerdetails": [
@@ -214,6 +272,90 @@
       "dob": "1998-01-19",
       "email": "shalu19@gmail.com",
       "phoneNumber": 9836727638,
+      "gender": "Female"
+    },
+    {
+      "id": "201c",
+      "firstname": "Dev",
+      "lastname": "Ashwin",
+      "username": "DEVASH2004",
+      "password": "Dev@1234",
+      "confirmpassword": "Dev@1234",
+      "dob": "2004-12-10",
+      "email": "dev@gmail.com",
+      "phoneNumber": "6387449918",
+      "gender": "Male"
+    },
+    {
+      "id": "504c",
+      "firstname": "Akil",
+      "lastname": "Arasan",
+      "username": "Akil",
+      "password": "Akil@1234",
+      "confirmpassword": "Akil@1234",
+      "dob": "2009-01-03",
+      "email": "akil@gamil.com",
+      "phoneNumber": "6382489179",
+      "gender": "Male"
+    },
+    {
+      "id": "09bc",
+      "firstname": "Diya",
+      "lastname": "Krishnan",
+      "username": "DIYAKRI1999",
+      "password": "Diya@1234",
+      "confirmpassword": "Diya@1234",
+      "dob": "1999-08-23",
+      "email": "diya@gmail.com",
+      "phoneNumber": "8633218971",
+      "gender": "Male"
+    },
+    {
+      "id": "65aa",
+      "firstname": "Sasvanth",
+      "lastname": "Kumar",
+      "username": "Sasvanth",
+      "password": "U2FsdGVkX1/NusHJmTM3fzqn9Lw/+3QRyLQJXnkKG3o=",
+      "confirmpassword": "Sas@1234",
+      "dob": "2022-04-03",
+      "email": "sasvanth@gmail.com",
+      "phoneNumber": "9876543212",
+      "gender": "Male"
+    },
+    {
+      "id": "3a38",
+      "firstname": "Janu",
+      "lastname": "Shree",
+      "username": "Janu",
+      "password": "U2FsdGVkX1801RU0Vq9a03yXqTZrvEz8bK8MyWwBWcs=",
+      "confirmpassword": "U2FsdGVkX1+1CU4miCPgzM/DIZbR5hxN2eVSkdXeFy8=",
+      "dob": "2001-10-23",
+      "email": "janu@gmail.com",
+      "phoneNumber": "8654321133",
+      "gender": "Female"
+    },
+    {
+      "id": "1bb8",
+      "firstname": "Vinudharshini",
+      "lastname": "Shanmugam",
+      "username": "VINUSHA2002",
+      "password": "U2FsdGVkX191mZyJOncu+9DBLJkIeM8UmuxN8nBhojE=",
+      "confirmpassword": "U2FsdGVkX1/l3PIPpvHcLa0l8R9gy4ylMg4d6ThfMXg=",
+      "dob": "2002-04-16",
+      "email": "vinu@gmail.com",
+      "phoneNumber": "9876523422",
+      "gender": "Female"
+    },
+    {
+      "id": "1671",
+      "firstname": "Kalai",
+      "lastname": "Shanmugam",
+      "username": "Kalai",
+      "password": "U2FsdGVkX18gDQQ8/SVNOIjaqUR0sS+/x3WVorgf7X0=",
+      "confirmpassword": "U2FsdGVkX1+KvphDYAW/gE5ZBuh23m7K+/22AQrBJFk=",
+      "dob": "2000-06-02",
+      "email": "kalai@gmail.com",
+      "phoneNumber": "2345643212",
       "gender": "Female"
     }
   ],
@@ -259,10 +401,30 @@
       "city": "Siruseri",
       "pincode": "652311",
       "userName": "VINUSHA2002"
+    },
+    {
+      "id": "af36",
+      "street": "TVK 2nd street,near Pony salon ",
+      "city": "Salem",
+      "pincode": "656534",
+      "userName": "DEVASH2004"
+    },
+    {
+      "id": "fa05",
+      "street": "2nd Kalai street",
+      "city": "Tirupur",
+      "pincode": "652431",
+      "userName": "Janu"
+    },
+    {
+      "id": "e334",
+      "street": "12,Sri sakthi street",
+      "city": "sathy",
+      "pincode": "675213",
+      "userName": "Kalai"
     }
   ],
   "my-order": [
-
     {
       "0": {
         "id": "4",
@@ -349,6 +511,66 @@
         "userName": "VINUSHA2002"
       },
       "id": "46c6"
+    },
+    {
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "DEVASH2004"
+      },
+      "1": {
+        "id": "20",
+        "imageUrl": "/assets/image/prawns-fry.jpg",
+        "itemName": "Prawn Fry",
+        "price": 115,
+        "quantity": 1,
+        "variety": "Non",
+        "userName": "DEVASH2004"
+      },
+      "2": {
+        "id": "14",
+        "imageUrl": "/assets/image/eggmasal.jpg",
+        "itemName": "Egg Masala",
+        "price": 80,
+        "quantity": 1,
+        "variety": "Non",
+        "userName": "DEVASH2004"
+      },
+      "id": "957e"
+    },
+    {
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "Janu"
+      },
+      "1": {
+        "id": "3",
+        "imageUrl": "/assets/image/venpongal.jpeg",
+        "itemName": "Venpongal",
+        "price": 50,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "Janu"
+      },
+      "2": {
+        "id": "7",
+        "imageUrl": "/assets/image/mushroombriyani.jpeg",
+        "itemName": "Mushroom Briyani",
+        "price": 230,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "Janu"
+      },
+      "id": "3983"
     }
   ]
 }

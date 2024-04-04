@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
-import { Item } from '../model/item';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -20,7 +19,6 @@ export class ItemsComponent implements OnInit {
   public searchFood: string;
   public pageNumber: number = 1;
 
-  
   constructor(private cartList: CartService, private toast: ToastrService) {}
 
   ngOnInit() {
@@ -60,9 +58,5 @@ export class ItemsComponent implements OnInit {
         this.cartList.itemLength();
       }
     })
-  }
-
-  get totalPages() {
-    return Math.ceil(this.searchFood.length / this.pageSize);
   }
 }

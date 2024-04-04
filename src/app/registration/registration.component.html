@@ -48,7 +48,7 @@
             </div>
             <br>
             <div>
-                <input class="input-style" type="text" placeholder="Phone Number" formControlName="phoneNumber | phonemock"><br>
+                <input class="input-style" type="text" placeholder="Phone Number" formControlName="phoneNumber"><br>
                 <small
                     *ngIf="registerForm.get('phoneNumber')?.invalid && (registerForm.get('phoneNumber')?.touched || registerForm.get('phoneNumber')?.dirty)">
                     <div *ngIf="registerForm.get('phoneNumber')?.hasError('required')">*Phone Number is
@@ -70,7 +70,8 @@
                 <small class="user-style">(Click the Username button to get username of yours. or Type your Username by
                     own)</small><br>
                 <input type="text" placeholder="Username" formControlName="username"><br>
-                <button (click)="createUsername()" *ngIf="registerForm.get('firstname')?.valid && registerForm.get('lastname')?.valid">Username</button><br>
+                <button (click)="createUsername()"
+                    *ngIf="registerForm.get('firstname')?.valid && registerForm.get('lastname')?.valid">Username</button><br>
                 <small
                     *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">*Username
                     is Required</small>

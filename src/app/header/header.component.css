@@ -5,7 +5,6 @@
     font-weight: bold;
     font-size: large;
     height: 15vh;
-
 }
 
 .btn-style,
@@ -45,14 +44,9 @@ a {
     font-weight: bold;
 }
 
-/* .bi-person{
-    margin-left:161vh
-} */
-
 .dropdown{
     padding: 10px;
     margin-top:10vh;
-    /* margin-bottom: 30vh; */
 }
 ul{
     height: 10vh;

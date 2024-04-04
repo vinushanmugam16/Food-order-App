@@ -7,8 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 describe('OrderComponent', () => {
   let component: OrderComponent;
   let fixture: ComponentFixture<OrderComponent>;
-  let route: Router;
-
+  
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [OrderComponent],

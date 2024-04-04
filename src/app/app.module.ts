@@ -63,7 +63,9 @@ import { PhonemockPipe } from './phonemock.pipe';
         deps: [HttpClient]
       }
     }),
-    ToastNoAnimationModule.forRoot(),
+    ToastNoAnimationModule.forRoot(
+     { preventDuplicates:true}
+    ),
     NgbModule,
     NgxPaginationModule
 

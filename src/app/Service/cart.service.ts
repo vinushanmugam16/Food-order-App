@@ -10,7 +10,7 @@ import { Address } from '../model/address';
 
 export class CartService {
 
-  public totalItem:any;
+  public totalItem:any=0;
   public foodItem: any;
   public food: any;
   public totalPrice: number = 0;
@@ -19,18 +19,17 @@ export class CartService {
     this.totalItem=this.itemLength()
    }
 
-  fooditemsUrl = environment.baseUrl + environment.foodItemsUrl;
-  cartUrl = environment.baseUrl + environment.addCart;
-  userUrl = environment.baseUrl + environment.regUrl;
-  addressUrl = environment.baseUrl + environment.addressUrl;
-  orderUrl=environment.baseUrl+environment.myorder;
+  public fooditemsUrl = environment.baseUrl + environment.foodItemsUrl;
+  public cartUrl = environment.baseUrl + environment.addCart;
+  public userUrl = environment.baseUrl + environment.regUrl;
+  public addressUrl = environment.baseUrl + environment.addressUrl;
+  public orderUrl=environment.baseUrl+environment.myorder;
 
   public getItem() {
     return this.http.get(this.fooditemsUrl);
   }
 
   public createCart(addingCart: Item) {
-    // console.log(addingCart);
     return this.http.post(this.cartUrl, addingCart);
   }
 

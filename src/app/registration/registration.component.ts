@@ -14,10 +14,12 @@ import { EncryptDecryptService } from '../Service/encryptDecrypt.service';
 export class RegistrationComponent implements OnInit {
 
   constructor(private user: UserService,
-    private router: Router, private toast: ToastrService, private encrDecr:EncryptDecryptService) { }
+    private router: Router, private toast: ToastrService, private encrDecr: EncryptDecryptService) { }
 
   public registerForm: FormGroup;
   public gender = ['Male', 'Female'];
+  private encryptPass: string;
+  private encryptConfirmpass:string;
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -39,6 +41,10 @@ export class RegistrationComponent implements OnInit {
       this.toast.warning('Please fill the form in Valid format!')
     }
     else {
+      this.encryptPass = this.encrDecr.encryptPassword(this.registerForm.value.password);
+      this.registerForm.get('password')?.setValue(this.encryptPass);
+      this.encryptConfirmpass= this.encrDecr.encryptPassword(this.registerForm.value.confirmpassword);
+      this.registerForm.get('confirmpassword')?.setValue(this.encryptConfirmpass);
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
           this.toast.success('Successfully Registered!');

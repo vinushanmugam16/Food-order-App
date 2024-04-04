@@ -19,12 +19,18 @@ export class OrderComponent implements OnInit {
   }
 
   public getFoodItem() {
-    this.cart.getCart()
+    try{
+      this.cart.getCart()
       .subscribe((response) => {
         this.foodItem = response;
         this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
         this.totalPrice = this.totalAll();
       })
+    }
+    catch(err){
+      console.error(err);
+    }
+   
   }
 
   public totalAll() {
@@ -36,10 +42,10 @@ export class OrderComponent implements OnInit {
 
   public orderSelected(item: any) {
     console.log(item);
-    this.cart.createOrder(item)
-    .subscribe((resp)=>{
-      console.log(resp);
-    })
+    // this.cart.createOrder(item)
+    // .subscribe((resp)=>{
+    //   console.log(resp);
+    // })
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

@@ -16,19 +16,13 @@ export class OrderedItemsComponent implements OnInit{
   constructor(private cart:CartService){}
   
   ngOnInit(){
-      // this.cart.getCart()
-      //   .subscribe((response) => {
-      //     this.foodItem = response;
-      //     this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
-      //     this.totalPrice = this.totalAll();
-          
-      //   })
-    this.cart.getOrder()
-    .subscribe((resp)=>{
-      this.myOrder=resp;
-      console.log(resp);
-      
-    })
+
+
+
+   const orderItems=sessionStorage.getItem('myorder')
+   if(orderItems){
+    this.myOrder=orderItems
+   }
         this.orderId=this.cart.generateOrderId();
   }
   public totalAll() {
