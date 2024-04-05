@@ -1,4 +1,4 @@
-import { Component, OnDestroy, TemplateRef } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { UserService } from '../Service/user.service';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from '../Service/cart.service';
@@ -11,10 +11,6 @@ import { CartService } from '../Service/cart.service';
 export class HeaderComponent implements OnDestroy {
 
   public cartLength: number;
-  public address: any;
-  public locateAddress: any;
-  public userAddress: any;
-  public setAddress: any;
 
   constructor(public cart: CartService,
     public user: UserService,
@@ -23,7 +19,7 @@ export class HeaderComponent implements OnDestroy {
     translate.setDefaultLang('en')
   }
 
-  userName = sessionStorage.getItem('user');
+  public userName = sessionStorage.getItem('user');
 
   public logoutPage() {
     this.user.logout();

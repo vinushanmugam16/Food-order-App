@@ -6,6 +6,7 @@ import { Item } from '../model/item';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.development';
 import { catchError, throwError } from 'rxjs';
+import * as CryptoJS from 'crypto-js';
 
 @Injectable({
   providedIn: 'root',
@@ -19,7 +20,7 @@ export class UserService {
   public userDetail: User[] = [];
   public loginDetail: Loginuser[] = [];
   public addingCart: Item[] = [];
-  public decryptPass: string;
+  private keys: string = '123';
 
   public createData(userDetail: User) {
     try {
@@ -50,7 +51,16 @@ export class UserService {
   public logout() {
     sessionStorage.removeItem('user');
     sessionStorage.removeItem('password');
+    sessionStorage.removeItem('myorder');
     this.route.navigateByUrl('login');
+  }
+
+  encryptPassword(password: string) {
+    return CryptoJS.AES.encrypt(password, this.keys).toString();
+  }
+
+  decryptPassword(password: string) {
+    return CryptoJS.AES.decrypt(password, this.keys).toString(CryptoJS.enc.Utf8);
   }
 }
 

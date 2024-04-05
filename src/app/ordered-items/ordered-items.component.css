@@ -1,11 +1,25 @@
 .order-style{
     text-align:center
 }
+
+.total-style{
+    font-size:30px;
+    font-weight: bold;
+}
+
+.table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 10vh;
+    padding: 30px;
+}
 img{
     width: 200px;
-    height: 100px;
+    height: 200px;
 }
-.total-style{
-    font-size:large;
-    font-weight: bold;
+.table-style {
+    margin-left: 50vh;
+    padding: 50px;
 }

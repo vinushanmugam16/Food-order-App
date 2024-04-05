@@ -10,10 +10,11 @@ import { Address } from '../model/address';
 
 export class CartService {
 
-  public totalItem:any=0;
-  public foodItem: any;
+  public totalItem;
+  public foodItem=[];
   public food: any;
   public totalPrice: number = 0;
+  public orderedItem=[];
 
   constructor(private http: HttpClient) {
     this.totalItem=this.itemLength()
@@ -74,19 +75,10 @@ export class CartService {
     return this.http.put(this.addressUrl+'/'+id,address)
   }
 
-  generateOrderId(): string {
+  generateOrderId() {
     const time = new Date().getTime().toString(36);
     const randomNumber = Math.random().toString(36).substr(2, 5);
     const orderId = time + randomNumber;
     return orderId.toUpperCase(); 
   }
-
-  public getOrder(){
-    return this.http.get(this.orderUrl);
-  }
-
-  public createOrder(order:any){
-    return this.http.post(this.orderUrl,order)
-  }
-
 }

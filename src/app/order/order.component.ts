@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { Router } from '@angular/router';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-order',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class OrderComponent implements OnInit {
 
-  public foodItem: any;
-  public food: any;
+  public foodItem:any;
+  public food: Item[];
   public totalPrice: number = 0;
   constructor(private cart: CartService, private route: Router) { }
 
@@ -19,18 +20,19 @@ export class OrderComponent implements OnInit {
   }
 
   public getFoodItem() {
-    try{
+    try {
       this.cart.getCart()
-      .subscribe((response) => {
-        this.foodItem = response;
-        this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
-        this.totalPrice = this.totalAll();
-      })
+        .subscribe((response) => {
+          this.foodItem = response;
+          this.food = this.foodItem.filter((item: { userName: string | null; }) => 
+            item.userName === sessionStorage.getItem('user'))
+          this.totalPrice = this.totalAll();
+          sessionStorage.setItem('myorder', JSON.stringify(this.food));
+        })
     }
-    catch(err){
+    catch (err) {
       console.error(err);
     }
-   
   }
 
   public totalAll() {
@@ -41,11 +43,7 @@ export class OrderComponent implements OnInit {
   }
 
   public orderSelected(item: any) {
-    console.log(item);
-    // this.cart.createOrder(item)
-    // .subscribe((resp)=>{
-    //   console.log(resp);
-    // })
+    // this.cart.orderedItem.push(item);
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

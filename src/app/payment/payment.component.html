@@ -1,63 +1,3 @@
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Address update</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-  </div>
-  <div class="modal-body">
-    <form [formGroup]="address">
-      <div class="mb-3">
-        <label for="address">Address</label>
-        <div class="input-group">
-
-          <input type="text" id="address" class="form-control" placeholder="Street" formControlName="street" />
-        </div>
-
-        <div>
-          <input type="text" class="form-control" placeholder="City" formControlName="city">
-        </div>
-        <div>
-          <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
-          <small
-            *ngIf="address.get('pincode')?.invalid && (address.get('pincode')?.touched || address.get('pincode')?.dirty)">
-            <small *ngIf="address.get('pincode')?.hasError('required')">*Pincode is Required</small>
-            <small *ngIf="address.get('pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
-          </small>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('')" (click)="onSave()">Save</button>
-  </div>
-</ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
-
-<pre class="text-style">{{ closeResult }}</pre>
-
-<!-- 
-<div class="row">
-  <div class="col md-3"> -->
-<div class="table-style">
-      <table>
-        <thead>
-          <th>S.No</th>
-          <th>Address</th>
-          <th>Action</th>
-        </thead>
-        <tbody>
-          <tr *ngFor="let add of userAddress ,let i=index">
-            <td>{{i+1}}</td>
-            <td>{{add.street}},{{add.city}},{{add.pincode}}</td>
-            <td><button class="bi bi-trash" (click)="removeAddress(add.id)"></button>
-              <button (click)="selectedAddress(add.id)">+</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-<!-- </div>
-  <div class="col md-3"> -->
 <div class="payprocess-style">
   <form [formGroup]="payment" class="payment-align-style">
     <div class="payment-style">
@@ -71,13 +11,49 @@
       <small *ngIf="payment.get('paymentOption')?.hasError('required')">*Payment method is required</small>
     </div><br>
     <div>
-      <!-- <p>Address:{{setAddress}}</p> -->
-      <div>
+      <div *ngIf="showTotal || cod">
         <select [ngModel]="setAddress" (change)="addressed($event)">
+          <option selected>Please choose your address</option>
           <option *ngFor="let add of userAddress ,let i=index" value="{{add.street}},{{add.city}},{{add.pincode}}">
             {{i+1}}. {{add.street}},{{add.city}},{{add.pincode}}</option>
         </select>
         <p>Delivery Address: {{setAddress}}</p>
+      </div>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Address update</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="address">
+            <div class="mb-3">
+              <label for="address">Address</label>
+              <div class="input-group">
+
+                <input type="text" id="address" class="form-control" placeholder="Street" formControlName="street" />
+              </div>
+
+              <div>
+                <input type="text" class="form-control" placeholder="City" formControlName="city">
+              </div>
+              <div>
+                <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
+                <small
+                  *ngIf="address.get('pincode')?.invalid && (address.get('pincode')?.touched || address.get('pincode')?.dirty)">
+                  <small *ngIf="address.get('pincode')?.hasError('required')">*Pincode is Required</small>
+                  <small *ngIf="address.get('pincode')?.hasError('pattern')">*Pincode should contain 6 numbers</small>
+                </small>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('')" (click)="onSave()">Save</button>
+        </div>
+      </ng-template>
+      <div class="address-style" *ngIf="showTotal || cod">
+        <pre>Add a new Address </pre>
+        <button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
       </div>
 
     </div>
@@ -103,5 +79,3 @@
     </div>
   </form>
 </div>
-<!-- </div>
-</div> -->

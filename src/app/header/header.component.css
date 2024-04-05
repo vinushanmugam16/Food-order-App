@@ -1,3 +1,69 @@
+/* .header-style {
+    display: flex;
+    border: 2px solid rgb(82, 74, 74);
+    background-color:rgb(161, 208, 214);
+    font-weight: bold;
+    font-size: large;
+    height: 15vh;
+}
+
+.btn-style,
+a { */
+    /* display: flex; */
+    /* font-size: 30px;
+    color: darkblue;
+    font-size: large;
+    font-weight: bold;
+    margin: 20px;
+    margin-bottom: 30vh;
+} */
+
+/* .active-state {
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+/* .title-style {
+    text-align: center;
+    margin-left: 30vh; */
+    /* padding-left: ; */
+    /* color:rgb(10, 8, 1);
+}
+
+.bi-cart4 {
+    margin-left: 167vh;
+    margin-top:30px
+} */
+
+/* .lang-style { */
+    /* margin: 30px; */
+    /* margin-left: 150vh; */
+    /* margin-top: 30vh; */
+    
+/* } */
+/* 
+.btn-secondary {
+    margin-left: 150vh;
+    font-size: 30px;
+    font-size: large;
+    font-weight: bold;
+} */
+
+/* .dropdown{
+    padding: 10px;
+    margin-top:10vh; */
+    /* margin-left:2vh */
+/* } */
+/* ul{
+    height: 10vh;
+} */
+
+
+
+
+
+
+
 .header-style {
     display: flex;
     border: 2px solid rgb(82, 74, 74);
@@ -47,7 +113,4 @@ a {
 .dropdown{
     padding: 10px;
     margin-top:10vh;
-}
-ul{
-    height: 10vh;
 }

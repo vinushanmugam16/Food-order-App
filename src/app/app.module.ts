@@ -24,10 +24,9 @@ import { ToastNoAnimationModule } from 'ngx-toastr';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { CustomFilterPipe } from './custom-filter.pipe';
-import { EncryptDecryptService } from './Service/encryptDecrypt.service';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
 import { PhonemockPipe } from './phonemock.pipe';
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
@@ -44,9 +43,9 @@ import { PhonemockPipe } from './phonemock.pipe';
     ItemsComponent,
     PaymentComponent,
     NotFoundComponent,
-    CustomFilterPipe,
     OrderedItemsComponent,
-    PhonemockPipe
+    PhonemockPipe,
+    HistoryComponent
 
   ],
   imports: [
@@ -64,7 +63,10 @@ import { PhonemockPipe } from './phonemock.pipe';
       }
     }),
     ToastNoAnimationModule.forRoot(
-     { preventDuplicates:true}
+      {
+        preventDuplicates: true,
+        closeButton: true
+      }
     ),
     NgbModule,
     NgxPaginationModule
@@ -72,8 +74,7 @@ import { PhonemockPipe } from './phonemock.pipe';
   ],
   providers: [UserService,
     CartService,
-    TranslateService,
-    EncryptDecryptService
+    TranslateService
   ],
   bootstrap: [AppComponent]
 })

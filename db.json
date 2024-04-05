@@ -161,35 +161,7 @@
       "id": "20"
     }
   ],
-  "addcart": [
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "18",
-      "imageUrl": "/assets/image/muttonbriyani.webp",
-      "itemName": "Mutton Briyani",
-      "price": 190,
-      "quantity": 2,
-      "variety": "Non",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "20",
-      "imageUrl": "/assets/image/prawns-fry.jpg",
-      "itemName": "Prawn Fry",
-      "price": 115,
-      "quantity": 1,
-      "variety": "Non",
-      "userName": "VINUSHA2002"
-    }
-  ],
+  "addcart": [],
   "logindetails": [
     {
       "id": "a5ac",
@@ -357,6 +329,17 @@
       "email": "kalai@gmail.com",
       "phoneNumber": "2345643212",
       "gender": "Female"
+    },
+    {
+      "id": "c070",
+      "firstname": "Harsh",
+      "lastname": "Linga",
+      "username": "HARSLIN2002",
+      "password": "U2FsdGVkX1+SaSGfr4Vp91jz4WaRqe0oPv+xYV1ZUyY=",
+      "confirmpassword": "U2FsdGVkX1/1uKkqwJBBKJrf4NYorWjQaUWQ1Ygu5ug=",
+      "dob": "2002-04-09",
+      "email": "harsha@gmail.com",
+      "gender": "Male"
     }
   ],
   "address": [

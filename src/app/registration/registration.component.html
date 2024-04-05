@@ -71,12 +71,11 @@
                     own)</small><br>
                 <input type="text" placeholder="Username" formControlName="username"><br>
                 <button (click)="createUsername()"
-                    *ngIf="registerForm.get('firstname')?.valid && registerForm.get('lastname')?.valid">Username</button><br>
+                    *ngIf="registerForm.get('firstname')?.valid && registerForm.get('lastname')?.valid">Username</button>
                 <small
                     *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">*Username
                     is Required</small>
-            </div>
-            <br>
+            </div><br>
             <div>
                 <input class="input-style" type="password" placeholder="Password" formControlName="password"><br>
                 <small

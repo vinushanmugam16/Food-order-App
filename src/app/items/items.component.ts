@@ -10,22 +10,23 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ItemsComponent implements OnInit {
 
-  public cartItem: any = [];
-  public userdata: any;
-  public cartAdd = [];
+  public cartItem:any=[];
   private foodItem: any[];
   public pageSize = 10;
-  public totalItems=20;
   public searchFood: string;
   public pageNumber: number = 1;
+  public filteredItems: any[];
+  public totalItems: number;
 
-  constructor(private cartList: CartService, private toast: ToastrService) {}
+  constructor(private cartList: CartService, private toast: ToastrService) {
+  }
 
   ngOnInit() {
     try {
       this.cartList.getItem()
         .subscribe(response => {
           this.cartItem = response;
+          this.filteredItems = this.cartItem;
         })
     }
     catch (err) {
@@ -58,5 +59,19 @@ export class ItemsComponent implements OnInit {
         this.cartList.itemLength();
       }
     })
+  }
+
+  filterItems() {
+    if (!this.searchFood) {
+      this.filteredItems = this.cartItem;
+    }
+    else {
+      this.filteredItems = this.cartItem.filter((item: { itemName: string; price: number; variety: string }) =>
+        item.itemName.toLowerCase().includes(this.searchFood.toLowerCase()) ||
+        item.price.toString().includes(this.searchFood.toLowerCase()) ||
+        item.variety.toLowerCase().includes(this.searchFood.toLowerCase())
+      );
+      this.totalItems=this.filteredItems.length;
+    }
   }
 }

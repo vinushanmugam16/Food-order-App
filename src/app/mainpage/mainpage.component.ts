@@ -10,7 +10,6 @@ export class MainpageComponent implements OnInit {
   public userName: string | null;
 
   ngOnInit() {
-
     this.userName = sessionStorage.getItem('user');
   }
 }

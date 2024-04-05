@@ -10,7 +10,6 @@ form {
     margin-bottom: 53vh;
     font-size: large;
     font-weight: bold;
-
 }
 
 .btn-outline-primary {
@@ -22,9 +21,5 @@ form {
 }
 
 .order-style {
-    display: block;
-    border: 2px solid black;
-    width:300px;
-    margin-left: 75vh;
     text-align: center;
 }

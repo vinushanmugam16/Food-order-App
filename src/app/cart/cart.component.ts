@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class CartComponent implements OnInit {
 
   public foodItem: any;
-  public food:any;
+  public food: Item[];
   public cartfoodItem: Object;
   public imageUrl = '/assets/image/emptycart.png';
   constructor(public cart: CartService, private toast:ToastrService) { }

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  addressUrl = "/assets/image/address.png"
+  public addressUrl = "/assets/image/address.png"
 }
