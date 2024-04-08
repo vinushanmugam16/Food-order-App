@@ -13,29 +13,31 @@ export class HistoryComponent implements OnInit {
   public itemLength: number;
   public totalPrice: number;
   public orderId: string;
-  public address:string|null;
+  public address: string | null;
   constructor(private cart: CartService) { }
 
   ngOnInit() {
-  
-    const savedHistory: any = sessionStorage.getItem('history');
 
-    this.orderedHistory = JSON.parse(savedHistory);
+    // const savedHistory: any = sessionStorage.getItem('history');
+
+    // this.orderedHistory = JSON.parse(savedHistory);
     // console.log(this.orderedHistory);
 
-    if(Array.isArray(this.orderedHistory)){
-      this.itemLength = this.orderedHistory.length;
-      console.log(this.itemLength);
-    }
-    else{
-      console.log('not an array');
-    }
+    this.cart.getOrderedHistory()
+      .subscribe((resp:any) => {
+        // console.log(resp)
+        const storeData = resp;
+        this.orderedHistory=storeData.filter((val: { userName: string | null; })=>val.userName === sessionStorage.getItem('user'))
+        console.log(this.orderedHistory);
+        // this.orderedHistory.push(resp);
+        
+        this.itemLength = this.orderedHistory.length;
 
-    this.userName = sessionStorage.getItem('user');
-    const total: any = sessionStorage.getItem('total')
-    this.totalPrice = JSON.parse(total);
-    this.address=sessionStorage.getItem('address');
-    this.orderId = this.cart.generateOrderId();
+        // this.userName = sessionStorage.getItem('user');
+        const total:any = sessionStorage.getItem('total')
+        this.totalPrice = JSON.parse(total);
+        this.address = sessionStorage.getItem('address');
+        this.orderId = this.cart.generateOrderId();
+      })
   }
-
 }

@@ -6,6 +6,6 @@ export interface User {
     confirmpassword:string,
     dob: string,
     gender: string,
-    phoneNumber: number,
+    phoneNumber: string,
     email: string,
 }

@@ -2,6 +2,11 @@
   
 <form>
     <input class="search-style" type="text" placeholder="Search" [(ngModel)]="searchFood" (input)="filterItems()" name="search">
+    <!-- <select class="search-select" (change)="selectOption($event)">
+        <option value="veg">Poori</option>
+      <option value="veg">Idly</option>
+      <option value="veg">Dosa</option>
+    </select> -->
 </form>
 
 <div class="outlet container">
@@ -15,8 +20,5 @@
             <button class="btn btn-outline-primary" (click)="addingTocart(item)">Add to Cart</button>
         </div>
         <pagination-controls (pageChange)="pageNumber = $event"></pagination-controls>
-
     </div>
-
 </div>
-

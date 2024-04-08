@@ -25,9 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
-import { PhonemockPipe } from './phonemock.pipe';
 import { HistoryComponent } from './history/history.component';
-
 
 @NgModule({
   declarations: [
@@ -44,7 +42,6 @@ import { HistoryComponent } from './history/history.component';
     PaymentComponent,
     NotFoundComponent,
     OrderedItemsComponent,
-    PhonemockPipe,
     HistoryComponent
 
   ],

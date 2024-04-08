@@ -161,7 +161,35 @@
       "id": "20"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120,
+      "quantity": 1,
+      "variety": "Non",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    }
+  ],
   "logindetails": [
     {
       "id": "a5ac",
@@ -172,16 +200,6 @@
       "id": "c0c1",
       "username": "Shalu",
       "password": "Shalu@123"
-    },
-    {
-      "id": "b012",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
-    },
-    {
-      "id": "e653",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468"
     },
     {
       "id": "3b3c",
@@ -340,6 +358,66 @@
       "dob": "2002-04-09",
       "email": "harsha@gmail.com",
       "gender": "Male"
+    },
+    {
+      "id": "77e6",
+      "firstname": "Ajay",
+      "lastname": "Nilan",
+      "username": "AJAYNIL2000",
+      "password": "U2FsdGVkX18ga9UUlm47eIcqf0n4xpZblrwfXqy17aY=",
+      "confirmpassword": "U2FsdGVkX1/SJFwmIYdnQxKBZyxppA/D6hEWBJ9G1u4=",
+      "dob": "2000-12-31",
+      "email": "ajay@gmail.com",
+      "phoneNumber": "9876543983",
+      "gender": "Male"
+    },
+    {
+      "id": "feb4",
+      "firstname": "Ilan",
+      "lastname": "Iyal",
+      "username": "ILANIYA2003",
+      "password": "U2FsdGVkX1+heqQCVSGyNpyj5MOg+ruWNKwCIjkwZhc=",
+      "confirmpassword": "U2FsdGVkX1/mrhaopWsDddaMQ/g6aDGXqDFNHehR6R0=",
+      "dob": "2003-09-30",
+      "email": "ilan@gmail.com",
+      "phoneNumber": "********93",
+      "gender": "Male"
+    },
+    {
+      "id": "61aa",
+      "firstname": "Sumeka",
+      "lastname": "Arasakumar",
+      "username": "Sumeka",
+      "password": "U2FsdGVkX1/QA7qB3x0KjI5CjjBVqEQ4xJyqgo1k0+I=",
+      "confirmpassword": "U2FsdGVkX1/VM+Bt6Lt/y1A+Bn5cti2NCKKyxRfu+yc=",
+      "dob": "2002-06-12",
+      "email": "sume@gmail.com",
+      "phoneNumber": "********42",
+      "gender": "Female"
+    },
+    {
+      "id": "1127",
+      "firstname": "Sasi",
+      "lastname": "Dharmaraj",
+      "username": "Sasi",
+      "password": "U2FsdGVkX1+YussK9g26tly/9S/S6tG/j4WHA5kj+zk=",
+      "confirmpassword": "U2FsdGVkX18VWAD9TeP8+ghoUM7aY6J/N46YA6C3Lcc=",
+      "dob": "2002-04-03",
+      "email": "sasi@gmail.com",
+      "phoneNumber": "********32",
+      "gender": "Female"
+    },
+    {
+      "id": "765b",
+      "firstname": "Divyaprakash",
+      "lastname": "Janar",
+      "username": "Rocky",
+      "password": "U2FsdGVkX18UnNszMrCjAl9d7dq3Ud0vd1QC4jGBasI=",
+      "confirmpassword": "U2FsdGVkX1/Hh6fQOmGA/T9EjXs6UIXGW+CpQl1Eois=",
+      "dob": "2001-12-12",
+      "email": "rocky@gmail.com",
+      "phoneNumber": "********79",
+      "gender": "Male"
     }
   ],
   "address": [
@@ -405,155 +483,105 @@
       "city": "sathy",
       "pincode": "675213",
       "userName": "Kalai"
+    },
+    {
+      "id": "b507",
+      "street": "65,Havmor street",
+      "city": "Bangalore",
+      "pincode": "637835",
+      "userName": "VINUSHA2002"
     }
   ],
-  "my-order": [
+  "history": [
     {
-      "0": {
-        "id": "4",
-        "imageUrl": "/assets/image/poori.jpeg",
-        "itemName": "Poori",
-        "price": 60,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "id": "c9e8"
+      "id": "5",
+      "imageUrl": "/assets/image/curdrice.jpeg",
+      "itemName": "Curdrice",
+      "price": 45,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "4",
-        "imageUrl": "/assets/image/poori.jpeg",
-        "itemName": "Poori",
-        "price": 60,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "id": "93cb"
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "1": {
-        "id": "8",
-        "imageUrl": "/assets/image/sambar.jpeg",
-        "itemName": "Sambar",
-        "price": 80,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "id": "c3d2"
+      "id": "6",
+      "imageUrl": "/assets/image/friedrice.jpeg",
+      "itemName": "Chicken Fried Rice",
+      "price": 120,
+      "quantity": 1,
+      "variety": "Non",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 3,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "1": {
-        "id": "20",
-        "imageUrl": "/assets/image/prawns-fry.jpg",
-        "itemName": "Prawn Fry",
-        "price": 115,
-        "quantity": 1,
-        "variety": "Non",
-        "userName": "VINUSHA2002"
-      },
-      "id": "21df"
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 3,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "1": {
-        "id": "20",
-        "imageUrl": "/assets/image/prawns-fry.jpg",
-        "itemName": "Prawn Fry",
-        "price": 115,
-        "quantity": 1,
-        "variety": "Non",
-        "userName": "VINUSHA2002"
-      },
-      "id": "46c6"
+      "id": "7",
+      "imageUrl": "/assets/image/mushroombriyani.jpeg",
+      "itemName": "Mushroom Briyani",
+      "price": 230,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "DEVASH2004"
-      },
-      "1": {
-        "id": "20",
-        "imageUrl": "/assets/image/prawns-fry.jpg",
-        "itemName": "Prawn Fry",
-        "price": 115,
-        "quantity": 1,
-        "variety": "Non",
-        "userName": "DEVASH2004"
-      },
-      "2": {
-        "id": "14",
-        "imageUrl": "/assets/image/eggmasal.jpg",
-        "itemName": "Egg Masala",
-        "price": 80,
-        "quantity": 1,
-        "variety": "Non",
-        "userName": "DEVASH2004"
-      },
-      "id": "957e"
+      "id": "8",
+      "imageUrl": "/assets/image/sambar.jpeg",
+      "itemName": "Sambar",
+      "price": 80,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
     },
     {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "Janu"
-      },
-      "1": {
-        "id": "3",
-        "imageUrl": "/assets/image/venpongal.jpeg",
-        "itemName": "Venpongal",
-        "price": 50,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "Janu"
-      },
-      "2": {
-        "id": "7",
-        "imageUrl": "/assets/image/mushroombriyani.jpeg",
-        "itemName": "Mushroom Briyani",
-        "price": 230,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "Janu"
-      },
-      "id": "3983"
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "4",
+      "imageUrl": "/assets/image/poori.jpeg",
+      "itemName": "Poori",
+      "price": 60,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
     }
   ]
 }

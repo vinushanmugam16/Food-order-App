@@ -20,6 +20,7 @@ export class HeaderComponent implements OnDestroy {
   }
 
   public userName = sessionStorage.getItem('user');
+  public address = sessionStorage.getItem('address');
 
   public logoutPage() {
     this.user.logout();

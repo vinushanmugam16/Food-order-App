@@ -19,6 +19,8 @@ export class RegistrationComponent implements OnInit {
   public gender = ['Male', 'Female'];
   private encryptPass: string;
   private encryptConfirmpass: string;
+  public phoneNum: string;
+  public mask = '';
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -29,18 +31,31 @@ export class RegistrationComponent implements OnInit {
       confirmpassword: new FormControl('', [Validators.required]),
       dob: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      phoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^\d{10}$/)]),
+      phoneNumber: new FormControl('', [Validators.required
+        , Validators.pattern(/^\*{8}\d{2}$/)
+      ]),
+
       gender: new FormControl('')
     },
       { validators: PasswordValidation });
   }
 
-  public phoneNumberMocking(phoneNumber:string){
-    var mask='';
+  public phoneNumberMocking() {
+    this.phoneNum = this.registerForm.get('phoneNumber')?.value;
 
+    if (this.phoneNum.length <= 10 && this.phoneNum.length > 0) {
+      if (this.phoneNum.length <= 8) {
+        this.mask += '*';
+      }
+      else if (this.phoneNum.length == 10 || this.phoneNum.length == 9) {
+        this.mask += this.phoneNum.slice(-1);
+      }
+    }
+    this.registerForm.get('phoneNumber')?.setValue(this.mask);
   }
 
   public onSubmit() {
+
     if (this.registerForm.invalid) {
       this.toast.warning('Please fill the form in Valid format!')
     }

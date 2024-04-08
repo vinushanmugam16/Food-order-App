@@ -10,7 +10,7 @@ import { Item } from '../model/item';
 })
 export class OrderComponent implements OnInit {
 
-  public foodItem: any;
+  public foodItem: any=[];
   public food: Item[];
   public totalPrice: number = 0;
   public ordered: any = [];
@@ -46,9 +46,17 @@ export class OrderComponent implements OnInit {
   }
 
   public orderSelected(item: any) {
-    this.cart.orderedItem.push(item);
-    console.log(this.cart.orderedItem);
-    sessionStorage.setItem('history', JSON.stringify(this.cart.orderedItem));
+    // this.cart.orderedItem.push(item);
+    // this.cart.getHistory(item);
+    // console.log(this.cart.orderedItem);
+    // console.log('item', item[0]);
+    item.map((val: Item) => {
+      this.cart.createOrderedHistory(val)
+        .subscribe((response) => {
+          console.log(response);
+        })
+    })
+
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

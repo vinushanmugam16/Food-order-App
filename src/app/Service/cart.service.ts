@@ -11,20 +11,20 @@ import { Address } from '../model/address';
 export class CartService {
 
   public totalItem;
-  public foodItem=[];
+  public foodItem = [];
   public food: any;
   public totalPrice: number = 0;
-  public orderedItem:any=[];
+  // public orderedItem: any = [];
 
   constructor(private http: HttpClient) {
-    this.totalItem=this.itemLength()
-   }
+    this.totalItem = this.itemLength()
+  }
 
   public fooditemsUrl = environment.baseUrl + environment.foodItemsUrl;
   public cartUrl = environment.baseUrl + environment.addCart;
   public userUrl = environment.baseUrl + environment.regUrl;
   public addressUrl = environment.baseUrl + environment.addressUrl;
-  public orderUrl=environment.baseUrl+environment.myorder;
+  public historyUrl = environment.baseUrl + environment.historyUrl;
 
   public getItem() {
     return this.http.get(this.fooditemsUrl);
@@ -55,30 +55,48 @@ export class CartService {
       })
   }
 
-  public getAddress(){
+  public getAddress() {
     return this.http.get(this.addressUrl);
   }
 
-  public createAddress(locate:Address){
-    return this.http.post(this.addressUrl,locate)
+  public createAddress(locate: Address) {
+    return this.http.post(this.addressUrl, locate)
   }
 
-  public deleteAddress(id:string){
+  public deleteAddress(id: string) {
     return this.http.delete(`${this.addressUrl}/${id}`);
   }
 
-  public selectAddress(id:string){
+  public selectAddress(id: string) {
     return this.http.get(`${this.addressUrl}/${id}`);
   }
 
-  public updateAddress(id:string,address:Address){
-    return this.http.put(this.addressUrl+'/'+id,address)
+  public updateAddress(id: string, address: Address) {
+    return this.http.put(this.addressUrl + '/' + id, address)
   }
 
   generateOrderId() {
     const time = new Date().getTime().toString(36);
     const randomNumber = Math.random().toString(36).substr(2, 5);
     const orderId = time + randomNumber;
-    return orderId.toUpperCase(); 
+    return orderId.toUpperCase();
+  }
+
+  // getHistory(item:any){
+  //   this.orderedItem.push(item);
+  //   sessionStorage.setItem('history', JSON.stringify(this.orderedItem));
+
+  // }
+
+  getOrderedHistory() {
+    return this.http.get(this.historyUrl);
+  }
+
+  createOrderedHistory(history: Item) {
+    return this.http.post(this.historyUrl, history);
+  }
+
+  updateHistory(id: number, history: Item) {
+    return this.http.put(this.historyUrl + '/' + id, history);
   }
 }

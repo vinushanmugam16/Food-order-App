@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../Service/cart.service';
 import { ToastrService } from 'ngx-toastr';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-items',
@@ -15,8 +16,9 @@ export class ItemsComponent implements OnInit {
   public pageSize = 10;
   public searchFood: string;
   public pageNumber: number = 1;
-  public filteredItems: any[];
+  public filteredItems: Item[];
   public totalItems: number;
+  public selectingOption:string
 
   constructor(private cartList: CartService, private toast: ToastrService) {
   }
@@ -38,7 +40,7 @@ export class ItemsComponent implements OnInit {
     const userName = sessionStorage.getItem('user');
     item.userName = userName;
 
-    this.cartList.getCart().subscribe((data: any) => {
+    this.cartList.getCart().subscribe((data:any) => {
       this.foodItem = data.filter((cartFood: { userName: string | null; }) => cartFood.userName === userName);
 
       if (this.foodItem.find((val) => val.userName === userName)) {
@@ -58,6 +60,8 @@ export class ItemsComponent implements OnInit {
         this.toast.info('Item already added to cart!');
         this.cartList.itemLength();
       }
+
+      // sessionStorage.setItem('history',JSON.stringify(this.foodItem));
     })
   }
 
@@ -74,4 +78,9 @@ export class ItemsComponent implements OnInit {
       this.totalItems=this.filteredItems.length;
     }
   }
+
+  // selectOption(event:Event){
+  //   const key=event.target as HTMLSelectElement;
+  //   this.selectingOption=key.value;
+  // }
 }
