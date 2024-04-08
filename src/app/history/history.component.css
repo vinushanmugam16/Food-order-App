@@ -1,0 +1,16 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 10vh;
+    padding: 30px;
+}
+.table-style {
+    margin-left: 50vh;
+    padding: 50px;
+    padding-bottom: 48vh;
+}
+.heading-style{
+    text-align: center;
+}

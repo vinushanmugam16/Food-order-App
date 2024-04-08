@@ -1,1 +1,25 @@
-<p>history works!</p>
+<h1 class="heading-style">History of Orders</h1>
+
+
+<div class="table-style">
+    <table>
+        <thead>
+            <th>S.No</th>
+            <th>UserName</th>
+            <th>No. of Items</th>
+            <th>Total</th>
+            <th>Address</th>
+            <th>OrderId</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of orderedHistory ,let i=index">
+                <td>{{i+1}}</td>
+                <td>{{userName}}</td>
+                <td>{{itemLength}}</td>
+                <td>{{totalPrice | currency:'INR'}}</td>
+                <td>{{address}}</td>
+                <td>{{orderId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

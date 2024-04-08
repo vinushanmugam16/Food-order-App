@@ -26,11 +26,9 @@ export class PaymentComponent implements OnInit {
   public locateAddress: any;
   public setAddress: string;
   public userAddress: Address[];
-  public orderId: string;
 
   constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal,
-              private route:Router
-  ) { }
+              private route:Router) { }
 
   ngOnInit() {
 
@@ -81,7 +79,6 @@ export class PaymentComponent implements OnInit {
       this.cart.deleteItem(item.id).subscribe(() => {
         this.cart.itemLength();
         this.toast.success('Successfully Paid!');
-        this.orderId = this.cart.generateOrderId();
         this.route.navigateByUrl('ordered');
       })
     })
@@ -89,13 +86,7 @@ export class PaymentComponent implements OnInit {
 
   public open(content: TemplateRef<any>) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-      (result) => {
-
-        let streetAddress = this.address.value.street;
-        let cityAddress = this.address.value.city;
-        let pinAddress = this.address.value.pincode;
-        this.closeResult = `Address: ${streetAddress},${cityAddress},${pinAddress} ${result}`;
-      }
+      () => {}
     );
   }
 
@@ -133,13 +124,15 @@ export class PaymentComponent implements OnInit {
   public selectedAddress(id: string) {
     this.cart.selectAddress(id)
       .subscribe(() => {
-        // this.location = result;
         this.toast.success('Has selected the address for order');
       })
   }
 
   public addressed(event: Event) {
     const destination = event.target as HTMLSelectElement;
-    this.setAddress = destination.value
+    this.setAddress = destination.value;
+    sessionStorage.setItem('address',this.setAddress)
+    // console.log(JSON.stringify(storeAddress));
+    
   }
 }

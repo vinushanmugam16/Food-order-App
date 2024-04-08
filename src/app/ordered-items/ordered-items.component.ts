@@ -29,5 +29,4 @@ export class OrderedItemsComponent implements OnInit {
     })
     return this.totalPrice;
   }
-
 }

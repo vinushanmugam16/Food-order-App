@@ -34,7 +34,11 @@ export class RegistrationComponent implements OnInit {
     },
       { validators: PasswordValidation });
   }
-  // [0-9]{10}
+
+  public phoneNumberMocking(phoneNumber:string){
+    var mask='';
+
+  }
 
   public onSubmit() {
     if (this.registerForm.invalid) {
@@ -45,10 +49,6 @@ export class RegistrationComponent implements OnInit {
       this.registerForm.get('password')?.setValue(this.encryptPass);
       this.encryptConfirmpass = this.user.encryptPassword(this.registerForm.value.confirmpassword);
       this.registerForm.get('confirmpassword')?.setValue(this.encryptConfirmpass);
-
-      // this.registerForm.get('phoneNumber')?.setValue(this.maskPhoneNumber);
-      // console.log(this.registerForm.get('phoneNumber')?.setValue(this.maskPhoneNumber(phoneNumber)));
-
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
           this.toast.success('Successfully Registered!');

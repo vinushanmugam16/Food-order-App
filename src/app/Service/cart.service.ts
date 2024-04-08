@@ -14,7 +14,7 @@ export class CartService {
   public foodItem=[];
   public food: any;
   public totalPrice: number = 0;
-  public orderedItem=[];
+  public orderedItem:any=[];
 
   constructor(private http: HttpClient) {
     this.totalItem=this.itemLength()
