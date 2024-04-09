@@ -21,7 +21,6 @@ export class OrderedItemsComponent implements OnInit {
     this.totalAll()
   }
 
-
   public totalAll() {
     this.myOrder.map((value: { price: number; quantity: number; }) => {
       this.totalPrice += value.price * value.quantity;

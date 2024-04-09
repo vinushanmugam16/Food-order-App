@@ -52,18 +52,20 @@
         </div>
       </ng-template>
       <div class="address-style" *ngIf="showTotal || cod">
-        <pre>Add a new Address </pre>
+        <p>Add a new Address </p>
         <button class="btn btn-lg btn-outline-primary" (click)="open(content)">+ Add Address</button>
       </div>
 
     </div>
     <div *ngIf="showTotal">
+      <form>
       <label>UPI ID</label><br>
       <input type="text" id="upi" formControlName="upiId"><br>
       <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
         <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
         <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
       </small><br>
+    </form>
     </div>
 
     <div *ngIf="showTotal" class="total-style">

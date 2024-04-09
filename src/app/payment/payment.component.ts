@@ -22,7 +22,6 @@ export class PaymentComponent implements OnInit {
   public address: FormGroup;
   private paymentMethod: string;
   public cod: boolean = false;
-  public closeResult: string;
   public locateAddress: any;
   public setAddress: string;
   public userAddress: Address[];
@@ -113,26 +112,9 @@ export class PaymentComponent implements OnInit {
       })
   }
 
-  // public removeAddress(id: any) {
-  //   this.cart.deleteAddress(id)
-  //     .subscribe(() => {
-  //       this.gettingAddress();
-  //       this.toast.error('Address has been deleted')
-  //     })
-  // }
-
-  public selectedAddress(id: string) {
-    this.cart.selectAddress(id)
-      .subscribe(() => {
-        this.toast.success('Has selected the address for order');
-      })
-  }
-
   public addressed(event: Event) {
     const destination = event.target as HTMLSelectElement;
     this.setAddress = destination.value;
-    sessionStorage.setItem('address',this.setAddress)
-    // console.log(JSON.stringify(storeAddress));
-    
+    this.toast.success('Has selected the address for order');
   }
 }

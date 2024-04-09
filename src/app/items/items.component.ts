@@ -11,17 +11,16 @@ import { Item } from '../model/item';
 })
 export class ItemsComponent implements OnInit {
 
-  public cartItem:any=[];
+  public cartItem: any = [];
   private foodItem: any[];
   public pageSize = 10;
   public searchFood: string;
   public pageNumber: number = 1;
   public filteredItems: Item[];
   public totalItems: number;
-  public selectingOption:string
+  public selectingOption: string;
 
-  constructor(private cartList: CartService, private toast: ToastrService) {
-  }
+  constructor(private cartList: CartService, private toast: ToastrService) { }
 
   ngOnInit() {
     try {
@@ -40,12 +39,8 @@ export class ItemsComponent implements OnInit {
     const userName = sessionStorage.getItem('user');
     item.userName = userName;
 
-    this.cartList.getCart().subscribe((data:any) => {
+    this.cartList.getCart().subscribe((data: any) => {
       this.foodItem = data.filter((cartFood: { userName: string | null; }) => cartFood.userName === userName);
-
-      if (this.foodItem.find((val) => val.userName === userName)) {
-        const food = this.foodItem
-      }
 
       const foundItem = this.foodItem.find((food: { itemName: string; }) =>
         food.itemName === item.itemName
@@ -60,27 +55,35 @@ export class ItemsComponent implements OnInit {
         this.toast.info('Item already added to cart!');
         this.cartList.itemLength();
       }
-
-      // sessionStorage.setItem('history',JSON.stringify(this.foodItem));
     })
   }
 
-  filterItems() {
-    if (!this.searchFood) {
+  public filterItems() {
+    if (!this.searchFood && !this.selectingOption) {
       this.filteredItems = this.cartItem;
     }
     else {
-      this.filteredItems = this.cartItem.filter((item: { itemName: string; price: number; variety: string }) =>
-        item.itemName.toLowerCase().includes(this.searchFood.toLowerCase()) ||
-        item.price.toString().includes(this.searchFood.toLowerCase()) ||
-        item.variety.toLowerCase().includes(this.searchFood.toLowerCase())
-      );
-      this.totalItems=this.filteredItems.length;
+      let itemFiltered = this.cartItem;
+
+      if (this.selectingOption) {
+        itemFiltered = itemFiltered.filter((item: { variety: string; }) =>
+          item.variety.toLowerCase().includes(this.selectingOption.toLowerCase())
+        );
+      }
+      if (this.searchFood) {
+        itemFiltered = itemFiltered.filter((item: { itemName: string; price: { toString: () => string | string[]; }; }) =>
+          item.itemName.toLowerCase().includes(this.searchFood.toLowerCase()) ||
+          item.price.toString().includes(this.searchFood.toLowerCase())
+        );
+      }
+      this.filteredItems = itemFiltered;
     }
+    this.totalItems = this.filteredItems.length;
   }
 
-  // selectOption(event:Event){
-  //   const key=event.target as HTMLSelectElement;
-  //   this.selectingOption=key.value;
-  // }
+  public selectOption(event: Event) {
+    const key = event.target as HTMLSelectElement;
+    this.selectingOption = key.value;
+    this.filterItems();
+  }
 }

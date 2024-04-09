@@ -32,7 +32,6 @@ export class CartComponent implements OnInit {
     catch (err) {
       console.error(err);
     }
-
   }
 
   public increaseQuantity(item: Item) {
@@ -48,7 +47,6 @@ export class CartComponent implements OnInit {
     }
     catch (err) {
       console.error(err);
-
     }
   }
 
@@ -72,7 +70,6 @@ export class CartComponent implements OnInit {
     catch (err) {
       console.error(err);
     }
-
   }
 
   public removeItem(id: any) {
@@ -86,7 +83,6 @@ export class CartComponent implements OnInit {
     catch (err) {
       console.error(err);
     }
-
   }
 
   public removeAll() {
@@ -103,6 +99,3 @@ export class CartComponent implements OnInit {
     }
   }
 }
-
-
-

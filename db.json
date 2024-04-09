@@ -163,31 +163,13 @@
   ],
   "addcart": [
     {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120,
-      "quantity": 1,
-      "variety": "Non",
-      "userName": "VINUSHA2002"
-    },
-    {
       "id": "2",
       "imageUrl": "/assets/image/dosa.jpeg",
       "itemName": "Dosa",
       "price": 75,
       "quantity": 1,
       "variety": "Veg",
-      "userName": "Janu"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Janu"
+      "userName": "Kevin"
     }
   ],
   "logindetails": [
@@ -418,16 +400,33 @@
       "email": "rocky@gmail.com",
       "phoneNumber": "********79",
       "gender": "Male"
+    },
+    {
+      "id": "57f9",
+      "firstname": "Nick",
+      "lastname": "Jonas",
+      "username": "Nick",
+      "password": "U2FsdGVkX1+U9GXQc8+3EJWkBO35whrdOw6jZ97R2dk=",
+      "confirmpassword": "U2FsdGVkX1/c4NTc5EOP0p+FdLH5+iUpv5i3UQHTHX0=",
+      "dob": "2000-03-04",
+      "email": "nick@gmail.com",
+      "phoneNumber": "********37",
+      "gender": "Male"
+    },
+    {
+      "id": "783c",
+      "firstname": "Kevin",
+      "lastname": "Subramanian",
+      "username": "Kevin",
+      "password": "U2FsdGVkX18Hmyk5xchd4A7otqD1dXr8IJsoKRtTNuc=",
+      "confirmpassword": "U2FsdGVkX1+JhDynZXwC83hPPFg3x+uKEAE2ZE2gACU=",
+      "dob": "1998-05-28",
+      "email": "kevin@gmail.com",
+      "phoneNumber": "********11",
+      "gender": "Male"
     }
   ],
   "address": [
-    {
-      "id": "14be",
-      "street": "ueuiwke",
-      "city": "chennai",
-      "pincode": "286471",
-      "userName": "DINEKUM2001"
-    },
     {
       "id": "aa31",
       "street": "43, Giri strret",
@@ -490,23 +489,21 @@
       "city": "Bangalore",
       "pincode": "637835",
       "userName": "VINUSHA2002"
+    },
+    {
+      "id": "31a0",
+      "street": "Door No. 176, TVH Ouranya Bay , Kazhipattur",
+      "city": "Siruseri",
+      "pincode": "637263",
+      "userName": "Janu"
     }
   ],
   "history": [
     {
-      "id": "5",
-      "imageUrl": "/assets/image/curdrice.jpeg",
-      "itemName": "Curdrice",
-      "price": 45,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
       "quantity": 1,
       "variety": "Veg",
       "userName": "VINUSHA2002"
@@ -519,69 +516,6 @@
       "quantity": 1,
       "variety": "Non",
       "userName": "VINUSHA2002"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "7",
-      "imageUrl": "/assets/image/mushroombriyani.jpeg",
-      "itemName": "Mushroom Briyani",
-      "price": 230,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "8",
-      "imageUrl": "/assets/image/sambar.jpeg",
-      "itemName": "Sambar",
-      "price": 80,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Janu"
-    },
-    {
-      "id": "4",
-      "imageUrl": "/assets/image/poori.jpeg",
-      "itemName": "Poori",
-      "price": 60,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Janu"
-    },
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Janu"
-    },
-    {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Janu"
     }
   ]
 }

@@ -2,14 +2,12 @@
 
     <div>
         <h1 class="title-style">Food Order App</h1>
-        
+
         <a class='btn-style' routerLink="registration" routerLinkActive="active-state"
             *ngIf="!user.login()">Register</a>
         <a class='btn-style' routerLink="login" routerLinkActive="active-state" *ngIf="!user.login()">Login</a>
-    <button class="bi bi-cart4" routerLink="cart"><sup>{{this.cart.totalItem}}</sup></button>
-
+        <button class="bi bi-cart4" routerLink="cart"><sup>{{this.cart.totalItem}}</sup></button>
     </div>
-
     <br>
 
     <span class="lang-style" *ngIf="user.login() ">
@@ -27,8 +25,8 @@
         </button>
         <ul class="dropdown-menu">
             <li><i class="dropdown-item" class="bi bi-person">{{userName}}</i></li>
-            <li><i class="dropdown-item" class="bi bi-geo-alt">{{address}}</i></li>
-            <li><a class="dropdown-item" class="bi bi-clock-history" routerLink="history">History</a></li>
+            <!-- <li><i class="dropdown-item" class="bi bi-geo-alt" *ngIf="address">{{address}}</i></li> -->
+            <!-- <li><a class="dropdown-item" class="bi bi-clock-history" routerLink="history">History</a></li> -->
             <li><a class="dropdown-item" class="bi bi-box-arrow-left" (click)="logoutPage()" *ngIf="user.login()">
                     Logout</a></li>
         </ul>

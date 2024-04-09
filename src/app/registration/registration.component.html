@@ -97,7 +97,7 @@
                 </small>
             </div><br>
             <div>
-                <input class="btn btn-success" type="submit" value="Submit" (click)="onSubmit()">
+                <input class="btn btn-success" type="submit" value="Submit" (click)="onSubmit()" [disabled]="registerForm.invalid">
             </div>
         </form>
     </div>

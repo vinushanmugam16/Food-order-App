@@ -31,10 +31,7 @@ export class RegistrationComponent implements OnInit {
       confirmpassword: new FormControl('', [Validators.required]),
       dob: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      phoneNumber: new FormControl('', [Validators.required
-        , Validators.pattern(/^\*{8}\d{2}$/)
-      ]),
-
+      phoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^\*{8}\d{2}$/)]),
       gender: new FormControl('')
     },
       { validators: PasswordValidation });

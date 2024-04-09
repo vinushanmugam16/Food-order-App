@@ -48,8 +48,7 @@ describe('CartComponent', () => {
         "itemName": "Poori",
         "quantity":1,
         "variety":"Veg",
-        "price": 60,
-        "userName":"VINUSHA2002"
+        "price": 60
       };
     spyOn(service, 'getCart').and.returnValue(of(mockResponse));
     component.getFoodItem();

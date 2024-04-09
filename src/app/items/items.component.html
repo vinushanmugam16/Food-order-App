@@ -1,12 +1,14 @@
 <h1 class="heading-style">Food Varieties </h1>
-  
+
 <form>
-    <input class="search-style" type="text" placeholder="Search" [(ngModel)]="searchFood" (input)="filterItems()" name="search">
-    <!-- <select class="search-select" (change)="selectOption($event)">
-        <option value="veg">Poori</option>
-      <option value="veg">Idly</option>
-      <option value="veg">Dosa</option>
-    </select> -->
+    <select class="select-filter" (change)="selectOption($event)">
+        <option value="">All</option>
+        <option value="veg">Veg</option>
+        <option value="non">Non-Veg</option>
+        <option value="dessert">Dessert</option>
+    </select>
+    <input class="search-style" type="text" placeholder="Search" [(ngModel)]="searchFood" (input)="filterItems()"
+        name="search">
 </form>
 
 <div class="outlet container">

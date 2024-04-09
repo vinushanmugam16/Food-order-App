@@ -37,7 +37,7 @@ describe('UserService', () => {
         "confirmpassword": "Aspire@123",
         "dob": "2000-09-23",
         "email": "gomathi@gmail.com",
-        "phoneNumber": 9876543210,
+        "phoneNumber": '9876543210',
         "gender": "Female"
       }
 

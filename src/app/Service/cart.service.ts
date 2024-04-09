@@ -12,9 +12,8 @@ export class CartService {
 
   public totalItem;
   public foodItem = [];
-  public food: any;
+  public food: any = [];
   public totalPrice: number = 0;
-  // public orderedItem: any = [];
 
   constructor(private http: HttpClient) {
     this.totalItem = this.itemLength()
@@ -80,23 +79,5 @@ export class CartService {
     const randomNumber = Math.random().toString(36).substr(2, 5);
     const orderId = time + randomNumber;
     return orderId.toUpperCase();
-  }
-
-  // getHistory(item:any){
-  //   this.orderedItem.push(item);
-  //   sessionStorage.setItem('history', JSON.stringify(this.orderedItem));
-
-  // }
-
-  getOrderedHistory() {
-    return this.http.get(this.historyUrl);
-  }
-
-  createOrderedHistory(history: Item) {
-    return this.http.post(this.historyUrl, history);
-  }
-
-  updateHistory(id: number, history: Item) {
-    return this.http.put(this.historyUrl + '/' + id, history);
   }
 }

@@ -40,23 +40,11 @@ export class OrderComponent implements OnInit {
   public totalAll() {
     this.food.map((value: { price: number; quantity: number; }) => {
       this.totalPrice += value.price * value.quantity;
-      sessionStorage.setItem('total', JSON.stringify(this.totalPrice));
     })
     return this.totalPrice;
   }
 
-  public orderSelected(item: any) {
-    // this.cart.orderedItem.push(item);
-    // this.cart.getHistory(item);
-    // console.log(this.cart.orderedItem);
-    // console.log('item', item[0]);
-    item.map((val: Item) => {
-      this.cart.createOrderedHistory(val)
-        .subscribe((response) => {
-          console.log(response);
-        })
-    })
-
+  public orderSelected() {
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

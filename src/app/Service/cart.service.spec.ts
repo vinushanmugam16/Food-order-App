@@ -41,8 +41,7 @@ describe('CartService', () => {
       "itemName": "Poori",
       "quantity": 1,
       "price": 60,
-      "variety": "veg",
-      "userName": "VINUSHA2002"
+      "variety": "veg"
     };
 
     service.createCart(items).subscribe(response => {
@@ -69,8 +68,7 @@ describe('CartService', () => {
       "itemName": "Poori",
       "quantity": 1,
       "price": 60,
-      "variety": "veg",
-      "userName": "VINUSHA2002"
+      "variety": "veg"
     };
 
     service.deleteItem(items.id).subscribe((items) => {
@@ -89,8 +87,7 @@ describe('CartService', () => {
       "itemName": "Poori",
       "quantity": 1,
       "price": 60,
-      "variety": "veg",
-      "userName": "VINUSHA2002"
+      "variety": "veg"
     };
     const item = cart.id;
     service.updateQuantity(item, cart).subscribe((data) => {
@@ -109,8 +106,7 @@ describe('CartService', () => {
       "itemName": "Poori",
       "quantity": 1,
       "price": 60,
-      "variety": "veg",
-      "userName": "VINUSHA2002"
+      "variety": "veg"
     };
     spyOn(service, 'getCart').and.returnValue(of(mock))
     service.itemLength();
