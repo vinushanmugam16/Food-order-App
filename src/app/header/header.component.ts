@@ -11,6 +11,7 @@ import { CartService } from '../Service/cart.service';
 export class HeaderComponent implements OnDestroy {
 
   public cartLength: number;
+  public userName = sessionStorage.getItem('user');
 
   constructor(public cart: CartService,
     public user: UserService,
@@ -19,15 +20,13 @@ export class HeaderComponent implements OnDestroy {
     translate.setDefaultLang('en')
   }
 
-  public userName = sessionStorage.getItem('user');
+  ngOnDestroy() {
+    this.logoutPage();
+  }
 
   public logoutPage() {
     this.cart.itemLength();
     this.user.logout();
-  }
-
-  ngOnDestroy() {
-    this.logoutPage();
   }
 
   public switchLang(lang: string) {

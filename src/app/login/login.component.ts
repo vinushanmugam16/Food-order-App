@@ -25,7 +25,6 @@ export class LoginComponent {
       let userFound = false;
       this.userDetails.forEach((user: { username: string; password: string; }) => {
         if (user.username === this.userName) {
-          console.log("correct");
           const decrypt = this.user.decryptPassword(user.password);
           if (decrypt === this.correctPassword) {
             sessionStorage.setItem('user', user.username);

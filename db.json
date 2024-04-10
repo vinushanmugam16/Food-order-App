@@ -161,17 +161,7 @@
       "id": "20"
     }
   ],
-  "addcart": [
-    {
-      "id": "2",
-      "imageUrl": "/assets/image/dosa.jpeg",
-      "itemName": "Dosa",
-      "price": 75,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "Kevin"
-    }
-  ],
+  "addcart": [],
   "logindetails": [
     {
       "id": "a5ac",
@@ -424,6 +414,18 @@
       "email": "kevin@gmail.com",
       "phoneNumber": "********11",
       "gender": "Male"
+    },
+    {
+      "id": "cb3b",
+      "firstname": "Banu",
+      "lastname": "Ponnusamy",
+      "username": "Banu",
+      "password": "U2FsdGVkX1/DuxGvGG1TcjenlA5Wh+oNnTkxD5Aht4w=",
+      "confirmpassword": "U2FsdGVkX1/yhOUonIg6/n1KtlMzPW/BGF6xczXUuhU=",
+      "dob": "2009-03-12",
+      "email": "banu@gmail.com",
+      "phoneNumber": "********28",
+      "gender": "Female"
     }
   ],
   "address": [
@@ -500,22 +502,43 @@
   ],
   "history": [
     {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
-      "itemName": "Venpongal",
-      "price": 50,
-      "quantity": 1,
-      "variety": "Veg",
-      "userName": "VINUSHA2002"
-    },
-    {
-      "id": "6",
-      "imageUrl": "/assets/image/friedrice.jpeg",
-      "itemName": "Chicken Fried Rice",
-      "price": 120,
-      "quantity": 1,
-      "variety": "Non",
-      "userName": "VINUSHA2002"
+      "0": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "1": {
+        "id": "3",
+        "imageUrl": "/assets/image/venpongal.jpeg",
+        "itemName": "Venpongal",
+        "price": 50,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "2": {
+        "id": "7",
+        "imageUrl": "/assets/image/mushroombriyani.jpeg",
+        "itemName": "Mushroom Briyani",
+        "price": 230,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "3": {
+        "id": "6",
+        "imageUrl": "/assets/image/friedrice.jpeg",
+        "itemName": "Chicken Fried Rice",
+        "price": 120,
+        "quantity": 1,
+        "variety": "Non",
+        "userName": "VINUSHA2002"
+      },
+      "id": "e794"
     }
   ]
 }

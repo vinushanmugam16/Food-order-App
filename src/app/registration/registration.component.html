@@ -88,10 +88,10 @@
             </div><br>
             <div>
                 <input class="input-style" type="password" placeholder="Confirm Password"
-                    formControlName="confirmpassword"><br>
+                    formControlName="confirmPassword"><br>
                 <small
-                    *ngIf="registerForm.get('confirmpassword')?.invalid && (registerForm.get('confirmpassword')?.touched || registerForm.get('confirmpassword')?.dirty)">
-                    <div *ngIf="registerForm.get('confirmpassword')?.hasError('required')">*Confirm Password is required
+                    *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.touched || registerForm.get('confirmPassword')?.dirty)">
+                    <div *ngIf="registerForm.get('confirmPassword')?.hasError('required')">*Confirm Password is required
                     </div>
                     <div *ngIf="registerForm.hasError('notmatchPassword')">*Password must match</div>
                 </small>

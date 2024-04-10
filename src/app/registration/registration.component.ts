@@ -21,6 +21,8 @@ export class RegistrationComponent implements OnInit {
   private encryptConfirmpass: string;
   public phoneNum: string;
   public mask = '';
+  public originalPhoneNumber: string;
+
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -28,7 +30,7 @@ export class RegistrationComponent implements OnInit {
       lastname: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*)"), Validators.minLength(3)]),
       username: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)]),
-      confirmpassword: new FormControl('', [Validators.required]),
+      confirmPassword: new FormControl('', [Validators.required]),
       dob: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       phoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^\*{8}\d{2}$/)]),
@@ -59,8 +61,8 @@ export class RegistrationComponent implements OnInit {
     else {
       this.encryptPass = this.user.encryptPassword(this.registerForm.value.password);
       this.registerForm.get('password')?.setValue(this.encryptPass);
-      this.encryptConfirmpass = this.user.encryptPassword(this.registerForm.value.confirmpassword);
-      this.registerForm.get('confirmpassword')?.setValue(this.encryptConfirmpass);
+      this.encryptConfirmpass = this.user.encryptPassword(this.registerForm.value.confirmPassword);
+      this.registerForm.get('confirmPassword')?.setValue(this.encryptConfirmpass);
       this.user.createData(this.registerForm.value)
         .subscribe(() => {
           this.toast.success('Successfully Registered!');

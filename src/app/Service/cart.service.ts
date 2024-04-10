@@ -80,4 +80,12 @@ export class CartService {
     const orderId = time + randomNumber;
     return orderId.toUpperCase();
   }
+
+  getOrderHistory(){
+    return this.http.get(this.historyUrl);
+  }
+
+  createOrderedHistory(history:Item){
+    return this.http.post(this.historyUrl,history)
+  }
 }

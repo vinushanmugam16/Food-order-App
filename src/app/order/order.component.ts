@@ -44,7 +44,7 @@ export class OrderComponent implements OnInit {
     return this.totalPrice;
   }
 
-  public orderSelected() {
+  public orderSelected(item:any) {
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

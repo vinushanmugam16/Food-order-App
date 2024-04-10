@@ -3,9 +3,9 @@
 <form>
     <select class="select-filter" (change)="selectOption($event)">
         <option value="">All</option>
-        <option value="veg">Veg</option>
-        <option value="non">Non-Veg</option>
-        <option value="dessert">Dessert</option>
+        <option value="veg">Veg({{vegCount}})</option>
+        <option value="non">Non-Veg({{nonvegCount}})</option>
+        <option value="dessert">Dessert({{dessertCount}})</option>
     </select>
     <input class="search-style" type="text" placeholder="Search" [(ngModel)]="searchFood" (input)="filterItems()"
         name="search">

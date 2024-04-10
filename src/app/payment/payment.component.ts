@@ -116,5 +116,16 @@ export class PaymentComponent implements OnInit {
     const destination = event.target as HTMLSelectElement;
     this.setAddress = destination.value;
     this.toast.success('Has selected the address for order');
+
+    // if(this.setAddress === 'address'){
+    //   alert('Hi');
+    //   // this.open(content);
+    //   this.onSave();
+    //   this.gettingAddress();
+    // }
+  }
+
+  addingAddress(){
+
   }
 }

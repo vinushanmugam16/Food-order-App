@@ -13,12 +13,15 @@ export class ItemsComponent implements OnInit {
 
   public cartItem: any = [];
   private foodItem: any[];
-  public pageSize = 10;
+  public pageSize: number = 10;
   public searchFood: string;
   public pageNumber: number = 1;
   public filteredItems: Item[];
   public totalItems: number;
   public selectingOption: string;
+  public vegCount: number = 0;
+  public nonvegCount: number = 0;
+  public dessertCount: number = 0;
 
   constructor(private cartList: CartService, private toast: ToastrService) { }
 
@@ -28,6 +31,9 @@ export class ItemsComponent implements OnInit {
         .subscribe(response => {
           this.cartItem = response;
           this.filteredItems = this.cartItem;
+          this.vegCount = this.filteredItems.filter((item) => item.variety === 'Veg').length;
+          this.nonvegCount = this.filteredItems.filter((item) => item.variety === 'Non').length;
+          this.dessertCount = this.filteredItems.filter((item) => item.variety === 'Dessert').length;
         })
     }
     catch (err) {
