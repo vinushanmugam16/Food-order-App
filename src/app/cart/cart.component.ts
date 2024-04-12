@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 
 export class CartComponent implements OnInit {
 
-  public foodItem;
+  public foodItem: any=[];
   public food: Item[];
   public cartFoodItem: Object;
   public imageUrl = '/assets/image/emptycart.png';

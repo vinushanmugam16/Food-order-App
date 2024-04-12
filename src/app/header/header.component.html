@@ -24,9 +24,7 @@
             aria-expanded="false">
         </button>
         <ul class="dropdown-menu">
-            <li><i class="dropdown-item" class="bi bi-person">{{userName}}</i></li>
-            <!-- <li><i class="dropdown-item" class="bi bi-geo-alt" *ngIf="address">{{address}}</i></li> -->
-            <!-- <li><a class="dropdown-item" class="bi bi-clock-history" routerLink="history">History</a></li> -->
+            <li><i class="dropdown-item" class="bi bi-person" (click)="updateProfile()">{{userName}}</i></li>
             <li><a class="dropdown-item" class="bi bi-box-arrow-left" (click)="logoutPage()" *ngIf="user.login()">
                     Logout</a></li>
         </ul>

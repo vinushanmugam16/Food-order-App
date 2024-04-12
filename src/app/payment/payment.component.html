@@ -17,7 +17,8 @@
           <option *ngFor="let add of userAddress ,let i=index" value="{{add.street}},{{add.city}},{{add.pincode}}">
             {{i+1}}. {{add.street}},{{add.city}},{{add.pincode}}</option>
         </select>
-        <p>Delivery Address: {{setAddress}}</p>
+        <br>
+        <p class="delivery-style">Delivery Address: {{setAddress}}</p>
       </div>
       <ng-template #content let-modal>
         <div class="modal-header">
@@ -58,12 +59,12 @@
 
     </div>
     <div *ngIf="showTotal">
-        <label>UPI ID</label><br>
-        <input type="text" id="upi" formControlName="upiId"><br>
-        <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
-          <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
-          <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
-        </small><br>
+      <label>UPI ID</label><br>
+      <input type="text" id="upi" formControlName="upiId"><br>
+      <small *ngIf="payment.get('upiId')?.invalid && (payment.get('upiId')?.touched || payment.get('upiId')?.dirty)">
+        <small *ngIf="payment.get('upiId')?.hasError('required')">*UPI Id is required</small>
+        <small *ngIf="payment.get('upiId')?.hasError('pattern')">*UPI Id should be in abcd@bankname format</small>
+      </small><br>
     </div>
 
     <div *ngIf="showTotal" class="total-style">

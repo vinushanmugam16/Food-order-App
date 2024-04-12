@@ -14,7 +14,7 @@ export class LoginComponent {
   public userName: string;
   public correctPassword: string;
   public patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]*$/;
-  private userDetails;
+  private userDetails: any;
 
   constructor(private user: UserService,
     private router: Router, private toast: ToastrService) { }

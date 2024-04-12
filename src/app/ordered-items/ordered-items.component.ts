@@ -12,12 +12,12 @@ export class OrderedItemsComponent implements OnInit {
   public foodItem: Item[];
   public totalPrice: number = 0;
   public orderId: string;
-  public myOrder=[];
+  public myOrder: any = [];
   constructor(private cart: CartService) { }
 
   ngOnInit() {
-    const orderedItems:any= sessionStorage.getItem('myorder');
-    this.myOrder =JSON.parse(orderedItems);
+    const orderedItems: any = sessionStorage.getItem('myorder');
+    this.myOrder = JSON.parse(orderedItems);
     this.totalAll()
   }
 

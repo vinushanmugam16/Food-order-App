@@ -13,7 +13,6 @@ export class OrderComponent implements OnInit {
   public foodItem: any=[];
   public food: Item[];
   public totalPrice: number = 0;
-  public ordered= [];
 
   constructor(private cart: CartService, private route: Router) { }
 

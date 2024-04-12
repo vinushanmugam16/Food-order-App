@@ -8,7 +8,6 @@ import { Injectable } from "@angular/core";
 
 export class AuthGuard implements CanActivate {
     constructor(private user: UserService) {}
-
     canActivate(): boolean {
         if (this.user.login()) {
             return true;

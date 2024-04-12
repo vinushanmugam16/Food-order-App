@@ -26,3 +26,8 @@ form {
 .payprocess-style{
     height: 70vh;
 }
+
+.delivery-style{
+    font-size: large;
+    font-weight: bold;
+}

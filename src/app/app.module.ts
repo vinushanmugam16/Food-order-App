@@ -25,6 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,8 @@ import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
     ItemsComponent,
     PaymentComponent,
     NotFoundComponent,
-    OrderedItemsComponent
-
+    OrderedItemsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

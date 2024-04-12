@@ -169,7 +169,7 @@
       "price": 75,
       "quantity": 1,
       "variety": "Veg",
-      "userName": "Janu"
+      "userName": "VINUSHA2002"
     }
   ],
   "logindetails": [
@@ -436,6 +436,30 @@
       "email": "banu@gmail.com",
       "phoneNumber": "********28",
       "gender": "Female"
+    },
+    {
+      "id": "14c3",
+      "firstname": "Vanitha",
+      "lastname": "Vijayakumar",
+      "username": "Vani",
+      "password": "U2FsdGVkX182ObfIaGi7r2RSoHprCvHeK6uRFw+NIfk=",
+      "confirmPassword": "U2FsdGVkX199VSaOCyfy5ftz0l9sQ422F2IT+vPj5Is=",
+      "dob": "1958-08-08",
+      "email": "vani@gmail.com",
+      "phoneNumber": "********68",
+      "gender": "Female"
+    },
+    {
+      "id": "fe25",
+      "firstname": "Mickey",
+      "lastname": "Mouse",
+      "username": "Mike",
+      "password": "U2FsdGVkX1/chvboSR1dn1dCVyA/4ziL6MIYueNun/U=",
+      "confirmPassword": "U2FsdGVkX18GbI27/3o6yCHseECEnyl7MrEWMFYkveo=",
+      "dob": "2009-02-12",
+      "email": "mick@gmail.com",
+      "phoneNumber": "********45",
+      "gender": "Male"
     }
   ],
   "address": [
@@ -510,52 +534,11 @@
       "userName": "Janu"
     },
     {
-      "id": "34bc",
-      "street": "rsg",
-      "city": "dfg",
-      "pincode": "234567",
-      "userName": "Janu"
-    }
-  ],
-  "history": [
-    {
-      "0": {
-        "id": "2",
-        "imageUrl": "/assets/image/dosa.jpeg",
-        "itemName": "Dosa",
-        "price": 75,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "1": {
-        "id": "3",
-        "imageUrl": "/assets/image/venpongal.jpeg",
-        "itemName": "Venpongal",
-        "price": 50,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "2": {
-        "id": "7",
-        "imageUrl": "/assets/image/mushroombriyani.jpeg",
-        "itemName": "Mushroom Briyani",
-        "price": 230,
-        "quantity": 1,
-        "variety": "Veg",
-        "userName": "VINUSHA2002"
-      },
-      "3": {
-        "id": "6",
-        "imageUrl": "/assets/image/friedrice.jpeg",
-        "itemName": "Chicken Fried Rice",
-        "price": 120,
-        "quantity": 1,
-        "variety": "Non",
-        "userName": "VINUSHA2002"
-      },
-      "id": "e794"
+      "id": "0cf8",
+      "street": "12, Sans College,Kuniyamuthur",
+      "city": "Coimbatore",
+      "pincode": "638236",
+      "userName": "Sumeka"
     }
   ]
 }

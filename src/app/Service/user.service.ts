@@ -55,11 +55,11 @@ export class UserService {
     this.route.navigateByUrl('login');
   }
 
-  encryptPassword(password: string) {
+  public encryptPassword(password: string) {
     return CryptoJS.AES.encrypt(password, this.keys).toString();
   }
 
-  decryptPassword(password: string) {
+  public decryptPassword(password: string) {
     return CryptoJS.AES.decrypt(password, this.keys).toString(CryptoJS.enc.Utf8);
   }
 }

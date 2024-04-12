@@ -22,15 +22,14 @@ export class PaymentComponent implements OnInit {
   public address: FormGroup;
   private paymentMethod: string;
   public cod: boolean = false;
-  public locateAddress;
+  public locateAddress: any;
   public setAddress: string;
   public userAddress: Address[];
 
   constructor(private cart: CartService, private toast: ToastrService, private modalService: NgbModal,
-              private route:Router) { }
+    private route: Router) { }
 
   ngOnInit() {
-
     this.gettingAddress();
     this.totalAll();
 
@@ -85,7 +84,7 @@ export class PaymentComponent implements OnInit {
 
   public open(content: TemplateRef<any>) {
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-      () => {}
+      () => { }
     );
   }
 
