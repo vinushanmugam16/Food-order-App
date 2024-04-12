@@ -12,7 +12,7 @@ export class OrderedItemsComponent implements OnInit {
   public foodItem: Item[];
   public totalPrice: number = 0;
   public orderId: string;
-  public myOrder: any=[];
+  public myOrder=[];
   constructor(private cart: CartService) { }
 
   ngOnInit() {

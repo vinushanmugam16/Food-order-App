@@ -161,7 +161,17 @@
       "id": "20"
     }
   ],
-  "addcart": [],
+  "addcart": [
+    {
+      "id": "2",
+      "imageUrl": "/assets/image/dosa.jpeg",
+      "itemName": "Dosa",
+      "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "Janu"
+    }
+  ],
   "logindetails": [
     {
       "id": "a5ac",
@@ -497,6 +507,13 @@
       "street": "Door No. 176, TVH Ouranya Bay , Kazhipattur",
       "city": "Siruseri",
       "pincode": "637263",
+      "userName": "Janu"
+    },
+    {
+      "id": "34bc",
+      "street": "rsg",
+      "city": "dfg",
+      "pincode": "234567",
       "userName": "Janu"
     }
   ],

@@ -13,7 +13,7 @@ export class OrderComponent implements OnInit {
   public foodItem: any=[];
   public food: Item[];
   public totalPrice: number = 0;
-  public ordered: any = [];
+  public ordered= [];
 
   constructor(private cart: CartService, private route: Router) { }
 
@@ -44,7 +44,7 @@ export class OrderComponent implements OnInit {
     return this.totalPrice;
   }
 
-  public orderSelected(item:any) {
+  public orderSelected() {
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

@@ -11,8 +11,8 @@ import { Item } from '../model/item';
 })
 export class ItemsComponent implements OnInit {
 
-  public cartItem: any = [];
-  private foodItem: any[];
+  public cartItem ;
+  private foodItem;
   public pageSize: number = 10;
   public searchFood: string;
   public pageNumber: number = 1;
