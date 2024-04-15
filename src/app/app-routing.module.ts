@@ -14,23 +14,25 @@ import { PaymentComponent } from './payment/payment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
-  {path:'', title:'Food Order App',component:HomepageComponent},
-  {path:'home',title:'Home',component:HomepageComponent},
-  {path:'header',component:HeaderComponent},
-  {path:'registration',title:'Registration', component:RegistrationComponent},
-  {path:'login',title:'Login',component:LoginComponent},
-  {path:'footer',component:FooterComponent},
-  {path:'mainpage',title:'Food Order App',component:MainpageComponent,canActivate:[AuthGuard]},
-  {path:'contact',title:'Contact',component:ContactComponent,canActivate:[AuthGuard]},
-  {path:'cart',title:'Cart',component:CartComponent,canActivate:[AuthGuard]},
-  {path:'items',title:'Items',component:ItemsComponent,canActivate:[AuthGuard]},
-  {path:'ordering',title:'Order',loadChildren:()=>import('./order/order.module').then((m)=>m.OrderModule)},
-  {path:'payment' ,title:'Payment', component:PaymentComponent,canActivate:[AuthGuard]},
-  {path:'ordered',title:'My Order', component:OrderedItemsComponent,canActivate:[AuthGuard]},
-  {path:'profile', title:'Profile', component:ProfileComponent, canActivate:[AuthGuard]},
-  {path:'**',title:'404 Error',component:NotFoundComponent}
+  { path: '', title: 'Food Order App', component: HomepageComponent },
+  { path: 'home', title: 'Home', component: HomepageComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'registration', title: 'Registration', component: RegistrationComponent },
+  { path: 'login', title: 'Login', component: LoginComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'mainpage', title: 'Food Order App', component: MainpageComponent, canActivate: [AuthGuard] },
+  { path: 'contact', title: 'Contact', component: ContactComponent, canActivate: [AuthGuard] },
+  { path: 'cart', title: 'Cart', component: CartComponent, canActivate: [AuthGuard] },
+  { path: 'items', title: 'Items', component: ItemsComponent, canActivate: [AuthGuard] },
+  { path: 'ordering', title: 'Order', loadChildren: () => import('./order/order.module').then((m) => m.OrderModule) },
+  { path: 'payment', title: 'Payment', component: PaymentComponent, canActivate: [AuthGuard] },
+  { path: 'ordered', title: 'My Order', component: OrderedItemsComponent, canActivate: [AuthGuard] },
+  { path: 'profile', title: 'Profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'history', title: 'History', component: HistoryComponent, canActivate: [AuthGuard] },
+  { path: '**', title: '404 Error', component: NotFoundComponent }
 ];
 
 @NgModule({

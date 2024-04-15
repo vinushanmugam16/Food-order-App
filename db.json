@@ -163,10 +163,46 @@
   ],
   "addcart": [
     {
+      "id": "9",
+      "imageUrl": "/assets/image/naan.jpeg",
+      "itemName": "Butter Naan",
+      "price": 230,
+      "quantity": 3,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "10",
+      "imageUrl": "/assets/image/paneerbutter.jpeg",
+      "itemName": "Paneer Butter Masala",
+      "price": 310,
+      "quantity": 3,
+      "variety": "Veg",
+      "userName": "Janu"
+    },
+    {
+      "id": "15",
+      "imageUrl": "/assets/image/fishfry.png",
+      "itemName": "Fishfry",
+      "price": 100,
+      "quantity": 1,
+      "variety": "Non",
+      "userName": "Janu"
+    },
+    {
       "id": "2",
       "imageUrl": "/assets/image/dosa.jpeg",
       "itemName": "Dosa",
       "price": 75,
+      "quantity": 1,
+      "variety": "Veg",
+      "userName": "VINUSHA2002"
+    },
+    {
+      "id": "3",
+      "imageUrl": "/assets/image/venpongal.jpeg",
+      "itemName": "Venpongal",
+      "price": 50,
       "quantity": 1,
       "variety": "Veg",
       "userName": "VINUSHA2002"
@@ -210,18 +246,6 @@
     }
   ],
   "registerdetails": [
-    {
-      "id": "c47d",
-      "firstname": "Vinudharshini",
-      "lastname": "Shanmugam",
-      "username": "VINUSHA2002",
-      "password": "Vinu@2468",
-      "confirmpassword": "Vinu@2468",
-      "dob": "2002-04-16",
-      "email": "vinu@gmail.com",
-      "phoneNumber": 9876543201,
-      "gender": "Female"
-    },
     {
       "id": "3023",
       "firstname": "Dinesh",
@@ -539,6 +563,29 @@
       "city": "Coimbatore",
       "pincode": "638236",
       "userName": "Sumeka"
+    }
+  ],
+  "history": [
+    {
+      "0": {
+        "id": "1",
+        "imageUrl": "/assets/image/idly.jpeg",
+        "itemName": "Idly",
+        "price": 35,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "1": {
+        "id": "2",
+        "imageUrl": "/assets/image/dosa.jpeg",
+        "itemName": "Dosa",
+        "price": 75,
+        "quantity": 1,
+        "variety": "Veg",
+        "userName": "VINUSHA2002"
+      },
+      "id": "59f6"
     }
   ]
 }

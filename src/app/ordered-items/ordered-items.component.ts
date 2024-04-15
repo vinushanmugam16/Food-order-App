@@ -13,12 +13,14 @@ export class OrderedItemsComponent implements OnInit {
   public totalPrice: number = 0;
   public orderId: string;
   public myOrder: any = [];
+  public storeAddress: string | null;
   constructor(private cart: CartService) { }
 
   ngOnInit() {
     const orderedItems: any = sessionStorage.getItem('myorder');
     this.myOrder = JSON.parse(orderedItems);
-    this.totalAll()
+    this.totalAll();
+    this.storeAddress = sessionStorage.getItem('address');
   }
 
   public totalAll() {

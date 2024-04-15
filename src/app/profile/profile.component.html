@@ -1,0 +1,9 @@
+<div class="profile-style">
+    <div *ngFor="let user of userDetail">
+        <p><img [src]="imgUrl" alt="Profile Image"></p>
+        <p class="name-style">{{user.username}}</p>
+        <p>{{user.email}}</p>
+        <p>{{user.phoneNumber}}</p>
+        <p *ngIf="address"> Latest ordered Address : {{address}}</p>
+    </div>
+</div>

@@ -77,7 +77,7 @@ export class ItemsComponent implements OnInit {
         );
       }
       if (this.searchFood) {
-        itemFiltered = itemFiltered.filter((item: { itemName: string; price: { toString: () => string | string[]; }; }) =>
+        itemFiltered = itemFiltered.filter((item: { itemName: string; price: { toString: () => string ; }; }) =>
           item.itemName.toLowerCase().includes(this.searchFood.toLowerCase()) ||
           item.price.toString().includes(this.searchFood.toLowerCase())
         );

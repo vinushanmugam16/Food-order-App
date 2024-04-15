@@ -21,8 +21,10 @@
                 <td>{{item.price*item.quantity | currency:'INR'}}</td>
             </tr>
             <br>
-            <span>Total:{{totalPrice | currency:'INR'}}</span><br>
-            <button class="btn btn-success" (click)="orderSelected()"> Order </button>
+            <span>Total: {{totalPrice | currency:'INR'}}</span><br>
+            <button class="btn btn-success" (click)="orderSelected(food)"> Order </button>
         </tbody>
     </table>
 </div>
+
+<app-history [orderedItems]="ordered"></app-history>

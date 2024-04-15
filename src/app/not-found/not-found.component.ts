@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
+
   imgUrl = '/assets/image/sad.png'
+
 }

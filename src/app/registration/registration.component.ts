@@ -20,7 +20,7 @@ export class RegistrationComponent implements OnInit {
   private encryptPass: string;
   private encryptConfirmpass: string;
   public phoneNum: string;
-  public mask = '';
+  public mask='';
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -57,8 +57,6 @@ export class RegistrationComponent implements OnInit {
       this.toast.warning('Please fill the form in Valid format!')
     }
     else {
-      sessionStorage.setItem('email',this.registerForm.value.email);
-      
       this.encryptPass = this.user.encryptPassword(this.registerForm.value.password);
       this.registerForm.get('password')?.setValue(this.encryptPass);
       this.encryptConfirmpass = this.user.encryptPassword(this.registerForm.value.confirmPassword);

@@ -62,17 +62,17 @@ export class CartService {
     return this.http.post(this.addressUrl, locate)
   }
 
-  public deleteAddress(id: string) {
-    return this.http.delete(`${this.addressUrl}/${id}`);
-  }
+  // public deleteAddress(id: string) {
+  //   return this.http.delete(`${this.addressUrl}/${id}`);
+  // }
 
-  public selectAddress(id: string) {
-    return this.http.get(`${this.addressUrl}/${id}`);
-  }
+  // public selectAddress(id: string) {
+  //   return this.http.get(`${this.addressUrl}/${id}`);
+  // }
 
-  public updateAddress(id: string, address: Address) {
-    return this.http.put(this.addressUrl + '/' + id, address)
-  }
+  // public updateAddress(id: string, address: Address) {
+  //   return this.http.put(this.addressUrl + '/' + id, address)
+  // }
 
   generateOrderId() {
     const time = new Date().getTime().toString(36);
@@ -80,4 +80,13 @@ export class CartService {
     const orderId = time + randomNumber;
     return orderId.toUpperCase();
   }
+
+  getHistory(){
+    return this.http.get(this.historyUrl);
+  }
+
+  createHistory(history:Item){
+    return this.http.post(this.historyUrl,history);
+  }
+
 }

@@ -42,8 +42,7 @@ export class PaymentComponent implements OnInit {
       street: new FormControl('', [Validators.required]),
       city: new FormControl('', [Validators.required, Validators.pattern("([a-zA-Z']+([a-zA-Z']+)*){2,15}")]),
       pincode: new FormControl('', [Validators.required, Validators.pattern("[0-9]{6}")]),
-      userName: new FormControl(''),
-      setAddress: new FormControl('')
+      userName: new FormControl('')
     })
   }
 
@@ -114,6 +113,7 @@ export class PaymentComponent implements OnInit {
   public addressed(event: Event) {
     const destination = event.target as HTMLSelectElement;
     this.setAddress = destination.value;
+    sessionStorage.setItem('address',this.setAddress);
     this.toast.success('Has selected the address for order');
   }
 }

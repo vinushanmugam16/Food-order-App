@@ -10,9 +10,10 @@ import { Item } from '../model/item';
 })
 export class OrderComponent implements OnInit {
 
-  public foodItem: any=[];
+  public foodItem: any = [];
   public food: Item[];
   public totalPrice: number = 0;
+  public ordered:any=[];
 
   constructor(private cart: CartService, private route: Router) { }
 
@@ -43,7 +44,14 @@ export class OrderComponent implements OnInit {
     return this.totalPrice;
   }
 
-  public orderSelected() {
+  public orderSelected(item: any) {
+    const arrayOfObjects: any = Object.values(item).filter(items => typeof items === 'object');
+    console.log(arrayOfObjects);
+    this.ordered=arrayOfObjects;
+    console.log(this.ordered);
+  
+    // this.cart.createHistory(arrayOfObjects).subscribe((data)=>console.log(data));
+
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }
