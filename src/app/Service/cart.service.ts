@@ -24,24 +24,17 @@ export class CartService {
   public userUrl = environment.baseUrl + environment.regUrl;
   public addressUrl = environment.baseUrl + environment.addressUrl;
 
-  //BE
   public getItemDisplay() {
-    // return this.http.get('http://localhost:4000/item')
     return this.http.get(this.fooditemsUrl);
   }
 
-  //BE
   public createCartItem(addingCart: Item) {
-    // console.log('service call', addingCart);
     return this.http.post(this.cartUrl,addingCart)
-    // return this.http.post('http://localhost:4000/addtocart', addingCart);
   }
   public getCartItem() {
-    // return this.http.get('http://localhost:4000/addtocart');
     return this.http.get(this.cartUrl);
   }
 
-  //BE
   public deleteCartItem(id: number) {
     return this.http.delete('http://localhost:4000/destroy/' + `${id}`)
   }
@@ -50,7 +43,6 @@ export class CartService {
     return this.http.delete('http://localhost:4000/destroyall');
   }
 
-  //BE
   public updateItemQuantity(id: string | number, foodItem: Item) {
     return this.http.put('http://localhost:4000/update/' + id, foodItem);
   }
@@ -63,13 +55,10 @@ export class CartService {
       })
   }
 
-  //BE
   public getAllAddress() {
-    // return this.http.get('http://localhost:4000/address');
     return this.http.get(this.addressUrl)
   }
   public createAllAddress(locate: Address) {
-    // return this.http.post('http://localhost:4000/address', locate)
     return this.http.post(this.addressUrl,locate)
   }
 

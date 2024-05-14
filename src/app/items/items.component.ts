@@ -31,8 +31,6 @@ export class ItemsComponent implements OnInit {
       this.cartList.getItemDisplay()
         .subscribe(response => {
           this.cartItem = response;
-          // console.log(this.cartItem);
-
           this.filteredItems = this.cartItem;
           this.vegCount = this.filteredItems.filter((item) => item.variety === 'Veg').length;
           this.nonvegCount = this.filteredItems.filter((item) => item.variety === 'Non').length;
@@ -46,16 +44,13 @@ export class ItemsComponent implements OnInit {
 
   public addingTocart(item: any) {
     this.cartList.getCartItem().subscribe((data: any) => {
-      // console.log('datas', data);
       this.foodItem = data
       const foundItem = this.foodItem.find((food: { itemName: string; }) =>
         food.itemName === item.itemName
       )
       if (!foundItem) {
-        // console.log(`fghjkl.`);
 
         this.cartList.createCartItem(item).subscribe(() => {
-          // console.log('posted');
           this.cartList.itemLength();
           this.toast.success('Item added to cart!');
         })

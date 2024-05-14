@@ -25,7 +25,6 @@ export class CartComponent implements OnInit {
         this.cart.getCartItem().subscribe(
           (res) => {
               this.food = res;
-              // console.log('getting items', this.food);
           })
     }
     catch (err) {

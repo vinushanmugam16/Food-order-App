@@ -59,7 +59,6 @@ export class RegistrationComponent implements OnInit {
       const regUser = this.registerForm.value;
       this.user.createRegisterUser(regUser)
         .subscribe((resp) => {
-          // console.log('Client response', resp);
           this.toast.success('Successfully Registered!');
           this.router.navigateByUrl('login');
         })

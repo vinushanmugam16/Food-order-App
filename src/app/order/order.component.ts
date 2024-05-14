@@ -10,7 +10,6 @@ import { Item } from '../model/item';
 })
 export class OrderComponent implements OnInit {
 
-  // public foodItem: any = [];
   public food: Item[];
   public totalPrice: number = 0;
 

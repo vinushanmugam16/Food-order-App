@@ -22,25 +22,20 @@ export class UserService {
 
  
   public createRegisterUser(userDetail: User) {
-    // return this.http.post('http://localhost:4000/register', userDetail);
     return this.http.post(this.registerUrl,userDetail);
   }
 
-  //bE
   public getLoginUser() {
-    // return this.http.get('http://localhost:4000/login')
     return this.http.get(this.loginUrl);
   }
 
   public createLoginUser(username: string, password: any) {
     const user = { username, password }
-    // return this.http.post('http://localhost:4000/login',user);
     return this.http.post(this.loginUrl,user)
   }
 
 
   public login() {
-    // return sessionStorage.getItem('user') && sessionStorage.getItem('password') ? true : false;
     return sessionStorage.getItem('token') ? true : false
   }
 

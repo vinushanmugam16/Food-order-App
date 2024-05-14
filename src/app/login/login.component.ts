@@ -25,12 +25,10 @@ export class LoginComponent {
   public onSubmit(loginForm: NgForm) {
     this.user.createLoginUser(this.userName, this.correctPassword).subscribe({
       next: (response: any) => {
-        // console.log(response);
         sessionStorage.setItem('token', response.token);
         sessionStorage.setItem('user',response.username);
         this.toast.success('Successfully Logined!');
         this.router.navigateByUrl('/mainpage');
-        // console.log('Login successful!', response);
       },
       error: (error: { error: { message: string; }; }) => {
         console.error('Error logging in:', error);
