@@ -59,11 +59,10 @@ export class PaymentComponent implements OnInit {
 
   public totalAll() {
     try {
-      this.cart.getCart()
+      this.cart.getCartItem()
         .subscribe((resp: any) => {
           this.foodItem = resp;
-          this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
-          this.totalPrice = this.food.reduce((total: number, food: { price: number; quantity: number; }) => total + (food.price * food.quantity), 0);
+          this.totalPrice = this.foodItem.reduce((total: number, food: { price: number; quantity: number; }) => total + (food.price * food.quantity), 0);
         })
     }
     catch (err) {
@@ -72,13 +71,11 @@ export class PaymentComponent implements OnInit {
   }
 
   public processPayment() {
-    this.food.map((item: { id: number }) => {
-      this.cart.deleteItem(item.id).subscribe(() => {
+    this.cart.deleteAll().subscribe(()=>{
         this.cart.itemLength();
         this.toast.success('Successfully Paid!');
         this.route.navigateByUrl('ordered');
       })
-    })
   }
 
   public open(content: TemplateRef<any>) {
@@ -88,12 +85,9 @@ export class PaymentComponent implements OnInit {
   }
 
   public gettingAddress() {
-    this.cart.getAddress()
-      .subscribe((res) => {
-        this.locateAddress = res;
-        const storeUser = sessionStorage.getItem('user');
-        this.locateAddress.userName = storeUser;
-        this.userAddress = this.locateAddress.filter((val: { userName: string | null; }) => val.userName === storeUser);
+    this.cart.getAllAddress()
+      .subscribe((res:any) => {
+        this.userAddress = res;
       })
   }
 
@@ -104,7 +98,7 @@ export class PaymentComponent implements OnInit {
       userName: sessionStorage.getItem('user')
     };
 
-    this.cart.createAddress(value)
+    this.cart.createAllAddress(value)
       .subscribe(() => {
         this.gettingAddress();
       })

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../Service/user.service';
 import { PasswordValidation } from '../customvalidation/passwordvalidation.directive';
 import { ToastrService } from 'ngx-toastr';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registration',
@@ -13,14 +14,12 @@ import { ToastrService } from 'ngx-toastr';
 export class RegistrationComponent implements OnInit {
 
   constructor(private user: UserService,
-    private router: Router, private toast: ToastrService) { }
+    private router: Router, private toast: ToastrService, private http: HttpClient) { }
 
   public registerForm: FormGroup;
   public gender = ['Male', 'Female'];
-  private encryptPass: string;
-  private encryptConfirmpass: string;
   public phoneNum: string;
-  public mask='';
+  public mask = '';
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
@@ -57,12 +56,10 @@ export class RegistrationComponent implements OnInit {
       this.toast.warning('Please fill the form in Valid format!')
     }
     else {
-      this.encryptPass = this.user.encryptPassword(this.registerForm.value.password);
-      this.registerForm.get('password')?.setValue(this.encryptPass);
-      this.encryptConfirmpass = this.user.encryptPassword(this.registerForm.value.confirmPassword);
-      this.registerForm.get('confirmPassword')?.setValue(this.encryptConfirmpass);
-      this.user.createData(this.registerForm.value)
-        .subscribe(() => {
+      const regUser = this.registerForm.value;
+      this.user.createRegisterUser(regUser)
+        .subscribe((resp) => {
+          // console.log('Client response', resp);
           this.toast.success('Successfully Registered!');
           this.router.navigateByUrl('login');
         })

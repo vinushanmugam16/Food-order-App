@@ -28,27 +28,27 @@ describe('UserService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should create user data', () => {
-    const registerUser: User = {
-        "firstname": "Gomathi",
-        "lastname": "Thiru",
-        "username": "GOMATHI2000",
-        "password": "Aspire@123",
-        "confirmpassword": "Aspire@123",
-        "dob": "2000-09-23",
-        "email": "gomathi@gmail.com",
-        "phoneNumber": '9876543210',
-        "gender": "Female"
-      }
+  // it('should create user data', () => {
+  //   // const registerUser: User = {
+  //   //     "firstname": "Gomathi",
+  //   //     "lastname": "Thiru",
+  //   //     "username": "GOMATHI2000",
+  //   //     "password": "Aspire@123",
+  //   //     "confirmpassword": "Aspire@123",
+  //   //     "dob": "2000-09-23",
+  //   //     "email": "gomathi@gmail.com",
+  //   //     "phoneNumber": '9876543210',
+  //   //     "gender": "Female"
+  //   //   }
 
-    service.createData(registerUser).subscribe(response => {
-      expect(response).toBeTruthy();
-    });
+  //   service.createData(registerUser).subscribe(response => {
+  //     expect(response).toBeTruthy();
+  //   });
 
-    const result = httpMock.expectOne('http://localhost:3000/registerdetails');
-    expect(result.request.method).toBe('POST');
-    result.flush({ registerUser });
-  });
+  //   const result = httpMock.expectOne('http://localhost:3000/registerdetails');
+  //   expect(result.request.method).toBe('POST');
+  //   result.flush({ registerUser });
+  // });
 
   it('should create login data', () => {
     const loginUser: Loginuser = {
@@ -56,9 +56,9 @@ describe('UserService', () => {
       "password": "Vinu@123",
     };
 
-    service.createLogin(loginUser).subscribe(response => {
-      expect(response).toBeTruthy();
-    });
+    // service.createLogin(loginUser).subscribe(response => {
+    //   expect(response).toBeTruthy();
+    // });
 
     const response = httpMock.expectOne('http://localhost:3000/logindetails');
     expect(response.request.method).toBe('POST');

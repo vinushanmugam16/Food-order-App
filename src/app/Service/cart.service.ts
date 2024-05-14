@@ -23,56 +23,56 @@ export class CartService {
   public cartUrl = environment.baseUrl + environment.addCart;
   public userUrl = environment.baseUrl + environment.regUrl;
   public addressUrl = environment.baseUrl + environment.addressUrl;
-  public historyUrl = environment.baseUrl + environment.historyUrl;
 
-  public getItem() {
+  //BE
+  public getItemDisplay() {
+    // return this.http.get('http://localhost:4000/item')
     return this.http.get(this.fooditemsUrl);
   }
 
-  public createCart(addingCart: Item) {
-    return this.http.post(this.cartUrl, addingCart);
+  //BE
+  public createCartItem(addingCart: Item) {
+    // console.log('service call', addingCart);
+    return this.http.post(this.cartUrl,addingCart)
+    // return this.http.post('http://localhost:4000/addtocart', addingCart);
   }
-
-  public getCart() {
+  public getCartItem() {
+    // return this.http.get('http://localhost:4000/addtocart');
     return this.http.get(this.cartUrl);
   }
 
-  public deleteItem(id: number) {
-    return this.http.delete(`${this.cartUrl}/${id}`);
+  //BE
+  public deleteCartItem(id: number) {
+    return this.http.delete('http://localhost:4000/destroy/' + `${id}`)
   }
 
-  public updateQuantity(id: string | number, foodItem: Item) {
-    return this.http.put(this.cartUrl + '/' + id, foodItem);
+  public deleteAll() {
+    return this.http.delete('http://localhost:4000/destroyall');
+  }
+
+  //BE
+  public updateItemQuantity(id: string | number, foodItem: Item) {
+    return this.http.put('http://localhost:4000/update/' + id, foodItem);
   }
 
   public itemLength() {
-    this.getCart()
+    this.getCartItem()
       .subscribe((response: any) => {
-        this.foodItem = response;
-        this.food = this.foodItem.filter((item: any) => item.userName === sessionStorage.getItem('user'))
+        this.food= response;
         this.totalItem = this.food.length;
       })
   }
 
-  public getAddress() {
-    return this.http.get(this.addressUrl);
+  //BE
+  public getAllAddress() {
+    // return this.http.get('http://localhost:4000/address');
+    return this.http.get(this.addressUrl)
+  }
+  public createAllAddress(locate: Address) {
+    // return this.http.post('http://localhost:4000/address', locate)
+    return this.http.post(this.addressUrl,locate)
   }
 
-  public createAddress(locate: Address) {
-    return this.http.post(this.addressUrl, locate)
-  }
-
-  // public deleteAddress(id: string) {
-  //   return this.http.delete(`${this.addressUrl}/${id}`);
-  // }
-
-  // public selectAddress(id: string) {
-  //   return this.http.get(`${this.addressUrl}/${id}`);
-  // }
-
-  // public updateAddress(id: string, address: Address) {
-  //   return this.http.put(this.addressUrl + '/' + id, address)
-  // }
 
   generateOrderId() {
     const time = new Date().getTime().toString(36);
@@ -80,13 +80,4 @@ export class CartService {
     const orderId = time + randomNumber;
     return orderId.toUpperCase();
   }
-
-  getHistory(){
-    return this.http.get(this.historyUrl);
-  }
-
-  createHistory(history:Item){
-    return this.http.post(this.historyUrl,history);
-  }
-
 }

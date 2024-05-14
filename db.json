@@ -199,13 +199,15 @@
       "userName": "VINUSHA2002"
     },
     {
-      "id": "3",
-      "imageUrl": "/assets/image/venpongal.jpeg",
+      "id": 3,
+      "_id": "6634cf43eaf8db439e2c72bd",
       "itemName": "Venpongal",
+      "imageUrl": "/assets/image/venpongal.jpeg",
       "price": 50,
       "quantity": 1,
       "variety": "Veg",
-      "userName": "VINUSHA2002"
+      "__v": 0,
+      "userName": "Vinusha"
     }
   ],
   "logindetails": [
@@ -483,6 +485,18 @@
       "dob": "2009-02-12",
       "email": "mick@gmail.com",
       "phoneNumber": "********45",
+      "gender": "Male"
+    },
+    {
+      "id": "67b1",
+      "firstname": "Monish",
+      "lastname": "Logu",
+      "username": "MONILOG2024",
+      "password": "U2FsdGVkX1+Y+2bduSXs/qS1NFVGcvFvTDhgnSkvtLk=",
+      "confirmPassword": "U2FsdGVkX180rG3e2Td/56iE3kXKeKMlb1ikOD43yy0=",
+      "dob": "2024-05-03",
+      "email": "moni@gmail.com",
+      "phoneNumber": "********12",
       "gender": "Male"
     }
   ],

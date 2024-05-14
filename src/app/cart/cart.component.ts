@@ -11,8 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 
 export class CartComponent implements OnInit {
 
-  public foodItem: any=[];
-  public food: Item[];
+  public food: any=[];
   public cartFoodItem: Object;
   public imageUrl = '/assets/image/emptycart.png';
   constructor(public cart: CartService, private toast: ToastrService) { }
@@ -23,11 +22,11 @@ export class CartComponent implements OnInit {
 
   public getFoodItem() {
     try {
-      this.cart.getCart()
-        .subscribe((res) => {
-          this.foodItem = res;
-          this.food = this.foodItem.filter((item: { userName: string | null; }) => item.userName === sessionStorage.getItem('user'));
-        })
+        this.cart.getCartItem().subscribe(
+          (res) => {
+              this.food = res;
+              // console.log('getting items', this.food);
+          })
     }
     catch (err) {
       console.error(err);
@@ -36,11 +35,11 @@ export class CartComponent implements OnInit {
 
   public increaseQuantity(item: Item) {
     try {
-      this.cart.getCart().subscribe((data) => {
+      this.cart.getCartItem().subscribe((data) => {
         this.cartFoodItem = data;
       });
       item.quantity++;
-      this.cart.updateQuantity(item.id, item)
+      this.cart.updateItemQuantity(item.id,item)
         .subscribe(() => {
           this.getFoodItem();
         })
@@ -52,7 +51,7 @@ export class CartComponent implements OnInit {
 
   public decreaseQuantity(item: Item) {
     try {
-      this.cart.getCart().subscribe((data) => {
+      this.cart.getCartItem().subscribe((data) => {
         this.cartFoodItem = data;
       });
       if (item.quantity > 1) {
@@ -62,7 +61,7 @@ export class CartComponent implements OnInit {
       else {
         this.removeItem(item.id);
       }
-      this.cart.updateQuantity(item.id, item)
+      this.cart.updateItemQuantity(item.id,item)
         .subscribe(() => {
           this.getFoodItem();
         })
@@ -74,7 +73,7 @@ export class CartComponent implements OnInit {
 
   public removeItem(id: any) {
     try {
-      this.cart.deleteItem(id).subscribe(() => {
+      this.cart.deleteCartItem(id).subscribe(() => {
         this.getFoodItem();
         this.cart.itemLength();
         this.toast.error('Item has been deleted from Cart!')
@@ -87,11 +86,9 @@ export class CartComponent implements OnInit {
 
   public removeAll() {
     try {
-      this.food.map((item: { id: number; }) => {
-        this.cart.deleteItem(item.id).subscribe(() => {
-          this.getFoodItem();
-          this.toast.error('Cart Items are deleted');
-        })
+      this.cart.deleteAll().subscribe(()=>{
+        this.getFoodItem();
+        this.toast.error('Cart Items are deleted');
       })
     }
     catch (err) {

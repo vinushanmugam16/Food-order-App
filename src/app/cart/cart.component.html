@@ -1,5 +1,5 @@
 <h2 class="heading-style">Cart</h2>
-<div class='table-style' *ngIf="foodItem.length !== 0">
+<div class='table-style' *ngIf="food.length !== 0">
     <div>
         <table>
             <thead>
@@ -13,7 +13,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody *ngIf="foodItem">
+            <tbody *ngIf="food">
                 <tr *ngFor="let item of food ; let i=index">
                     <td>{{i+1}}</td>
                     <td>{{item.itemName}}</td>
@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<div class="cart-style" *ngIf="foodItem.length === 0">
+<div class="cart-style" *ngIf="food.length === 0">
     <div>
         <img [src]='imageUrl' alt="Empty Cart">
         <h4>Your Cart is empty!</h4>

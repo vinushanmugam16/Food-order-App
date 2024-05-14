@@ -9,7 +9,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
@@ -26,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthInterceptor } from './Service/authInterceptor.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   providers: [UserService,
     CartService,
-    TranslateService
+    TranslateService,
+    {provide : HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
   ],
   bootstrap: [AppComponent]
 })

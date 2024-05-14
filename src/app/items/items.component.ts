@@ -22,14 +22,17 @@ export class ItemsComponent implements OnInit {
   public vegCount: number = 0;
   public nonvegCount: number = 0;
   public dessertCount: number = 0;
+  public filterUser: any = [];
 
   constructor(private cartList: CartService, private toast: ToastrService) { }
 
   ngOnInit() {
     try {
-      this.cartList.getItem()
+      this.cartList.getItemDisplay()
         .subscribe(response => {
           this.cartItem = response;
+          // console.log(this.cartItem);
+
           this.filteredItems = this.cartItem;
           this.vegCount = this.filteredItems.filter((item) => item.variety === 'Veg').length;
           this.nonvegCount = this.filteredItems.filter((item) => item.variety === 'Non').length;
@@ -42,17 +45,17 @@ export class ItemsComponent implements OnInit {
   }
 
   public addingTocart(item: any) {
-    const userName = sessionStorage.getItem('user');
-    item.userName = userName;
-
-    this.cartList.getCart().subscribe((data: any) => {
-      this.foodItem = data.filter((cartFood: { userName: string | null; }) => cartFood.userName === userName);
-
+    this.cartList.getCartItem().subscribe((data: any) => {
+      // console.log('datas', data);
+      this.foodItem = data
       const foundItem = this.foodItem.find((food: { itemName: string; }) =>
         food.itemName === item.itemName
       )
       if (!foundItem) {
-        this.cartList.createCart(item).subscribe(() => {
+        // console.log(`fghjkl.`);
+
+        this.cartList.createCartItem(item).subscribe(() => {
+          // console.log('posted');
           this.cartList.itemLength();
           this.toast.success('Item added to cart!');
         })
@@ -77,7 +80,7 @@ export class ItemsComponent implements OnInit {
         );
       }
       if (this.searchFood) {
-        itemFiltered = itemFiltered.filter((item: { itemName: string; price: { toString: () => string ; }; }) =>
+        itemFiltered = itemFiltered.filter((item: { itemName: string; price: { toString: () => string; }; }) =>
           item.itemName.toLowerCase().includes(this.searchFood.toLowerCase()) ||
           item.price.toString().includes(this.searchFood.toLowerCase())
         );

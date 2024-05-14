@@ -14,7 +14,6 @@ import { PaymentComponent } from './payment/payment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OrderedItemsComponent } from './ordered-items/ordered-items.component';
 import { ProfileComponent } from './profile/profile.component';
-import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   { path: '', title: 'Food Order App', component: HomepageComponent },
@@ -31,7 +30,6 @@ const routes: Routes = [
   { path: 'payment', title: 'Payment', component: PaymentComponent, canActivate: [AuthGuard] },
   { path: 'ordered', title: 'My Order', component: OrderedItemsComponent, canActivate: [AuthGuard] },
   { path: 'profile', title: 'Profile', component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: 'history', title: 'History', component: HistoryComponent, canActivate: [AuthGuard] },
   { path: '**', title: '404 Error', component: NotFoundComponent }
 ];
 

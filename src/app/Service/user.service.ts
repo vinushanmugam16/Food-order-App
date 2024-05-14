@@ -5,8 +5,6 @@ import { Loginuser } from '../model/loginuser';
 import { Item } from '../model/item';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.development';
-import { catchError, throwError } from 'rxjs';
-import * as CryptoJS from 'crypto-js';
 
 @Injectable({
   providedIn: 'root',
@@ -20,46 +18,36 @@ export class UserService {
   public userDetail: User[] = [];
   public loginDetail: Loginuser[] = [];
   public addingCart: Item[] = [];
-  private keys: string = '123';
 
-  public createData(userDetail: User) {
-    try {
-      return this.http.post(this.registerUrl, userDetail).pipe(
-        catchError(error => {
-          console.error('Error', error);
-          return throwError(error);
-        })
-    )}
-    catch (error) {
-      console.error(error);
-      return throwError(error);
-    }
+
+ 
+  public createRegisterUser(userDetail: User) {
+    // return this.http.post('http://localhost:4000/register', userDetail);
+    return this.http.post(this.registerUrl,userDetail);
   }
 
-  public createLogin(loginDetail: Loginuser) {
-    return this.http.post(this.loginUrl, loginDetail);
+  //bE
+  public getLoginUser() {
+    // return this.http.get('http://localhost:4000/login')
+    return this.http.get(this.loginUrl);
   }
 
-  public getUsername() {
-    return this.http.get(this.registerUrl);
+  public createLoginUser(username: string, password: any) {
+    const user = { username, password }
+    // return this.http.post('http://localhost:4000/login',user);
+    return this.http.post(this.loginUrl,user)
   }
+
 
   public login() {
-    return sessionStorage.getItem('user') && sessionStorage.getItem('password') ? true : false;
+    // return sessionStorage.getItem('user') && sessionStorage.getItem('password') ? true : false;
+    return sessionStorage.getItem('token') ? true : false
   }
 
   public logout() {
     sessionStorage.removeItem('user');
-    sessionStorage.removeItem('password');
+    sessionStorage.removeItem('token');
     sessionStorage.removeItem('myorder');
     this.route.navigateByUrl('login');
-  }
-
-  public encryptPassword(password: string) {
-    return CryptoJS.AES.encrypt(password, this.keys).toString();
-  }
-
-  public decryptPassword(password: string) {
-    return CryptoJS.AES.decrypt(password, this.keys).toString(CryptoJS.enc.Utf8);
   }
 }

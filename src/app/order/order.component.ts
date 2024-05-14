@@ -10,10 +10,9 @@ import { Item } from '../model/item';
 })
 export class OrderComponent implements OnInit {
 
-  public foodItem: any = [];
+  // public foodItem: any = [];
   public food: Item[];
   public totalPrice: number = 0;
-  public ordered:any=[];
 
   constructor(private cart: CartService, private route: Router) { }
 
@@ -23,11 +22,9 @@ export class OrderComponent implements OnInit {
 
   public getFoodItem() {
     try {
-      this.cart.getCart()
-        .subscribe((response) => {
-          this.foodItem = response;
-          this.food = this.foodItem.filter((item: { userName: string | null; }) =>
-            item.userName === sessionStorage.getItem('user'))
+      this.cart.getCartItem()
+        .subscribe((response:any) => {
+          this.food = response;
           this.totalPrice = this.totalAll();
           sessionStorage.setItem('myorder', JSON.stringify(this.food));
         })
@@ -44,14 +41,7 @@ export class OrderComponent implements OnInit {
     return this.totalPrice;
   }
 
-  public orderSelected(item: any) {
-    const arrayOfObjects: any = Object.values(item).filter(items => typeof items === 'object');
-    console.log(arrayOfObjects);
-    this.ordered=arrayOfObjects;
-    console.log(this.ordered);
-  
-    // this.cart.createHistory(arrayOfObjects).subscribe((data)=>console.log(data));
-
+  public orderSelected() {
     this.cart.itemLength();
     this.route.navigateByUrl('payment');
   }

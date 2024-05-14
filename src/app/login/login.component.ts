@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -14,30 +15,26 @@ export class LoginComponent {
   public userName: string;
   public correctPassword: string;
   public patternValue = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]*$/;
-  private userDetails: any;
 
   constructor(private user: UserService,
-    private router: Router, private toast: ToastrService) { }
+    private router: Router,
+    private toast: ToastrService) { }
+
+
 
   public onSubmit(loginForm: NgForm) {
-    this.user.getUsername().subscribe((value) => {
-      this.userDetails = value;
-      let userFound = false;
-      this.userDetails.forEach((user: { username: string; password: string; }) => {
-        if (user.username === this.userName) {
-          const decrypt = this.user.decryptPassword(user.password);
-          if (decrypt === this.correctPassword) {
-            sessionStorage.setItem('user', user.username);
-            sessionStorage.setItem('password', user.password);
-            this.toast.success('Successfully Logined!')
-            this.router.navigateByUrl('mainpage');
-            userFound = true;
-          }
-        }
-      });
-      if (!userFound) {
-        this.toast.warning('Invalid Login!, Please Enter valid details!');
+    this.user.createLoginUser(this.userName, this.correctPassword).subscribe({
+      next: (response: any) => {
+        // console.log(response);
+        sessionStorage.setItem('token', response.token);
+        sessionStorage.setItem('user',response.username);
+        this.toast.success('Successfully Logined!');
+        this.router.navigateByUrl('/mainpage');
+        // console.log('Login successful!', response);
+      },
+      error: (error: { error: { message: string; }; }) => {
+        console.error('Error logging in:', error);
       }
-    });
+    })
   }
 }
