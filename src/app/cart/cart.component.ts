@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 
 export class CartComponent implements OnInit {
 
-  public food: any=[];
+  public food: any = [];
   public cartFoodItem: Object;
   public imageUrl = '/assets/image/emptycart.png';
   constructor(public cart: CartService, private toast: ToastrService) { }
@@ -22,10 +22,10 @@ export class CartComponent implements OnInit {
 
   public getFoodItem() {
     try {
-        this.cart.getCartItem().subscribe(
-          (res) => {
-              this.food = res;
-          })
+      this.cart.getCartItem().subscribe(
+        (res) => {
+          this.food = res;
+        })
     }
     catch (err) {
       console.error(err);
@@ -38,7 +38,7 @@ export class CartComponent implements OnInit {
         this.cartFoodItem = data;
       });
       item.quantity++;
-      this.cart.updateItemQuantity(item.id,item)
+      this.cart.updateItemQuantity(item.id, item)
         .subscribe(() => {
           this.getFoodItem();
         })
@@ -60,7 +60,7 @@ export class CartComponent implements OnInit {
       else {
         this.removeItem(item.id);
       }
-      this.cart.updateItemQuantity(item.id,item)
+      this.cart.updateItemQuantity(item.id, item)
         .subscribe(() => {
           this.getFoodItem();
         })
@@ -85,7 +85,7 @@ export class CartComponent implements OnInit {
 
   public removeAll() {
     try {
-      this.cart.deleteAll().subscribe(()=>{
+      this.cart.deleteAll().subscribe(() => {
         this.getFoodItem();
         this.toast.error('Cart Items are deleted');
       })

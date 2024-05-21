@@ -29,7 +29,7 @@ export class CartService {
   }
 
   public createCartItem(addingCart: Item) {
-    return this.http.post(this.cartUrl,addingCart)
+    return this.http.post(this.cartUrl, addingCart)
   }
   public getCartItem() {
     return this.http.get(this.cartUrl);
@@ -50,7 +50,7 @@ export class CartService {
   public itemLength() {
     this.getCartItem()
       .subscribe((response: any) => {
-        this.food= response;
+        this.food = response;
         this.totalItem = this.food.length;
       })
   }
@@ -58,15 +58,21 @@ export class CartService {
   public getAllAddress() {
     return this.http.get(this.addressUrl)
   }
+
   public createAllAddress(locate: Address) {
-    return this.http.post(this.addressUrl,locate)
+    return this.http.post(this.addressUrl, locate)
   }
 
 
-  generateOrderId() {
+  public generateOrderId() {
     const time = new Date().getTime().toString(36);
     const randomNumber = Math.random().toString(36).substr(2, 5);
     const orderId = time + randomNumber;
     return orderId.toUpperCase();
   }
+
+  public itemsCount(){
+    return this.http.get(this.fooditemsUrl);
+  }
+  
 }

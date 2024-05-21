@@ -71,11 +71,11 @@ export class PaymentComponent implements OnInit {
   }
 
   public processPayment() {
-    this.cart.deleteAll().subscribe(()=>{
-        this.cart.itemLength();
-        this.toast.success('Successfully Paid!');
-        this.route.navigateByUrl('ordered');
-      })
+    this.cart.deleteAll().subscribe(() => {
+      this.cart.itemLength();
+      this.toast.success('Successfully Paid!');
+      this.route.navigateByUrl('ordered');
+    })
   }
 
   public open(content: TemplateRef<any>) {
@@ -86,7 +86,7 @@ export class PaymentComponent implements OnInit {
 
   public gettingAddress() {
     this.cart.getAllAddress()
-      .subscribe((res:any) => {
+      .subscribe((res: any) => {
         this.userAddress = res;
       })
   }
@@ -107,7 +107,7 @@ export class PaymentComponent implements OnInit {
   public addressed(event: Event) {
     const destination = event.target as HTMLSelectElement;
     this.setAddress = destination.value;
-    sessionStorage.setItem('address',this.setAddress);
+    sessionStorage.setItem('address', this.setAddress);
     this.toast.success('Has selected the address for order');
   }
 }

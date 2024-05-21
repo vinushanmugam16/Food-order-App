@@ -22,7 +22,7 @@ export class OrderComponent implements OnInit {
   public getFoodItem() {
     try {
       this.cart.getCartItem()
-        .subscribe((response:any) => {
+        .subscribe((response: any) => {
           this.food = response;
           this.totalPrice = this.totalAll();
           sessionStorage.setItem('myorder', JSON.stringify(this.food));

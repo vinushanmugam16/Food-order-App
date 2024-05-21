@@ -1,4 +1,3 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -20,18 +19,17 @@ export class LoginComponent {
     private router: Router,
     private toast: ToastrService) { }
 
-
-
   public onSubmit(loginForm: NgForm) {
     this.user.createLoginUser(this.userName, this.correctPassword).subscribe({
       next: (response: any) => {
         sessionStorage.setItem('token', response.token);
-        sessionStorage.setItem('user',response.username);
+        sessionStorage.setItem('user', response.username);
         this.toast.success('Successfully Logined!');
         this.router.navigateByUrl('/mainpage');
       },
       error: (error: { error: { message: string; }; }) => {
         console.error('Error logging in:', error);
+        this.toast.warning('Invalid Login!');
       }
     })
   }

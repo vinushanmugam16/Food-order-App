@@ -19,10 +19,8 @@ export class UserService {
   public loginDetail: Loginuser[] = [];
   public addingCart: Item[] = [];
 
-
- 
   public createRegisterUser(userDetail: User) {
-    return this.http.post(this.registerUrl,userDetail);
+    return this.http.post(this.registerUrl, userDetail);
   }
 
   public getLoginUser() {
@@ -31,9 +29,8 @@ export class UserService {
 
   public createLoginUser(username: string, password: any) {
     const user = { username, password }
-    return this.http.post(this.loginUrl,user)
+    return this.http.post(this.loginUrl, user)
   }
-
 
   public login() {
     return sessionStorage.getItem('token') ? true : false

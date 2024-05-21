@@ -15,8 +15,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.user.getLoginUser()
-      .subscribe((data:any) => {
-        this.userDetail=data;
+      .subscribe((data: any) => {
+        this.userDetail = data;
         this.userDetail = data.filter((val: { username: string | null; }) => val.username == sessionStorage.getItem('user'));
         this.address = sessionStorage.getItem('address');
       })

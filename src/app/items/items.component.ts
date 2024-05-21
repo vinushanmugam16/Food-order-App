@@ -29,12 +29,12 @@ export class ItemsComponent implements OnInit {
   ngOnInit() {
     try {
       this.cartList.getItemDisplay()
-        .subscribe(response => {
-          this.cartItem = response;
+        .subscribe((response: any) => {
+          this.cartItem = response.items;
           this.filteredItems = this.cartItem;
-          this.vegCount = this.filteredItems.filter((item) => item.variety === 'Veg').length;
-          this.nonvegCount = this.filteredItems.filter((item) => item.variety === 'Non').length;
-          this.dessertCount = this.filteredItems.filter((item) => item.variety === 'Dessert').length;
+          this.vegCount = response.vegCount;
+          this.nonvegCount = response.nonvegCount;
+          this.dessertCount = response.dessertCount;
         })
     }
     catch (err) {
